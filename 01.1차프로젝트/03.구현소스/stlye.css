@@ -1,5 +1,7 @@
 @charset "utf-8";
-
+html{
+  scroll-behavior: smooth;
+}
 html, body{
     margin: 0;
     padding: 0;
@@ -21,6 +23,7 @@ h1,h2,h3,h4,h5,h6,ul,ol,li{
     background-size: cover;
     background-position: center;
     background-image: url();  
+    position: relative;
 }
 .tabbutton{
   width: 50px;
@@ -36,10 +39,8 @@ h1,h2,h3,h4,h5,h6,ul,ol,li{
 .ts{
   height: 100%;
   background-color: rgb(0, 0, 0);
-  display: block;
   color: white;
   font-family: '나눔 고딕';
-  display: none;
 }
 .ts h1{
   font-size: 60px;
@@ -54,6 +55,8 @@ h1,h2,h3,h4,h5,h6,ul,ol,li{
 .tss{
   height: 100%;
   max-width: 1920px; 
+  display: none;
+  display: block;
 }
 .ts-main{
   width: 1550px;
@@ -72,5 +75,80 @@ h1,h2,h3,h4,h5,h6,ul,ol,li{
   padding: 70px 20px;
 }
 .main{
+  height: 100%;
+}
+nav{
+  margin-top: 30px;
+  position: fixed;
+  width: 100%;
+}
+nav , .page1 nav div, .page1 ul{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.page1 nav li{
+  margin-left:10px ;
+  font-size: 12px;
+  font-weight: bold;
+}
+.main .list li{
+  padding: 0 10px;
+  margin-left: 10px;
+  font-size: 15px;
+}
+.list a{
+  text-decoration: none;
+}
+.page1 section{
+  position: relative;
+  top: 30%;
+  left : 50%;
+}
+.page1 h1{
+  font-size: 60px;
+  font-family: '나눔고딕';
+  margin-bottom: 30px;
+}
+.page1 section p{
+  font-size: 22px;
+  font-family: '나눔고딕';
+  margin-bottom: 54px;
+  font-weight: 600;
+}
+.arrow{
+ display: flex;
+ align-items: center;
+}
+.page1 section span{
+  position: relative;
+  font-size: 12px;
+  font-family: '나눔고딕';
+  font-weight: 600;
+  color: rgb(0, 0, 0);
+  padding: 0 30px;
+}
+.page1 section a{
+  text-decoration: none;
+  width: 200px;
+  height: 70px;
+}
+.page1 section a:hover {
+  background-color: skyblue;
+   border-radius: 75px 75px 75px 75px;
+   transform-origin:0 100% 0 ;
+   
+}
+
+.page1 section a::before{
+  position: absolute;
+  content: '';
+  display: block;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background-color: skyblue;
+}
+.page2{
   height: 100%;
 }

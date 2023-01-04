@@ -71,7 +71,7 @@
     </div>
     <div class="main">
         <div class="page1">
-            <nav>
+            <nav class="nav">
                 <div>
                     <img src="../00.자료수집/02.이미지데이터/footer_logo.png" alt="">
                     <ul>
@@ -79,14 +79,14 @@
                         <li>EN</li>
                     </ul>
                 </div>
-                <div>
+                <div class="list">
                     <ul>
-                        <li>BUSINESS</li>
-                        <li>PRODUCT</li>
-                        <li>INSIGHT</li>
-                        <li>COMPANY</li>
-                        <li>CONTACT</li>
-                        <li>RECRUITMENT</li>
+                        <li><a href="">BUSINESS</a> </li>
+                        <li><a href="">PRODUCT</a> </li>
+                        <li><a href="">INSIGHT</a> </li>
+                        <li><a href="">COMPANY</a> </li>
+                        <li><a href="">CONTACT</a> </li>
+                        <li><a href="">RECRUITMENT</a> </li>
                     </ul>
                 </div>
                 <button class="tabbutton" id="tabbutton">탭키</button>
@@ -94,8 +94,12 @@
             <section>
                 <div>
                     <h1>Automotive<br>SW Solution Partner</h1>
-                    <p]>미래차 소프트웨어 솔루션 파트너</p>
-                    <span>DETAIL VIEW</span>
+                    <p>미래차 소프트웨어 솔루션 파트너</p>
+                    <a class="arrow" href="">
+                        <span>DETAIL VIEW</span>
+                        <i>➡</i>
+                    </a>
+                    
                 </div>
             </section>
         </div>
@@ -104,15 +108,11 @@
         <div class="page4"></div>
     </div>
 
-        <script
-            src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
-            integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
-            crossorigin="anonymous"
-            referrerpolicy="no-referrer"
-        ></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
         <script>
-            $(".tabbutton").on("click", function () {
-                $(".ts").toggleClass("show");
+            $('.tabbutton').on('click', function () {
+                $('.tss').toggleClass('show');
             });
 
             // document.getElementsByClassName('tabbutton')[0].addEventListener('click', function(){document.getElementsByClassName('ts')[0].style.display='block';});
