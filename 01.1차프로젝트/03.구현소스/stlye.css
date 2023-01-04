@@ -39,6 +39,7 @@ h1,h2,h3,h4,h5,h6,ul,ol,li{
   display: block;
   color: white;
   font-family: '나눔 고딕';
+  display: none;
 }
 .ts h1{
   font-size: 60px;
