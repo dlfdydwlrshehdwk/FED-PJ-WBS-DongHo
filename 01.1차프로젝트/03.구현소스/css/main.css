@@ -1,23 +1,10 @@
 @charset "utf-8";
-<<<<<<< HEAD:01.1차프로젝트/03.구현소스/css/main.css
 @import url(./reset.css);
 
-=======
-html{
-  scroll-behavior: smooth;
+body *{
+  outline: 1px dashed red;
 }
-html, body{
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    width: 100%;
-}
-h1,h2,h3,h4,h5,h6,ul,ol,li{
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
->>>>>>> 67dceca233f8f9309397f1b1e6f4d15e7ff84095:01.1차프로젝트/03.구현소스/stlye.css
+
 .show{
   display: block;
 }
