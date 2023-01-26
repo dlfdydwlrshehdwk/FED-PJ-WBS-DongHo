@@ -46,7 +46,7 @@ body *{
     /* nav안의 ul flex박스 */
     display: flex;
 }
-.nav>ul>li:hover .smenu{
+.nav>ul:hover>li .smenu{
     height: 280px;
     transition: 0.4s ease-in-out .4s;
 }
