@@ -18,15 +18,24 @@ body *{
     align-items: center;
     justify-content: space-between;
 }
-.nav>ul>li::before{
+.nav>ul::before{
     content: '';
     position: absolute;
     display: block;
     z-index: -1;
     top: 0;
-    height: 400px;
-    width: 100vw;
+    left: 0;
+    height: 0;
+    width: 100%;
     background-color: red ; 
+    transition: all .3s ease-in;
+}
+.nav>ul:hover::before{
+    display: block;
+    height: 400px;
+    transition-duration: .3s;
+    
+    
 }
 /* nav 로고 */
 .nav .logo{
@@ -37,14 +46,27 @@ body *{
     /* nav안의 ul flex박스 */
     display: flex;
 }
-.nav>ul>li+li{
-    /* li간격 */
-    padding-left: 80px;
+.nav>ul>li:hover .smenu{
+    height: 280px;
+    transition: 0.4s ease-in-out .4s;
 }
-.nav a{
+
+.nav>ul>li>a{
     color: #fff;
     font-weight: bold;
     font-size: 1.5rem;
+    display: block;
+    width: 150px;
+    line-height:8;
+    text-align: center;
+}
+.smenu a{
+    color: #fff;
+    font-weight: bold;
+    font-size: 1.5rem;
+    text-align: center;
+    width: 150px;
+    display: block;
 }
 
 /* 버튼위치이동 */
@@ -55,4 +77,6 @@ body *{
     position: absolute;
     top: 140px;
     line-height: 2;
+    height: 0;
+    overflow: hidden;
 }
