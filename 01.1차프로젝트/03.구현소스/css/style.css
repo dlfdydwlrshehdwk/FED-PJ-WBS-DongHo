@@ -18,7 +18,9 @@ body *{
     align-items: center;
     justify-content: space-between;
 }
-.nav>ul::before{
+
+/* 가상요소로 서브메뉴창 만들기 */
+.nav>ul>li::before{
     content: '';
     position: absolute;
     display: block;
@@ -30,12 +32,11 @@ body *{
     background-color: red ; 
     transition: all .3s ease-in;
 }
-.nav>ul:hover::before{
+/* 오버시 가상요소서브메뉴창 열기 */
+.nav>ul:hover>li::before{
     display: block;
     height: 400px;
     transition-duration: .3s;
-    
-    
 }
 /* nav 로고 */
 .nav .logo{
@@ -46,9 +47,29 @@ body *{
     /* nav안의 ul flex박스 */
     display: flex;
 }
+.nav>ul:hover>li>a{
+    padding: 0 15px;
+}
+/* 가상요소배경펼쳐질떄 a태그 기본색변경 */
+.nav>ul:hover>li>a{
+    color: #000;
+}
+/* 가상요소의 li오버시 a태그 색변경 */
+body .nav>ul>li:hover>a{
+    color: cyan;
+    transform: scale(1.2);
+}
 .nav>ul:hover>li .smenu{
     height: 280px;
     transition: 0.4s ease-in-out .4s;
+}
+/* 서브메뉴오버시 글자색변경 */
+.smenu li:hover>a{
+    color: aqua;
+}
+/* 가상요소 배경 펼쳐질떄 서브메뉴도 넓어지게 */
+.nav>ul:hover>li .smenu a{
+    padding: 0 15px;
 }
 
 .nav>ul>li>a{
@@ -75,7 +96,7 @@ body *{
 }
 .smenu{
     position: absolute;
-    top: 140px;
+    top: 120px;
     line-height: 2;
     height: 0;
     overflow: hidden;
