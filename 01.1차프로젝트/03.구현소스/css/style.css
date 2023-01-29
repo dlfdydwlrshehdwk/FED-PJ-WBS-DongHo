@@ -1,6 +1,7 @@
 @charset "utf-8";
 @import url(./reset.css);
 /* 외부CSS 장착 */
+
 /* 공사 */
 body *{
     /* outline: 1px dashed red; */
@@ -23,7 +24,6 @@ body *{
 .nav>ul>li::before{
     content: '';
     position: absolute;
-    content: '';
     display: block;
     z-index: -1;
     top: 0;
@@ -40,9 +40,21 @@ body *{
     transition-duration: .3s;
 }
 /* ul오버시 nav에 밑줄표시 */
-.nav>ul:hover .nav{
-    border-bottom: 2px solid aqua;
+.nav>ul:hover::before{
+    border-bottom: 1px solid #ccc;
 }
+.nav>ul::before{
+    position: absolute;
+    content: '';
+    display: block;
+    width: 100%;
+    border-bottom: 0px solid #ccc;
+    left: 0;
+    top: 120px;
+    transition:  .2s;
+}
+
+
 /* nav 로고 */
 .nav .logo{
     /* 로고 위치이동 */
@@ -51,24 +63,25 @@ body *{
 .nav>ul{
     /* nav안의 ul flex박스 */
     display: flex;
+    
 }
 /* ul오버시 li들 패딩줘서 넓어지게하기 */
 .nav>ul:hover>li>a{
     padding: 0 15px;
+    transition: all .4s;
 }
+
 /* 가상요소배경펼쳐질떄 a태그 기본색변경 */
 .nav>ul:hover a{
     color: #000;
 }
 /* 가상요소 배경펼쳐질때 로고색 검은색변경 */
-.nav>ul:hover .logo img{
-    color: #000;
-}
+
 
 /* 서브메뉴 펼쳐지기 높이설정 및 자연스럽게 보이게 */
 .nav>ul:hover>li .smenu{
-    height: 280px;
-    transition: 0.4s ease-in-out .4s;
+    height: 260px;
+    transition: 0.2s ease-in-out .2s;
 }
 /* 서브메뉴오버시 글자색변경 */
 .smenu li:hover>a{
@@ -92,7 +105,9 @@ body *{
     width: 150px;
     line-height:8;
     text-align: center;
+    transition: all .4s;
 }
+
 /* 서브메뉴 a글자 설정 */
 .smenu a{
     color: #fff;
@@ -114,4 +129,5 @@ body *{
     line-height: 2;
     height: 0;
     overflow: hidden;
+    padding-top: 20px;
 }
