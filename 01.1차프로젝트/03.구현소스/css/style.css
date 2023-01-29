@@ -131,3 +131,21 @@ body *{
     overflow: hidden;
     padding-top: 20px;
 }
+/* 가상요소로 밑줄만들기 */
+.nav>ul>li>a::after{
+    content: '';
+    display: block;
+    margin-top: 1px;
+    /* 변경속성 width */
+    width: 0%;
+    margin-left: 50%;
+    height: 2px;
+    background-color: rgb(94, 223, 255);
+    /* 트랜지션: 속시이지 */
+    transition: all .3s;
+}
+/* 오버시 바 보이기 */
+.nav>ul>li:hover>a::after{
+    width: 100%;
+    margin-left: 0%; 
+}
