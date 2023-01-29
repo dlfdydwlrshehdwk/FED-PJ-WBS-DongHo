@@ -3,7 +3,7 @@
 /* 외부CSS 장착 */
 /* 공사 */
 body *{
-    outline: 1px dashed red;
+    /* outline: 1px dashed red; */
 }
 
 /* nav바 */
@@ -18,20 +18,15 @@ body *{
     align-items: center;
     justify-content: space-between;
 }
-<<<<<<< Updated upstream
 
 /* 가상요소로 서브메뉴창 만들기 */
 .nav>ul>li::before{
     content: '';
-=======
-/* .nav>ul>li:hover::before {
->>>>>>> Stashed changes
     position: absolute;
     content: '';
     display: block;
     z-index: -1;
     top: 0;
-<<<<<<< Updated upstream
     left: 0;
     height: 0;
     width: 100%;
@@ -44,12 +39,10 @@ body *{
     height: 400px;
     transition-duration: .3s;
 }
-=======
-    height: 400px;
-    width: 100%;
-    background-color: red ; 
-} */
->>>>>>> Stashed changes
+/* ul오버시 nav에 밑줄표시 */
+.nav>ul:hover .nav{
+    border-bottom: 2px solid aqua;
+}
 /* nav 로고 */
 .nav .logo{
     /* 로고 위치이동 */
@@ -59,18 +52,19 @@ body *{
     /* nav안의 ul flex박스 */
     display: flex;
 }
+/* ul오버시 li들 패딩줘서 넓어지게하기 */
 .nav>ul:hover>li>a{
     padding: 0 15px;
 }
 /* 가상요소배경펼쳐질떄 a태그 기본색변경 */
-.nav>ul:hover>li>a{
+.nav>ul:hover a{
     color: #000;
 }
-/* 가상요소의 li오버시 a태그 색변경 */
-body .nav>ul>li:hover>a{
-    color: cyan;
-    transform: scale(1.2);
+/* 가상요소 배경펼쳐질때 로고색 검은색변경 */
+.nav>ul:hover .logo img{
+    color: #000;
 }
+
 /* 서브메뉴 펼쳐지기 높이설정 및 자연스럽게 보이게 */
 .nav>ul:hover>li .smenu{
     height: 280px;
@@ -79,6 +73,10 @@ body .nav>ul>li:hover>a{
 /* 서브메뉴오버시 글자색변경 */
 .smenu li:hover>a{
     color: aqua;
+}
+/* 서브메뉴오버시 밑줄색 */
+.smenu li:hover>a>span{
+    border-bottom: 1px solid aqua;
 }
 /* 가상요소 배경 펼쳐질떄 서브메뉴도 넓어지게 */
 .nav>ul:hover>li .smenu a{
@@ -114,30 +112,6 @@ body .nav>ul>li:hover>a{
     position: absolute;
     top: 120px;
     line-height: 2;
-<<<<<<< Updated upstream
     height: 0;
     overflow: hidden;
-=======
-}
-
-.nav>ul>li::before{
-    content: '';
-    position: absolute;
-    top: 129px;
-    left: 0;
-    /* z-index: -1; */
-    width: 100%;
-    /* 부모는? */
-    height: 0;
-    background-color: rgb(255, 255, 255);
-    transition: .45s ease-out;
-    border-bottom: 2px solid red;
-    border-style: none;
-}
-/* 상위메뉴 오버시 서브배경보이기 */
-.nav>ul>li:hover::before{
-    height: 140px;
-    border-bottom: 2px solid red;
-    transition-duration: .3s;
->>>>>>> Stashed changes
 }
