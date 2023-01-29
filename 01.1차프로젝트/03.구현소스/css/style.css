@@ -18,14 +18,20 @@ body *{
     align-items: center;
     justify-content: space-between;
 }
+<<<<<<< Updated upstream
 
 /* 가상요소로 서브메뉴창 만들기 */
 .nav>ul>li::before{
     content: '';
+=======
+/* .nav>ul>li:hover::before {
+>>>>>>> Stashed changes
     position: absolute;
+    content: '';
     display: block;
     z-index: -1;
     top: 0;
+<<<<<<< Updated upstream
     left: 0;
     height: 0;
     width: 100%;
@@ -38,6 +44,12 @@ body *{
     height: 400px;
     transition-duration: .3s;
 }
+=======
+    height: 400px;
+    width: 100%;
+    background-color: red ; 
+} */
+>>>>>>> Stashed changes
 /* nav 로고 */
 .nav .logo{
     /* 로고 위치이동 */
@@ -102,6 +114,30 @@ body .nav>ul>li:hover>a{
     position: absolute;
     top: 120px;
     line-height: 2;
+<<<<<<< Updated upstream
     height: 0;
     overflow: hidden;
+=======
+}
+
+.nav>ul>li::before{
+    content: '';
+    position: absolute;
+    top: 129px;
+    left: 0;
+    /* z-index: -1; */
+    width: 100%;
+    /* 부모는? */
+    height: 0;
+    background-color: rgb(255, 255, 255);
+    transition: .45s ease-out;
+    border-bottom: 2px solid red;
+    border-style: none;
+}
+/* 상위메뉴 오버시 서브배경보이기 */
+.nav>ul>li:hover::before{
+    height: 140px;
+    border-bottom: 2px solid red;
+    transition-duration: .3s;
+>>>>>>> Stashed changes
 }
