@@ -1,0 +1,181 @@
+@charset "utf-8";
+@import url(./reset.css);
+
+body *{
+  outline: 1px dashed red;
+}
+
+.show{
+  display: block;
+}
+.page1{
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-image: url();  
+    position: relative;
+}
+
+.tabbutton{
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: none;
+}
+.tabbar{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 50px;
+}
+.ts{
+  height: 100%;
+  background-color: rgb(0, 0, 0);
+  color: white;
+  font-family: '나눔 고딕';
+  display: none;
+}
+.ts h1{
+  font-size: 60px;
+}
+.ts h2{
+  font-size: 30px;
+  margin-bottom: 30px;
+}
+.ts li{
+  font-size: 17px;
+}
+.tss{
+  height: 100%;
+  max-width: 1920px; 
+  display: none;
+  display: block;
+}
+.ts-main{
+  width: 1550px;
+  margin: 0 auto;
+  padding: 100px 0;
+}
+.ts-list{
+  display: flex;
+  justify-content: space-between;
+}
+.ts-list li{
+   padding: 15px 0;
+}
+.ts-list div{
+  border-left: 1px solid #222;
+  padding: 70px 20px;
+}
+.main{
+  height: 100%;
+}
+<<<<<<< HEAD:01.1차프로젝트/03.구현소스/css/main.css
+.page1 nav{
+  margin-top: 50px;
+  display: flex;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  align-items: center;
+  justify-content: space-around;
+}
+.page1 .logo, ul, section>div {
+  display: flex;
+}
+.logo{
+  margin-right: 10px;
+}
+.logo ul{
+  align-items: center;
+}
+.logo ul li{
+  padding: 0 10px;
+}
+
+.tag{
+  width: 700px;
+  justify-content: space-around;
+}
+.page1 section{
+  position: relative;
+  
+}
+=======
+nav{
+  margin-top: 30px;
+  position: fixed;
+  width: 100%;
+}
+nav , .page1 nav div, .page1 ul{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.page1 nav li{
+  margin-left:10px ;
+  font-size: 12px;
+  font-weight: bold;
+}
+.main .list li{
+  padding: 0 10px;
+  margin-left: 10px;
+  font-size: 15px;
+}
+.list a{
+  text-decoration: none;
+}
+.page1 section{
+  position: relative;
+  top: 30%;
+  left : 50%;
+}
+.page1 h1{
+  font-size: 60px;
+  font-family: '나눔고딕';
+  margin-bottom: 30px;
+}
+.page1 section p{
+  font-size: 22px;
+  font-family: '나눔고딕';
+  margin-bottom: 54px;
+  font-weight: 600;
+}
+.arrow{
+ display: flex;
+ align-items: center;
+}
+.page1 section span{
+  position: relative;
+  font-size: 12px;
+  font-family: '나눔고딕';
+  font-weight: 600;
+  color: rgb(0, 0, 0);
+  padding: 0 30px;
+}
+.page1 section a{
+  text-decoration: none;
+  width: 200px;
+  height: 70px;
+}
+.page1 section a:hover {
+  background-color: skyblue;
+   border-radius: 75px 75px 75px 75px;
+   transform-origin:0 100% 0 ;
+   
+}
+
+.page1 section a::before{
+  position: absolute;
+  content: '';
+  display: block;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background-color: skyblue;
+}
+.page2{
+  height: 100%;
+}
+>>>>>>> 67dceca233f8f9309397f1b1e6f4d15e7ff84095:01.1차프로젝트/03.구현소스/stlye.css

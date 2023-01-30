@@ -9,7 +9,8 @@ body *{
 
 /* nav바 */
 .nav{
-    position: relative;
+    position: fixed;
+    width: 100%;
     /* nav flex박스 */
     display: flex;
     /* 박스크기 */
