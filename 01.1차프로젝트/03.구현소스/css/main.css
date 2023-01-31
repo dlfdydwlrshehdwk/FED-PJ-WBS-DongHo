@@ -8,8 +8,8 @@
 body *{
     outline: 1px dotted red;
 }
-/* 페이지 1 */
 
+/* 페이지 1 */
 .bx1{
     display: flex;
     width: 50%;
@@ -22,29 +22,47 @@ body *{
 
 /* 페이지 2 */
 .p2wrap{
+    /* 플렉스박스 */
     display: flex;
+    align-items: center;
+    justify-content: center;
     width: 100%;
     height: 100%;
 }
+/* 페이지 2의 왼쪽박스 */
 .bx2{
+    /* 부모박스 .txtbx */
+    position: relative;
+    /* 플렉스박스  */
     display: flex;
-    width: 50%;
-    height: 100%;
-    justify-content: center;
-    flex-direction: column;
-    margin: 0 auto 0 0;
+    align-items: center;
+    /* 글귀 중앙에 오기위해 플렉스준거 */
 }
+/* 사진 넘어가는박스  */
 .bx3{
     width: 50%;
-    height: 100%;
+    /* 오른쪽으로 박스 옮긴거 */
+    margin: 0 0 0 auto;
+    /* 넘어가는 사진 안보이게 */
     overflow: hidden;
 }
+/* .bx3 ul */
 .bx3 ul{
-    display: flex;
-    height: 100%;
-    align-items: center;
+    /* 플렉스박스 사진 가로정렬 */
+    display: flex; 
+    /* 트랜스폼 줘서 왼쪽으로 가게끔 해야함. */
+    transform: translateX();
 }
-.bx3 img{
-    width: 100%;
-    height: 100%;
+/* 사진마다 공간주기 */
+.bx3 li+li{
+    margin-left: 30px;
+}
+/* 텍스트박스 */
+.txtbx{
+    position: absolute;
+    color: #fff;
+}
+.txtarea{
+    max-width: 1760px;
+    margin: 0 auto;
 }
