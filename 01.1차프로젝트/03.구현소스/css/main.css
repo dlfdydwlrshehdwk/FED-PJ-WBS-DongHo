@@ -25,18 +25,13 @@ body *{
     /* 플렉스박스 */
     display: flex;
     align-items: center;
-    justify-content: center;
-    width: 100%;
     height: 100%;
 }
 /* 페이지 2의 왼쪽박스 */
 .bx2{
-    /* 부모박스 .txtbx */
-    position: relative;
     /* 플렉스박스  */
     display: flex;
-    align-items: center;
-    /* 글귀 중앙에 오기위해 플렉스준거 */
+    width: 100%;
 }
 /* 사진 넘어가는박스  */
 .bx3{
@@ -59,10 +54,26 @@ body *{
 }
 /* 텍스트박스 */
 .txtbx{
-    position: absolute;
     color: #fff;
-}
-.txtarea{
-    max-width: 1760px;
     margin: 0 auto;
+}
+
+
+/******************* 페이지 3 **********************/
+
+.p3wrap{
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.p3area{
+    max-width: 1550px;
+    margin: 0  auto;
+    text-align: center;
+}
+.p3show ul{
+    display: flex;
+}
+.p3show span{
+    font-size: 1.8rem;
 }
