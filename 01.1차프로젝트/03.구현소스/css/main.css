@@ -73,7 +73,12 @@ body *{
 }
 .p3show ul{
     display: flex;
+    justify-content: space-evenly;
 }
 .p3show span{
     font-size: 1.8rem;
+}
+
+.p3show>ul>li>div{
+    display: flex;
 }
