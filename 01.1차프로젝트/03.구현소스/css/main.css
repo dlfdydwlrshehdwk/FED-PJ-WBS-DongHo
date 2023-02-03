@@ -82,27 +82,33 @@ body *{
     font-size: 1.8rem;
 }
 
+
 .p3show>ul>li>div{
+    /* 플렉스박스 */
     display: flex;
+    /* 중앙배치 */
     justify-content: center;
 }
+/* 플렉스박스들이 표에서 4등분할되게 */
 .p3show>ul>li{
     width: 25%;
 }
+/* 페이지3에서 슬롯머신박스 부분 */
 .nhd{
     height: 8rem;
     font-size: 8rem;
-    /* overflow: hidden; */
+    /* 숫자한개만 보이게하고 나머지는 숨겨줌 */
+    overflow: hidden;
 }
-.nhd div{
-    margin: auto 0 0;
-}
+/* 퍼센트/ 종 크기조절 */
 .pct span{
     font-size: 4rem;
 }
+/* 퍼센트 / 종 숫자옆에 배치 */
 .pct{
     margin: auto 0 0;
 }
+/* 슬롯머신부분 2번째 ol위쪽에서 내려오게 미리 셋팅 */
 .nhd2 ol{
     transform: translateY(-90%);
 }
