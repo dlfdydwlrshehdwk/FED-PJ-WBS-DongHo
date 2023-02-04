@@ -14,7 +14,7 @@ body *{
     display: flex;
     width: 50%;
     height: 100%;
-     align-items: flex-start;
+    align-items: flex-start;
     justify-content: center;
     flex-direction: column;
     margin: 0 0 0 auto;
@@ -56,6 +56,11 @@ body *{
 .txtbx{
     color: #fff;
     margin: 0 auto;
+}
+.txtarea{
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
 
@@ -111,4 +116,7 @@ body *{
 /* 슬롯머신부분 2번째 ol위쪽에서 내려오게 미리 셋팅 */
 .nhd2 ol{
     transform: translateY(-90%);
+}
+.p3txt{
+    margin-bottom: 8rem;
 }
