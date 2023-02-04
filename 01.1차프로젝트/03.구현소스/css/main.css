@@ -145,8 +145,9 @@ body *{
     top: 50%;
     transform: translateY(-50%);
 }
-.p4img .timg{
-    
+.p4ani .timg{
+    margin-bottom: 2rem;
+    justify-content: space-between;
 }
 .p4img .bimg{
     justify-content: space-around;
