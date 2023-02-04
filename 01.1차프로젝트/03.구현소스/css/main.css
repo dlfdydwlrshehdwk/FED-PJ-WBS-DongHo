@@ -126,11 +126,28 @@ body *{
 /******************* 페이지 4 **********************/
 .p4ani ul{
     display: flex;
+    width: 300%;
+    justify-content: space-evenly;
 }
 .p4txt{
     text-align: center;
+    margin-bottom: 9rem;
+}
+.p4txt p{
+    margin-top: 2.5rem;
 }
 .p4img li{
     width: 24rem;
     height: 10rem;
+}
+.p4bx{
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.p4img .timg{
+    
+}
+.p4img .bimg{
+    justify-content: space-around;
 }
