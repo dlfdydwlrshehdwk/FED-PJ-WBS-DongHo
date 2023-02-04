@@ -9,7 +9,7 @@ body *{
     outline: 1px dotted red;
 }
 
-/* 페이지 1 */
+/************************ 페이지 1 ************************/
 .bx1{
     display: flex;
     width: 50%;
@@ -20,7 +20,7 @@ body *{
     margin: 0 0 0 auto;
 }
 
-/* 페이지 2 */
+/************************ 페이지 2 ************************/
 .p2wrap{
     /* 플렉스박스 */
     display: flex;
@@ -119,4 +119,18 @@ body *{
 }
 .p3txt{
     margin-bottom: 8rem;
+}
+
+
+
+/******************* 페이지 4 **********************/
+.p4ani ul{
+    display: flex;
+}
+.p4txt{
+    text-align: center;
+}
+.p4img li{
+    width: 24rem;
+    height: 10rem;
 }
