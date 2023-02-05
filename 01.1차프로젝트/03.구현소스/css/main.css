@@ -152,3 +152,88 @@ body *{
 .p4img .bimg{
     justify-content: space-around;
 }
+
+
+
+/*************************** 페이지 5 ***********************/
+.p5cont{
+    width: 1515px;
+    margin: 0 auto;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%
+    );
+}
+.p5bx{
+    max-width: 465px;
+}
+.p5txt p{
+    margin-top: 2.5rem;
+}
+.p5txt{
+    margin-bottom: 3rem;
+}
+.p5ul{
+    display: flex;
+}
+.p5ul ul{
+    width: 50%;
+}
+.p5ul ul li{
+    font-size: 1.4rem;
+    padding: 2rem 0;
+}
+.p5send{
+    display: flex;
+    font-size: 1.4rem;
+    margin-top: 3rem;
+}
+
+.sendbt button{
+    border: none;
+    width: 17rem;
+    height: 5rem;
+    background-color: blue;
+    color: #fff;
+    font-weight: bold;
+}
+
+/******************** 메인영역 끝 ****************/
+
+/* 하단영역 시작 */
+.ftcont{
+    width: 1760px;
+    margin: 0 auto;
+    padding-top: 8.8rem;
+    padding-bottom: 7rem;
+}
+.ftbx{
+    display: flex;
+}
+.fttxt dl,.ftsns ul,.ftbt ul,.ftbt{
+    display: flex;
+}
+.fttxt{
+    font-size: 1.6rem;
+}
+.ftdl{
+    display: flex;
+}
+.ftdl dt{
+    font-size: 1.6rem;
+}
+.ftdl dd{
+    font-size: 1.5rem;
+}
+.ftbt p{
+    font-size: 1.4rem;
+}
+.ftbt ul li a{
+    font-size: 1.6rem;
+}
+.ftlogo{
+    margin-bottom: 6rem;
+}
+.ftbt{
+    justify-content: space-between;
+}
