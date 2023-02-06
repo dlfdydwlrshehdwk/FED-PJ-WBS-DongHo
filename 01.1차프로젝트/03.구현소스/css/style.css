@@ -31,7 +31,7 @@ body *{
     left: 0;
     height: 0;
     width: 100%;
-    background-color: red ; 
+    background-color: rgb(188, 197, 57) ; 
     transition: all .3s ease-in;
 }
 /* 오버시 가상요소서브메뉴창 열기 */
@@ -118,6 +118,9 @@ body *{
     width: 150px;
     display: block;
 }
+.smenu li:first-child{
+    padding-top: 20px;
+}
 
 /* 버튼위치이동 */
 .btn{
@@ -130,7 +133,7 @@ body *{
     line-height: 2;
     height: 0;
     overflow: hidden;
-    padding-top: 20px;
+    /* padding-top: 20px; */
 }
 /* 가상요소로 밑줄만들기 */
 .nav>ul>li>a::after{
