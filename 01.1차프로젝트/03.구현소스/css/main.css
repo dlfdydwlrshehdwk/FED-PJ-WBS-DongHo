@@ -194,11 +194,14 @@ body *{
     padding: 2rem 0;
     border-bottom: 1px solid rgb(255,255,255,0.1);
 }
+.p5ul label{
+    width: 100%;
+}
 .p5ul ul input{
     border: none;
     background: none;
 }
-.p5textarea label{
+.nayong{
     width: 10%;
 }
 .p5txtarea textarea{
@@ -213,6 +216,7 @@ body *{
     margin-top: 3rem;
     align-items: center;
     justify-content: space-between;
+    user-select: none;
 }
 
 .sendbt button{
@@ -233,6 +237,15 @@ body *{
 /******************** 메인영역 끝 ****************/
 
 /* 하단영역 시작 */
+.page6{
+    min-height: 623px;
+}
+.fttxt{
+    color: #333;
+    font-weight: 500;
+}
+
+
 .ftcont{
     width: 1760px;
     margin: 0 auto;
@@ -249,6 +262,7 @@ body *{
     font-size: 1.6rem;
     width: 40%;
     line-height: 1.8;
+    
 }
 .fttxt dl dt{
     width: 90px;
@@ -265,6 +279,10 @@ body *{
 .ftdl dd{
     font-size: 1.5rem;
     margin-bottom: 1rem;
+    color: #999;
+}
+.ftdlbx{
+    width: 60%;
 }
 
 .ftbt p{
@@ -278,12 +296,23 @@ body *{
 }
 .ftbt{
     justify-content: space-between;
+    padding: 60px 0;
+}
+.ftbt span{
+    font-size: 1.4rem;
+}
+.ftbt ul li:last-child{
+    margin-left: 60px;
+}
+.ftbt ul li:last-child a{
+    color: #999;
 }
 .ftsns{
-    position: relative;
-    bottom: 0;
-    left: 0;
+    margin-top: 76px;
+
 }
 .ftsns ul li{
     margin-right: 15px;
 }
+
+
