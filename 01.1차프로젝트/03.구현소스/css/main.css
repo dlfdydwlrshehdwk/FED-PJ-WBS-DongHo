@@ -1,12 +1,13 @@
 @charset "utf-8";
 @import url(./reset.css);
+@import url(./core.css);
 /* 외부 CSS 장착 */
 .main,.page,.bx {
     width: 100%;
     height: 100%;
 }
 body *{
-    outline: 1px dotted red;
+    /* outline: 1px dotted red; */
 }
 
 /************************ 페이지 1 ************************/
@@ -163,6 +164,7 @@ body *{
     top: 50%;
     transform: translateY(-50%
     );
+    color: #fff;
 }
 .p5cont label{
     font-size: 1.3rem;
@@ -173,9 +175,9 @@ body *{
 }
 .p5txt p{
     margin-top: 2.5rem;
+    margin-bottom: 30px;
 }
 .p5txt{
-    margin-bottom: 3rem;
     border-bottom: 3px solid #fff;
 }
 .p5ul{
@@ -192,7 +194,7 @@ body *{
 .p5ul ul li{
     font-size: 1.4rem;
     padding: 2rem 0;
-    border-bottom: 1px solid rgb(255,255,255,0.1);
+    border-bottom: 1px solid rgb(255,255,255,0.2);
 }
 .p5ul label{
     width: 100%;
@@ -203,6 +205,9 @@ body *{
 }
 .nayong{
     width: 10%;
+}
+.p5txtarea{
+    margin-top: 10px;
 }
 .p5txtarea textarea{
     border: none;
@@ -217,6 +222,19 @@ body *{
     align-items: center;
     justify-content: space-between;
     user-select: none;
+}
+.p5send input{
+    display: none;
+}
+.p5send input+label{
+    display: inline-block;
+    text-align: center;
+    font-weight: 400;
+}
+/* 체크박스 체크시 아이콘 변경 */
+.p5send input:checked+label{
+    font-weight: 900;
+    /* 체크된 상태의 아이콘 두께만 변경하면됨 */
 }
 
 .sendbt button{
@@ -240,17 +258,16 @@ body *{
 .page6{
     min-height: 623px;
 }
-.fttxt{
-    color: #333;
-    font-weight: 500;
-}
 
 
 .ftcont{
     width: 1760px;
     margin: 0 auto;
-    padding-top: 8.8rem;
-    padding-bottom: 7rem;
+    /* padding-top: 8.8rem;
+    padding-bottom: 7rem; */
+}
+.fttop{
+
 }
 .ftbx{
     display: flex;

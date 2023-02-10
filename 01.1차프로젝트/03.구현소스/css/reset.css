@@ -1,4 +1,7 @@
 @charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&family=Yusei+Magic&display=swap');
+/* font-family: 'Montserrat', sans-serif; */
+  /* font-family: 'Yusei Magic', sans-serif; */
 
 html{
     font-size: 10px;
@@ -15,6 +18,10 @@ h1,h2,h3,h4,h5,h6,ul,ol,li,p,dl,dt,dd{
   list-style: none;
   padding: 0;
   margin: 0;
+  font-family: 'Montserrat', sans-serif;
+}
+dl,dt,dd{
+    font-weight: 500;
 }
 body a{
     text-decoration: none;
