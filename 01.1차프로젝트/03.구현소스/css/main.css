@@ -21,6 +21,29 @@ body *{
     margin: 0 0 0 auto;
 }
 
+.circlebx{
+    position: absolute;
+    top: 63%;
+    left: 46%;
+}
+.circle{
+    width: 100px;
+    height: 100px;
+    background-color: rgb(255, 251, 21);
+    border-radius: 75px;
+    transition: width .3s ease-in-out;
+}
+.cirtxt{
+    position: absolute;
+    top: 50%;
+    left: 33%;
+    transform: translateY(-50%);
+    width: 500px;
+    font-size: 4rem;
+}
+.circle:hover{
+    width: 300px;
+}
 /************************ 페이지 2 ************************/
 .p2wrap{
     /* 플렉스박스 */
@@ -44,11 +67,18 @@ body *{
 }
 /* .bx3 ul */
 .bx3 ul{
+    position: relative;
+    left: 0;
     /* 플렉스박스 사진 가로정렬 */
     display: flex; 
     /* 트랜스폼 줘서 왼쪽으로 가게끔 해야함. */
-    transform: translateX();
+    /* transform: translateX(); */
+    width: 308%;
+    /* 애니 이시이지반방마 */
+    animation: txt 16s linear infinite;
+    animation-timing-function: 3s;
 }
+
 /* 사진마다 공간주기 */
 .bx3 li+li{
     margin-left: 30px;
@@ -62,6 +92,62 @@ body *{
     position: relative;
     top: 50%;
     transform: translateY(-50%);
+}
+/* 흐르는 글자 키프레임 */
+@keyframes txt {
+    
+    0%{
+        left: 0%;
+    }
+    6.25%{
+        left: -19.5%;
+    }
+    12.5%{
+        left: -19.5%;
+    }
+    18.75%{
+        left: -39%;
+    }
+    25%{
+        left: -39%;
+    }
+    31.25%{
+        left: -58.5%
+    }
+    37.5%{
+        left: -58.5%;
+    }
+    43.75%{
+        left: -78%;
+    }
+    50%{
+        left: -78%
+    }
+    56.25%{
+        left: -97.5%;
+    }
+    62.5%{
+        left: -97.5%;
+    }
+    68.75%{
+        left: -117%;
+    }
+    75%{
+        left: -117%;
+    }
+    81.25%{
+        left: -136.5%;
+    }
+    87.5%{
+        left: -136.5%;
+    }
+    93.75%{
+        left: -156%;
+    }
+        
+    100%{
+        left: -156%;
+    }
 }
 
 
@@ -153,7 +239,9 @@ body *{
 .p4img .bimg{
     justify-content: space-around;
 }
-
+.page4{
+    overflow: hidden;
+}
 
 
 /*************************** 페이지 5 ***********************/
