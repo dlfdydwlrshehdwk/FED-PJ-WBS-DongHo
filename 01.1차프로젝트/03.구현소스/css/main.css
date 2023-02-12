@@ -170,6 +170,7 @@ body *{
 .nhd li{
     line-height: 1em;
 }
+
 .p3show li>span{
     font-size: 1.8rem;
 }
@@ -187,11 +188,37 @@ body *{
 }
 /* 페이지3에서 슬롯머신박스 부분 */
 .nhd{
+    position: relative;
     height: 8rem;
     font-size: 8rem;
     /* 숫자한개만 보이게하고 나머지는 숨겨줌 */
     overflow: hidden;
+    top: 0;
 }
+.nhd ol{
+    position: relative;
+}
+
+.nhd2 ol{
+animation: nhd1 2s ease-in-out forwards;
+}
+.nhd1 ol{
+    animation: nhd2 2s ease-in-out forwards;
+}
+@keyframes nhd1 {
+    to{
+        transform: translateY(0%);
+    }
+}
+@keyframes nhd2 {
+    to{
+        transform: translateY(-89.2%);
+    }
+}
+
+
+
+
 /* 퍼센트/ 종 크기조절 */
 .pct span{
     font-size: 4rem;
@@ -246,7 +273,7 @@ body *{
     /* animation: txt3 30s linear infinite; */
 }
 .page4{
-    /* overflow: hidden; */
+    overflow: hidden;
 }
 @keyframes txt2 {
     to{
