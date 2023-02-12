@@ -143,8 +143,7 @@ body *{
     }
     93.75%{
         left: -156%;
-    }
-        
+    } 
     100%{
         left: -156%;
     }
@@ -213,8 +212,6 @@ body *{
 /******************* 페이지 4 **********************/
 .p4ani ul{
     display: flex;
-    width: 300%;
-    justify-content: space-evenly;
 }
 .p4txt{
     text-align: center;
@@ -226,23 +223,40 @@ body *{
 .p4img li{
     width: 24rem;
     height: 10rem;
+    margin: 0 10px;
 }
 .p4bx{
     position: relative;
     top: 50%;
     transform: translateY(-50%);
 }
-.p4ani .timg{
-    margin-bottom: 2rem;
-    justify-content: space-between;
+.p4ani{
+    width: 409%;
 }
-.p4img .bimg{
-    justify-content: space-around;
+.p4ani .timg{
+    position: relative;
+    left: -50%;
+    margin-bottom: 2rem;
+    animation: txt2 30s linear infinite;
+}
+.p4ani .bimg{
+    position: relative;
+    right: 0;
+    animation: txt3 30s linear infinite;
 }
 .page4{
-    overflow: hidden;
+    /* overflow: hidden; */
 }
-
+@keyframes txt2 {
+    to{
+        left: 0;
+    }
+}
+@keyframes txt3 {
+    to{
+        right: 50%;
+    }
+}
 
 /*************************** 페이지 5 ***********************/
 .p5cont{
