@@ -20,11 +20,12 @@ body *{
     flex-direction: column;
     margin: 0 0 0 auto;
 }
-
+.pob{
+    position: relative;
+}
 .circlebx{
     position: absolute;
-    top: 63%;
-    left: 46%;
+    top: 105%;
 }
 .circle{
     width: 100px;
@@ -35,13 +36,13 @@ body *{
 }
 .cirtxt{
     position: absolute;
-    top: 50%;
-    left: 33%;
-    transform: translateY(-50%);
-    width: 500px;
-    font-size: 4rem;
+    top: 105%;
+    left: 5%;
+    height: 100px;
+    line-height: 100px;
+    font-size: 2rem;
 }
-.circle:hover{
+.cbx:hover .circle{
     width: 300px;
 }
 /************************ 페이지 2 ************************/
@@ -75,7 +76,7 @@ body *{
     /* transform: translateX(); */
     width: 308%;
     /* 애니 이시이지반방마 */
-    animation: txt 32s linear infinite;
+    /* animation: txt 32s linear infinite; */
     animation-timing-function: 3s;
 }
 
