@@ -75,7 +75,7 @@ body *{
     /* transform: translateX(); */
     width: 308%;
     /* 애니 이시이지반방마 */
-    animation: txt 16s linear infinite;
+    animation: txt 32s linear infinite;
     animation-timing-function: 3s;
 }
 
@@ -237,12 +237,12 @@ body *{
     position: relative;
     left: -50%;
     margin-bottom: 2rem;
-    animation: txt2 30s linear infinite;
+    /* animation: txt2 30s linear infinite; */
 }
 .p4ani .bimg{
     position: relative;
     right: 0;
-    animation: txt3 30s linear infinite;
+    /* animation: txt3 30s linear infinite; */
 }
 .page4{
     /* overflow: hidden; */
