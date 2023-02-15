@@ -1,0 +1,49 @@
+/* sitemap 시작 core로 옮길예정 */
+.sitemap{
+    color: white;
+    background-color: #000;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9;
+}
+.sitemap_main{
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 1515px;
+    margin: 0 auto;
+}
+.sitemap_top ul{
+    display: flex;
+    justify-content: space-between;
+}
+.sitemap h2{
+    font-size: 6rem;
+    font-weight: bold;
+}
+.sitemap dl{
+    padding: 70px 25px;
+    border-left: 1px solid rgb(255, 255, 255,0.1);
+    margin-top: 75px;
+    width: 100%;
+}
+.sitemap dt{
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 2em;
+}
+.sitemap dd{
+    font-size: 1.7rem;
+    padding: 1em 0;
+}
+/* a를 누르면 나머지가 흐릿해지게 */
+/* .sitemap_cont dd a:hover .sitemap_cont>dl{
+    display: none;
+} */
+.sitemap a{
+    color: #fff;
+}
+.sitemap_cont{
+    display: flex;
+}
