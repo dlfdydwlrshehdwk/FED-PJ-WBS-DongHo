@@ -1,5 +1,6 @@
 /* sitemap 시작 core로 옮길예정 */
 .sitemap{
+    display: none;
     color: white;
     background-color: #000;
     position: fixed;
