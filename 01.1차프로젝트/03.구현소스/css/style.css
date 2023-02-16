@@ -19,6 +19,7 @@ body *{
     /* 플렉스정렬 */
     align-items: center;
     justify-content: space-between;
+    z-index: 999;
 }
 
 /* 가상요소로 서브메뉴창 만들기 */

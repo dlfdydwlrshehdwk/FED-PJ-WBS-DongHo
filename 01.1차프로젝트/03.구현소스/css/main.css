@@ -4,16 +4,6 @@
 
 /* 메인프로젝트 css 원본 */
 
-
-/* 외부 CSS 장착 */
-.main,.page,.bx {
-    width: 100%;
-    height: 100%;
-}
-body *{
-    /* outline: 1px dotted red; */
-}
-
 /************************ 페이지 1 ************************/
 .bx1{
     display: flex;

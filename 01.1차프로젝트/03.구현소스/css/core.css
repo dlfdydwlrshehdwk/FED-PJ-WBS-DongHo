@@ -1,4 +1,169 @@
-/* sitemap 시작 core로 옮길예정 */
+@charset "utf-8";
+@import url(./reset.css);
+/* 외부CSS 장착 */
+
+
+.main,.page,.bx {
+    width: 100%;
+    height: 100%;
+}
+body *{
+    /* outline: 1px dotted red; */
+}
+
+
+/* nav바 시작 */
+.nav{
+    position: fixed;
+    width: 100%;
+    /* nav flex박스 */
+    display: flex;
+    /* 박스크기 */
+    height: 120px;
+
+    /* 플렉스정렬 */
+    align-items: center;
+    justify-content: space-between;
+    z-index: 999;
+}
+
+/* 가상요소로 서브메뉴창 만들기 */
+.nav>ul>li::before{
+    content: '';
+    position: absolute;
+    display: block;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    height: 0;
+    width: 100%;
+    background-color: rgb(188, 197, 57) ; 
+    transition: all .3s ease-in;
+}
+/* 오버시 가상요소서브메뉴창 열기 */
+.nav>ul:hover>li::before{
+    display: block;
+    height: 400px;
+    transition-duration: .3s;
+}
+/* ul오버시 nav에 밑줄표시 */
+.nav>ul:hover::before{
+    border-bottom: 1px solid #ccc;
+}
+.nav>ul::before{
+    position: absolute;
+    content: '';
+    display: block;
+    width: 100%;
+    border-bottom: 0px solid #ccc;
+    left: 0;
+    top: 120px;
+    transition:  .2s;
+}
+
+
+/* nav 로고 */
+.nav .logo{
+    /* 로고 위치이동 */
+    margin-left: 50px;
+}
+.nav>ul{
+    /* nav안의 ul flex박스 */
+    display: flex;
+    
+}
+/* ul오버시 li들 패딩줘서 넓어지게하기 */
+.nav>ul:hover>li>a{
+    padding: 0 15px;
+    transition: all .4s;
+}
+
+/* 가상요소배경펼쳐질떄 a태그 기본색변경 */
+.nav>ul:hover a{
+    color: #000;
+}
+/* 가상요소 배경펼쳐질때 로고색 검은색변경 */
+
+
+/* 서브메뉴 펼쳐지기 높이설정 및 자연스럽게 보이게 */
+.nav>ul:hover>li .smenu{
+    height: 260px;
+    transition: 0.2s ease-in-out .2s;
+}
+/* 서브메뉴오버시 글자색변경 */
+.smenu li:hover>a{
+    color: aqua;
+}
+/* 서브메뉴오버시 밑줄색 */
+.smenu li:hover>a>span{
+    border-bottom: 1px solid aqua;
+}
+/* 가상요소 배경 펼쳐질떄 서브메뉴도 넓어지게 */
+.nav>ul:hover>li .smenu a{
+    padding: 0 15px;
+}
+
+/* nav a글자 설정 */
+.nav>ul>li>a{
+    color: #fff;
+    font-weight: bold;
+    font-size: 1.5rem;
+    display: block;
+    width: 150px;
+    line-height:8;
+    text-align: center;
+    transition: all .4s;
+}
+
+/* 서브메뉴 a글자 설정 */
+.smenu a{
+    color: #fff;
+    font-weight: bold;
+    font-size: 1.5rem;
+    text-align: center;
+    width: 150px;
+    display: block;
+}
+.smenu li:first-child{
+    padding-top: 20px;
+}
+
+/* 버튼위치이동 */
+.btn{
+    margin-right: 20px;
+}
+/* 서브메뉴 */
+.smenu{
+    position: absolute;
+    top: 120px;
+    line-height: 2;
+    height: 0;
+    overflow: hidden;
+    /* padding-top: 20px; */
+}
+/* 가상요소로 밑줄만들기 */
+.nav>ul>li>a::after{
+    content: '';
+    display: block;
+    margin-top: 1px;
+    /* 변경속성 width */
+    width: 0%;
+    margin-left: 50%;
+    height: 2px;
+    background-color: rgb(94, 223, 255);
+    /* 트랜지션: 속시이지 */
+    transition: all .3s;
+}
+/* 오버시 바 보이기 */
+.nav>ul>li:hover>a::after{
+    width: 100%;
+    margin-left: 0%; 
+}
+
+/* nav 끝 */
+
+
+/* sitemap 시작 */
 .sitemap{
     display: none;
     color: white;
@@ -6,7 +171,10 @@
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 9;
+    z-index: 999;
+}
+.sitemap.on{
+    display: block;
 }
 .sitemap_main{
     position: relative;
@@ -48,3 +216,7 @@
 .sitemap_cont{
     display: flex;
 }
+
+
+
+/* 사이트맵 끝 */
