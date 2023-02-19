@@ -45,6 +45,9 @@
     width: 300px;
 }
 /************************ 페이지 2 ************************/
+.page2{
+    position: relative;
+}
 .p2wrap{
     /* 플렉스박스 */
     display: flex;
@@ -451,14 +454,15 @@ animation: nhd1 2s ease-in-out forwards;
 /* 하단영역 시작 */
 .page6{
     min-height: 623px;
+    background-color: #fff;
 }
 
 
 .ftcont{
     width: 1760px;
     margin: 0 auto;
-    /* padding-top: 8.8rem;
-    padding-bottom: 7rem; */
+    padding-top: 8.8rem;
+    /* padding-bottom: 7rem; */ */
 }
 .fttop{
 
