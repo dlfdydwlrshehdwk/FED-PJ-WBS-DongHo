@@ -39,9 +39,9 @@
     top: 50%;
     left: 5%;
     font-size: 2rem;
-    transform: translateY(-50%);
+    transform: translate(5%,-50%);
 }
-.cbx:hover .circle{
+.circle:hover{
     width: 300px;
 }
 /************************ 페이지 2 ************************/
@@ -78,10 +78,11 @@
     /* transform: translateX(); */
     width: 308%;
     /* 애니 이시이지반방마 */
-    /* animation: txt 32s linear infinite; */
+    animation: txt 32s linear infinite;
 }
 .bx3 li{
     position: relative;
+    overflow: hidden;
 }
 .bx3 li div{
     position: absolute;
@@ -121,7 +122,7 @@ margin-bottom: 10px;
 .bx3 img{
     transition:  .3s;
 }
-.bx3 img:hover{
+.bx3 li:hover img{
     transform: scale(1.1);
 }
 
@@ -148,51 +149,27 @@ margin-bottom: 10px;
     0%{
         left: 0%;
     }
-    6.25%{
-        left: -19.5%;
-    }
-    12.5%{
-        left: -19.5%;
-    }
-    18.75%{
-        left: -39%;
+    17.5%{
+        left: 0%;
     }
     25%{
         left: -39%;
     }
-    31.25%{
-        left: -58.5%
-    }
-    37.5%{
-        left: -58.5%;
-    }
-    43.75%{
-        left: -78%;
+    42.5%{
+        left: -39%;
     }
     50%{
         left: -78%
     }
-    56.25%{
-        left: -97.5%;
-    }
-    62.5%{
-        left: -97.5%;
-    }
-    68.75%{
-        left: -117%;
+    67.5%{
+        left: -78%
     }
     75%{
         left: -117%;
     }
-    81.25%{
-        left: -136.5%;
+    92.5%{
+        left: -117%;
     }
-    87.5%{
-        left: -136.5%;
-    }
-    93.75%{
-        left: -156%;
-    } 
     100%{
         left: -156%;
     }
@@ -462,7 +439,7 @@ animation: nhd1 2s ease-in-out forwards;
     width: 1760px;
     margin: 0 auto;
     padding-top: 8.8rem;
-    /* padding-bottom: 7rem; */ */
+    /* padding-bottom: 7rem; */ 
 }
 .fttop{
 

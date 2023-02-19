@@ -224,8 +224,41 @@ body *{
 /* 페이지2의 버튼 */
 .p2btn{
     position: fixed;
-    width: 50px;
-    height: 50px;
-    bottom: 10px;
+    width: 70px;
+    height: 70px;
+    bottom: 20px;
     right: 10px;
+    background-color: #fff;
+    border-radius: 50%;
+}
+
+/* 컨택버튼 */
+
+.ctbtn{
+    position: fixed;    
+    bottom: 100px;
+    right: 10px;
+    width: 70px;
+    height: 70px;
+}
+.ctcircle{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 70px;
+    height: 70px;
+    background-color: #fff;
+    border-radius: 75px;
+    transition:  .3s;
+}
+.cttxt{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-size: 2rem;
+    transform: translate(-50%,-50%);
+    font-size: 1.5rem;
+}
+.ctbtn:hover .ctcircle{
+    width: 200px;
 }
