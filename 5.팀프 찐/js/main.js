@@ -80,14 +80,10 @@ function loadFn(){
     let length = ll/3;
 
     const sg = seq => {
-        console.log("sg:",seq)
-
         if(seq){
-            console.log("오른",num)
             num++;
         }
         else{
-            console.log("왼",num)
             num--;
         }
     
