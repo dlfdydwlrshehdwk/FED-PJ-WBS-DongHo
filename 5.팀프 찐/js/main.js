@@ -64,9 +64,72 @@ function loadFn(){
         }; ////// click함수 ///////////
 
     }); //////////// forEach ////////////
+
+
+
+
+
+
+
+    // 좌우뚫려있는 자유로운 행성박스
     
+    // 좌우 화살표 변수 mbtn
+    const mbtn = document.querySelectorAll('.mbtn');
+    // 행성슬라이드 변수 mslide 
+    const mslide = document.querySelector('#mslide');
+    // 광클금지 변수
+    let prot = 0;
+
+    const gs = (seq)=>{
+        if(prot) return ;
+        prot = 1;
+        setTimeout(()=>{
+            prot=0;
+        },400); //timeout ////
+        
+        // li리스트 변수
+        let clist = mslide.querySelectorAll('#mslide li');
+
+        // 오른쪽 버튼
+        if(seq){
+            // 한박스가아니라 박스기준1/3 만 이동해야하므로 33%
+            mslide.style.left = "-33.33%";
+            mslide.style.transition='.4s ease-in-out';
+            setTimeout(()=>{
+                mslide.appendChild(clist[0]);
+                mslide.style.left = '0'
+                mslide.style.transition='none';
+            },400);//timeout////
+        }// if ////
+
+        // 왼쪽버튼
+        else {
+            mslide.insertBefore(clist[clist.length-1],clist[0]);
+            // 한박스가아니라 박스기준1/3 만 이동해야하므로 33%
+            mslide.style.left = '-33.33%';
+            mslide.style.transition='none';
+            setTimeout(()=>{
+                mslide.style.left='0';
+                mslide.style.transition='.4s ease-in-out';
+            },0);//timeout////
+        }// else ////
+    };//gs////
+
+    // 실행코드
+    mbtn.forEach((ele,idx)=>{
+        ele.onclick=()=>{
+            gs(idx);
+        };//onclick////
+        ele.onmouseover=()=>{
+            ele.style.cursor='pointer';
+        };//onmouseover ////
+    });//forEach////
     
-    // 맨밑에 행성넘어가는 JS //////////////////////////////////
+
+
+
+    /*
+    // 맨밑에 행성넘어가는 JS - 좌우 막은버전 //////////////////////////////////
     
     // 좌우 화살표 변수 mbtn
     const mbtn = document.querySelectorAll('.mbtn');
@@ -78,8 +141,14 @@ function loadFn(){
     let num = 0;
     // 넘어가는 li가 3개씩이여서 화면100프로에 3개담으려고 3개로짜름
     let length = ll/3;
+    // 광클금지 변수
+    let prot = 0;
 
     const sg = seq => {
+        if(prot) return ;
+        prot = 1;
+        setTimeout(()=>{prot=0;},400)
+
         if(seq){
             num++;
         }
@@ -105,6 +174,7 @@ function loadFn(){
     });//forEach ////
 
     // 행성넘어가는 JS 끝부분 ////////////////////////////////////
+    */
 
 
 } ////////////////// loadFn 함수 //////////////
