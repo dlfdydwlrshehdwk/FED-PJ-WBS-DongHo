@@ -64,9 +64,19 @@ function loadFn(){
         }; ////// click함수 ///////////
 
     }); //////////// forEach ////////////
+    // 좌우 화살표 변수 mbtn
+    const mbtn = document.querySelectorAll('.mbtn');
+    // 행성슬라이드 변수 mslide 
+    const mslide = document.querySelector('#mslide')
 
-
-
+    // console.log("좌우화살표:",mbtn,"행성ul:",mslide);
+    
+    mbtn.forEach((ele)=>{
+        console.log(ele);
+        ele[1].onclick = () =>{
+            mslide.style.transform = 'translateX(-100%)';
+        }//onclick ////
+    });//forEach ////
 
 
 

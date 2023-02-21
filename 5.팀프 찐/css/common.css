@@ -69,7 +69,7 @@ nav.gnb ul{
   position: relative;
   width: 100%;
   height: 350px;
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 .info #mslide{
   display: flex;
