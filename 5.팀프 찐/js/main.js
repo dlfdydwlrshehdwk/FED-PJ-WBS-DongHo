@@ -64,20 +64,51 @@ function loadFn(){
         }; ////// click함수 ///////////
 
     }); //////////// forEach ////////////
+    
+    
+    // 맨밑에 행성넘어가는 JS //////////////////////////////////
+    
     // 좌우 화살표 변수 mbtn
     const mbtn = document.querySelectorAll('.mbtn');
     // 행성슬라이드 변수 mslide 
-    const mslide = document.querySelector('#mslide')
+    const mslide = document.querySelector('#mslide');
+    // list개수파악용변수
+    const ll = document.querySelectorAll('#mslide li').length;
+    // 슬라이드번호 담을 변수
+    let num = 0;
+    // 넘어가는 li가 3개씩이여서 화면100프로에 3개담으려고 3개로짜름
+    let length = ll/3;
 
-    // console.log("좌우화살표:",mbtn,"행성ul:",mslide);
+    const sg = seq => {
+        console.log("sg:",seq)
+
+        if(seq){
+            console.log("오른",num)
+            num++;
+        }
+        else{
+            console.log("왼",num)
+            num--;
+        }
     
-    mbtn.forEach((ele)=>{
-        console.log(ele);
-        ele[1].onclick = () =>{
-            mslide.style.transform = 'translateX(-100%)';
-        }//onclick ////
+    if(num===-1) num = num=0;
+    else if(num=== length) num= num-1;
+
+    mslide.style.left=(num*-100)+"%";
+
+    }//sg////
+    
+    // 최종실행코드
+    mbtn.forEach((ele,idx)=>{
+        ele.onclick=()=>{
+            sg(idx);
+        };// onclick ////
+        ele.onmouseover=()=>{
+            ele.style.cursor='pointer';
+        }
     });//forEach ////
 
+    // 행성넘어가는 JS 끝부분 ////////////////////////////////////
 
 
 } ////////////////// loadFn 함수 //////////////
