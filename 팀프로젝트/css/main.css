@@ -1,0 +1,147 @@
+@charset "utf-8";
+
+/* SOLAR SYSTEM PJ 메인 페이지 CSS - main.css */
+
+/* 외부 공통 CSS 합치기 */
+@import url(reset.css);
+@import url(core.css);
+@import url(common.css);
+
+
+/************* 2. 메인영역 **************/
+main.cont{
+  /* 슬라이드부모 */
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  /* 넘치는 자식요소 숨기기 */
+  overflow: hidden;
+  box-sizing: border-box;
+}
+#slide{
+  display: flex;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+#slide li{
+  position: relative;
+  flex-shrink: 0;
+  flex-basis: 100%;
+}
+#slide li::before{
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.4) 10%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.4) 100%);
+}
+#slide li img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+#slide .tbx{
+  position: absolute;
+  left: 200px;
+  top: 250px;
+  width: 20vw;
+  color: #fff;
+  font-family: 'Kanit', sans-serif;
+}
+#slide .tbg1{
+  top: 45vh;
+  padding: 25px;
+  width: 35vw;
+  background-color: rgba(28, 28, 28, 0.601);
+}
+#slide .tbg2{
+  top: 33vh;
+  padding: 25px;
+  width: 18vw;
+  background-color: rgba(28, 28, 28, 0.601);
+}
+#slide .tbx h2{
+  font-size: 4.2rem;
+  line-height: 1.2;
+  margin-bottom: 30px;
+}
+#slide .tbx p{
+  font-size: 2.2rem;
+  font-weight: 200;
+  line-height: 1.5;
+  margin-bottom: 30px;
+}
+#slide .tbx .btn{
+  width: 120px;
+  text-align: center;
+}
+#slide .tbx .btn a{
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 8px 5px;
+  box-sizing: border-box;
+  font-size: 1.6rem;
+  font-weight: 400;
+  color: #a9d3ee;
+  border: 1px solid #ffffff4b;
+  transition: .5s;
+}
+#slide .tbx .btn:hover a{
+  color: #fff;
+  border: 1px solid #ffffff;
+}
+
+/*이동버튼*/
+.abtn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  /*Y축 중앙이동*/
+}
+/*왼쪽버튼*/
+.ab1 {
+  left: 50px;
+}
+/*오른쪽버튼*/
+.ab2 {
+  right: 50px;
+}
+
+/*블릿버튼*/
+.indic {
+  display: flex;
+  position: absolute;
+  top: 90%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.indic li{
+  cursor: pointer;
+}
+.indic li+li{
+  margin-left: 30px;
+}
+
+.indic li img{
+  position: absolute;
+  /*이미지 겹치게*/
+  width: 10px;
+  height: 10px;
+}
+
+.indic li img:last-child {
+  /*회색이미지만 투명하게*/
+  opacity: 0;
+}
+/*회색블릿이미지가 보이게하는 class*/
+.indic li.on img:last-child {
+  /*회색이미지만 투명하게*/
+  opacity: 1;
+  /*우선적용!*/
+}
+
+
