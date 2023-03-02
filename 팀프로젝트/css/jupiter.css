@@ -17,13 +17,12 @@ body *{
 }
 
 /* 서브페이지 1 시작 */
-.page1{
-    background: url(../img/space.jpg) no-repeat  center/cover;
-}
+
 /* 행성박스 */
 .jbx{
     position: relative;
     height: 932px;
+    background: url(../img/space.jpg) no-repeat  center/cover;
 }
 /* 목성 */
 .jupiter{
@@ -35,6 +34,9 @@ body *{
     height: 200px;
     border-radius: 50%;
 }
+.s{
+    display: flex;
+}
 /* 행성정보박스 */
 .jtbx{
     position: absolute;
@@ -43,9 +45,22 @@ body *{
     width: 100%;
     background-color: #272727;
 }
+.jtxt li{
+    padding: 20px;
+}
 /* 행성 정보txt박스 */
 .jtxt{
     display: flex;
+    text-align: center;
+}
+.jtxt div{
+    color: #e96a76;
+    margin-bottom: 6px;
+}
+.jtxt span{
+    display: flex;
+    color: #fff;
+    justify-content: center;
 }
 /* more박스 */
 .more{
@@ -64,21 +79,38 @@ body *{
     color: #000;
 }
 /* 행성 정보 page1 ul */
-.p1ul ul{
+.p1ul>ul{
     display: flex;
-    justify-content: space-around;
+    /* justify-content: space-around; */
+    align-items: center;
 }
-.p1ul>ul>li:first-child>div{
-    font-size: 37px;
+ol li{
+    width: 300px;
+    text-align: center;
 }
-.p1ul li div:last-child{
+/* slide박스 */
+.slide{
+    width: 900px;
+    /* overflow: hidden; */
+}
+/* jupiter글자 */
+.p1ul>ul>li:first-child{
     color: #fff;
+    font-size: 37px;
+    font-weight: bold;
+    width: 300px;
 }
 .fz12{
     font-size: 12px;
 }
 .fz20{
     font-size: 20px;
+}
+.fz20 p{
+    margin-left: 5px;
+}
+.p1ul button{
+    color: #fff;
 }
 
 /* 서브페이지 1 끝 */
