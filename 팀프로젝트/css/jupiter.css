@@ -48,10 +48,7 @@ body *{
     background-color: #272727;
 }
 /* more박스 */
-.more{
-    position: absolute;
-    bottom: 0;
-    left: 0;
+.p1more{
     height: 36px;
     text-align: center;
     line-height: 36px;
@@ -65,10 +62,27 @@ body *{
 }
 .fz12{
     font-size: 12px;
+    color: red;
 }
 .fz20{
     font-size: 20px;
+    color: white;
 }
+.p1ul{
+    display: flex;
+}
+/* jupiter 글자 */
+.p1ul>li:first-child > div{
+    font-size: 40px;
+    color: white;
+}
+.p1_infobx{
+    display: flex;
+}
+.slidebx ol{
+    display: flex;
+}
+
 
 /* 서브페이지 1 끝 */
 
@@ -81,10 +95,41 @@ body *{
 .page2{
     background-color: #fff;
 }
+.p2top{
+    width: 100%;
+    background-color: brown;
+}
+.p2top ul{
+    display: flex;
+    width: 800px;
+    text-align: center;
+    margin: 0 auto;
+    justify-content: space-around;
+}
+.p2top a{
+    color: black;
+    font-size: 20px;
+}
+.p2txt{
+    width: 800px;
+    margin: 0 auto;
+    font-size: 19px;
+}
+.p2bythenumbers{
+    width: 900px;
+}
+.p2_3_titbx{
+    text-align: center;
+    background-color: #ece5e5;
+    font-weight: bold;
+}
 
 /* 서브페이지 2 끝 */
 /* 서브페이지 3 시작 */
 .page3{
     background-color: #ece5e5;
+}
+.p3grid{
+    display: grid;
 }
 /* 서브페이지 3 끝 */
