@@ -9,12 +9,12 @@
 
 /* 메인부분 공통 */
 body *{
-    outline: 2px dashed red;
+    /* outline: 2px dashed red; */
 }
 /* 각페이지 */
 .page{
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
 }
 
 /* 서브페이지 1 시작 */
@@ -128,8 +128,60 @@ body *{
 /* 서브페이지 3 시작 */
 .page3{
     background-color: #ece5e5;
+    
+}
+.p3cont{
+    box-sizing: border-box;
+    margin-top: 50px;
+    padding: 80px 48px 100px;
+}
+.p3cont header{
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 50px;
 }
 .p3grid{
     display: grid;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+    grid-template-columns: repeat(3,1fr);
+}
+.p3grid h3{
+    font-size: 18px;
+    margin-bottom: 12px;
+}
+.p3gridbx{
+    border-bottom: 1px solid #dcbfbf;
+    border-right: 1px solid #dcbfbf;
+}
+.bdrx{
+    border-right: none;
+}
+.bdbx{
+    border-bottom:  none;
+}
+
+.circle{
+    background-color: #dcbfbf;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: none;
+    margin: 0 auto;
+    line-height: 60px;
+    margin-bottom: 17px;
+    font-size: 22px;
+}
+.p3gridbx{
+    /* aspect-ratio: 280/400; */
+    padding: 33px 33px 33px 33px;
+}
+.ptn{
+    padding-top: 0;
+}
+.p3girdcont p{
+    font-size: 15px;
+    margin: 15px 0;
 }
 /* 서브페이지 3 끝 */
