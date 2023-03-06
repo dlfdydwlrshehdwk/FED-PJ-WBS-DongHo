@@ -60,6 +60,7 @@ body *{
     color: #000;
 }
 .fz12{
+    margin-bottom: 3px;
     font-size: 12px;
     color: #e96a76;
 }
@@ -68,13 +69,10 @@ body *{
     color: white;
 }
 .p1ul{
+    position: relative;
     display: flex;
-    justify-content: space-around;
     width: 1200px;
     margin: 0 auto;
-}
-.p1ul >li{
-    padding: 19px 22px;
 }
 /* jupiter 글자 */
 .p1ul>li:first-child > div{
@@ -82,10 +80,20 @@ body *{
     color: white;
 }
 .p1_infobx{
+    position: absolute;
     display: flex;
 }
+.slidebx{
+    overflow: hidden;
+}
 .slidebx ol{
+    width: 100%;
     display: flex;
+}
+.slidebx li {
+    padding: 19px 22px;
+    width: 300px;
+    box-sizing: border-box;
 }
 
 
