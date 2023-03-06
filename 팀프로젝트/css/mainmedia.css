@@ -85,7 +85,7 @@
     .top.active .ham{
         z-index: 9999;
         color: #fff;
-        transform: scale(1.5);
+        transform: scale(1);
     }
     .top.active .ham::before {
         content: '×';
@@ -157,7 +157,6 @@
 
 /* 600px 사이즈 이하 미디어쿼리 시작 */
 @media screen and (max-width: 600px) {
-
     .topbx{
         margin: 0 2vw;
         height: 8vh;
@@ -175,6 +174,16 @@
         font-size: 1.5rem;
     }
 
+    .info #mslide li {
+        margin: 0 9vw;
+        flex-basis: 65%;
+    }
+    .mb1 {
+        left: 50px;
+    }
+    .mb2 {
+        right: 50px;
+    }
 
 }
 /* 600px 사이즈 이하 미디어쿼리 끝 */

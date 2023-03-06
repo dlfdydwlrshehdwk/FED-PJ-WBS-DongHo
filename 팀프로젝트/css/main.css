@@ -7,6 +7,38 @@
 @import url(core.css);
 @import url(common.css);
 
+/* 스크롤바 안보이게 하기 */
+body{
+  -ms-overflow-style: none;
+}
+body::after{
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 9999;
+  background-color: #000;
+  animation: introAni 1s ease-in-out forwards;
+}
+::-webkit-scrollbar {
+  display: none;
+}
+
+@keyframes introAni {
+  0%{
+    opacity: 1;
+  }
+  90%{
+    opacity: 0;
+    height: 100vh;
+  }
+  100%{
+    opacity: 0;
+    height: 0;
+  }
+}
 
 /************* 2. 메인영역 **************/
 main.cont{

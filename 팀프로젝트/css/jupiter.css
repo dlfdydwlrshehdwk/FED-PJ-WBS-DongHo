@@ -21,7 +21,6 @@ body *{
 
 /* 행성박스 */
 .jbx{
-    position: relative;
     height: 932px;
     background: url(../img/space.jpg) no-repeat  center/cover;
 }
@@ -55,14 +54,14 @@ body *{
     width: 100%;
     background-color: #e96a76;
 }
-.more a{
+.p1more a{
     font-size: 17px;
     font-weight: bold;
     color: #000;
 }
 .fz12{
     font-size: 12px;
-    color: red;
+    color: #e96a76;
 }
 .fz20{
     font-size: 20px;
@@ -70,6 +69,12 @@ body *{
 }
 .p1ul{
     display: flex;
+    justify-content: space-around;
+    width: 1200px;
+    margin: 0 auto;
+}
+.p1ul >li{
+    padding: 19px 22px;
 }
 /* jupiter 글자 */
 .p1ul>li:first-child > div{
