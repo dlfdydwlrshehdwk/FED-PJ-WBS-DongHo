@@ -60,6 +60,7 @@ body *{
     color: #000;
 }
 .fz12{
+    margin-top: 4px;
     margin-bottom: 3px;
     font-size: 12px;
     color: #e96a76;
@@ -73,21 +74,30 @@ body *{
     display: flex;
     width: 1200px;
     margin: 0 auto;
+    justify-content: space-between;
 }
 /* jupiter 글자 */
 .p1ul>li:first-child > div{
     font-size: 40px;
     color: white;
+    padding: 19px 22px;
 }
 .p1_infobx{
-    position: absolute;
+    text-align: center;
+    position: relative;
     display: flex;
-}
-.slidebx{
+    height: 100%;
     overflow: hidden;
 }
+.slidebx{
+    position: relative;
+    /* ol부모 */
+    width: 900px;
+}
 .slidebx ol{
-    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
     display: flex;
 }
 .slidebx li {
@@ -95,6 +105,12 @@ body *{
     width: 300px;
     box-sizing: border-box;
 }
+.btns {
+    display: flex;
+    align-items: center;
+    font-size: 40px;
+}
+
 
 
 /* 서브페이지 1 끝 */
