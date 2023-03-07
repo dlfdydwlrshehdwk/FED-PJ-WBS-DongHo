@@ -82,6 +82,7 @@ body *{
     color: white;
     padding: 19px 22px;
 }
+/* p1 정보박스 */
 .p1_infobx{
     text-align: center;
     position: relative;
@@ -89,6 +90,7 @@ body *{
     height: 100%;
     overflow: hidden;
 }
+/* 슬라이드박스 */
 .slidebx{
     position: relative;
     /* ol부모 */
@@ -105,6 +107,7 @@ body *{
     width: 300px;
     box-sizing: border-box;
 }
+/* 버튼 중앙맞추려고... */
 .btns {
     display: flex;
     align-items: center;
@@ -121,12 +124,16 @@ body *{
 
 
 /* 서브페이지 2 시작 */
+
 .page2{
     background-color: #fff;
 }
+/* 페이지2 상단 */
 .p2top{
     width: 100%;
-    background-color: brown;
+    background-color: #ece5e5;
+    padding: 10px 0;
+    margin-bottom: 80px;
 }
 .p2top ul{
     display: flex;
@@ -136,13 +143,23 @@ body *{
     justify-content: space-around;
 }
 .p2top a{
-    color: black;
+    color: #9c6772;
     font-size: 20px;
 }
+/* 페이지2 내용출력박스 */
+.p2contbx{
+    width: 1200px;
+    margin: 0 auto;
+}
+
+/* 페이지2 overview 부분 */
 .p2txt{
-    width: 800px;
+    width: 600px;
     margin: 0 auto;
     font-size: 19px;
+}
+.p2txt p+p {
+    margin: 20px 0;
 }
 .p2bythenumbers{
     width: 900px;
@@ -153,7 +170,54 @@ body *{
     font-weight: bold;
 }
 
+/* 페이지2 indepth부분 */
+.p2indepth{
+    width: 600px;
+    margin: 0 auto;
+}
+.p2indepth h2{
+    font-size: 30px;
+    margin-bottom: 15px;
+}
+.p2indepth p{
+    font-size: 17px;
+    margin-bottom: 15px;
+}
+.minfo{
+    text-align: center;
+    font-size: 40px;
+}
+h3 >a {
+    color: black;
+}
+
+
+/* 페이지2 보여줬다 안보였다 */
+.p2contbx section{
+    display: none;
+}
+.p2contbx .show{
+    display: block;
+}
+
 /* 서브페이지 2 끝 */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* 서브페이지 3 시작 */
 .page3{
     background-color: #ece5e5;
