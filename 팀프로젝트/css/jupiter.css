@@ -191,9 +191,74 @@ h3 >a {
     color: black;
 }
 
+/* 페이지3 bythenumbes 부분 */
+.w-50{
+    width: 50%;
+    font-size: 17px;
+}
+.p2_3_main section{
+    margin-bottom: 30px;
+}
+.p2_3_main .w-50 span{
+    margin-left: 5px;
+    font-size: 14px;
+}
+/* 페이지3 첫번째 div 플렉스x  */
+.p2_3_main .db{
+    display: block;
+}
+/* 페이지3의 각종 박스들 */
+.p2_3_bx{
+    display: flex;
+}
+.p2_3_bx span{
+    font-size: 16px;
+}
+.p2bythenumbers{
+    margin: 0 auto;
+    text-align: center;
+}
+.p2_3_titbx{
+    font-size: 14px;
+    padding: 4px 0;
+    margin-bottom: 4px;
+}
+.bigcircle{
+    margin: 30px auto;
+    position: relative;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-color: #dcbfbf;
+}
+.bcjupiter{
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 14px;
+    color: red;
+}
+.smallcircle{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: black;
+}
+.smallcircle div{
+    position: absolute;
+    top: 100%;
+    left : 50%;
+    transform: translateX(-50%);
+    font-size: 14px;
+}
 
 /* 페이지2 보여줬다 안보였다 */
-.p2contbx section{
+.p2contbx>section{
     display: none;
 }
 .p2contbx .show{
