@@ -310,17 +310,74 @@ h3 >a {
     width: 1200px;
     margin: 0 auto;
 }
-.p2galleries a{
-    color: #000;
+.p2_5_top a{
+    color: #959696;
+    margin-right: 10px;
+    font-weight: bold;
+}
+.p2_5_top ul{
+    display: flex;
+    font-size: 20px;
+    margin-bottom: 50px;
+}
+.p2_5_top ul li+li::before{
+    content: '|';
+    color: #959696;
+}
+.p2_5_top ol {
+    display: flex;
+}
+.p2_5_top{
+    display: flex;
+    justify-content: space-between;
 }
 
 /* p2_5_cont_list 버전 */
+.p2_5_cont_list{
+    display: none;
+}
 .p2_5_cont_list ul li{
     display: flex;
+    padding: 20px 0;
+    border-bottom: 1px solid #ccc;
+}
+.p2_5_cont_list ul li:first-child{
+    border-top: 1px solid #ccc;
 }
 .p2_5_cont_list ul li a{
     font-size: 30px;
 }
+.p2_5_li_imgbx{
+    margin-right: 20px;
+}
+.p2_5_li_txtbx>div:first-child{
+    margin-bottom: 20px;
+}
+.p2_5_li_txtbx{
+    color: #3a3a3a;
+}
+.p2_5_li_txtbx a{
+    font-size: 29px;
+    font-weight: bold;
+    color:#3a3a3a;
+}
+.p2_5_li_txtbx a:hover{
+    text-decoration: underline;
+}
+.p2_5_li_txtbx p{
+    font-size: 18px;
+}
+/* p2_5_cont_list 버전  끝*/
+
+/* p2_5_cont_grid 버전 시작 */
+.p2_5_cont_grid{
+
+}
+.p2_5_gridbx ul{
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+}
+/* p2_5_cont_grid 버전 끝 */
 /* 페이지 2 - p2galleries 영역 끝 */
 
 /* 서브페이지 2 끝 */
