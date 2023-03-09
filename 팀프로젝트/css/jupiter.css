@@ -318,6 +318,9 @@ h3 >a {
 .p2_5_cont_list ul li{
     display: flex;
 }
+.p2_5_cont_list ul li a{
+    font-size: 30px;
+}
 /* 페이지 2 - p2galleries 영역 끝 */
 
 /* 서브페이지 2 끝 */
