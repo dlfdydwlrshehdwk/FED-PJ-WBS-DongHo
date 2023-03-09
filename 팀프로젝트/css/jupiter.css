@@ -192,10 +192,21 @@ h3 >a {
 }
 
 /* 페이지3 bythenumbes 부분 */
+/* width 50% 적용 */
 .w-50{
     width: 50%;
     font-size: 17px;
 }
+/* 페이지2 -3 윗부분 */
+.p2_3_top section{
+    display: flex;
+    margin-bottom: 30px;
+}
+/* 페이지 2-3 윗부분 이미지 */
+.p2_3_top_img{
+    margin-bottom: 10px;
+}
+/* 페이지 2-3 메인영역 섹션 */
 .p2_3_main section{
     margin-bottom: 30px;
 }
@@ -214,6 +225,7 @@ h3 >a {
 .p2_3_bx span{
     font-size: 16px;
 }
+/* 페이지 2-3 본문영역 기준 */
 .p2bythenumbers{
     margin: 0 auto;
     text-align: center;
