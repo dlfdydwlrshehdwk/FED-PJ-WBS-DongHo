@@ -277,6 +277,49 @@ h3 >a {
     display: block;
 }
 
+
+/* 페이지 2 - p2exploration 영역 */
+.p2exploration{
+    width: 600px;
+    margin: 0 auto;
+    line-height: 30px;
+}
+.p2exploration p {
+    font-size: 19px;
+    margin-bottom: 30px;
+}
+.p2exploration ul{
+    list-style-position: outside;
+    padding-left: 20px;
+}
+.p2exploration li{
+    list-style: disc;
+    margin-bottom: 20px;
+    font-size: 19px;
+}
+.p2exploration h2 {
+    font-size: 40px;
+    margin: 40px 0 30px;
+}
+
+/* 페이지 2 - p2exploration 영역 끝 */
+
+
+/* 페이지 2 - p2galleries 영역 시작 */
+.p2galleries {
+    width: 1200px;
+    margin: 0 auto;
+}
+.p2galleries a{
+    color: #000;
+}
+
+/* p2_5_cont_list 버전 */
+.p2_5_cont_list ul li{
+    display: flex;
+}
+/* 페이지 2 - p2galleries 영역 끝 */
+
 /* 서브페이지 2 끝 */
 
 
