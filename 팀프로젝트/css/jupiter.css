@@ -370,12 +370,16 @@ h3 >a {
 /* p2_5_cont_list 버전  끝*/
 
 /* p2_5_cont_grid 버전 시작 */
-.p2_5_cont_grid{
-
+.p2_5_cont_grid h3{
+    font-size: 15px;
 }
 .p2_5_gridbx ul{
     display: grid;
     grid-template-columns: repeat(5,1fr);
+    grid-column-gap: 20px;
+}
+.p2_5_gridbx li img {
+    width: 100%;
 }
 /* p2_5_cont_grid 버전 끝 */
 /* 페이지 2 - p2galleries 영역 끝 */
