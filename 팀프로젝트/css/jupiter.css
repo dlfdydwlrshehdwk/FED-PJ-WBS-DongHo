@@ -235,11 +235,18 @@ body *{
 }
 .p2indepth h2{
     font-size: 30px;
-    margin-bottom: 15px;
+    margin: 30px 0 15px;
 }
 .p2indepth p{
     font-size: 17px;
     margin-bottom: 15px;
+}
+.p2indepth img{
+    width: 100%;
+    margin: 15px 0;
+}
+.p2indepth div{
+    margin-bottom: 100px;
 }
 .minfo{
     text-align: center;
@@ -267,6 +274,9 @@ h3 >a {
 /* 페이지 2-3 메인영역 섹션 */
 .p2_3_main section{
     margin-bottom: 30px;
+}
+.p2_3_main section:last-child{
+    margin-bottom: 100px;
 }
 .p2_3_main .w-50 span{
     margin-left: 5px;
