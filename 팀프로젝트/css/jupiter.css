@@ -157,6 +157,7 @@ body *{
     width: 600px;
     margin: 0 auto;
     font-size: 19px;
+    margin-bottom: 50px;
 }
 .p2txt p+p {
     margin: 20px 0;
@@ -169,6 +170,53 @@ body *{
     background-color: #ece5e5;
     font-weight: bold;
 }
+/* 슬라이드 크기조절 밑 다른애 안보이기 */
+.p2slide{
+    width: 800px;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+}
+/* 슬라이드 가로배치 */
+.p2slide ul{
+    display: flex;
+    font-size: 13px;
+}
+/* p2슬라이드 이미지 */
+.p2slide img{
+    margin-bottom: 15px;
+}
+/* p2슬라이드 불릿 가로정렬 밑 위치조정 */
+.p2slide_bullet ol{
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    gap: 0 40px;
+}
+/* p2슬라이드 불릿 겹치기 + 안보이기 - show주면 켜짐 */
+.p2slide_bullet img{
+    position: absolute;
+    display: none;
+}
+.p2slide_btns{
+    position: absolute;
+}
+.p2slide_btns a{
+    font-size: 40px;
+    color: #222;
+}
+.p2slide_btns_left{
+    top: 50%;
+    left: 10%;
+}
+.p2slide_btns_right{
+    top: 50%;
+    right: 10%;
+}
+
+
 
 /* 페이지2 indepth부분 */
 .p2indepth{
