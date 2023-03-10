@@ -154,6 +154,10 @@ body *{
     width: 1200px;
     margin: 0 auto;
 }
+.p2contbx p ,
+.p2contbx h2{
+    color : #3a3a3a
+}
 
 /* 페이지2 overview 부분 */
 .p2overview p{
