@@ -135,6 +135,9 @@ body *{
     padding: 10px 0;
     margin-bottom: 80px;
 }
+.p2top li:hover a{
+    color: #222;
+}
 .p2top ul{
     display: flex;
     width: 800px;
@@ -153,6 +156,9 @@ body *{
 }
 
 /* 페이지2 overview 부분 */
+.p2overview p{
+    color :#3a3a3a
+}
 .p2txt{
     width: 600px;
     margin: 0 auto;
