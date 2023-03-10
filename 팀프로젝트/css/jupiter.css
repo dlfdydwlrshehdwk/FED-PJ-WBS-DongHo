@@ -270,7 +270,7 @@ h3 >a {
 }
 
 /* 페이지2 보여줬다 안보였다 */
-.p2contbx>section{
+.p2contbx article{
     display: none;
 }
 .p2contbx .show{
