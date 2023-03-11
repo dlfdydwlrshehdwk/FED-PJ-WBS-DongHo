@@ -178,6 +178,7 @@ function loadFn(){
 
         page1_btns.forEach((ele,idx)=>{
             ele.onclick=()=>{
+                event.preventDefault();
                 page1sg(idx);
             }
         });
@@ -222,12 +223,22 @@ function loadFn(){
             }
         })
 
-
+        // 페이지2의 moreinfo누르면 알림창
         const p3minfo = document.querySelector('.minfo')
         p3minfo.onclick = ()=>{
             event.preventDefault();
             alert('준비중입니다.')
         }
+
+        // 페이지2의 갤러리 list와 grid
+        // 이벤트 대상
+        const p2gallery_a = document.querySelectorAll('.p2_5_top a');
+        
+        p2gallery_a.forEach((ele)=>{
+            ele.onclick = () => {
+                event.preventDefault();
+            }
+        })
 
 
 
