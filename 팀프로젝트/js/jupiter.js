@@ -135,7 +135,7 @@ function loadFn(){
             -> 화살표를 누르면 슬라이드의 left값을 이동
 
         2. 1페이지의 MORE 버튼을 누르면 2페이지로 부드럽게 이동
-
+        
         3. 2페이지의 각 서브제목을 누르면
         누른 서브제목의 글씨와 크기를 바꾸고
         서브제목에 맞는 내용을 출력( 클래스 show를 줘 보이게만듬)
@@ -145,12 +145,49 @@ function loadFn(){
         li버튼을 누르면 li형식의 데이터를 출력하고
         grid버튼을 누르면 grid 형식의 데이터를 출력해준다.
         데이터는 객체를 이용해 출력해준다.
-
-        
-
-
-
     */
+
+        // 1. 1페이지 슬라이드구역 - 닫히는 슬라이드
+        
+        // 페이지1 버튼
+        const page1_btns = document.querySelectorAll('.btns')
+        // 페이지1 ol슬라이드
+        const page1_slide = document.querySelector('.slidebx ol')
+        // 페이지1 페이지 리스트개수 파악용
+        const page1_slide_li = document.querySelectorAll('.slidebx ol li').length;
+        // 페이지리스트개수 변수
+        let qwe = 0;
+
+        const page1sg = seq => {
+            if(prott) return ;
+            prott = 1;
+            setTimeout(()=>{prott=0;},400)
+            if(seq){
+                qwe++;
+                page1_slide.style.transition = '.2s'
+            }
+            else{
+                qwe--;
+                page1_slide.style.transition = '.2s'
+            }
+        
+        if(qwe===-1) qwe = qwe=0;
+        else if(qwe=== page1_slide_li-2) qwe= qwe-1;
+        page1_slide.style.left=(qwe*-33)+"%";
+        }
+
+        page1_btns.forEach((ele,idx)=>{
+            ele.onclick=()=>{
+                page1sg(idx);
+            }
+        });
+
+        // 2. more버튼을 누르면page2로 이동 - 완료
+        document.querySelector('.p1more').onclick= ()=>{
+            event.preventDefault();
+           location.href="#page2"
+        }
+
 
 
 

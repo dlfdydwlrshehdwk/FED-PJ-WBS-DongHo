@@ -5,7 +5,9 @@
 @import url(./core.css);
 @import url(./reset.css);
 
-
+html{
+    scroll-behavior: smooth;
+}
 
 /* 메인부분 공통 */
 body *{
@@ -112,13 +114,12 @@ body *{
     display: flex;
     align-items: center;
     font-size: 40px;
+    z-index: 1;
 }
 
 
 
 /* 서브페이지 1 끝 */
-
-
 
 
 

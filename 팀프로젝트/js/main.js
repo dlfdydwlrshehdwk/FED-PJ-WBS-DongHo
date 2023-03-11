@@ -339,6 +339,8 @@ function loadFn(){
     let length = ll/3;
     // 광클금지 변수
     let prot = 0;
+
+    
     const sg = seq => {
         if(prot) return ;
         prot = 1;
