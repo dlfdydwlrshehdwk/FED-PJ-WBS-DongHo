@@ -136,7 +136,9 @@ body *{
     padding: 10px 0;
     margin-bottom: 80px;
 }
-.p2top li:hover a{
+.p2top li:hover a,
+.p2top li.black a
+{
     color: #222;
 }
 .p2top ul{

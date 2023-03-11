@@ -188,10 +188,46 @@ function loadFn(){
            location.href="#page2"
         }
 
+        // 3. 페이지2의 각 소제목을 누르면
+        // 각소제목에 글씨색을 기본색으로 바꿔주고 다른 소제목에 클래스를 지워주고 
+        // 클릭한 소제목에 클래스를준고 글씨색을 바꿔줌 - 완료
+        // 이벤트대상 : .p2top li
+        const p2topli = document.querySelectorAll('.p2top li');
+        // 변경대상 : .page2 article
+        const p2article = document.querySelectorAll('.page2 article')
+
+        /* 
+            함수명 showarticle
+            기능 p2topli를 클릭하면 소제목에 클래스 넣어 보여주기
+        */
+        function showarticle (seq) {
+            // 메뉴초기화
+            for(let x of p2article){
+                x.classList.remove('show');
+            }
+            p2article[seq].classList.add('show');
+
+            for(let x of p2topli){
+                x.classList.remove('black');
+            }
+            p2topli[seq].classList.add('black')
+        }
+        // 최초실행
+        showarticle(0);
+        // 실행코드
+        p2topli.forEach((ele,idx)=>{
+            ele.onclick= ()=>{
+                event.preventDefault();
+                showarticle(idx);
+            }
+        })
 
 
-
-
+        const p3minfo = document.querySelector('.minfo')
+        p3minfo.onclick = ()=>{
+            event.preventDefault();
+            alert('준비중입니다.')
+        }
 
 
 
