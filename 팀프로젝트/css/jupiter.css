@@ -610,6 +610,14 @@ h3 >a {
     }
     .p3grid {
         grid-template-columns: repeat(2,1fr);
+        /* border: 1px solid #dcbfbf; */
+        border-left: 1px solid #dcbfbf;
+    }
+    .bdrx {
+        border-right: 1px solid #dcbfbf;
+    }
+    .bdbx {
+        border-bottom: 1px solid #dcbfbf;
     }
     .ptn {
         padding: 20px;
