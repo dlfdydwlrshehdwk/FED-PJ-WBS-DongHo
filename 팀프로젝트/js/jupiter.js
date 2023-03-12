@@ -162,35 +162,44 @@ function loadFn(){
             if(prott) return ;
             prott = 1;
             setTimeout(()=>{prott=0;},400)
+            // 오른쪽버튼을 누르면
             if(seq){
                 qwe++;
                 page1_slide.style.transition = '.2s'
             }
+            // 왼쪽버튼을 누르면
             else{
                 qwe--;
                 page1_slide.style.transition = '.2s'
             }
-        
+        // 눌러서 왼쪽 끝으로 간다면
         if(qwe===-1){
             qwe = qwe=0;
             // // 900이하 미디어쿼리
             // if(window.innerWidth<900){
-            //     mslide.style.left = "-83%";
             // }
             // // 1200이하 미디어쿼리
             // if(window.innerWidth<1200){
-            //     mslide.style.left = "-83%";
+
             // }
         } 
             
-
-        // else if(qwe=== page1_slide_li-2) qwe= qwe-1;
-        // page1_slide.style.left=(qwe*-300)+"px";
-        // }
+        // 눌러서 오른쪽 끝까지 간다면
         else if(qwe=== page1_slide_li-2) qwe= qwe-1;
-        page1_slide.style.left=(qwe*-33)+"%";
+        page1_slide.style.left=(qwe*-300)+"px";
 
+            // 900이하 미디어쿼리
+            // if(window.innerWidth<900){
+            // }
+            // 1200이하 미디어쿼리
+            // if(window.innerWidth<1200){
+            //     if(qwe=== page1_slide_li-1) qwe= qwe-1;
+            // page1_slide.style.left=(qwe*-300)+"px";
+            // }
         }
+        // else if(qwe=== page1_slide_li-2) qwe= qwe-1;
+        // page1_slide.style.left=(qwe*-33)+"%";
+        // }
 
         page1_btns.forEach((ele,idx)=>{
             ele.onclick=()=>{
