@@ -149,10 +149,12 @@ body *{
 }
 .p2top ul{
     display: flex;
-    width: 800px;
+    max-width: 800px;
     text-align: center;
     margin: 0 auto;
     justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 0 10px;
 }
 .p2top a{
     color: #9c6772;
@@ -174,9 +176,9 @@ body *{
     color :#3a3a3a
 }
 .p2txt{
-    width: 600px;
+    max-width: 600px;
     margin: 0 auto;
-    font-size: 19px;
+    font-size: min(19px,3vw);
     margin-bottom: 50px;
 }
 .p2txt p+p {
@@ -240,15 +242,15 @@ body *{
 
 /* 페이지2 indepth부분 */
 .p2indepth{
-    width: 600px;
+    max-width: 600px;
     margin: 0 auto;
 }
 .p2indepth h2{
-    font-size: 30px;
+    font-size: min(30px,9vw);
     margin: 30px 0 15px;
 }
 .p2indepth p{
-    font-size: 17px;
+    font-size: min(17px,2.5vw);
     margin-bottom: 15px;
 }
 .p2indepth img{
@@ -358,13 +360,14 @@ h3 >a {
 
 /* 페이지 2 - p2exploration 영역 */
 .p2exploration{
-    width: 600px;
+    max-width: 600px;
+    min-width: 400px;
     margin: 0 auto;
-    line-height: 30px;
+    line-height: min(30px,3vw);
 }
 .p2exploration p {
-    font-size: 19px;
-    margin-bottom: 30px;
+    font-size: min(19px,1.6vw);
+    margin:0 10px 30px;
 }
 .p2exploration ul{
     list-style-position: outside;
@@ -372,12 +375,12 @@ h3 >a {
 }
 .p2exploration li{
     list-style: disc;
-    margin-bottom: 20px;
-    font-size: 19px;
+    margin-bottom: min(20px,1.5vw);
+    font-size: min(19px,2vw);
 }
 .p2exploration h2 {
-    font-size: 40px;
-    margin: 40px 0 30px;
+    font-size: min(40px,4vw);
+    margin: 40px 10px 30px;
 }
 
 /* 페이지 2 - p2exploration 영역 끝 */
@@ -385,7 +388,7 @@ h3 >a {
 
 /* 페이지 2 - p2galleries 영역 시작 */
 .p2galleries {
-    min-width: 500px;
+    min-width: 400px;
     max-width: 1200px;
     margin: 0 auto;
 }
@@ -619,5 +622,41 @@ h3 >a {
     }
     .p2_5_li_txtbx>div:first-child {
         margin-bottom: 10px;
+    }
+    .p2indepth {
+        max-width: 600px;
+        min-width: 400px;
+        margin: 0 10px;
+    }
+    .p2indepth h2 {
+        font-size: min(30px,9vw);
+        margin: 10px 0 5px;
+    }
+    .p2indepth p {
+        font-size: min(17px,2.5vw);
+        margin-bottom: 10px;
+    }
+    .p2top {
+        width: 100%;
+        background-color: #ece5e5;
+        padding: 10px 0;
+        margin-bottom: 40px;
+    }
+}
+@media screen and (max-width : 500px) {
+    .p2top ul {
+        flex-direction: column;
+    }
+    .p2_5_gridbx{
+        margin: 0 10px;
+    }
+    .p2top {
+        margin-bottom: 20px;
+    }
+    .p2txt p+p {
+        margin: 15px 0;
+    }
+    .p2exploration {
+        line-height: 15px;
     }
 }
