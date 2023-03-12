@@ -385,7 +385,7 @@ h3 >a {
 
 /* 페이지 2 - p2galleries 영역 시작 */
 .p2galleries {
-    width: 1200px;
+    max-width: 1200px;
     margin: 0 auto;
 }
 .p2_5_top a{
@@ -564,5 +564,17 @@ h3 >a {
     .p1ul {
         width: 1200px;
         justify-content: space-evenly;
+    }
+    .p2_5_gridbx ul {
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        grid-gap: min(20px,10vw);
+    }
+}
+@media screen and (max-width : 800px) {
+    .p2_5_gridbx ul {
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        grid-gap: 20px;
     }
 }
