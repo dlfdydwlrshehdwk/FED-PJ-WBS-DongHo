@@ -1,3 +1,4 @@
+
 window.addEventListener("DOMContentLoaded", loadFn);
 
 /****************************************** 
@@ -6,7 +7,6 @@ window.addEventListener("DOMContentLoaded", loadFn);
 ******************************************/
 
 function loadFn(){
-
     console.log("로딩완료!");
 
 
@@ -240,6 +240,92 @@ function loadFn(){
             }
         })
 
+
+        
+        // 출력대상 : 
+        // (1) .p2_5_cont_list
+        const p25licontbx = document.querySelector('.p2_5_cont_list');
+         // (2)  p2_5_gridbx
+         const gridcontbx = document.querySelector('.p2_5_gridbx');
+
+        /* 
+            함수명 : p2g_list 
+            기능 : 페이지2 갤러리에 배열 데이터를 출력
+        */    
+        function p2g_list() {
+            // console.log(p2g_linfo["제목"][3])
+            let hcode = "<ul>";
+            for(let i = 0; i<10; i++){
+                hcode += `
+                <li>
+                <div class="p2_5_li_imgbx">
+                    <a href="#">
+                        <img src="./img/${p2g_linfo["이미지"][i]}.jpg" alt="#">
+                    </a>
+                </div>
+                <div class="p2_5_li_txtbx">
+                    <div>
+                        <a href="#">${p2g_linfo["제목"][i]}</a>
+                    </div>
+                    <div>
+                        <p>${p2g_linfo["내용"][i]}</p>
+                    </div>
+                </div>
+            </li>
+                `;
+            }//for문////
+            hcode += "</ul>"
+            // console.log(hcode)
+            p25licontbx.innerHTML = hcode;
+            p25licontbx.classList.add('show');
+        }//p2g_list 함수 ////
+
+        // 최초 list 형식이니 실행
+        p2g_list();
+
+        /* 
+            함수명 : p2g_grid
+            기능 : 페이지2 갤러리에 그리드 형식으로 출력
+        */
+        function p2g_grid() {
+            
+            let hcode = `<ul>`
+            for(let i = 0; i<10; i++){
+                hcode += `
+                <li>
+                    <div>
+                    <img src="./img/${p2g_linfo["이미지"][i]}.jpg" alt="#">
+                    </div>
+                    <div>
+                        <a href="#">${p2g_linfo["제목"][i]}</a>
+                    </div>
+                </li>
+                `;
+            } // for문 ////
+            hcode += `</ul>`;
+            gridcontbx.innerHTML = hcode;
+            gridcontbx.classList.add('show');
+        }//p2ggrid   함수 ////
+
+        // list 나 gird누르면 그에맞는 형식으로 출력되어 보이기
+        // 이벤트대상 .p2gallerries_look
+        const p5glook = document.querySelectorAll('.p2gallerries_look');
+        p5glook.forEach((ele,idx)=>{
+            ele.onclick = () => {
+                if(idx === 0 ){
+                    gridcontbx.classList.remove('show');
+                    p2g_list();
+
+                }
+                else {
+                    p25licontbx.classList.remove('show');
+                    p2g_grid();
+                }
+
+            }; //click ////
+        })//forEach ////
+
+       
 
 
 } ////////////////// loadFn 함수 //////////////
