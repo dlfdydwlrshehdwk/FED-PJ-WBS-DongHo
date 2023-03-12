@@ -385,6 +385,7 @@ h3 >a {
 
 /* 페이지 2 - p2galleries 영역 시작 */
 .p2galleries {
+    min-width: 500px;
     max-width: 1200px;
     margin: 0 auto;
 }
@@ -424,7 +425,7 @@ h3 >a {
     border-top: 1px solid #ccc;
 }
 .p2_5_cont_list ul li a{
-    font-size: 30px;
+    font-size: min(30px,3vw);
 }
 .p2_5_li_imgbx{
     width: 23%;
@@ -449,7 +450,7 @@ h3 >a {
     text-decoration: underline;
 }
 .p2_5_li_txtbx p{
-    font-size: 18px;
+    font-size: min(18px,2vw);
 }
 /* p2_5_cont_list 버전  끝*/
 
@@ -570,11 +571,53 @@ h3 >a {
         grid-template-columns: repeat(4,1fr);
         grid-gap: min(20px,10vw);
     }
+    .p1_infobx {
+        margin: 0 auto;
+    }
+    .slidebx {
+        max-width: 600px;
+    }
+    .p1ul {
+        max-width: 900px;
+        margin: 0 auto;
+    }
 }
-@media screen and (max-width : 800px) {
+
+
+
+
+
+
+
+@media screen and (max-width : 900px) {
     .p2_5_gridbx ul {
         display: grid;
         grid-template-columns: repeat(3,1fr);
         grid-gap: 20px;
+    }
+    .slidebx {
+        max-width: 300px;
+    }
+    .p1ul {
+        max-width: 600px;
+    }
+    .p2_5_gridbx ul {
+        grid-template-columns: repeat(3,1fr);
+        grid-gap: min(20px,10vw);
+    }
+}
+
+@media screen and (max-width : 600px) {
+    .p2_5_gridbx ul {
+        grid-template-columns: repeat(1,1fr);
+        grid-gap: 10px;
+    }
+    .p2contbx {
+        max-width: 1200px;
+        min-width: 300px;
+        margin: 0 auto;
+    }
+    .p2_5_li_txtbx>div:first-child {
+        margin-bottom: 10px;
     }
 }

@@ -171,9 +171,25 @@ function loadFn(){
                 page1_slide.style.transition = '.2s'
             }
         
-        if(qwe===-1) qwe = qwe=0;
+        if(qwe===-1){
+            qwe = qwe=0;
+            // // 900이하 미디어쿼리
+            // if(window.innerWidth<900){
+            //     mslide.style.left = "-83%";
+            // }
+            // // 1200이하 미디어쿼리
+            // if(window.innerWidth<1200){
+            //     mslide.style.left = "-83%";
+            // }
+        } 
+            
+
+        // else if(qwe=== page1_slide_li-2) qwe= qwe-1;
+        // page1_slide.style.left=(qwe*-300)+"px";
+        // }
         else if(qwe=== page1_slide_li-2) qwe= qwe-1;
         page1_slide.style.left=(qwe*-33)+"%";
+
         }
 
         page1_btns.forEach((ele,idx)=>{
