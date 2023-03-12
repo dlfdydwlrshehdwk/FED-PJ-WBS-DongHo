@@ -185,17 +185,19 @@ function loadFn(){
         } 
             
         // 눌러서 오른쪽 끝까지 간다면
-        else if(qwe=== page1_slide_li-2) qwe= qwe-1;
-        page1_slide.style.left=(qwe*-300)+"px";
-
+        else if(qwe=== page1_slide_li-2){
+            qwe= qwe-1;
             // 900이하 미디어쿼리
             // if(window.innerWidth<900){
             // }
             // 1200이하 미디어쿼리
             // if(window.innerWidth<1200){
-            //     if(qwe=== page1_slide_li-1) qwe= qwe-1;
-            // page1_slide.style.left=(qwe*-300)+"px";
+            //     qwe === page1_slide_li-1;
             // }
+
+        }
+        page1_slide.style.left=(qwe*-300)+"px";
+
         }
         // else if(qwe=== page1_slide_li-2) qwe= qwe-1;
         // page1_slide.style.left=(qwe*-33)+"%";
