@@ -608,6 +608,15 @@ h3 >a {
         grid-template-columns: repeat(3,1fr);
         grid-gap: min(20px,10vw);
     }
+    .p3grid {
+        grid-template-columns: repeat(2,1fr);
+    }
+    .ptn {
+        padding: 20px;
+    }
+    .p3gridbx {
+        padding: 20px;
+    }
 }
 
 @media screen and (max-width : 600px) {
@@ -642,6 +651,7 @@ h3 >a {
         padding: 10px 0;
         margin-bottom: 40px;
     }
+    
 }
 @media screen and (max-width : 500px) {
     .p2top ul {
@@ -658,5 +668,20 @@ h3 >a {
     }
     .p2exploration {
         line-height: 15px;
+    }
+    .p3grid {
+        grid-template-columns: repeat(1,1fr);
+        border: 1px solid #dcbfbf;
+        border-bottom: 1px solid #dcbfbf;
+        border-right: none;
+    }
+    .bdrx {
+        border-right: 1px solid #dcbfbf;
+    }
+    .bdbx {
+        border-bottom: 1px solid #dcbfbf;
+    }
+    .ptn {
+        padding: 33px;
     }
 }
