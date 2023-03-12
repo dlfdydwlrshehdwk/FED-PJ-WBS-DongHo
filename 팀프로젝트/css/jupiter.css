@@ -7,6 +7,7 @@
 
 html{
     scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 
 /* 메인부분 공통 */
@@ -23,18 +24,22 @@ body *{
 
 /* 행성박스 */
 .jbx{
-    height: 932px;
+    position: relative;
+    height: 100vh;
     background: url(../img/space.jpg) no-repeat  center/cover;
 }
 /* 목성 */
-.jupiter{
+.jibx{
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
-    width: 200px;
-    height: 200px;
+    min-width: 600px;
     border-radius: 50%;
+}
+.jibx img {
+    width: 600px;
+    /* aspect-ratio: 480/360; */
 }
 /* p1 하단바 */
 .s{
@@ -155,7 +160,8 @@ body *{
 }
 /* 페이지2 내용출력박스 */
 .p2contbx{
-    width: 1200px;
+    max-width: 1200px;
+    min-width: 600px;
     margin: 0 auto;
 }
 .p2contbx p ,
@@ -551,3 +557,12 @@ h3 >a {
     margin: 15px 0;
 }
 /* 서브페이지 3 끝 */
+
+
+/* 미디어쿼리 */
+@media screen and (max-width:1200px) {
+    .p1ul {
+        width: 1200px;
+        justify-content: space-evenly;
+    }
+}
