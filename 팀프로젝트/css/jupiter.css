@@ -185,7 +185,7 @@ body *{
     margin: 20px 0;
 }
 .p2bythenumbers{
-    width: 900px;
+    max-width: 900px;
 }
 .p2_3_titbx{
     text-align: center;
@@ -399,7 +399,7 @@ h3 >a {
 }
 .p2_5_top ul{
     display: flex;
-    font-size: 20px;
+    font-size: min(20px,2vw);
     margin-bottom: 60px;
 }
 .p2_5_top ul li+li::before{
@@ -624,6 +624,9 @@ h3 >a {
     }
     .p3gridbx {
         padding: 20px;
+    }
+    .p2_3_top{
+        display: none;
     }
 }
 
