@@ -21,7 +21,46 @@ body *{
 }
 
 /* 서브페이지 1 시작 */
+.page1 {
+    position: relative;
+    background-color: #000;
+}
+.p1bg{
+    height: 100vh;
+    background: url(../img/jupiter_bg.jpg) no-repeat right;
+    margin: 0 0 0 auto;
+}
+.p1txtbx {
+    position: absolute;
+    top: 35%;
+    left: 10%;
+    color: #e5e5e5;
+}
+.p1txtbx h2{
+    font-size: min(60px,6vw);
+    margin-bottom: 10px;
+}
+.p1txtbx p{
+    font-size: min(19px, 2.2vw);
+    margin-bottom: 10px;
+    line-height: 30px;
+}
+.p1txtbx a{
+    font-size: min(30px, 3.5vw);
+    transition: .3s;
+}
+.p1txtbx div:hover a{
+    color: yellow;
+    text-shadow:  0px 0px 20px goldenrod;
+    transform-origin: left;
+}
 
+/* 선 */
+.sun{
+    position: absolute;
+    top: -90px;
+    left: 0;
+}
 /* 행성박스 */
 .jbx{
     position: relative;
@@ -55,6 +94,8 @@ body *{
 }
 /* more박스 */
 .p1more{
+    position: absolute;
+    bottom: 0;
     height: 36px;
     text-align: center;
     line-height: 36px;
