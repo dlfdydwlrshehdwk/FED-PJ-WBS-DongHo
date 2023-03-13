@@ -187,8 +187,9 @@ body *{
 .p2top{
     width: 100%;
     background-color: #ece5e5;
-    padding: 10px 0;
+    padding: 10px;
     margin-bottom: 80px;
+    box-sizing: border-box;
 }
 .p2top li:hover a,
 .p2top li.black a
@@ -680,6 +681,12 @@ h3 >a {
         /* border: 1px solid #dcbfbf; */
         border-left: 1px solid #dcbfbf;
     }
+    .p3grid>div:first-child{
+        border-top: 1px solid #dcbfbf;
+    }
+    .p3grid>div:nth-child(2){
+        border-top: 1px solid #dcbfbf;
+    }
     .bdrx {
         border-right: 1px solid #dcbfbf;
     }
@@ -730,7 +737,6 @@ h3 >a {
     .p2top {
         width: 100%;
         background-color: #ece5e5;
-        padding: 10px 0;
         margin-bottom: 40px;
     }
     /* 선 */
@@ -790,6 +796,7 @@ h3 >a {
         border-bottom: 1px solid #dcbfbf;
         border-right: none;
     }
+    
 }
 @media screen and (max-width : 500px) {
     .p2top ul {
