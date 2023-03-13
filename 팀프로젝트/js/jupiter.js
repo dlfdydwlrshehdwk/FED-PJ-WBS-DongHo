@@ -100,6 +100,11 @@ function loadFn(){
                 mslide.style.left = '0'
                 mslide.style.transition='none';
             },400);//timeout////
+
+            // 600이하 미디어쿼리
+            if(window.innerWidth<600){
+                mslide.style.left = "-83%";
+            }
         }// if ////
 
         // 왼쪽버튼
@@ -113,6 +118,10 @@ function loadFn(){
                 mslide.style.transition='.4s ease-in-out';
             },0);//timeout////
         }// else ////
+        // 600이하 미디어쿼리
+        if(window.innerWidth<600){
+            mslide.style.left = "-83%";
+        }
     };//gs////
 
     // 실행코드
