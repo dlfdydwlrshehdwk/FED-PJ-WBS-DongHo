@@ -39,6 +39,10 @@ body *{
 .p1txtbx h2{
     font-size: min(60px,6vw);
     margin-bottom: 10px;
+    background-image: linear-gradient(to right, #a46051, #c3e2f7,#e9ac8d);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 2px 2px  10px rgba(255, 255, 255, 0.24);
 }
 .p1txtbx p{
     font-size: min(19px, 2.2vw);
@@ -50,7 +54,10 @@ body *{
     transition: .3s;
 }
 .p1txtbx div:hover a{
-    color: yellow;
+    /* color: yellow; */
+    background-image: linear-gradient(to right, #a46051, #c3e2f7,#e9ac8d);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
     text-shadow:  0px 0px 20px goldenrod;
     transform-origin: left;
 }
@@ -402,7 +409,6 @@ h3 >a {
 /* 페이지 2 - p2exploration 영역 */
 .p2exploration{
     max-width: 600px;
-    min-width: 400px;
     margin: 0 auto;
     line-height: min(30px,3vw);
 }
@@ -429,7 +435,6 @@ h3 >a {
 
 /* 페이지 2 - p2galleries 영역 시작 */
 .p2galleries {
-    min-width: 400px;
     max-width: 1200px;
     margin: 0 auto;
 }
@@ -686,22 +691,45 @@ h3 >a {
     }
     .p2indepth {
         max-width: 600px;
-        min-width: 400px;
-        margin: 0 10px;
+        margin: 10px 0 15px;
     }
-    .p2indepth h2 {
+    .p2indepth h2 ,
+    .p2exploration h2{
         font-size: min(30px,9vw);
-        margin: 10px 0 5px;
+        margin: 10px 0 15px;
+    }
+    .p2exploration h2{
+        margin-bottom: 30px;
     }
     .p2indepth p {
-        font-size: min(17px,2.5vw);
+        font-size: min(17px,4vw);
         margin-bottom: 10px;
+    line-height: 1.4;
     }
     .p2top {
         width: 100%;
         background-color: #ece5e5;
         padding: 10px 0;
         margin-bottom: 40px;
+    }
+    /* 선 */
+    .sun{
+        position: absolute;
+        top: -52px;
+        left: 0;
+    }
+    .p25{
+        padding: 0 25px;
+    }
+    .p25 p {
+        font-size: min(19px,4vw);
+        line-height: 1.5;
+    }
+    .p2exploration li {
+        margin-bottom: min(20px,1.5vw);
+        font-size: min(19px,4vw);
+        line-height: 1.5;
+        margin-bottom: 15px;
     }
     
 }
