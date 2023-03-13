@@ -533,6 +533,21 @@ h3 >a {
     width: 100%;
     margin-bottom: 5px;
 }
+.g1bg{
+    background: url(../img/PIA03456_thumb.jpg) no-repeat center/cover;
+    width: 100%;
+    height: 100%;
+}
+.g2bg{
+    background: url(../img/planets_320.jpg) no-repeat center/cover;
+    width: 100%;
+    height: 100%;
+}
+.p3grid > div:nth-child(4),
+.p3grid > div:nth-child(12){
+    padding: 0;
+}
+
 /* p2_5_cont_grid 버전 끝 */
 /* 페이지 2 - p2galleries 영역 끝 */
 
@@ -768,6 +783,14 @@ h3 >a {
     }
     
 }
+@media screen and (max-width:650px) {
+    .p3grid {
+        grid-template-columns: repeat(1,1fr);
+        border: 1px solid #dcbfbf;
+        border-bottom: 1px solid #dcbfbf;
+        border-right: none;
+    }
+}
 @media screen and (max-width : 500px) {
     .p2top ul {
         flex-direction: column;
@@ -784,12 +807,7 @@ h3 >a {
     .p2exploration {
         line-height: 15px;
     }
-    .p3grid {
-        grid-template-columns: repeat(1,1fr);
-        border: 1px solid #dcbfbf;
-        border-bottom: 1px solid #dcbfbf;
-        border-right: none;
-    }
+    
     .bdrx {
         border-right: 1px solid #dcbfbf;
     }
