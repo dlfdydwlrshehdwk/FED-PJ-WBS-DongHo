@@ -309,7 +309,6 @@ function loadFn(){
 
         // 최초 list 형식이니 실행
         p2g_list();
-
         /* 
             함수명 : p2g_grid
             기능 : 페이지2 갤러리에 그리드 형식으로 출력
