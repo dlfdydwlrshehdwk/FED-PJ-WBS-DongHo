@@ -27,7 +27,7 @@ body *{
 }
 .p1bg{
     height: 100vh;
-    background: url(../jupiterimg/jupiter_bg.jpg) no-repeat right;
+    background: url(../img/jupiter_bg.jpg) no-repeat right;
     margin: 0 0 0 auto;
 }
 .p1txtbx {
@@ -73,7 +73,7 @@ body *{
 .jbx{
     position: relative;
     height: 100vh;
-    background: url(../jupiterimg/) no-repeat  center/cover;
+    background: url(../img/space.jpg) no-repeat  center/cover;
 }
 /* 목성 */
 .jibx{
@@ -535,12 +535,12 @@ h3 >a {
     margin-bottom: 5px;
 }
 .g1bg{
-    background: url(../jupiterimg/PIA03456_thumb.jpg) no-repeat center/cover;
+    background: url(../img/PIA03456_thumb.jpg) no-repeat center/cover;
     width: 100%;
     height: 100%;
 }
 .g2bg{
-    background: url(../jupiterimg/planets_320.jpg) no-repeat center/cover;
+    background: url(../img/planets_320.jpg) no-repeat center/cover;
     width: 100%;
     height: 100%;
 }
@@ -778,7 +778,7 @@ h3 >a {
         justify-content: space-between;
     }
     .p1bg {
-        background: url(../jupiterimg/jupiter_bg.jpg) no-repeat right/65%;
+        background: url(../img/jupiter_bg.jpg) no-repeat right/65%;
     }
     .p1txtbx p {
         line-height: 1.5;

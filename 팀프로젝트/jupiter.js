@@ -287,7 +287,7 @@ function loadFn(){
                 <li>
                 <div class="p2_5_li_imgbx">
                     <a href="#">
-                        <img src="./jupiterimg/${p2g_linfo["이미지"][i]}.jpg" alt="#">
+                        <img src="./img/${p2g_linfo["이미지"][i]}.jpg" alt="#">
                     </a>
                 </div>
                 <div class="p2_5_li_txtbx">
@@ -321,7 +321,7 @@ function loadFn(){
                 hcode += `
                 <li>
                     <div>
-                    <img src="./jupiterimg/${p2g_linfo["이미지"][i]}.jpg" alt="#">
+                    <img src="./img/${p2g_linfo["이미지"][i]}.jpg" alt="#">
                     </div>
                     <div>
                         <a href="#">${p2g_linfo["제목"][i]}</a>
