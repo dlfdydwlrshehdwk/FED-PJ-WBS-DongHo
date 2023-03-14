@@ -71,38 +71,6 @@ body *{
 .main{
   height: 100%;
 }
-<<<<<<< HEAD:01.1차프로젝트/03.구현소스/css/main.css
-.page1 nav{
-  margin-top: 50px;
-  display: flex;
-  position: absolute;
-  top: 0;
-  width: 100%;
-  align-items: center;
-  justify-content: space-around;
-}
-.page1 .logo, ul, section>div {
-  display: flex;
-}
-.logo{
-  margin-right: 10px;
-}
-.logo ul{
-  align-items: center;
-}
-.logo ul li{
-  padding: 0 10px;
-}
-
-.tag{
-  width: 700px;
-  justify-content: space-around;
-}
-.page1 section{
-  position: relative;
-  
-}
-=======
 nav{
   margin-top: 30px;
   position: fixed;
@@ -178,4 +146,3 @@ nav , .page1 nav div, .page1 ul{
 .page2{
   height: 100%;
 }
->>>>>>> 67dceca233f8f9309397f1b1e6f4d15e7ff84095:01.1차프로젝트/03.구현소스/stlye.css

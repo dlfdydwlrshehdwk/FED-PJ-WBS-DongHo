@@ -2,6 +2,12 @@
 @import url(./reset.css);
 @import url(./core.css);
 
+/* 폰트 */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&family=Yusei+Magic&display=swap');
+/* 
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Yusei Magic', sans-serif;
+*/
 /* 메인프로젝트 css 원본 */
 
 /************************ 페이지 1 ************************/
@@ -17,7 +23,9 @@
 
 
 .pob{
+    margin-left: 30px;
     position: relative;
+    color: #fff;
 }
 .pob h1{
     line-height: 8.4rem;
@@ -32,7 +40,7 @@
 .circle{
     width: 100px;
     height: 100px;
-    background-color: rgb(255, 251, 21);
+    background-color: skyblue;
     border-radius: 75px;
     transition: width .3s ease-in-out;
 }
@@ -76,11 +84,7 @@
     left: 0;
     /* 플렉스박스 사진 가로정렬 */
     display: flex; 
-    /* 트랜스폼 줘서 왼쪽으로 가게끔 해야함. */
-    /* transform: translateX(); */
     width: 308%;
-    /* 애니 이시이지반방마 */
-    animation: txt 32s linear infinite;
 }
 .bx3 li{
     position: relative;
@@ -135,7 +139,7 @@ margin-bottom: 10px;
 /* 텍스트박스 */
 .txtbx{
     color: #fff;
-    margin: 0 auto;
+    margin-left:5%;
 }
 .txtarea{
     position: relative;
@@ -200,9 +204,13 @@ margin-bottom: 10px;
 .p3txt h1{
     margin-bottom: 20px;
 }
+.p3txt p{
+    font-size: 1.8rem;
+}
 
 .p3show li>span{
     font-size: 1.8rem;
+    font-weight: bold;
 }
 .p3mt{
     margin-bottom: 20px;
@@ -227,7 +235,7 @@ margin-bottom: 10px;
 }
 /* 플렉스박스들이 표에서 4등분할되게 */
 .p3show>ul>li{
-    width: 25%;
+    width: 22%;
     position: relative;
 }
 /* 페이지3에서 슬롯머신박스 부분 */
@@ -268,6 +276,7 @@ animation: nhd1 2s ease-in-out forwards;
 /* 퍼센트/ 종 크기조절 */
 .pct span{
     font-size: 4rem;
+    font-weight: bold;
 }
 /* 퍼센트 / 종 숫자옆에 배치 */
 .pct{
@@ -290,6 +299,7 @@ animation: nhd1 2s ease-in-out forwards;
 .p4txt{
     text-align: center;
     margin-bottom: 9rem;
+    font-size: 1.8rem;
 }
 .p4txt p{
     margin-top: 2.5rem;
@@ -353,9 +363,10 @@ animation: nhd1 2s ease-in-out forwards;
 .p5txt p{
     margin-top: 2.5rem;
     margin-bottom: 30px;
+    line-height: 3rem;
 }
 .p5txt{
-    border-bottom: 3px solid #fff;
+    border-bottom: 2px solid #fff;
 }
 .p5ul{
     display: flex;
@@ -371,7 +382,8 @@ animation: nhd1 2s ease-in-out forwards;
 .p5ul ul li{
     font-size: 1.4rem;
     padding: 2rem 0;
-    border-bottom: 1px solid rgb(255,255,255,0.2);
+    border-bottom: 1px solid rgb(255,255,255,0.3);
+    margin-right: 1.5rem;
 }
 .p5ul label{
     width: 100%;
@@ -439,32 +451,41 @@ animation: nhd1 2s ease-in-out forwards;
 
 
 .ftcont{
-    width: 1760px;
     margin: 0 auto;
-    padding-top: 8.8rem;
-    /* padding-bottom: 7rem; */ 
-}
-.fttop{
-
+    padding: 8.8rem 3rem 0;
 }
 .ftbx{
     display: flex;
+    justify-content: space-between;
+    padding-bottom: 80px;
+    border-bottom: 1px solid #eee;
 }
 .fttxt dl,.ftsns ul,.ftbt ul,.ftbt{
     display: flex;
 }
-.fttxt{
+.fttxt {
     font-size: 1.6rem;
-    width: 40%;
+    width: 35%;
     line-height: 1.8;
-    
+    color: #333;
 }
-.fttxt dl dt{
-    width: 90px;
+
+.fttxt dl+dl {
+    margin-top: 10px;
+    }
+.fttxt dl >dt{
+    flex-basis: 20%;
+}   
+.fttxt dl> dd{
+    flex-basis: 68%;
 }
 .ftdl{
     display: flex;
-    justify-content: space-evenly;
+    justify-content: flex-end;
+}
+.ftdl dl{
+    flex-basis: 16%;
+    padding-right: 1rem;
 }
 .ftdl dt{
     font-size: 1.6rem;
@@ -477,7 +498,7 @@ animation: nhd1 2s ease-in-out forwards;
     color: #999;
 }
 .ftdlbx{
-    width: 60%;
+    width: 62%;
 }
 
 .ftbt p{
@@ -493,14 +514,17 @@ animation: nhd1 2s ease-in-out forwards;
     justify-content: space-between;
     padding: 60px 0;
 }
-.ftbt span{
+.ftbt span {
     font-size: 1.4rem;
+    color: #666;
+    font-weight: 500;
 }
 .ftbt ul li:last-child{
     margin-left: 60px;
 }
 .ftbt ul li:last-child a{
     color: #999;
+    /* padding-right: 20px; */
 }
 .ftsns{
     margin-top: 76px;
@@ -509,5 +533,19 @@ animation: nhd1 2s ease-in-out forwards;
 .ftsns ul li{
     margin-right: 15px;
 }
-
+.ftsns li div{
+    position: relative;
+    width: 30px;
+    height: 30px;
+    background-color: #e3e3e3;
+    border-radius: 50%;
+}
+.ftsns li>div>a{
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-size: 1.2rem;
+}
 

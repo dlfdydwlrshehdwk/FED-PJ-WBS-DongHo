@@ -1,14 +1,23 @@
 @charset "utf-8";
 @import url(./reset.css);
 /* 외부CSS 장착 */
-
+/* 폰트 */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&family=Yusei+Magic&display=swap');
+/* 
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Yusei Magic', sans-serif;
+*/
 
 .main,.page,.bx {
     width: 100%;
     height: 100%;
 }
 body *{
-    outline: 1px dotted red;
+    /* outline: 1px dotted red; */
+    font-family: 'Montserrat', sans-serif;
+}
+body{
+    overflow-x: hidden;
 }
 
 
@@ -25,6 +34,8 @@ body *{
     align-items: center;
     justify-content: space-between;
     z-index: 999;
+
+    color: #fff;
 }
 
 /* 가상요소로 서브메뉴창 만들기 */
@@ -37,7 +48,7 @@ body *{
     left: 0;
     height: 0;
     width: 100%;
-    background-color: rgb(188, 197, 57) ; 
+    background-color: #fff ; 
     transition: all .3s ease-in;
 }
 /* 오버시 가상요소서브메뉴창 열기 */
@@ -80,7 +91,7 @@ body *{
 
 /* 가상요소배경펼쳐질떄 a태그 기본색변경 */
 .nav>ul:hover a{
-    color: #000;
+    color: #333;
 }
 /* 가상요소 배경펼쳐질때 로고색 검은색변경 */
 
@@ -92,11 +103,11 @@ body *{
 }
 /* 서브메뉴오버시 글자색변경 */
 .smenu li:hover>a{
-    color: aqua;
+    color: #00afeb;
 }
 /* 서브메뉴오버시 밑줄색 */
 .smenu li:hover>a>span{
-    border-bottom: 1px solid aqua;
+    border-bottom: 1px solid #00afeb;
 }
 /* 가상요소 배경 펼쳐질떄 서브메뉴도 넓어지게 */
 .nav>ul:hover>li .smenu a{
@@ -130,7 +141,8 @@ body *{
 
 /* 버튼위치이동 */
 .btn{
-    margin-right: 20px;
+    margin-right: 30px;
+    font-size: 40px;
 }
 /* 서브메뉴 */
 .smenu{
@@ -143,14 +155,16 @@ body *{
 }
 /* 가상요소로 밑줄만들기 */
 .nav>ul>li>a::after{
+    position: relative;
+    z-index: 1;
     content: '';
     display: block;
     margin-top: 1px;
     /* 변경속성 width */
     width: 0%;
     margin-left: 50%;
-    height: 2px;
-    background-color: rgb(94, 223, 255);
+    height: 3px;
+    background-color: #00afeb;
     /* 트랜지션: 속시이지 */
     transition: all .3s;
 }
@@ -183,9 +197,10 @@ body *{
     width: 1515px;
     margin: 0 auto;
 }
-.sitemap_top ul{
+.sitemap_top ul {
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 .sitemap h2{
     font-size: 6rem;
@@ -216,6 +231,11 @@ body *{
 .sitemap_cont{
     display: flex;
 }
+/* 사이트맵 x 버튼 */
+.sitemap_btn{
+    font-size: 40px;
+    margin-right: 15px;
+}
 
 
 
@@ -223,6 +243,7 @@ body *{
 
 /* 페이지2의 버튼 */
 .p2btn{
+    display: none;
     position: fixed;
     width: 70px;
     height: 70px;
@@ -236,8 +257,8 @@ body *{
 
 .ctbtn{
     position: fixed;    
-    bottom: 100px;
-    right: 10px;
+    bottom: 5%;
+    right: 2%;
     width: 70px;
     height: 70px;
 }
@@ -257,7 +278,9 @@ body *{
     left: 50%;
     font-size: 2rem;
     transform: translate(-50%,-50%);
-    font-size: 1.5rem;
+    font-size: 2rem;
+    color: #333;
+
 }
 .ctbtn:hover .ctcircle{
     width: 200px;
