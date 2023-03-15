@@ -39,29 +39,29 @@ body{
 }
 
 /* 가상요소로 서브메뉴창 만들기 */
-.nav>ul>li::before{
+.nv ul li::before{
     content: '';
     position: absolute;
     display: block;
-    z-index: -1;
+    /* z-index: -1; */
     top: 0;
     left: 0;
     height: 0;
-    width: 100%;
+    width: 100vw;
     background-color: #fff ; 
     transition: all .3s ease-in;
 }
 /* 오버시 가상요소서브메뉴창 열기 */
-.nav>ul:hover>li::before{
+.nv ul:hover li::before{
     display: block;
     height: 400px;
     transition-duration: .3s;
 }
 /* ul오버시 nav에 밑줄표시 */
-.nav>ul:hover::before{
+.nav ul:hover::before{
     border-bottom: 1px solid #ccc;
 }
-.nav>ul::before{
+.nav ul::before{
     position: absolute;
     content: '';
     display: block;
@@ -71,20 +71,19 @@ body{
     top: 120px;
     transition:  .2s;
 }
-
-
 /* nav 로고 */
 .nav .logo{
     /* 로고 위치이동 */
     margin-left: 50px;
 }
-.nav>ul{
+.nav ul{
     /* nav안의 ul flex박스 */
     display: flex;
+    justify-content: center;
     
 }
 /* ul오버시 li들 패딩줘서 넓어지게하기 */
-.nav>ul:hover>li>a{
+.nav ul:hover li a{
     padding: 0 15px;
     transition: all .4s;
 }
@@ -93,29 +92,27 @@ body{
 .nav>ul:hover a{
     color: #333;
 }
-/* 가상요소 배경펼쳐질때 로고색 검은색변경 */
-
 
 /* 서브메뉴 펼쳐지기 높이설정 및 자연스럽게 보이게 */
-.nav>ul:hover>li .smenu{
+.nav ul:hover li .smenu{
     height: 260px;
     transition: 0.2s ease-in-out .2s;
 }
 /* 서브메뉴오버시 글자색변경 */
-.smenu li:hover>a{
+.smenu li:hover a{
     color: #00afeb;
 }
 /* 서브메뉴오버시 밑줄색 */
-.smenu li:hover>a>span{
+.smenu li:hover a span{
     border-bottom: 1px solid #00afeb;
 }
 /* 가상요소 배경 펼쳐질떄 서브메뉴도 넓어지게 */
-.nav>ul:hover>li .smenu a{
+.nav ul:hover li .smenu a{
     padding: 0 15px;
 }
 
 /* nav a글자 설정 */
-.nav>ul>li>a{
+.nav ul li a{
     color: #fff;
     font-weight: bold;
     font-size: 1.5rem;
@@ -154,7 +151,7 @@ body{
     /* padding-top: 20px; */
 }
 /* 가상요소로 밑줄만들기 */
-.nav>ul>li>a::after{
+.nav ul li a::after{
     position: relative;
     z-index: 1;
     content: '';
@@ -169,9 +166,17 @@ body{
     transition: all .3s;
 }
 /* 오버시 바 보이기 */
-.nav>ul>li:hover>a::after{
+.nav ul li:hover>a::after{
     width: 100%;
     margin-left: 0%; 
+}
+
+/* 중앙내브바 미디어쿼리를 위한 앱솔루트행 */
+.nv{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 3333;
 }
 
 /* nav 끝 */
