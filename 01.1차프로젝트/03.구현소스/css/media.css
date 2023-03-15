@@ -1,0 +1,19 @@
+@charset "utf-8";
+
+/* 나의 PJ 페스카로 미디어쿼리 */
+
+@media screen and (max-width: 1600px ) {
+    /* nav부분 */
+    .smenu a {
+        width: 120px;
+    }
+    .nav ul >li >a {
+        width: 120px;
+    }
+}
+
+@media screen and (max-width:1250px) {
+    .nav> ul {
+        display: none;
+    }
+}

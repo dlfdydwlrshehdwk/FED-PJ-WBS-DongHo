@@ -32,14 +32,14 @@ body{
 
     /* 플렉스정렬 */
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     z-index: 999;
 
     color: #fff;
 }
 
 /* 가상요소로 서브메뉴창 만들기 */
-.nav >ul li::before{
+.nav >ul> li::before{
     content: '';
     position: absolute;
     display: block;
@@ -52,7 +52,7 @@ body{
     transition: all .3s ease-in;
 }
 /* 오버시 가상요소서브메뉴창 열기 */
-.nav >ul:hover li::before{
+.nav >ul:hover> li::before{
     display: block;
     height: 400px;
     transition-duration: .3s;
@@ -72,29 +72,32 @@ body{
     transition:  .2s;
 }
 /* nav 로고 */
-.nav .logo{
-    /* 로고 위치이동 */
+.nav .logo {
     margin-left: 50px;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
 }
-.nav ul{
+.nav> ul{
     /* nav안의 ul flex박스 */
     display: flex;
     justify-content: center;
     
 }
 /* ul오버시 li들 패딩줘서 넓어지게하기 */
-.nav ul:hover li >a{
+.nav>ul:hover>li>a{
     padding: 0 15px;
     transition: all .4s;
 }
 
 /* 가상요소배경펼쳐질떄 a태그 기본색변경 */
-.nav>ul:hover a{
+.nav> ul:hover a{
     color: #333;
 }
 
 /* 서브메뉴 펼쳐지기 높이설정 및 자연스럽게 보이게 */
-.nav ul:hover li .smenu{
+.nav> ul:hover >li .smenu{
     height: 260px;
     transition: 0.2s ease-in-out .2s;
 }
@@ -112,13 +115,13 @@ body{
 }
 
 /* nav a글자 설정 */
-.nav ul li a{
+.nav ul >li >a{
     color: #fff;
     font-weight: bold;
-    font-size: 1.5rem;
+    font-size: min(15px,.8vw);
     display: block;
     width: 150px;
-    line-height:8;
+    line-height:120px;
     text-align: center;
     transition: all .4s;
 }
@@ -127,31 +130,37 @@ body{
 .smenu a{
     color: #fff;
     font-weight: bold;
-    font-size: 1.5rem;
+    font-size: min(15px,.8vw);
     text-align: center;
     width: 150px;
     display: block;
+    line-height: min(30px,3vw);
 }
-.smenu li:first-child{
+.smenu >li:first-child{
     padding-top: 20px;
 }
-
+.nav ul>li{
+    width: 16.66%;
+}
 /* 버튼위치이동 */
-.btn{
-    margin-right: 30px;
+.btn {
     font-size: 40px;
+    position: absolute;
+    top: 50%;
+    right: 1%;
+    transform: translateY(-50%);
 }
 /* 서브메뉴 */
 .smenu{
     position: absolute;
     top: 120px;
-    line-height: 2;
+    line-height: min(30px,2vw);
     height: 0;
     overflow: hidden;
     /* padding-top: 20px; */
 }
 /* 가상요소로 밑줄만들기 */
-.nav ul li a::after{
+.nav> ul> li a::after{
     position: relative;
     z-index: 1;
     content: '';
@@ -166,7 +175,7 @@ body{
     transition: all .3s;
 }
 /* 오버시 바 보이기 */
-.nav ul li:hover>a::after{
+.nav> ul> li:hover>a::after{
     width: 100%;
     margin-left: 0%; 
 }
