@@ -39,29 +39,29 @@ body{
 }
 
 /* 가상요소로 서브메뉴창 만들기 */
-.nv ul li::before{
+.nav >ul li::before{
     content: '';
     position: absolute;
     display: block;
-    /* z-index: -1; */
+    z-index: -1;
     top: 0;
     left: 0;
     height: 0;
-    width: 100vw;
+    width: 100%;
     background-color: #fff ; 
     transition: all .3s ease-in;
 }
 /* 오버시 가상요소서브메뉴창 열기 */
-.nv ul:hover li::before{
+.nav >ul:hover li::before{
     display: block;
     height: 400px;
     transition-duration: .3s;
 }
 /* ul오버시 nav에 밑줄표시 */
-.nav ul:hover::before{
+.nav >ul:hover::before{
     border-bottom: 1px solid #ccc;
 }
-.nav ul::before{
+.nav >ul::before{
     position: absolute;
     content: '';
     display: block;
@@ -83,7 +83,7 @@ body{
     
 }
 /* ul오버시 li들 패딩줘서 넓어지게하기 */
-.nav ul:hover li a{
+.nav ul:hover li >a{
     padding: 0 15px;
     transition: all .4s;
 }
@@ -172,12 +172,12 @@ body{
 }
 
 /* 중앙내브바 미디어쿼리를 위한 앱솔루트행 */
-.nv{
+/* .nv{
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
     z-index: 3333;
-}
+} */
 
 /* nav 끝 */
 
