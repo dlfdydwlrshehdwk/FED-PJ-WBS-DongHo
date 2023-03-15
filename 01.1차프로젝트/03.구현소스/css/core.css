@@ -86,7 +86,7 @@ body{
 }
 /* ul오버시 li들 패딩줘서 넓어지게하기 */
 .nav>ul:hover>li>a{
-    padding: 0 15px;
+    padding: 0 1.5vw;
     transition: all .4s;
 }
 
@@ -110,7 +110,7 @@ body{
 }
 /* 가상요소 배경 펼쳐질떄 서브메뉴도 넓어지게 */
 .nav ul:hover li .smenu a{
-    padding: 0 15px;
+    padding: 0 1.5vw;
 }
 
 /* nav a글자 설정 */
@@ -138,9 +138,9 @@ body{
     padding-top: 20px;
 }
 .nav ul>li{
-    flex: 1;
-    padding: 0 1vw;
-    width: 100%;
+    /* flex: 1; */
+    /* padding: 0 1vw; */
+    width: 15%;
 }
 /* 버튼위치이동 */
 .btn {
@@ -185,13 +185,6 @@ body{
     margin-left: 0%; 
 }
 
-/* 중앙내브바 미디어쿼리를 위한 앱솔루트행 */
-/* .nv{
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 3333;
-} */
 
 /* nav 끝 */
 
