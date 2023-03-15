@@ -83,10 +83,12 @@ body{
     /* nav안의 ul flex박스 */
     display: flex;
     width: 60%;
+    justify-content: center;
+    transition: .3s;
 }
 /* ul오버시 li들 패딩줘서 넓어지게하기 */
-.nav>ul:hover>li>a{
-    padding: 0 1.5vw;
+.nav>ul:hover>li{
+    padding: 0 1vw;
     transition: all .4s;
 }
 
@@ -124,7 +126,6 @@ body{
     text-align: center;
     transition: all .4s;
 }
-
 /* 서브메뉴 a글자 설정 */
 .smenu a{
     color: #fff;
@@ -141,6 +142,7 @@ body{
     /* flex: 1; */
     /* padding: 0 1vw; */
     width: 15%;
+    transition: .3s;
 }
 /* 버튼위치이동 */
 .btn {

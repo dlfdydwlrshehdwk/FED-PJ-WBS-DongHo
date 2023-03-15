@@ -146,8 +146,20 @@ margin-bottom: 10px;
     top: 50%;
     transform: translateY(-50%);
 }
-.txtarea h1{
+/* 한글자씩 나오기 위함 */
+.stage .stage1{
+    overflow: hidden;
+}
+.stage1 h1{
+    display: inline-block;
     margin-bottom: 20px;
+    transform: translateY(120%);
+    opacity: 0;
+    transition: .3s ease-in;
+}
+.stage.on.stage1 h1{
+    transform: translateY(0);
+    opacity: 1;
 }
 /* 흐르는 글자 키프레임 */
 @keyframes txt {
