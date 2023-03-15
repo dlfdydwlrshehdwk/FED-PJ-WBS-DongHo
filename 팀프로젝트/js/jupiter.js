@@ -161,11 +161,23 @@ function loadFn(){
         // 페이지1 버튼
         const page1_btns = document.querySelectorAll('.btns')
         // 페이지1 ol슬라이드
+        const page1_slide_pr = document.querySelector('.slidebx')
+        // 페이지1 ol슬라이드
         const page1_slide = document.querySelector('.slidebx ol')
         // 페이지1 페이지 리스트개수 파악용
         const page1_slide_li = document.querySelectorAll('.slidebx ol li').length;
         // 페이지리스트개수 변수
         let qwe = 0;
+        
+        let chkLimit = Math.floor(page1_slide.clientWidth / page1_slide_pr.clientWidth)        
+        if(chkLimit===4) chkLimit=3;
+        console.log(chkLimit);
+
+        window.addEventListener("resize",()=>{
+            chkLimit = Math.floor(page1_slide.clientWidth / page1_slide_pr.clientWidth)
+            if(chkLimit===4) chkLimit=3;
+            console.log(chkLimit);
+        }); /////// resize ////////////
 
         const page1sg = seq => {
             if(prott) return ;
@@ -182,27 +194,13 @@ function loadFn(){
                 page1_slide.style.transition = '.2s'
             }
         // 눌러서 왼쪽 끝으로 간다면
-        if(qwe===-1){
+        if(qwe===-1){            
             qwe = qwe=0;
-            // // 900이하 미디어쿼리
-            // if(window.innerWidth<900){
-            // }
-            // // 1200이하 미디어쿼리
-            // if(window.innerWidth<1200){
-
-            // }
         } 
             
         // 눌러서 오른쪽 끝까지 간다면
-        else if(qwe=== page1_slide_li-2){
+        else if(qwe=== chkLimit+1){
             qwe= qwe-1;
-            // 900이하 미디어쿼리
-            // if(window.innerWidth<900){
-            // }
-            // 1200이하 미디어쿼리
-            // if(window.innerWidth<1200){
-            //     qwe === page1_slide_li-1;
-            // }
 
         }
         page1_slide.style.left=(qwe*-300)+"px";

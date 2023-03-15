@@ -82,7 +82,7 @@ body{
 .nav> ul{
     /* nav안의 ul flex박스 */
     display: flex;
-    justify-content: center;
+    /* justify-content: center; */
     
 }
 /* ul오버시 li들 패딩줘서 넓어지게하기 */
@@ -120,7 +120,7 @@ body{
     font-weight: bold;
     font-size: min(15px,.8vw);
     display: block;
-    width: 150px;
+    /* width: 150px; */
     line-height:120px;
     text-align: center;
     transition: all .4s;
@@ -132,7 +132,7 @@ body{
     font-weight: bold;
     font-size: min(15px,.8vw);
     text-align: center;
-    width: 150px;
+    /* width: 150px; */
     display: block;
     line-height: min(30px,3vw);
 }
@@ -140,7 +140,9 @@ body{
     padding-top: 20px;
 }
 .nav ul>li{
-    width: 16.66%;
+    flex: 1;
+    /* width: 16.66%; */
+    padding: 0 2vw;
 }
 /* 버튼위치이동 */
 .btn {
@@ -150,10 +152,17 @@ body{
     right: 1%;
     transform: translateY(-50%);
 }
+.smbx{
+    position: relative;
+}
 /* 서브메뉴 */
 .smenu{
     position: absolute;
-    top: 120px;
+    /* top: 120px; */
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+    
     line-height: min(30px,2vw);
     height: 0;
     overflow: hidden;
