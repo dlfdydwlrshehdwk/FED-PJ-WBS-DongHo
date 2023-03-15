@@ -27,10 +27,10 @@ body a{
     text-decoration: none;
     color: #000;
 }
-h1{
-    font-size: 6.4rem;
+h1 {
+    font-size: min(64px,4vw);
 }
-p{
-    font-size: 2rem;
+p {
+    font-size: min(20px,1.8vw);
     font-weight: bold;
 }

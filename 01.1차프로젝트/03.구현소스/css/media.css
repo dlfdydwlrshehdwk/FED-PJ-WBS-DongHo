@@ -3,17 +3,28 @@
 /* 나의 PJ 페스카로 미디어쿼리 */
 
 @media screen and (max-width: 1600px ) {
-    /* nav부분 */
-    /* .smenu a {
-        width: 120px;
-    }
-    .nav ul >li >a {
-        width: 120px;
-    } */
 }
 
 @media screen and (max-width:1250px) {
-    /* .nav> ul {
+    .nav ul>li{
         display: none;
-    } */
+    }
+}
+
+@media screen and (max-width : 1000px) {
+
+    /* 1페이지 */
+    .bx1 {
+        margin: 0 auto 0 0;
+    }
+    .pob h1 {
+        line-height: min(84px,8vw);
+        font-size: min(64px,6vw);
+    }
+    p {
+        font-size: min(20px,2vw);
+    }
+    .cirtxt {
+        font-size: min(20px,2.1vw);
+    }
 }

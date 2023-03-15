@@ -82,8 +82,7 @@ body{
 .nav> ul{
     /* nav안의 ul flex박스 */
     display: flex;
-    /* justify-content: center; */
-    
+    width: 60%;
 }
 /* ul오버시 li들 패딩줘서 넓어지게하기 */
 .nav>ul:hover>li>a{
@@ -132,7 +131,6 @@ body{
     font-weight: bold;
     font-size: min(15px,.8vw);
     text-align: center;
-    /* width: 150px; */
     display: block;
     line-height: min(30px,3vw);
 }
@@ -141,8 +139,8 @@ body{
 }
 .nav ul>li{
     flex: 1;
-    /* width: 16.66%; */
-    padding: 0 2vw;
+    padding: 0 1vw;
+    width: 100%;
 }
 /* 버튼위치이동 */
 .btn {
@@ -158,7 +156,6 @@ body{
 /* 서브메뉴 */
 .smenu{
     position: absolute;
-    /* top: 120px; */
     left: 50%;
     transform: translateX(-50%);
     white-space: nowrap;
@@ -166,7 +163,6 @@ body{
     line-height: min(30px,2vw);
     height: 0;
     overflow: hidden;
-    /* padding-top: 20px; */
 }
 /* 가상요소로 밑줄만들기 */
 .nav> ul> li a::after{
@@ -244,10 +240,6 @@ body{
     font-size: 1.7rem;
     padding: 1em 0;
 }
-/* a를 누르면 나머지가 흐릿해지게 */
-/* .sitemap_cont dd a:hover .sitemap_cont>dl{
-    display: none;
-} */
 .sitemap a{
     color: #fff;
 }
