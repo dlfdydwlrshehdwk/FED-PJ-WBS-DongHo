@@ -102,40 +102,108 @@ function updatePg() {
 // p박스는 한줄씩 같은시간으로 올라온다
 // 대상 stage1
 const s1 = qs('.stage1');
-const stage =qs('.stage');
-const s2 = qs('.stage2');
+const s3 = qs('.stage3');
+const s4 = qs('.stage4');
+const s5 = qs('.stage5');
+const s2 = qsa('.stage2');
+const stage =qsa('.stage');
 const h1 = ["BUSINESS","About FESCARO","Partnership","Contact us"] // 데이터저장변수
 // p태그
 const stage2p = qsa('.stage2 p')
 console.log(stage2p)
 
 
-// h  js 
-let hcode = "" // 코드 저장변수
-let idx = 0; //순번변수
-
-for(let x of h1[0]){
-    // console.log(x)
-    if(x === " ") x= "&nbsp;";
-    hcode +=`
-    <h1 style = "transition-delay:${idx*0.02}s">${x}</h1>
-    `;
-
-    idx++;
-    // console.log(x)
+function p2h1txt() {
+    // h  js 
+    let hcode = "" // 코드 저장변수
+    let idx = 0; //순번변수
+    
+    for(let x of h1[0]){
+        // console.log(x)
+        if(x === " ") x= "&nbsp;";
+        hcode +=`
+        <h1 style = "transition-delay:${idx*0.02}s">${x}</h1>
+        `;
+    
+        idx++;
+        // console.log(x)
+    }
+    s1.innerHTML = hcode;
+}
+function p3h1txt() {
+    // h  js 
+    let hcode = "" // 코드 저장변수
+    let idx = 0; //순번변수
+    
+    for(let x of h1[1]){
+        // console.log(x)
+        if(x === " ") x= "&nbsp;";
+        hcode +=`
+        <h1 style = "transition-delay:${idx*0.02}s">${x}</h1>
+        `;
+    
+        idx++;
+        // console.log(x)
+    }
+    s3.innerHTML = hcode;
+}
+function p4h1txt() {
+    // h  js 
+    let hcode = "" // 코드 저장변수
+    let idx = 0; //순번변수
+    
+    for(let x of h1[2]){
+        // console.log(x)
+        if(x === " ") x= "&nbsp;";
+        hcode +=`
+        <h1 style = "transition-delay:${idx*0.02}s">${x}</h1>
+        `;
+    
+        idx++;
+        // console.log(x)
+    }
+    s4.innerHTML = hcode;
+}
+function p5h1txt() {
+    // h  js 
+    let hcode = "" // 코드 저장변수
+    let idx = 0; //순번변수
+    
+    for(let x of h1[3]){
+        // console.log(x)
+        if(x === " ") x= "&nbsp;";
+        hcode +=`
+        <h1 style = "transition-delay:${idx*0.02}s">${x}</h1>
+        `;
+    
+        idx++;
+        // console.log(x)
+    }
+    s5.innerHTML = hcode;
 }
 
+p2h1txt();
+p3h1txt();
+p4h1txt();
+p5h1txt();
 
 
-s1.innerHTML = hcode;
+
 
 // p박스 
-    setTimeout(()=>s2.classList.add('on'),1)
+    setTimeout(()=>{
+        s2.forEach((ele)=>{
+            ele.classList.add('on')
+        }),100})
 
 
 
 
-setTimeout(()=>{stage.classList.add("on");},100)
+setTimeout(()=>{
+    stage.forEach((ele)=>{
+        ele.classList.add("on")
+    });
+},100)
 
 
 
