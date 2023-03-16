@@ -139,7 +139,7 @@ margin-bottom: 10px;
 /* 텍스트박스 */
 .txtbx{
     color: #fff;
-    margin-left:5%;
+    margin-left:3%;
 }
 .txtarea{
     position: relative;
@@ -148,32 +148,36 @@ margin-bottom: 10px;
 }
 /* 한글자씩 나오기 위함 */
 .stage{
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 /* 글자 개별박스 */
 .stage h1{
     /* 트랜스폼 적용위해 */
     display: inline-block;
     margin-bottom: 20px;
-    transform: translateY(20%);
+    transform: translateY(40%);
     opacity: 0;
-    transition: .1s ease-in;
+    transition: .8s ease-in-out;
 }
 /* 글자 개별박스 */
 .stage p{
     /* 트랜스폼 적용위해 */
     display: inline-block;
-    margin-bottom: 20px;
-    transform: translateY(20%);
+    line-height: 1.7;
+    transform: translateY(80%);
     opacity: 0;
-    transition: .1s ease-in;
+    transition: 1.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
+.stage2 {
+    overflow: hidden;
+}
+
 /* 스테이지로 들어오기 */
 .stage.on h1{
     transform: translate(0,0);
     opacity: 1;
 }
-.stage.on p{
+.stage2.on p{
     transform: translate(0,0);
     opacity: 1;
 }

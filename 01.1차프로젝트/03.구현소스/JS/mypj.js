@@ -1,8 +1,9 @@
 window.addEventListener("DOMContentLoaded",()=>{
 
-    setTimeout(()=>{
-        window.scrollTo(0,0);
-    },100) // 작동완료
+    // 새로고침시 화면맨위로설정
+    // setTimeout(()=>{
+    //     window.scrollTo(0,0);
+    // },100) // 작동완료
 
 // 셀렉터 변수화
 const qs = x =>document.querySelector(x);
@@ -97,48 +98,44 @@ function updatePg() {
 
 
 // 구현내용 
-// h1 p 태그 들을 각글자를 하나씩 아래서 위로 올라오기
+// h1 은 한글자씩 부드럽게 올라오고
+// p박스는 한줄씩 같은시간으로 올라온다
 // 대상 stage1
 const s1 = qs('.stage1');
 const stage =qs('.stage');
 const s2 = qs('.stage2');
 const h1 = ["BUSINESS","About FESCARO","Partnership","Contact us"] // 데이터저장변수
-const p = [
-    "페스카로는 자동차 사이버보안 전문기업에서\n 자동차 전장 SW전문기업으로 확장하여\n 미래차에 필요한 모든 솔루션을 선도합니다.",
-    "내연기관차부터 전기차,자율주행차까지 전문경험과 노하우를\n 바탕으로 미래차 산업의 혁신을 주도합니다.",
-    "페스카로는 기술력과 안정성, 신뢰성을 바탕으로\n글로벌 OEM, Tier, Chip사와 함께하고 있습니다.",
-    "문의사항을 남겨주시면\n빠른 시일 내에 연락을 드리겠습니다.",
-]
+// p태그
+const stage2p = qsa('.stage2 p')
+console.log(stage2p)
 
+
+// h  js 
 let hcode = "" // 코드 저장변수
-let pcode = "" // p 저장변수
 let idx = 0; //순번변수
-let pidx = 0; 
 
 for(let x of h1[0]){
     // console.log(x)
     if(x === " ") x= "&nbsp;";
     hcode +=`
-    <h1 style = "transition-delay:${idx*0.05}s">${x}</h1>
+    <h1 style = "transition-delay:${idx*0.02}s">${x}</h1>
     `;
 
     idx++;
     // console.log(x)
 }
-for(let x of p[0]){
-    if(x === " ") x = "&nbsp;";
-    pcode +=`
-    <p style = "transition-delay:${pidx*0.05}s">${x}</p>
-    `;
-    pidx++;
-}
 
 
 
 s1.innerHTML = hcode;
-s2.innerHTML = pcode;
 
-setTimeout(()=>{stage.classList.add("on");},2000)
+// p박스 
+    setTimeout(()=>s2.classList.add('on'),1)
+
+
+
+
+setTimeout(()=>{stage.classList.add("on");},100)
 
 
 
