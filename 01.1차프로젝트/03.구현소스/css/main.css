@@ -147,18 +147,34 @@ margin-bottom: 10px;
     transform: translateY(-50%);
 }
 /* 한글자씩 나오기 위함 */
-.stage .stage1{
+.stage{
     overflow: hidden;
 }
-.stage1 h1{
+/* 글자 개별박스 */
+.stage h1{
+    /* 트랜스폼 적용위해 */
     display: inline-block;
     margin-bottom: 20px;
-    transform: translateY(120%);
+    transform: translateY(20%);
     opacity: 0;
-    transition: .3s ease-in;
+    transition: .1s ease-in;
 }
-.stage.on.stage1 h1{
-    transform: translateY(0);
+/* 글자 개별박스 */
+.stage p{
+    /* 트랜스폼 적용위해 */
+    display: inline-block;
+    margin-bottom: 20px;
+    transform: translateY(20%);
+    opacity: 0;
+    transition: .1s ease-in;
+}
+/* 스테이지로 들어오기 */
+.stage.on h1{
+    transform: translate(0,0);
+    opacity: 1;
+}
+.stage.on p{
+    transform: translate(0,0);
     opacity: 1;
 }
 /* 흐르는 글자 키프레임 */
@@ -216,9 +232,9 @@ margin-bottom: 10px;
 .p3txt h1{
     margin-bottom: 20px;
 }
-.p3txt p{
+/* .p3txt p{
     font-size: 1.8rem;
-}
+} */
 
 .p3show li>span{
     font-size: 1.8rem;
@@ -311,7 +327,7 @@ animation: nhd1 2s ease-in-out forwards;
 .p4txt{
     text-align: center;
     margin-bottom: 9rem;
-    font-size: 1.8rem;
+    /* font-size: 1.8rem; */
 }
 .p4txt p{
     margin-top: 2.5rem;
