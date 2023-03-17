@@ -12,18 +12,44 @@ window.addEventListener("DOMContentLoaded",()=>{
 // 셀렉터 변수화
 const qs = x =>document.querySelector(x);
 const qsa = x => document.querySelectorAll(x);
-    // console.log("로딩완료");
 
-// 마우스 휠로 페이지 이동
 
-// 변수 설정하기
-// 전체 페이지 변수
-let pgnum = 0; //현재 페이지 번호(첫페이지 0)
-// 전체 페이지 수
-const pgcnt = qsa('.page').length; //6개!
-// console.log(pgcnt)
-// 광스크롤 금지 변수
-let prot_sc = 0;
+
+// 데이터저장변수
+const h1 = ["BUSINESS","About FESCARO","Partnership","Contact us"] 
+
+// (2) 인디케이터메뉴 
+// const indic = document.querySelectorAll('.indic a');
+// console.log(indic);
+
+// [ 이벤트 연결 함수등록하기 ] ////
+// 인디케이터메뉴 이벤트연결
+// indic.forEach((ele,idx)=>{//요소 , 순번
+//     ele.addEventListener('click',()=>movePg(idx));
+// }); // forEach ////
+
+
+    // 변수 설정하기
+    // 전체 페이지 변수
+    let pgnum = 0; //현재 페이지 번호(첫페이지 0)
+    // 전체 페이지 수
+    const pgcnt = qsa('.page').length; //6개!
+    // 광스크롤 금지 변수
+    let prot_sc = 0;
+
+    const page = qsa('.page');
+    // 대상 page on주면 애니메이션
+    // const page = qsa('.page');
+    // 각 h1태그 출력칸
+    const s1 = qs('.stage1');
+    const s3 = qs('.stage3');
+    const s4 = qs('.stage4');
+    const s5 = qs('.stage5');
+
+
+
+
+
 
 // 휠이벤트설정
 window.addEventListener('wheel',wheelFn,{passive:false});
@@ -31,14 +57,13 @@ window.addEventListener('wheel',wheelFn,{passive:false});
 // 휠 이벤트 함수 만들기
 function wheelFn(e){
     // 기본기능 멈추기
-    event.preventDefault();
+    e.preventDefault();
 
     // 광스크롤 막기
     if(prot_sc === 1) return;
     prot_sc =1;
     setTimeout(()=>prot_sc = 0,800);
     
-    // console.log('휠 확인')
     // 휠 방향 알아내기
     // 이벤트객체.wheelDelta
     let dir = e.wheelDelta; //위120 아래 -120
@@ -49,7 +74,6 @@ function wheelFn(e){
         pgnum++;
         // 한계수 지정 총페이지수 -1
         if(pgnum > pgcnt -1) pgnum = pgcnt-1;
-        // console.log('pgnum:',pgnum, '\npgcnt:',pgcnt)
     } // if 문 ////
 
     // 스크롤 윗뱡향 : 페이지 번호 감소
@@ -62,69 +86,109 @@ function wheelFn(e){
     }//else ////
     console.log('페이지버놓',pgnum)
     updatePg();
+    // updatePg(indic);
 } // wheel 이벤트 ////
+
+
 
 
 
 // 함수명 updatePg
 // 기능 페이지 이동 설정값 업데이트
 
-function updatePg(obj) {
-    console.log('페이지이동')
+function updatePg() { // obj - 변경할 메뉴전체 객체
+    console.log('업데이트')
     // 페이지 이동하기
     // scrollTO(가로,세로)
     window.scrollTo(0,window.innerHeight*pgnum);
     // 세로 이동위치 : 윈도우 높이값* 페이지 번호
 
+    page.forEach((ele)=>{
+        ele.classList.remove('on');
+        // console.log(ele)
+    })
+    page[pgnum].classList.add('on');
 
+    console.log(page[pgnum])
     // 페이지 이동후 해당 페이지액션
     // pageAction 함수호출 (페이지이동 시차를 준다.)
-    setTimeout(()=>pageAction(pgnum),500)
+    // setTimeout(()=>pageAction(pgnum),500)
 }//updatePg 함수 ////
-
 
 /* 
     함수명 : initCSS
-    기능 : 애니메이션 초기값 셋팅
+    기능 : 등장할 요소들의 초기값 셋팅
 */
-const stage =qsa('.stage');
-console.log(stage);
-// 이벤트 설정
-stage.forEach((ele,idx)=>{initCSS(ele,idx)});
+// 대상 : stage 변수   .stage
+
+// console.log(page);
+// 이벤트설정
+// page.forEach((ele,idx)=>initCSS(ele,idx));
 // 함수만들기
-function initCSS(ele,seq) {
-    // 호출확인 
-    console.log('이닛호출',seq)
-    console.log(ele)
-    ele.classList.remove('on');
+function initCSS(ele,seq){ //ele 요소, seq순번
+    // console.log('이닛호출',seq) 0 1 2 3
+    console.log(ele) 
 
-    
-}
-
-
-/* 
-    함수명 : pageAction
-    기능 : 페이지별 액션주기
-*/
-
-function pageAction(seq) {
-    console.log('액션',seq)
-
-    stage.forEach((ele,idx)=>{initCSS(ele,seq)});
-
-    // 페이지 액션주기
+    // ele.style.transion='none'
+    // 각 요소별 초기화하기
     if(seq === 0){
-        p2h1txt();
+        ele.classList.remove('on');
     }
     else if(seq === 1){
-        p3h1txt();
+        ele.classList.remove('on');
     }
     else if(seq === 2){
-        p4h1txt();
+        ele.classList.remove('on');
     }
     else if(seq === 3){
-        p5h1txt();
+        ele.classList.remove('on');
     }
+    else if(seq === 4){
+        ele.classList.remove('on');
+    }
+    else if(seq === 5){
+        ele.classList.remove('on');
+    }
+} // initCSS ////
+
+/* 
+    함수명 :pageAction
+    기능 : 페이지별 액션
+*/
+
+function pageAction(seq){
+    console.log('액션',seq)
+
+    // 전체 초기화
+    // page.forEach((ele,idx)=>initCSS(ele,idx));
+    // console.log(idx)
+    // 액션주기
+    // page.forEach((ele,idx)=>ele.classList.add('on'));
+    // if(seq === 0){
+    //     console.log('gd')
+    // }
+    // else if(seq ===1){
+    //     ele.classList.add('on');
+    //     p2h1txt();
+    //     pbx();
+    // }
+    // else if(seq ===2){
+    //     ele.classList.add('on');
+    //     p3h1txt();
+    //     pbx();
+    // }
+    // else if(seq ===3){
+    //     ele.classList.add('on');
+    //     p4h1txt();
+    //     pbx();
+    // }
+    // else if(seq ===4){
+    //     ele.classList.add('on');
+    //     p5h1txt();
+    //     pbx();
+    // }
+    // else if(seq ===5){
+    // }
 }
 
 
@@ -132,151 +196,90 @@ function pageAction(seq) {
 
 
 
-
-
-
-
-
-
-
-
-// 구현내용 
-// h1 은 한글자씩 부드럽게 올라오고
-// p박스는 한줄씩 같은시간으로 올라온다
-// 대상 stage1
-const s1 = qs('.stage1');
-const s3 = qs('.stage3');
-const s4 = qs('.stage4');
-const s5 = qs('.stage5');
-const s2 = qsa('.stage2');
-
-const h1 = ["BUSINESS","About FESCARO","Partnership","Contact us"] // 데이터저장변수
-// p태그
-const stage2p = qsa('.stage2 p')
-console.log(stage2p)
-
-
+// 각 페이지마다 맞는 내용 한글자씩 설정된 함수들
+// 페이지2텍스트 함수
 function p2h1txt() {
-    // h  js 
     let hcode = "" // 코드 저장변수
     let idx = 0; //순번변수
-    setTimeout(()=>{
-        stage.forEach((ele)=>{
-            ele.classList.add("on")
-        });
-    },100)
     
     for(let x of h1[0]){
-        // console.log(x)
         if(x === " ") x= "&nbsp;";
         hcode +=`
         <h1 style = "transition-delay:${idx*0.02}s">${x}</h1>
         `;
     
         idx++;
-        // console.log(x)
     }
     s1.innerHTML = hcode;
 }
+// 페이지3 텍스트함수
 function p3h1txt() {
-    // h  js 
     let hcode = "" // 코드 저장변수
     let idx = 0; //순번변수
-    setTimeout(()=>{
-        stage.forEach((ele)=>{
-            ele.classList.add("on")
-        });
-    },100)
     
     for(let x of h1[1]){
-        // console.log(x)
         if(x === " ") x= "&nbsp;";
         hcode +=`
         <h1 style = "transition-delay:${idx*0.02}s">${x}</h1>
         `;
     
         idx++;
-        // console.log(x)
         
     }
     s3.innerHTML = hcode;
 }
+// 페이지4 텍스트함수
 function p4h1txt() {
-    // h  js 
     let hcode = "" // 코드 저장변수
     let idx = 0; //순번변수
-    setTimeout(()=>{
-        stage.forEach((ele)=>{
-            ele.classList.add("on")
-        });
-    },100)
     
     for(let x of h1[2]){
-        // console.log(x)
         if(x === " ") x= "&nbsp;";
         hcode +=`
         <h1 style = "transition-delay:${idx*0.02}s">${x}</h1>
         `;
     
         idx++;
-        // console.log(x)
     }
     s4.innerHTML = hcode;
-    setTimeout(()=>{
-    stage.forEach((ele)=>{
-        ele.classList.add("on")
-    });
-},100)
 }
+// 페이지5 텍스트함수
 function p5h1txt() {
-    // h  js 
     let hcode = "" // 코드 저장변수
     let idx = 0; //순번변수
     
     for(let x of h1[3]){
-        // console.log(x)
         if(x === " ") x= "&nbsp;";
         hcode +=`
         <h1 style = "transition-delay:${idx*0.02}s">${x}</h1>
         `;
     
         idx++;
-        // console.log(x)
     }
     s5.innerHTML = hcode;
-    setTimeout(()=>{
-        stage.forEach((ele)=>{
-            ele.classList.add("on")
-        });
-    },100)
 }
 
-// p2h1txt();
-// p3h1txt();
-// p4h1txt();
-// p5h1txt();
-
-
-
-
-// p박스 
-setTimeout(()=>{
-    s2.forEach((ele)=>{
-        ele.classList.add('on')
-}),100})
-
-
-
-
-setTimeout(()=>{
-    stage.forEach((ele)=>{
-        ele.classList.add("on")
-    });
-},100)
-
-
-
-
+// function h1txt () {
+//     let hcode =""
+//     let idx = 0;
+//     for(let i =0; i<4; i++){
+//         for(let x of h1[i]){
+//             if(x ==="") x="&nbsp;";
+//             hcode +=`
+//             <h1 style = "transition-delay:${idx*0.02}s">${x}</h1>
+//             `;
+//             idx++;
+//         }
+//         qsa('.stage').forEach((ele)=>{ele.innerHTML = hcode;})
+//     }
+// }
+// h1txt();
+// 각 글자 한글자씩 출력해주는거 일단실행 opacity0처리되어있음
+// page에 클래스 on주면 애니메이션있음
+p2h1txt();
+p3h1txt();
+p4h1txt();
+p5h1txt();
 
 
 
@@ -287,21 +290,13 @@ setTimeout(()=>{
 
 
 
-/* 
-    함수명 : pageAction
-    기능 : 페이지별 액션주기
-*/
 
-function pageAction(seq) {
-    console.log('액션',seq)
 
-    // 변경대상 
-    // 페이지2의 textarea
-    const p2tarea = qs('.page2 .txtarea')
-    // console.log(p2tarea)
 
-    // 해당 페이지 액션주기
-}
+
+
+
+
 
 
 
@@ -338,12 +333,12 @@ stb = qs(".sitemap_btn");
 // 메인페이지 버튼누를시 사이트맵에 클래스 on 추가
 btn.onclick = ()=>{
     // console.log(btn);
-    sitemap.classList.add("on");
+    sitemap.classList.add("show");
 };
 
 // 사이트맵에 버튼클릭시 사이트맵에 클래스 on 빼기
 stb.onclick=()=>{
-    sitemap.classList.remove("on");
+    sitemap.classList.remove("show");
 }
 
 // 사이트맵 버튼 이동 끝

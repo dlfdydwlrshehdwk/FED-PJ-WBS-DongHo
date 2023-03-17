@@ -56,7 +56,7 @@
     width: 300px;
 }
 /************************ 페이지 2 ************************/
-.page2{
+#pg2{
     position: relative;
 }
 .p2wrap{
@@ -161,7 +161,7 @@ margin-bottom: 10px;
     transition: .8s ease-in-out;
 }
 /* 글자 개별박스 */
-.stage p{
+.page p{
     /* 트랜스폼 적용위해 */
     display: inline-block;
     line-height: 1.7;
@@ -174,11 +174,11 @@ margin-bottom: 10px;
 }
 
 /* 스테이지로 들어오기 */
-.stage.on h1{
+.page.on .stage h1{
     transform: translate(0,0);
     opacity: 1;
 }
-.stage2.on p{
+.page.on .stage2 p{
     transform: translate(0,0);
     opacity: 1;
 }
@@ -362,7 +362,7 @@ animation: nhd1 2s ease-in-out forwards;
     right: 0;
     /* animation: txt3 30s linear infinite; */
 }
-.page4{
+#pg4{
     overflow: hidden;
 }
 @keyframes txt2 {
@@ -477,8 +477,8 @@ animation: nhd1 2s ease-in-out forwards;
 /******************** 메인영역 끝 ****************/
 
 /* 하단영역 시작 */
-.page6{
-    min-height: 623px;
+#pg6{
+    max-height: 706px;
     background-color: #fff;
 }
 
