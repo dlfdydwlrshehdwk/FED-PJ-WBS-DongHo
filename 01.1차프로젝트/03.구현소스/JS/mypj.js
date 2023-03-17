@@ -1,3 +1,7 @@
+
+
+
+
 window.addEventListener("DOMContentLoaded",()=>{
 
     // 새로고침시 화면맨위로설정
@@ -60,15 +64,18 @@ function wheelFn(e){
     updatePg();
 } // wheel 이벤트 ////
 
+
+
 // 함수명 updatePg
 // 기능 페이지 이동 설정값 업데이트
 
-function updatePg() {
+function updatePg(obj) {
     console.log('페이지이동')
     // 페이지 이동하기
     // scrollTO(가로,세로)
     window.scrollTo(0,window.innerHeight*pgnum);
     // 세로 이동위치 : 윈도우 높이값* 페이지 번호
+
 
     // 페이지 이동후 해당 페이지액션
     // pageAction 함수호출 (페이지이동 시차를 준다.)
@@ -78,11 +85,47 @@ function updatePg() {
 
 /* 
     함수명 : initCSS
-    기능 : 글자 애니메이션 초기값 셋팅
+    기능 : 애니메이션 초기값 셋팅
+*/
+const stage =qsa('.stage');
+console.log(stage);
+// 이벤트 설정
+stage.forEach((ele,idx)=>{initCSS(ele,idx)});
+// 함수만들기
+function initCSS(ele,seq) {
+    // 호출확인 
+    console.log('이닛호출',seq)
+    console.log(ele)
+    ele.classList.remove('on');
+
+    
+}
+
+
+/* 
+    함수명 : pageAction
+    기능 : 페이지별 액션주기
 */
 
+function pageAction(seq) {
+    console.log('액션',seq)
 
+    stage.forEach((ele,idx)=>{initCSS(ele,seq)});
 
+    // 페이지 액션주기
+    if(seq === 0){
+        p2h1txt();
+    }
+    else if(seq === 1){
+        p3h1txt();
+    }
+    else if(seq === 2){
+        p4h1txt();
+    }
+    else if(seq === 3){
+        p5h1txt();
+    }
+}
 
 
 
@@ -106,7 +149,7 @@ const s3 = qs('.stage3');
 const s4 = qs('.stage4');
 const s5 = qs('.stage5');
 const s2 = qsa('.stage2');
-const stage =qsa('.stage');
+
 const h1 = ["BUSINESS","About FESCARO","Partnership","Contact us"] // 데이터저장변수
 // p태그
 const stage2p = qsa('.stage2 p')
@@ -117,6 +160,11 @@ function p2h1txt() {
     // h  js 
     let hcode = "" // 코드 저장변수
     let idx = 0; //순번변수
+    setTimeout(()=>{
+        stage.forEach((ele)=>{
+            ele.classList.add("on")
+        });
+    },100)
     
     for(let x of h1[0]){
         // console.log(x)
@@ -134,6 +182,11 @@ function p3h1txt() {
     // h  js 
     let hcode = "" // 코드 저장변수
     let idx = 0; //순번변수
+    setTimeout(()=>{
+        stage.forEach((ele)=>{
+            ele.classList.add("on")
+        });
+    },100)
     
     for(let x of h1[1]){
         // console.log(x)
@@ -144,6 +197,7 @@ function p3h1txt() {
     
         idx++;
         // console.log(x)
+        
     }
     s3.innerHTML = hcode;
 }
@@ -151,6 +205,11 @@ function p4h1txt() {
     // h  js 
     let hcode = "" // 코드 저장변수
     let idx = 0; //순번변수
+    setTimeout(()=>{
+        stage.forEach((ele)=>{
+            ele.classList.add("on")
+        });
+    },100)
     
     for(let x of h1[2]){
         // console.log(x)
@@ -163,6 +222,11 @@ function p4h1txt() {
         // console.log(x)
     }
     s4.innerHTML = hcode;
+    setTimeout(()=>{
+    stage.forEach((ele)=>{
+        ele.classList.add("on")
+    });
+},100)
 }
 function p5h1txt() {
     // h  js 
@@ -180,21 +244,26 @@ function p5h1txt() {
         // console.log(x)
     }
     s5.innerHTML = hcode;
+    setTimeout(()=>{
+        stage.forEach((ele)=>{
+            ele.classList.add("on")
+        });
+    },100)
 }
 
-p2h1txt();
-p3h1txt();
-p4h1txt();
-p5h1txt();
+// p2h1txt();
+// p3h1txt();
+// p4h1txt();
+// p5h1txt();
 
 
 
 
 // p박스 
-    setTimeout(()=>{
-        s2.forEach((ele)=>{
-            ele.classList.add('on')
-        }),100})
+setTimeout(()=>{
+    s2.forEach((ele)=>{
+        ele.classList.add('on')
+}),100})
 
 
 
