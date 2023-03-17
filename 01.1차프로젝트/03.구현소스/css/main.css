@@ -43,6 +43,7 @@
     background-color: skyblue;
     border-radius: 75px;
     transition: width .3s ease-in-out;
+    border: 1px solid white;
 }
 .cirtxt {
     position: absolute;
