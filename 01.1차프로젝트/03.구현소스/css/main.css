@@ -286,11 +286,11 @@ margin-bottom: 10px;
     position: relative;
 }
 
-.nhd2 ol{
+.page.on .nhd2 ol{
 animation: nhd1 2s ease-in-out forwards;
 }
-.nhd1 ol{
-    animation: nhd2 2s ease-in-out forwards;
+.page.on .nhd1 ol{
+animation: nhd2 2s ease-in-out forwards;
 }
 @keyframes nhd1 {
     to{
