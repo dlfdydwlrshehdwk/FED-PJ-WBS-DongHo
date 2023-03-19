@@ -200,6 +200,8 @@ body{
     top: 0;
     left: 0;
     z-index: 999;
+    width: 100%;
+    height: 100vh;
 }
 .sitemap.show{
     display: block;
@@ -208,7 +210,7 @@ body{
     position: relative;
     top: 50%;
     transform: translateY(-50%);
-    width: 1515px;
+    max-width: 1515px;
     margin: 0 auto;
 }
 .sitemap_top ul {
@@ -217,22 +219,22 @@ body{
     align-items: center;
 }
 .sitemap h2{
-    font-size: 6rem;
+    font-size: min(60px,5vw);
     font-weight: bold;
 }
 .sitemap dl{
-    padding: 70px 25px;
+    padding: min(70px,7vw) min(25px,2.3vw);
     border-left: 1px solid rgb(255, 255, 255,0.1);
     margin-top: 75px;
-    width: 100%;
+    flex: 1;
 }
 .sitemap dt{
-    font-size: 3rem;
+    font-size: min(30px,2.3vw);
     font-weight: bold;
     margin-bottom: 2em;
 }
 .sitemap dd{
-    font-size: 1.7rem;
+    font-size: min(17px,1.3vw);
     padding: 1em 0;
 }
 .sitemap a{
@@ -245,6 +247,9 @@ body{
 .sitemap_btn{
     font-size: 40px;
     margin-right: 15px;
+}
+.sitewrap{
+    padding: 0 50px;
 }
 
 
