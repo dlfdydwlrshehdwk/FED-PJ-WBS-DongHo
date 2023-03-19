@@ -338,10 +338,10 @@ animation: nhd2 2s ease-in-out forwards;
 .p4txt p{
     margin-top: 2.5rem;
 }
-.p4img li{
+.p4bx li{
     width: 24rem;
     height: 10rem;
-    margin: 0 10px;
+    margin: 0 15px;
 }
 
 .p4bx{

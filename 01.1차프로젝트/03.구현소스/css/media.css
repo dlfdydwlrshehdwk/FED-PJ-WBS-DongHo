@@ -125,6 +125,15 @@
     .sitemap dd:nth-child(4n+1){
         clear: both;
     }
+    .ftbt{
+        flex-direction: column;
+        gap: 15px 0;
+        white-space: nowrap;
+    }
+    #pg6 {
+        max-height: 656px;
+        background-color: #fff;
+    }
 }
 
 @media screen and (max-width: 600px ) {
@@ -160,11 +169,7 @@
     .p5ul label {
         width: 15%;
     }
-    /* 푸터 */
-    .ftbt{
-        flex-direction: column;
-        gap: 15px 0;
-    }
+    
     #pg6 {
         max-height: 639px;
         background-color: #fff;
