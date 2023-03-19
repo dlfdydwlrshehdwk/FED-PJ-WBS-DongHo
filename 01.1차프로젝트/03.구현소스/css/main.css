@@ -82,7 +82,7 @@
 /* .bx3 ul */
 .bx3 ul{
     position: relative;
-    left: 0;
+    left: -78%;
     /* 플렉스박스 사진 가로정렬 */
     display: flex; 
     width: 308%;

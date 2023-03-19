@@ -90,9 +90,6 @@ function wheelFn(e){
 } // wheel 이벤트 ////
 
 
-
-
-
 // 함수명 updatePg
 // 기능 페이지 이동 설정값 업데이트
 
@@ -114,84 +111,6 @@ function updatePg() { // obj - 변경할 메뉴전체 객체
     // pageAction 함수호출 (페이지이동 시차를 준다.)
     // setTimeout(()=>pageAction(pgnum),500)
 }//updatePg 함수 ////
-
-/* 
-    함수명 : initCSS
-    기능 : 등장할 요소들의 초기값 셋팅
-*/
-// 대상 : stage 변수   .stage
-
-// console.log(page);
-// 이벤트설정
-// page.forEach((ele,idx)=>initCSS(ele,idx));
-// 함수만들기
-function initCSS(ele,seq){ //ele 요소, seq순번
-    // console.log('이닛호출',seq) 0 1 2 3
-    console.log(ele) 
-
-    // ele.style.transion='none'
-    // 각 요소별 초기화하기
-    if(seq === 0){
-        ele.classList.remove('on');
-    }
-    else if(seq === 1){
-        ele.classList.remove('on');
-    }
-    else if(seq === 2){
-        ele.classList.remove('on');
-    }
-    else if(seq === 3){
-        ele.classList.remove('on');
-    }
-    else if(seq === 4){
-        ele.classList.remove('on');
-    }
-    else if(seq === 5){
-        ele.classList.remove('on');
-    }
-} // initCSS ////
-
-/* 
-    함수명 :pageAction
-    기능 : 페이지별 액션
-*/
-
-function pageAction(seq){
-    console.log('액션',seq)
-
-    // 전체 초기화
-    // page.forEach((ele,idx)=>initCSS(ele,idx));
-    // console.log(idx)
-    // 액션주기
-    // page.forEach((ele,idx)=>ele.classList.add('on'));
-    // if(seq === 0){
-    //     console.log('gd')
-    // }
-    // else if(seq ===1){
-    //     ele.classList.add('on');
-    //     p2h1txt();
-    //     pbx();
-    // }
-    // else if(seq ===2){
-    //     ele.classList.add('on');
-    //     p3h1txt();
-    //     pbx();
-    // }
-    // else if(seq ===3){
-    //     ele.classList.add('on');
-    //     p4h1txt();
-    //     pbx();
-    // }
-    // else if(seq ===4){
-    //     ele.classList.add('on');
-    //     p5h1txt();
-    //     pbx();
-    // }
-    // else if(seq ===5){
-    // }
-}
-
-
 
 
 
@@ -283,6 +202,13 @@ p5h1txt();
 
 
 
+// 페이지 2 인터벌
+
+// 대상 .bx3 ul
+const p2slide = qs('.bx3slide')
+console.log(p2slide)
+// 기능 : 일정시간마다 왼쪽으로 -39%씩이동
+// 화살표를 누르면 맨끝사진을 다른맨끝으로 잘라서 넣은 후 방향에 맞게 이동
 
 
 
