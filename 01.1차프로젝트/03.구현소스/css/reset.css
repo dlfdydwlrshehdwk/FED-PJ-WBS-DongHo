@@ -29,7 +29,7 @@ body a{
     color: #000;
 }
 h1 {
-    font-size: min(64px,4vw);
+    font-size: min(64px,6vw);
 }
 p {
     font-size: min(20px,1.8vw);

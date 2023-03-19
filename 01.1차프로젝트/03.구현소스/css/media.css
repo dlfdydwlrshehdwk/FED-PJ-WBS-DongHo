@@ -10,6 +10,41 @@
         display: none;
     }
 }
+@media screen and (max-width:1200px) {
+    /* 페이지 2미디어 */
+    .bx3{
+        padding: 0 20px;
+        width: 100%;
+    }
+    .bx2 {
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+    }
+    .bx3 ul {
+        width: 200%;
+    }
+    .p2wrap {
+        align-items: flex-end;
+        box-sizing: border-box;
+        padding: 10% 0;
+    }
+
+    /* 푸터 */
+    .ftbx {
+        flex-direction: column;
+    }
+    .ftsns {
+        margin-top: 40px;
+    }
+    .fttxt {
+        width: 100%;
+    }
+    .ftdlbx {
+        width: 100%;
+        padding-top: 50px;
+    }
+}
 
 @media screen and (max-width : 1000px) {
 
@@ -26,5 +61,67 @@
     }
     .cirtxt {
         font-size: min(20px,2.1vw);
+    }
+}
+
+@media screen and (max-width: 800px ) {
+    .bx3 ul {
+        width: 308%;
+    }
+    h1 {
+        font-size: min(64px,9vw);
+    }
+    p {
+        font-size: min(20px,3vw);
+    }
+
+
+    /* 푸터 */
+    .ftdlbx {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 600px ) {
+    .bx3 ul {
+        width: 388%;
+    }
+    h1 {
+        font-size: min(64px,9vw);
+    }
+    p {
+        font-size: min(20px,3vw);
+    }
+
+    /* 5페이지 */
+    .p5ul {
+        flex-direction: column;
+    }
+    .p5ul ul {
+        width: 100%;
+    }
+    .p5send {
+        margin-bottom: 2rem;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .sendbt{
+        margin: 0 auto;
+        margin-top: 10px;
+    }
+    .p5ul ul input {
+        width: 85%;
+    }
+    .p5ul label {
+        width: 15%;
+    }
+    /* 푸터 */
+    .ftbt{
+        flex-direction: column;
+        gap: 15px 0;
+    }
+    #pg6 {
+        max-height: 639px;
+        background-color: #fff;
     }
 }

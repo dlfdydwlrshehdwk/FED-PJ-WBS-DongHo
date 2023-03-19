@@ -38,8 +38,8 @@
     position: relative;
 }
 .circle{
-    width: 100px;
-    height: 100px;
+    width: min(100px,9vw);
+    height: min(100px,9vw);
     background-color: skyblue;
     border-radius: 75px;
     transition: width .3s ease-in-out;
@@ -53,7 +53,7 @@
     transform: translate(5%,-50%);
 }
 .circle:hover{
-    width: 300px;
+    width: min(300px,29vw);
 }
 /************************ 페이지 2 ************************/
 #pg2{
@@ -126,8 +126,9 @@ margin-bottom: 10px;
     bottom:  0;
     right : 0;
 }
-.bx3 img{
-    transition:  .3s;
+.bx3 img {
+    transition: .3s;
+    width: 100%;
 }
 .bx3 li:hover img{
     transform: scale(1.1);
@@ -242,7 +243,7 @@ margin-bottom: 10px;
 } */
 
 .p3show li>span{
-    font-size: 1.8rem;
+    font-size: min(18px,2vw);
     font-weight: bold;
 }
 .p3mt{
@@ -265,6 +266,7 @@ margin-bottom: 10px;
     display: flex;
     /* 중앙배치 */
     justify-content: center;
+    margin-top: 2rem;
 }
 /* 플렉스박스들이 표에서 4등분할되게 */
 .p3show>ul>li{
@@ -274,13 +276,12 @@ margin-bottom: 10px;
 /* 페이지3에서 슬롯머신박스 부분 */
 .nhd{
     position: relative;
-    height: 8rem;
-    font-size: 8rem;
+    height: 1em;
+    font-size: min(80px,7vw);
     /* 숫자한개만 보이게하고 나머지는 숨겨줌 */
     overflow: hidden;
     top: 0;
     font-weight: 700;
-    margin-top: 20px;
 }
 .nhd ol{
     position: relative;
@@ -308,7 +309,7 @@ animation: nhd2 2s ease-in-out forwards;
 
 /* 퍼센트/ 종 크기조절 */
 .pct span{
-    font-size: 4rem;
+    font-size: min(40px,4vw);
     font-weight: bold;
 }
 /* 퍼센트 / 종 숫자옆에 배치 */
@@ -378,25 +379,24 @@ animation: nhd2 2s ease-in-out forwards;
 
 /*************************** 페이지 5 ***********************/
 .p5cont{
-    width: 1515px;
+    max-width: 1515px;
     margin: 0 auto;
     position: relative;
     top: 50%;
-    transform: translateY(-50%
-    );
+    transform: translateY(-50%);
     color: #fff;
 }
 .p5cont label{
-    font-size: 1.3rem;
+    font-size: min(13px,2vw);
     font-weight: bold;
 }
 .p5bx{
     max-width: 465px;
+    margin:  0 20px;
 }
 .p5txt p{
-    margin-top: 2.5rem;
     margin-bottom: 30px;
-    line-height: 3rem;
+    line-height: 2em;
 }
 .p5txt{
     border-bottom: 2px solid #fff;
@@ -478,7 +478,7 @@ animation: nhd2 2s ease-in-out forwards;
 
 /* 하단영역 시작 */
 #pg6{
-    max-height: 706px;
+    max-height: 704px;
     background-color: #fff;
 }
 
@@ -486,6 +486,7 @@ animation: nhd2 2s ease-in-out forwards;
 .ftcont{
     margin: 0 auto;
     padding: 8.8rem 3rem 0;
+    background-color: #fff;
 }
 .ftbx{
     display: flex;
@@ -497,7 +498,7 @@ animation: nhd2 2s ease-in-out forwards;
     display: flex;
 }
 .fttxt {
-    font-size: 1.6rem;
+    font-size: min(16px,1.8vw);
     width: 35%;
     line-height: 1.8;
     color: #333;
@@ -521,12 +522,12 @@ animation: nhd2 2s ease-in-out forwards;
     padding-right: 1rem;
 }
 .ftdl dt{
-    font-size: 1.6rem;
+    font-size: min(16px,1.5vw);
     font-weight: bold;
     margin-bottom: 2rem;
 }
 .ftdl dd{
-    font-size: 1.5rem;
+    font-size: min(15px,1.4vw);
     margin-bottom: 1rem;
     color: #999;
 }
