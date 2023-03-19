@@ -169,4 +169,7 @@
         max-height: 639px;
         background-color: #fff;
     }
+    .sitemap dd:nth-child(3n+1){
+        /* clear: both; */
+    }
 }
