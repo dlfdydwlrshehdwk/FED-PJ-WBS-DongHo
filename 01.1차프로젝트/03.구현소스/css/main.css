@@ -91,6 +91,9 @@
     position: relative;
     overflow: hidden;
 }
+.bx3 li p{
+    opacity: 1;
+}
 .bx3 li div{
     position: absolute;
     width: 100%;
@@ -106,25 +109,15 @@ margin-bottom: 10px;
     font-size: 1.3rem;
     color: #555;
 }
-.bx3 li:first-child div,
-.bx3 li:nth-child(5) div{
-    top: 0;
-    left: 0;
-}
-.bx3 li:nth-child(2) div,
-.bx3 li:nth-child(6) div{
+.bx3bottom{
+    position: absolute;
     bottom: 0;
     left: 0;
 }
-.bx3 li:nth-child(3) div,
-.bx3 li:nth-child(7) div{
+.bx3top{
+    position: absolute;
     top: 0;
-    right: 0;
-}
-.bx3 li:nth-child(4) div,
-.bx3 li:nth-child(8) div{
-    bottom:  0;
-    right : 0;
+    left: 0;
 }
 .bx3 img {
     transition: .3s;
@@ -140,6 +133,7 @@ margin-bottom: 10px;
 }
 /* 텍스트박스 */
 .txtbx{
+    position: relative;
     color: #fff;
     margin-left:3%;
 }
@@ -147,6 +141,13 @@ margin-bottom: 10px;
     position: relative;
     top: 50%;
     transform: translateY(-50%);
+}
+.p2btns{
+    font-size: 40px;
+    display: flex;
+    position: absolute;
+    bottom: 0;
+    left: 0;
 }
 /* 한글자씩 나오기 위함 */
 .stage{
