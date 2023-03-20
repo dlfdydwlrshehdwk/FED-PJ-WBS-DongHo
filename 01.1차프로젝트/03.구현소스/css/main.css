@@ -102,11 +102,12 @@
     box-sizing: border-box;
 }
 .bx3 li div h3{
-font-size: 2rem;
+font-size: min(20px,1.9vw);
 margin-bottom: 10px;
+white-space: nowrap
 }
 .bx3 li div p{
-    font-size: 1.3rem;
+    font-size: min(13px, 1.2vw);
     color: #555;
 }
 .bx3bottom{
