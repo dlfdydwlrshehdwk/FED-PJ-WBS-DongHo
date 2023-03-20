@@ -1,5 +1,14 @@
 
+let mob = 0;
+if(window.innerWidth < 800) mob = 1;
+console.log("처음mob:",mob);
 
+window.addEventListener("resize",()=>{
+    if(window.innerWidth < 800) mob = 1;
+    else mob = 0;
+    console.log("리사이즈mob:",mob);
+
+});
 
 
 window.addEventListener("DOMContentLoaded",()=>{
@@ -53,9 +62,28 @@ const h1 = ["BUSINESS","About FESCARO","Partnership","Contact us"]
 
 // 휠이벤트설정
 window.addEventListener('wheel',wheelFn,{passive:false});
+// 스크롤이벤트설정
+window.addEventListener('scroll',scrollFn,{passive:false});
+
+const retVal = x => x.getBoundingClientRect().top;
+
+function scrollFn(){
+    if(!mob) return;
+
+
+    page.forEach(ele=>{
+        let point = retVal(ele);
+        console.log(point);
+        if(point<100 && point > -100) ele.classList.add('on');
+        else ele.classList.remove("on");
+    });
+}
 
 // 휠 이벤트 함수 만들기
 function wheelFn(e){
+
+    if(mob) return;
+
     // 기본기능 멈추기
     e.preventDefault();
 
@@ -100,11 +128,20 @@ function updatePg() { // obj - 변경할 메뉴전체 객체
     window.scrollTo(0,window.innerHeight*pgnum);
     // 세로 이동위치 : 윈도우 높이값* 페이지 번호
 
-    page.forEach((ele)=>{
-        ele.classList.remove('on');
-        // console.log(ele)
-    })
-    page[pgnum].classList.add('on');
+    setTimeout(()=>{
+
+        console.log("실행!!!");
+        page.forEach((ele,idx)=>{
+                ele.classList.remove('on');
+            // console.log(ele)
+        })
+
+        page[pgnum].classList.add('on');
+
+    },600);
+
+        
+
 
     console.log(page[pgnum])
     // 페이지 이동후 해당 페이지액션
