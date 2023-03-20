@@ -139,6 +139,13 @@
         max-height: 656px;
         background-color: #fff;
     }
+    .sitemap.show .sitemap_main {
+        top: 0;
+        transform: translateY(0);
+    }
+    .sitemap.show {
+        overflow-y: scroll;
+    }
 }
 
 @media screen and (max-width: 600px ) {

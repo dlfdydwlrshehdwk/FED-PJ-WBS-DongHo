@@ -10,7 +10,7 @@
 */
 /* 메인프로젝트 css 원본 */
 
-/************************ 페이지 1 ************************/
+/************************ 페이지 1 시작 ************************/
 .bx1{
     display: flex;
     width: 50%;
@@ -55,7 +55,9 @@
 .circle:hover{
     width: min(300px,29vw);
 }
-/************************ 페이지 2 ************************/
+/************************ 페이지 1 끝  ************************/
+
+/************************ 페이지 2 시작 ************************/
 #pg2{
     position: relative;
 }
@@ -143,17 +145,6 @@ white-space: nowrap
     top: 50%;
     transform: translateY(-50%);
 }
-.p2btns{
-    font-size: 40px;
-    display: flex;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-}
-/* 한글자씩 나오기 위함 */
-.stage{
-    /* overflow: hidden; */
-}
 /* 글자 개별박스 */
 .stage h1{
     /* 트랜스폼 적용위해 */
@@ -175,6 +166,43 @@ white-space: nowrap
 .stage2 {
     overflow: hidden;
 }
+.p2btns{
+    font-size: 40px;
+    overflow: hidden;
+    display: flex;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    gap: 0 100px;
+    line-height: 40px;
+}
+.p2bar{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100px;
+    height: 0px;
+    border: 1px solid rgba(0, 0, 0, 0.226);
+}
+.p2gbar {
+    position: absolute;
+    height: 100%;
+    width: 50%;
+    overflow: hidden;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.p2gage{
+    position: absolute;
+    top: 50%;
+    left: -114%;
+    transform: translate(0, -50%);
+    width: 100px;
+    height: 0;
+    border: 1px solid #000;
+}
 
 /* 스테이지로 들어오기 */
 .page.on .stage h1{
@@ -186,7 +214,7 @@ white-space: nowrap
     opacity: 1;
 }
 /* 흐르는 글자 키프레임 */
-@keyframes txt {
+/* @keyframes txt {
     
     0%{
         left: 0%;
@@ -215,10 +243,10 @@ white-space: nowrap
     100%{
         left: -156%;
     }
-}
+} */
+/************************ 페이지 2 끝 ************************/
 
-
-/******************* 페이지 3 **********************/
+/******************* 페이지 3 시작**********************/
 
 .p3wrap{
     position: relative;

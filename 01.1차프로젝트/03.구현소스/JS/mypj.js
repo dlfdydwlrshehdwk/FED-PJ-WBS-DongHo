@@ -1,4 +1,5 @@
-
+// 변수한개를 지정
+// width가 800이하일떄 변수가 1이된다. 이상일땐 0
 let mob = 0;
 if(window.innerWidth < 800) mob = 1;
 console.log("처음mob:",mob);
@@ -66,7 +67,6 @@ window.addEventListener('wheel',wheelFn,{passive:false});
 window.addEventListener('scroll',scrollFn,{passive:false});
 
 const retVal = x => x.getBoundingClientRect().top;
-
 function scrollFn(){
     if(!mob) return;
 
@@ -74,7 +74,7 @@ function scrollFn(){
     page.forEach(ele=>{
         let point = retVal(ele);
         console.log(point);
-        if(point<100 && point > -100) ele.classList.add('on');
+        if(point<150 && point > -150) ele.classList.add('on');
         else ele.classList.remove("on");
     });
 }
@@ -138,7 +138,7 @@ function updatePg() { // obj - 변경할 메뉴전체 객체
 
         page[pgnum].classList.add('on');
 
-    },600);
+    },300);
 
         
 
@@ -247,9 +247,15 @@ const p2slide = qs('.bx3slide');
 const p2slist = qsa('.bx3slide li');
 // 대상 페이지 2의 버튼들
 const p2btns = qsa('.p2btns div');
-console.log(p2btns)
+// 대상 게이지 .p2gage
+const p2gage = qs('.p2gage');
+
+console.log(p2gage)
 // 기능 : 일정시간마다 왼쪽으로 -39%씩이동
 // 화살표를 누르면 맨끝사진을 다른맨끝으로 잘라서 넣은 후 방향에 맞게 이동
+// 기능 : 게이지가 인터벌시간동안 -114%에서 0으로 옴
+
+
 
 // 광클금지변수 : 0 - 허용, 1 - 불허용
 let qwer = 0;
@@ -310,6 +316,10 @@ const goSlide = (seq) => {
         // 대기실행 공간인 큐(Queue)메모리공간에서 실행하므로
         // 코드가 동시에 바뀌는 것을 막아주고 의도한 대로
         // 시차실행을 가능하게 해준다!
+
+        // 게이지가 찬다.
+        // p2gage.style.left = 0;
+        // p2gage.style.transition = "left .4s ease-in-out"
 
 
     } //////////// if : 오른쪽클릭시 //////
@@ -414,6 +424,26 @@ autoT = setTimeout(autoSlide,5000);
 } ///////// clearAuto 함수 /////////////
 
 
+let autoG;
+let autoGt;
+
+/* 
+    함수명 : autoGage
+    기능 : 게이지가 인터발시간과 맞게 차징
+*/
+function autoGage(){
+    console.log("인터발실행")
+}
+
+
+/* 
+    함수명 : clearGage
+    기능 : 인터발을지우고 다시실행
+*/
+function clearGage(){
+    console.log("인터발실행")
+}
+
 
 
 
@@ -461,11 +491,13 @@ stb = qs(".sitemap_btn");
 btn.onclick = ()=>{
     // console.log(btn);
     sitemap.classList.add("show");
+    document.body.style.overflow = "hidden";
 };
 
 // 사이트맵에 버튼클릭시 사이트맵에 클래스 on 빼기
 stb.onclick=()=>{
     sitemap.classList.remove("show");
+    document.body.style.overflow="visible";
 }
 
 // 사이트맵 버튼 이동 끝
