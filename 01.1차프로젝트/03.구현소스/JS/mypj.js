@@ -122,7 +122,7 @@ function wheelFn(e){
 // 기능 페이지 이동 설정값 업데이트
 
 function updatePg() { // obj - 변경할 메뉴전체 객체
-    console.log('업데이트')
+    // console.log('업데이트')
     // 페이지 이동하기
     // scrollTO(가로,세로)
     window.scrollTo(0,window.innerHeight*pgnum);
@@ -130,7 +130,7 @@ function updatePg() { // obj - 변경할 메뉴전체 객체
 
     setTimeout(()=>{
 
-        console.log("실행!!!");
+        // console.log("실행!!!");
         page.forEach((ele,idx)=>{
                 ele.classList.remove('on');
             // console.log(ele)
@@ -140,10 +140,11 @@ function updatePg() { // obj - 변경할 메뉴전체 객체
 
     },300);
 
-        
-
-
     console.log(page[pgnum])
+    console.log(pgnum)
+    if(pgnum === 1){
+        qs('.ctbtn').classList.add('on');
+    }
     // 페이지 이동후 해당 페이지액션
     // pageAction 함수호출 (페이지이동 시차를 준다.)
     // setTimeout(()=>pageAction(pgnum),500)
@@ -250,7 +251,7 @@ const p2btns = qsa('.p2btns div');
 // 대상 게이지 .p2gage
 const p2gage = qs('.p2gage');
 
-console.log(p2gage)
+// console.log(p2gage)
 // 기능 : 일정시간마다 왼쪽으로 -39%씩이동
 // 화살표를 누르면 맨끝사진을 다른맨끝으로 잘라서 넣은 후 방향에 맞게 이동
 // 기능 : 게이지가 인터벌시간동안 -114%에서 0으로 옴
@@ -263,9 +264,6 @@ let qwer = 0;
 // 2. 슬라이드 변경함수 만들기
 // 호출시 seq에 들어오는 값중 1은 오른쪽, 0은 왼쪽
 const goSlide = (seq) => {
-    //  console.log("슬고우!", seq);
-
-    //  console.log("못들어갔어!!!!");
 
     // 광클금지 설정하기 //////
     if (qwer) return;
@@ -284,7 +282,8 @@ const goSlide = (seq) => {
     // 1-1. 오른쪽버튼 클릭시 ////////////////
     if (seq) {
          console.log("오른!");
-
+         p2gage.style.left = '-114%';
+         p2gage.style.transition='none';
         // 1. 슬라이드 이동전 먼저 잘라낸다!
         // 이유: 슬라이드 순서를 왼쪽이동과 동일하게 함!
         // 중앙확대 트랜지션 적용시 동작이 달라지므로!
@@ -317,17 +316,12 @@ const goSlide = (seq) => {
         // 코드가 동시에 바뀌는 것을 막아주고 의도한 대로
         // 시차실행을 가능하게 해준다!
 
-        // 게이지가 찬다.
-        // p2gage.style.left = 0;
-        // p2gage.style.transition = "left .4s ease-in-out"
-
 
     } //////////// if : 오른쪽클릭시 //////
 
     // 1-2. 왼쪽버튼 클릭시 //////////////
     else {
-         console.log("왼쪽!");
-
+        console.log("왼쪽!");
         // (1) 왼쪽버튼 클릭시 이전 슬라이드가
         // 나타나도록 하기위해 우선 맨뒤 li를
         // 맨앞으로 이동한다.
@@ -351,7 +345,6 @@ const goSlide = (seq) => {
         }, 0); ////// 타임아웃 /////////
 
     } //////////// else : 왼쪽클릭시 //////
-
     // 2. 현재 슬라이드 순번과 같은 블릿표시하기
     // 대상: .indic li -> indic변수
     // 2-1. 현재 배너리스트 업데이트하기
@@ -362,7 +355,7 @@ const goSlide = (seq) => {
 
     // 2-2.방향별 읽어올 슬라이드 순번으로 "data-seq"값 읽어오기
     // 세번째 슬라이드가 주인공이니까 0,1,2 즉 2번을 쓰면됨!!!
-    let cseq = clist[2].getAttribute("data-seq");
+    // let cseq = clist[2].getAttribute("data-seq");
     //  console.log("현재순번:", cseq);
 
     // 2-3. 블릿초기화
@@ -377,11 +370,15 @@ p2btns.forEach((ele, idx) => {
     ele.onclick = () => {
         // 0. 기본이동막기
         event.preventDefault();
-        
         // 1. 인터발지우기함수 호출!
         clearAuto();
+        clearGage();
         // 2. 슬라이드 함수 호출!
         goSlide(idx);
+        // 3. 게이지 실행!
+        p2gage.style.left = '-114%';
+        p2gage.style.transition='none';
+        setTimeout(goGage,5000);
     }; ///// click함수 //////
 }); /////// forEach //////////
 
@@ -390,6 +387,9 @@ let autoI;
 // 타임아웃함수 지우기위한 변수
 let autoT;
 
+let autoG;
+let autoGt;
+
 /************************************ 
     함수명: autoSlide
     기능: 인터발함수로 슬라이드함수 호출
@@ -397,6 +397,7 @@ let autoT;
 function autoSlide(){
     console.log("인터발시작!");
     // 인터발함수로 슬라이드함수 호출하기
+    // autoI 는 3초후에 고슬라이드 우측을 실행해줘
     autoI = setInterval(()=>goSlide(1),3000);
 } ////////////// autoSlide함수 //////////
 
@@ -411,41 +412,62 @@ function clearAuto(){
 console.log("인터발멈춤!");
 // 1. 인터발 지우기
 clearInterval(autoI);
-
 // 2. 타임아웃도 지우지 않으면
 // 쌓여서 타임아웃 쓰나미실행이 발생한다!
 clearTimeout(autoT);
-
 // 3. 잠시후 다시 작동하도록 타임아웃으로
 // 인터발함수를 호출한다! 
 // 5초후(인터발은 3초후, 토탈 8초후 작동시작)
+// 5초뒤에 오토슬라이드(3초후에 슬라이드 우측으로가는거 실행)
 autoT = setTimeout(autoSlide,5000);
-
 } ///////// clearAuto 함수 /////////////
 
 
-let autoG;
-let autoGt;
 
 /* 
-    함수명 : autoGage
-    기능 : 게이지가 인터발시간과 맞게 차징
+    함수명 : goGage
+    기능 : 게이지의 left값을 조정해준다! 
 */
+function goGage() {
+    // 변경대상 .p2gage  p2gage 변수
+
+    p2gage.style.left = "-114%"
+    setTimeout(()=>{
+        p2gage.style.left = "0%"
+        p2gage.style.transition = "2.5s ease-in"
+
+    },1)
+}
+// 자동게이지는 3초뒤부터되길레 한번실행해줌
+goGage();
+
 function autoGage(){
-    console.log("인터발실행")
-}
+    console.log("게이지시작!");
+    // 인터발함수로 슬라이드함수 호출하기
+    // autoI 는 3초후에 고슬라이드 우측을 실행해줘
+    autoG = setInterval(()=>goGage(),3000);
+} ////////////// autoSlide함수 //////////
 
+// 게이지 호출!
+autoGage();
 
-/* 
-    함수명 : clearGage
-    기능 : 인터발을지우고 다시실행
-*/
+/************************************ 
+    함수명: clearGage
+    기능: 인터발함수를 지우고 다시셋팅
+************************************/
 function clearGage(){
-    console.log("인터발실행")
-}
-
-
-
+    console.log("게이지멈춤!");
+    // 1. 인터발 지우기
+    clearInterval(autoG);
+    // 2. 타임아웃도 지우지 않으면
+    // 쌓여서 타임아웃 쓰나미실행이 발생한다!
+    clearTimeout(autoGt);
+    // 3. 잠시후 다시 작동하도록 타임아웃으로
+    // 인터발함수를 호출한다! 
+    // 5초후(인터발은 3초후, 토탈 8초후 작동시작)
+    // 5초뒤에 오토슬라이드(3초후에 슬라이드 우측으로가는거 실행)
+    autoGt = setTimeout(autoGage,5000);
+    } ///////// clearAuto 함수 /////////////
 
 
 

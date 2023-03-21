@@ -386,12 +386,12 @@ animation: nhd2 2s ease-in-out forwards;
     position: relative;
     left: -50%;
     margin-bottom: 2rem;
-    /* animation: txt2 30s linear infinite; */
+    animation: txt2 30s linear infinite;
 }
 .p4ani .bimg{
     position: relative;
     right: 0;
-    /* animation: txt3 30s linear infinite; */
+    animation: txt3 30s linear infinite;
 }
 #pg4{
     overflow: hidden;

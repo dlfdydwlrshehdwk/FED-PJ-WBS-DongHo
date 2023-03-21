@@ -280,16 +280,21 @@ body{
     right: 10px;
     background-color: #fff;
     border-radius: 50%;
+    
 }
 
 /* 컨택버튼 */
 
 .ctbtn{
     position: fixed;    
-    bottom: 5%;
+    bottom: 4%;
     right: 2%;
     width: 70px;
     height: 70px;
+    transition: .4s ease-in-out;
+}
+.on.ctbtn{
+    bottom:15%
 }
 .ctcircle{
     position: absolute;
