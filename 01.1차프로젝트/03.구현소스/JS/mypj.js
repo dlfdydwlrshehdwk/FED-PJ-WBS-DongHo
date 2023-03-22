@@ -1,9 +1,10 @@
-// 변수한개를 지정
+// 변수한개를 지정 mob
 // width가 800이하일떄 변수가 1이된다. 이상일땐 0
 let mob = 0;
 if(window.innerWidth < 800) mob = 1;
-console.log("처음mob:",mob);
+// console.log("처음mob:",mob);
 
+// 리사이즈를해서 보이는크기가 800이하일경우 mob를 1로 
 window.addEventListener("resize",()=>{
     if(window.innerWidth < 800) mob = 1;
     else mob = 0;
@@ -142,8 +143,11 @@ function updatePg() { // obj - 변경할 메뉴전체 객체
 
     console.log(page[pgnum])
     console.log(pgnum)
-    if(pgnum === 1){
+    if(pgnum !== 0){
         qs('.ctbtn').classList.add('on');
+    }
+    else if (pgnum === 0){
+        qs('.ctbtn').classList.remove('on');
     }
     // 페이지 이동후 해당 페이지액션
     // pageAction 함수호출 (페이지이동 시차를 준다.)
@@ -500,7 +504,7 @@ function clearGage(){
 
 
 
-// 사이트맵 버튼 이동 시작
+// 사이트맵 버튼 이동 시작 //////////////////////////////////
 
 // 메인페이지 버튼
 btn = qs(".btn");
@@ -509,7 +513,7 @@ sitemap = qs(".sitemap");
 // 사이트맵 버튼
 stb = qs(".sitemap_btn");
 
-// 메인페이지 버튼누를시 사이트맵에 클래스 on 추가
+// 메인페이지 사이트맵 버튼누를시 사이트맵에 클래스 on 추가
 btn.onclick = ()=>{
     // console.log(btn);
     sitemap.classList.add("show");
@@ -521,8 +525,83 @@ stb.onclick=()=>{
     sitemap.classList.remove("show");
     document.body.style.overflow="visible";
 }
+// 완료 !
+// 사이트맵 버튼 이동 끝 ///////////////////////////////////
 
-// 사이트맵 버튼 이동 끝
+
+// 위로가는 화살표 버튼 누르면 위로가기 /////////////////////////////////
+// 이벤트대상 .upbtn
+const upbtn = qs('.upbtn');
+
+upbtn.onclick = () => {
+    // 기본기능 막기
+    event.preventDefault();
+    // pgnum 0으로 교체
+    pgnum = 0;
+    // 페이지0으로 가기
+    window.scrollTo(0,window.innerHeight*pgnum)
+    qs('.ctbtn').classList.remove('on');
+}
+// 완료 !
+// 위로가는 화살표 버튼 끝 /////////////////////////////////
+
+// 로고 클릭시 페이지 새로고침 ////
+// 이벤트대상 .logo a
+const logoa = qsa('.logo a')
+logoa.forEach((ele)=>{
+    ele.onclick = () => {
+        window.location.reload();
+    }
+})
+
+// 완료
+// 로고 클릭시 페이지 새로고침 끝 ////
+
+
+// 로고색 바뀌기! //////////////////////////////////////
+// 기능 : nav ul에 마우스들어가면 로고이미지 1에 on빼고 로고이미지2에 on넣어주기, 마우스 빠지면 로고이미지2에 on뺴고 로고이미지에 1넣어주기
+
+    // 대상 : .nav ul
+    const navul = qs('.nav ul')
+    // 변경대상 : .logo img 2개
+    const logoimg = qsa('.logo img')
+    navul.onmouseenter= () => {
+        logoimg[0].classList.toggle('on');
+        logoimg[1].classList.toggle('on');
+    } // mouseenter ////
+
+    navul.onmouseleave= () => {
+        // 시간차를 줘야할거같아서 0.3초 줌!
+        setTimeout(() => {
+            logoimg[0].classList.toggle('on');
+            logoimg[1].classList.toggle('on');
+        },300)
+    } // mouseenter ////
+
+    // 완료! // 
+
+// 로고색 바뀌기! 끝 //////////////////////////////////////
+
+
+
+
+
+const ctbtn = qs('.ctbtn')
+// 컨택트 버튼 누르면 컨택트페이지로 가기!!////
+// 기능 : 컨택트버튼을 누르면 컨택트 페이지로 넘어감
+// 이벤트대상 : .ctbtn
+ctbtn.onclick = () => {
+    // 기본기능 막기
+    event.preventDefault();
+    // 페이지0으로 가기
+    pgnum = 4;
+    window.scrollTo(0,window.innerHeight*pgnum);
+    // pgnum 0으로 교체
+    // pgnum = 4;
+    updatePg();
+}
+
+// 컨택트 버튼 누르면 컨택트페이지로 가기!! 끝////
 
 
 });//로드구역 ///

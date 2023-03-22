@@ -72,12 +72,18 @@ body{
     transition:  .2s;
 }
 /* nav 로고 */
-.nav .logo {
+.logo img {
+    opacity: 0;
     margin-left: 50px;
     position: absolute;
     top: 50%;
     left: 0;
     transform: translateY(-50%);
+    transition:.3s;
+}
+/* 이미지에 온을 주면! */
+.logo img.on{
+    opacity: 1;
 }
 .nav> ul{
     /* nav안의 ul flex박스 */
@@ -289,22 +295,31 @@ body{
     position: fixed;    
     bottom: 4%;
     right: 2%;
-    width: 70px;
-    height: 70px;
+    width: 60px;
+    height: 60px;
     transition: .4s ease-in-out;
+    z-index: 1;
+    cursor: pointer;
 }
 .on.ctbtn{
-    bottom:15%
+    bottom:12%
 }
 .ctcircle{
+    overflow: hidden;
     position: absolute;
     bottom: 0;
     right: 0;
-    width: 70px;
-    height: 70px;
+    width: 60px;
+    height: 60px;
     background-color: #fff;
     border-radius: 75px;
     transition:  .3s;
+}
+.ctcircle div{
+    opacity: 0;
+    transform: translate(18%, 100%);
+    font-size: 16px;
+    font-weight: bold;
 }
 .cttxt{
     position: absolute;
@@ -318,4 +333,32 @@ body{
 }
 .ctbtn:hover .ctcircle{
     width: 200px;
+}
+.ctbtn:hover .ctcircle div{
+    opacity: 1;
+}
+
+/* 위로가는버튼 */
+.upbtn{
+    position: fixed;
+    opacity: 1;
+    bottom: 4%;
+    right: 2%;
+    width: 60px;
+    height: 60px;
+    transition: .4s ease-in-out;
+    background-color: #fff;
+    font-size: 30px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 60px;
+}
+.upbtn:hover i {
+    transform: translateY(-5px);
+}
+.upbtn i {
+    transition: .3s ease-in-out;
+}
+.on.upbtn{
+    opacity: 1;
 }
