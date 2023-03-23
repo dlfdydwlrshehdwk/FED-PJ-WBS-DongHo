@@ -16,8 +16,9 @@ body *{
     /* outline: 1px dotted red; */
     font-family: 'Montserrat', sans-serif;
 }
-body{
+html{
     overflow-x: hidden;
+    overflow-y: hidden;
 }
 
 

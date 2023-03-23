@@ -16,9 +16,9 @@ window.addEventListener("resize",()=>{
 window.addEventListener("DOMContentLoaded",()=>{
 
     // 새로고침시 화면맨위로설정
-    // setTimeout(()=>{
-    //     window.scrollTo(0,0);
-    // },100) // 작동완료
+    setTimeout(()=>{
+        window.scrollTo(0,0);
+    },100) // 작동완료
 
 // 셀렉터 변수화
 const qs = x =>document.querySelector(x);
@@ -143,11 +143,20 @@ function updatePg() { // obj - 변경할 메뉴전체 객체
 
     console.log(page[pgnum])
     console.log(pgnum)
+    // 페이지넘버 컨택트동그라미 등장 기능
     if(pgnum !== 0){
         qs('.ctbtn').classList.add('on');
     }
     else if (pgnum === 0){
         qs('.ctbtn').classList.remove('on');
+    }
+
+    // 페이지가 2,3 이면 li색 검정색으로 해야함
+    // if(pgnum === 2){
+    //     qsa('.cl>a').forEach((ele,idx)=>{
+    //         ele.style.color ="#333";
+    //         console.log(ele,ele[1],ele[idx]);
+    //     })
     }
     // 페이지 이동후 해당 페이지액션
     // pageAction 함수호출 (페이지이동 시차를 준다.)
@@ -406,7 +415,7 @@ function autoSlide(){
 } ////////////// autoSlide함수 //////////
 
 // 자동넘김 최초호출!
-autoSlide();
+// autoSlide();
 
 /************************************ 
     함수명: clearAuto
