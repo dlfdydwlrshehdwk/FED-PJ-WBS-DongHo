@@ -152,12 +152,23 @@ function updatePg() { // obj - 변경할 메뉴전체 객체
     }
 
     // 페이지가 2,3 이면 li색 검정색으로 해야함
-    if(pgnum === 2 && 3){
-        qsa('.nav ul a').forEach((ele,idx)=>{
+    if(pgnum === 2 ){
+        qsa('.nav ul a').forEach((ele)=>{
             ele.style.color ="#333";
-            console.log('gd');
+            console.log(pgnum);
+        })
+    } // if 
+    else if(pgnum === 3){
+        qsa('.nav ul a').forEach((ele)=>{
+            ele.style.color ="#333";
         })
     }
+    else{
+        qsa('.nav ul a').forEach((ele)=>{
+            ele.style.color ="#fff";
+        })
+    }
+    // else
     // 페이지 이동후 해당 페이지액션
     // pageAction 함수호출 (페이지이동 시차를 준다.)
     // setTimeout(()=>pageAction(pgnum),500)
