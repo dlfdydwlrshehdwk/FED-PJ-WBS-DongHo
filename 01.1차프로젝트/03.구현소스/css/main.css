@@ -96,7 +96,7 @@ body .pob p{
 /* .bx3 ul */
 .bx3 ul{
     position: relative;
-    left: -78%;
+    left: -156%;
     /* 플렉스박스 사진 가로정렬 */
     display: flex; 
     width: 308%;
@@ -115,20 +115,6 @@ body .pob p{
     /* padding: 50px 30px; */
     box-sizing: border-box;
 }
-.bx3 li:nth-child(0) div,
-.bx3 li:nth-child(2) div,
-.bx3 li:nth-child(4) div,
-.bx3 li:nth-child(6) div{
-    top: 7%;
-    left: 9%;
-}
-.bx3 li:nth-child(1) div,
-.bx3 li:nth-child(3) div,
-.bx3 li:nth-child(5) div,
-.bx3 li:nth-child(7) div{
-    bottom: 8%;
-    right: -7%;
-}
 
 .bx3 li div h3{
 font-size: min(20px,1.9vw);
@@ -141,10 +127,14 @@ white-space: nowrap
     line-height: 1;
     transform: translateY(0);
 }
-/* .bx3bottom{
+.bx3bottom{
+    bottom: 8%;
+    left: 10%;
 }
 .bx3top{
-} */
+    top: 8%;
+    left: 10%;
+}
 .bx3 img {
     transition: .3s;
     width: 100%;
@@ -660,3 +650,6 @@ animation: nhd2 2s ease-in-out forwards;
     font-size: 1.2rem;
 }
 
+/* .bx3slide li:nth-child(7){
+    opacity: .2;
+} */

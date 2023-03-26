@@ -39,6 +39,8 @@
     /* 푸터 */
     .ftbx {
         flex-direction: column;
+        padding-bottom: 40px;
+
     }
     .ftsns {
         margin-top: 40px;
@@ -147,6 +149,9 @@
     .sitemap.show {
         overflow-y: scroll;
     }
+    #pg6 {
+        max-height: 598px;
+    }
 }
 
 @media screen and (max-width: 600px ) {
@@ -195,5 +200,8 @@
     }
     .sitemap dd:nth-child(3n+1){
         /* clear: both; */
+    }
+    #pg6 {
+        max-height: 585px;
     }
 }
