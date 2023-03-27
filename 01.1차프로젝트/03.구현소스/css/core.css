@@ -193,7 +193,10 @@ html{
     width: 100%;
     margin-left: 0%; 
 }
-
+/* 탭버튼 트랜지션 */
+.tbtn {
+    transition:  .3s;
+}
 
 /* nav 끝 */
 

@@ -16,9 +16,9 @@ window.addEventListener("resize",()=>{
 window.addEventListener("DOMContentLoaded",()=>{
 
     // 새로고침시 화면맨위로설정
-    setTimeout(()=>{
-        window.scrollTo(0,0);
-    },100) // 작동완료
+    // setTimeout(()=>{
+    //     window.scrollTo(0,0);
+    // },100) // 작동완료
 
 // 셀렉터 변수화
 const qs = x =>document.querySelector(x);
@@ -143,14 +143,21 @@ function updatePg() { // obj - 변경할 메뉴전체 객체
 
     console.log(page[pgnum])
     console.log(pgnum)
+
+    ///////////////////////////////////////////////////////////
+    // 휠 했을때 페이지별 분기
+    ///////////////////////////////////////////////////////////
+    
     // 페이지넘버 컨택트동그라미 등장 기능
     if(pgnum !== 0){
+
         qs('.ctbtn').classList.add('on');
     }
     else if (pgnum === 0){
         qs('.ctbtn').classList.remove('on');
     }
 
+<<<<<<< HEAD
     // 1번페이지에도착해야 슬라이드 실행
     if(pgnum === 1){
         autoSlide();
@@ -159,15 +166,34 @@ function updatePg() { // obj - 변경할 메뉴전체 객체
         clearInterval(autoI);}
 
     // 페이지가 2,3 이면 li색 검정색, site맵색 검정, 로고 on
+=======
+    // 2 페이지 
+    // nav li 색 검정
+>>>>>>> 99ff6d4f59635e1da5de3ade5b22b59d29f5b534
     if(pgnum === 2 ){
         qsa('.nav ul a').forEach((ele)=>{
             ele.style.color = "#333";
         })
+<<<<<<< HEAD
         qs('.tabbtn').classList.add('black');
         logoimg[1].classList.add('on');
         logoimg[0].classList.remove('on');
+=======
+        // nav 로고 이미지 색변경
+        qsa('.logo img')[1].classList.add('on');
+        qsa('.logo img')[0].classList.remove('on');
+        // 탭버튼 색변경
+        qs('.tbtn').style.color = '#333';
+        // p2slide.style.left = "-156%";
+        // p2slide.style.transition = "none";
+        // p2gage.style.transition = 'none'
+        // p2gage.style.left = '-114%' 
+>>>>>>> 99ff6d4f59635e1da5de3ade5b22b59d29f5b534
     } // if 
+
+    // 3페이지
     else if(pgnum === 3){
+<<<<<<< HEAD
         qsa('.nav >ul>li a').forEach((ele)=>{
             ele.style.color = "#333";
         })
@@ -183,6 +209,35 @@ function updatePg() { // obj - 변경할 메뉴전체 객체
         logoimg[1].classList.remove('on');
         logoimg[0].classList.add('on');
     }
+=======
+        // nav li 색변경
+        qsa('.nav ul a').forEach((ele)=>{
+            ele.style.color ="#333";
+        })
+        // 로고 이미지 변경
+        qsa('.logo img')[1].classList.add('on');
+        qsa('.logo img')[0].classList.remove('on');
+        // 탭버튼 색변경
+        qs('.tbtn').style.color = '#333';
+    }
+    else if(pgnum === 5){
+        // 탭버튼 없애기
+        qs('.tbtn').style.opacity = 0;
+    }
+    else{
+        // nav li 색변경
+        qsa('.nav ul a').forEach((ele)=>{
+            ele.style.color ="#fff";
+        })
+        // 로고 이미지 색변경
+        qsa('.logo img')[0].classList.add('on');
+        qsa('.logo img')[1].classList.remove('on');
+        // 탭버튼 생기게하기 + 흰색
+        qs('.tbtn').style.opacity = 1;
+        qs('.tbtn').style.color = 'white';
+    }
+
+>>>>>>> 99ff6d4f59635e1da5de3ade5b22b59d29f5b534
 }//updatePg 함수 ////
 
 
@@ -314,11 +369,14 @@ const goSlide = (seq) => {
     // 0. 현재의 슬라이드 li수집하기
     let clist = document.querySelectorAll(".bx3slide li");
     // clist -> current list 현재 리스트
-
     // 1. 방향에 따른 분기
     // 1-1. 오른쪽버튼 클릭시 ////////////////
     if (seq) {
          console.log("오른!");
+<<<<<<< HEAD
+=======
+         reGage();
+>>>>>>> 99ff6d4f59635e1da5de3ade5b22b59d29f5b534
         // 1. 슬라이드 이동전 먼저 잘라낸다!
         // 이유: 슬라이드 순서를 왼쪽이동과 동일하게 함!
         // 중앙확대 트랜지션 적용시 동작이 달라지므로!
@@ -326,7 +384,11 @@ const goSlide = (seq) => {
         // (1-1) 바깥에 나가있는 첫번째 슬라이드
         //       li를 잘라서 맨뒤로 보낸다!
         p2slide.appendChild(clist[0]);
+<<<<<<< HEAD
         // (1-2) 동시에 left값을 -39%으로 변경한다!
+=======
+        // (1-2) 동시에 left값을 -110%으로 변경한다!
+>>>>>>> 99ff6d4f59635e1da5de3ade5b22b59d29f5b534
         p2slide.style.left = "-117%";
         // (1-3) 트랜지션 없애기!
         p2slide.style.transition = "none";
@@ -341,7 +403,11 @@ const goSlide = (seq) => {
         // 변경효과가 없음!!! 
         setTimeout(() => {
             p2slide.style.left = "-156%";
+<<<<<<< HEAD
             p2slide.style.transition = " .4s ease-in-out";                
+=======
+            p2slide.style.transition = "left .4s ease-in-out";                
+>>>>>>> 99ff6d4f59635e1da5de3ade5b22b59d29f5b534
         }, 10); //// 타임아웃 //////
         // 시간에 0을쓰면 인터발호출시 트랜지션이 안먹히는 에러가 있음
         // 1만써도 괜찮음
@@ -351,6 +417,7 @@ const goSlide = (seq) => {
 
     // 1-2. 왼쪽버튼 클릭시 //////////////
     else {
+        reGage();
         console.log("왼쪽!");
         // (1) 왼쪽버튼 클릭시 이전 슬라이드가
         // 나타나도록 하기위해 우선 맨뒤 li를
@@ -359,7 +426,11 @@ const goSlide = (seq) => {
         // slide.insertBefore(맨끝li,맨앞li)
         p2slide.insertBefore(clist[clist.length - 1], clist[0]);
 
+<<<<<<< HEAD
         // (2) 동시에 left값을 -117%로 변경한다.
+=======
+        // (2) 동시에 left값을 -195%로 변경한다.
+>>>>>>> 99ff6d4f59635e1da5de3ade5b22b59d29f5b534
         p2slide.style.left = "-195%";
         // 이때 트랜지션을 없앤다(한번실행후 부터 생기므로!)
         p2slide.style.transition = "none";
@@ -372,13 +443,21 @@ const goSlide = (seq) => {
         setTimeout(() => {
             p2slide.style.left = "-156%";
             p2slide.style.transition = "left .4s ease-in-out";
+<<<<<<< HEAD
         }, 1); ////// 타임아웃 /////////
+=======
+        }, 10); ////// 타임아웃 /////////
+>>>>>>> 99ff6d4f59635e1da5de3ade5b22b59d29f5b534
 
     } //////////// else : 왼쪽클릭시 //////
     // 2. 현재 슬라이드 순번과 같은 블릿표시하기
     // 대상: .indic li -> indic변수
     // 2-1. 현재 배너리스트 업데이트하기
+<<<<<<< HEAD
     clist = qsa(".bx3slide li");
+=======
+    // clist = p2slide.querySelectorAll("li");
+>>>>>>> 99ff6d4f59635e1da5de3ade5b22b59d29f5b534
     // !!!!! 오른쪽이든 왼쪽이든 먼저 잘라내기 때문에 
     // 순번은 3번째로 일치함!!!!!!
     // console.log("다시수집:",clist);
@@ -401,11 +480,15 @@ p2btns.forEach((ele, idx) => {
         // 0. 기본이동막기
         event.preventDefault();
         // 1. 인터발지우기함수 호출!
+        setTimeout(()=>goGage(),5000)
         clearAuto();
         // 2. 슬라이드 함수 호출!
         goSlide(idx);
+<<<<<<< HEAD
         // 게이지 초기화
         p2gage.style.left = '-114%';
+=======
+>>>>>>> 99ff6d4f59635e1da5de3ade5b22b59d29f5b534
     }; ///// click함수 //////
 }); /////// forEach //////////
 
@@ -413,6 +496,12 @@ p2btns.forEach((ele, idx) => {
 let autoI;
 // 타임아웃함수 지우기위한 변수
 let autoT;
+<<<<<<< HEAD
+=======
+// 인터발 
+let autoG;
+let autoGt
+>>>>>>> 99ff6d4f59635e1da5de3ade5b22b59d29f5b534
 
 /************************************ 
     함수명: autoSlide
@@ -423,10 +512,16 @@ function autoSlide(){
     // 인터발함수로 슬라이드함수 호출하기
     // autoI 는 3초후에 고슬라이드 우측을 실행해줘
     autoI = setInterval(()=>goSlide(1),3000);
+    // autoG = setInterval(()=>goGage(),5000);
 } ////////////// autoSlide함수 //////////
 
+<<<<<<< HEAD
 // 자동넘김 최초호출! - >페이지 2에서만 하기로함
 // autoSlide();
+=======
+// 자동넘김 최초호출!
+autoSlide();
+>>>>>>> 99ff6d4f59635e1da5de3ade5b22b59d29f5b534
 
 /************************************ 
     함수명: clearAuto
@@ -436,18 +531,50 @@ function clearAuto(){
 console.log("인터발멈춤!");
 // 1. 인터발 지우기
 clearInterval(autoI);
+// clearInterval(autoG);
 // 2. 타임아웃도 지우지 않으면
 // 쌓여서 타임아웃 쓰나미실행이 발생한다!
 clearTimeout(autoT);
+// clearTimeout(autoGt);
 // 3. 잠시후 다시 작동하도록 타임아웃으로
 // 인터발함수를 호출한다! 
 // 5초후(인터발은 3초후, 토탈 8초후 작동시작)
 // 5초뒤에 오토슬라이드(3초후에 슬라이드 우측으로가는거 실행)
 autoT = setTimeout(autoSlide,5000);
+// autoGt = setTimeout(autoGage,5000);
 } ///////// clearAuto 함수 /////////////
 
 
 
+<<<<<<< HEAD
+=======
+function reGage() {
+    console.log('게이지삭제')
+    p2gage.style.transition = 'none'
+    p2gage.style.left = '-114%'
+}
+function goGage() {
+    console.log('게이지충전')
+    setTimeout(()=>{
+        p2gage.style.transition = '3s ease-in-out'
+        p2gage.style.left = '0%'
+    },30)
+}
+function autoGage () {
+    console.log('자동게이지')
+    autoG = setInterval(()=>goGage(),3000)
+}
+function clearGage(){
+    console.log('오토게이지삭제')
+    clearInterval(autoG);
+    clearTimeout(autoGt);
+    autoGt = setTimeout(autoGage,5000);
+}
+// 최초 게이지
+// 
+goGage();
+autoGage();
+>>>>>>> 99ff6d4f59635e1da5de3ade5b22b59d29f5b534
 
 
 
@@ -509,11 +636,20 @@ const upbtn = qs('.upbtn');
 upbtn.onclick = () => {
     // 기본기능 막기
     event.preventDefault();
-    // pgnum 0으로 교체
     pgnum = 0;
     // 페이지0으로 가기
     window.scrollTo(0,window.innerHeight*pgnum)
     qs('.ctbtn').classList.remove('on');
+    qsa('.nav ul a').forEach((ele)=>{
+        ele.style.color ="white";
+        console.log(pgnum);
+    })
+    // nav 로고 이미지 색변경
+    qsa('.logo img')[0].classList.add('on');
+    qsa('.logo img')[1].classList.remove('on');
+    // 탭버튼 색변경
+    qs('.tbtn').style.color = 'white';
+    // pgnum 0으로 교체
 }
 // 완료 !
 // 위로가는 화살표 버튼 끝 /////////////////////////////////
