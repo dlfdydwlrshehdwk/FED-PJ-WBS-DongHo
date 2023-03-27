@@ -151,27 +151,38 @@ function updatePg() { // obj - 변경할 메뉴전체 객체
         qs('.ctbtn').classList.remove('on');
     }
 
-    // 페이지가 2,3 이면 li색 검정색으로 해야함
+    // 1번페이지에도착해야 슬라이드 실행
+    if(pgnum === 1){
+        autoSlide();
+    }
+    else{ // 아니라면 슬라이드 초기화
+        clearInterval(autoI);}
+
+    // 페이지가 2,3 이면 li색 검정색, site맵색 검정, 로고 on
     if(pgnum === 2 ){
         qsa('.nav ul a').forEach((ele)=>{
-            ele.style.color ="#333";
-            console.log(pgnum);
+            ele.style.color = "#333";
         })
+        qs('.tabbtn').classList.add('black');
+        logoimg[1].classList.add('on');
+        logoimg[0].classList.remove('on');
     } // if 
     else if(pgnum === 3){
-        qsa('.nav ul a').forEach((ele)=>{
-            ele.style.color ="#333";
+        qsa('.nav >ul>li a').forEach((ele)=>{
+            ele.style.color = "#333";
         })
+        qs('.tabbtn').classList.add('black');
+        logoimg[1].classList.add('on');
+        logoimg[0].classList.remove('on');
     }
     else{
-        qsa('.nav ul a').forEach((ele)=>{
-            ele.style.color ="#fff";
+        qsa('.nav> ul >li>a').forEach((ele)=>{
+            ele.style.color = "#fff"
         })
+        qs('.tabbtn').classList.remove('black');
+        logoimg[1].classList.remove('on');
+        logoimg[0].classList.add('on');
     }
-    // else
-    // 페이지 이동후 해당 페이지액션
-    // pageAction 함수호출 (페이지이동 시차를 준다.)
-    // setTimeout(()=>pageAction(pgnum),500)
 }//updatePg 함수 ////
 
 
@@ -240,6 +251,8 @@ function p5h1txt() {
     s5.innerHTML = hcode;
 }
 
+
+// 각 그거를 줄이고 싶은데 미구현
 // function h1txt () {
 //     let hcode =""
 //     let idx = 0;
@@ -299,15 +312,13 @@ const goSlide = (seq) => {
     //  console.log("나,들어왔어!!!");
 
     // 0. 현재의 슬라이드 li수집하기
-    let clist = p2slide.querySelectorAll("li");
+    let clist = document.querySelectorAll(".bx3slide li");
     // clist -> current list 현재 리스트
 
     // 1. 방향에 따른 분기
     // 1-1. 오른쪽버튼 클릭시 ////////////////
     if (seq) {
          console.log("오른!");
-         p2gage.style.left = '-114%';
-         p2gage.style.transition='none';
         // 1. 슬라이드 이동전 먼저 잘라낸다!
         // 이유: 슬라이드 순서를 왼쪽이동과 동일하게 함!
         // 중앙확대 트랜지션 적용시 동작이 달라지므로!
@@ -315,30 +326,25 @@ const goSlide = (seq) => {
         // (1-1) 바깥에 나가있는 첫번째 슬라이드
         //       li를 잘라서 맨뒤로 보낸다!
         p2slide.appendChild(clist[0]);
-        // (1-2) 동시에 left값을 -110%으로 변경한다!
-        p2slide.style.left = "-39%";
+        // (1-2) 동시에 left값을 -39%으로 변경한다!
+        p2slide.style.left = "-117%";
         // (1-3) 트랜지션 없애기!
         p2slide.style.transition = "none";
 
         
         // (2) 오른쪽 버튼 클릭시 다음 슬라이드가
         //     나타나도록 슬라이드 박스의 left값을
-        //     -220%로 변경시킨다.
+        //     -78%로 변경시킨다.
 
         // [코드분리하기!] //////////////////////////
         // -> 같은속성변경을 같은 메모리공간에서 수행하면
         // 변경효과가 없음!!! 
         setTimeout(() => {
-            p2slide.style.left = "-78%";
-            p2slide.style.transition = "left .4s ease-in-out";                
-        }, 1); //// 타임아웃 //////
+            p2slide.style.left = "-156%";
+            p2slide.style.transition = " .4s ease-in-out";                
+        }, 10); //// 타임아웃 //////
         // 시간에 0을쓰면 인터발호출시 트랜지션이 안먹히는 에러가 있음
-        // 1만써도 괜찮음~
-
-        // -> 타이밍함수는 기존 함수인 스택(Stack)메모리 공간이 아닌
-        // 대기실행 공간인 큐(Queue)메모리공간에서 실행하므로
-        // 코드가 동시에 바뀌는 것을 막아주고 의도한 대로
-        // 시차실행을 가능하게 해준다!
+        // 1만써도 괜찮음
 
 
     } //////////// if : 오른쪽클릭시 //////
@@ -354,25 +360,25 @@ const goSlide = (seq) => {
         p2slide.insertBefore(clist[clist.length - 1], clist[0]);
 
         // (2) 동시에 left값을 -117%로 변경한다.
-        p2slide.style.left = "-117%";
+        p2slide.style.left = "-195%";
         // 이때 트랜지션을 없앤다(한번실행후 부터 생기므로!)
         p2slide.style.transition = "none";
 
-        // (3) 그 후 left값을 -220%으로 애니메이션하여
+        // (3) 그 후 left값을 -78%으로 애니메이션하여
         // 슬라이드가 왼쪽에서 들어온다.
         // 동일 속성인 left가 같은 코딩처리 공간에 동시에
         // 있으므로 이것을 분리해야 효과가 있다!
         // setTimeout을 사용한다!
         setTimeout(() => {
-            p2slide.style.left = "-78%";
+            p2slide.style.left = "-156%";
             p2slide.style.transition = "left .4s ease-in-out";
-        }, 0); ////// 타임아웃 /////////
+        }, 1); ////// 타임아웃 /////////
 
     } //////////// else : 왼쪽클릭시 //////
     // 2. 현재 슬라이드 순번과 같은 블릿표시하기
     // 대상: .indic li -> indic변수
     // 2-1. 현재 배너리스트 업데이트하기
-    clist = p2slide.querySelectorAll("li");
+    clist = qsa(".bx3slide li");
     // !!!!! 오른쪽이든 왼쪽이든 먼저 잘라내기 때문에 
     // 순번은 3번째로 일치함!!!!!!
     // console.log("다시수집:",clist);
@@ -382,10 +388,10 @@ const goSlide = (seq) => {
     // let cseq = clist[2].getAttribute("data-seq");
     //  console.log("현재순번:", cseq);
 
-    // 2-3. 블릿초기화
+    // 2-3. 블릿초기화 - 불릿없음
     // for (let x of indic) x.classList.remove("on");
 
-    // 2-4. 읽어온 슬라이드 순번의 블릿에 클래스 "on"넣기
+    // 2-4. 읽어온 슬라이드 순번의 블릿에 클래스 "on"넣기 -없음 
     // indic[cseq].classList.add("on");
 }; ////////// goSlide함수 ///////////
 
@@ -396,13 +402,10 @@ p2btns.forEach((ele, idx) => {
         event.preventDefault();
         // 1. 인터발지우기함수 호출!
         clearAuto();
-        clearGage();
         // 2. 슬라이드 함수 호출!
         goSlide(idx);
-        // 3. 게이지 실행!
+        // 게이지 초기화
         p2gage.style.left = '-114%';
-        p2gage.style.transition='none';
-        setTimeout(goGage,5000);
     }; ///// click함수 //////
 }); /////// forEach //////////
 
@@ -410,9 +413,6 @@ p2btns.forEach((ele, idx) => {
 let autoI;
 // 타임아웃함수 지우기위한 변수
 let autoT;
-
-let autoG;
-let autoGt;
 
 /************************************ 
     함수명: autoSlide
@@ -425,7 +425,7 @@ function autoSlide(){
     autoI = setInterval(()=>goSlide(1),3000);
 } ////////////// autoSlide함수 //////////
 
-// 자동넘김 최초호출!
+// 자동넘김 최초호출! - >페이지 2에서만 하기로함
 // autoSlide();
 
 /************************************ 
@@ -445,53 +445,6 @@ clearTimeout(autoT);
 // 5초뒤에 오토슬라이드(3초후에 슬라이드 우측으로가는거 실행)
 autoT = setTimeout(autoSlide,5000);
 } ///////// clearAuto 함수 /////////////
-
-
-
-/* 
-    함수명 : goGage
-    기능 : 게이지의 left값을 조정해준다! 
-*/
-function goGage() {
-    // 변경대상 .p2gage  p2gage 변수
-
-    p2gage.style.left = "-114%"
-    setTimeout(()=>{
-        p2gage.style.left = "0%"
-        p2gage.style.transition = "2.5s ease-in"
-
-    },1)
-}
-// 자동게이지는 3초뒤부터되길레 한번실행해줌
-goGage();
-
-function autoGage(){
-    console.log("게이지시작!");
-    // 인터발함수로 슬라이드함수 호출하기
-    // autoI 는 3초후에 고슬라이드 우측을 실행해줘
-    autoG = setInterval(()=>goGage(),3000);
-} ////////////// autoSlide함수 //////////
-
-// 게이지 호출!
-autoGage();
-
-/************************************ 
-    함수명: clearGage
-    기능: 인터발함수를 지우고 다시셋팅
-************************************/
-function clearGage(){
-    console.log("게이지멈춤!");
-    // 1. 인터발 지우기
-    clearInterval(autoG);
-    // 2. 타임아웃도 지우지 않으면
-    // 쌓여서 타임아웃 쓰나미실행이 발생한다!
-    clearTimeout(autoGt);
-    // 3. 잠시후 다시 작동하도록 타임아웃으로
-    // 인터발함수를 호출한다! 
-    // 5초후(인터발은 3초후, 토탈 8초후 작동시작)
-    // 5초뒤에 오토슬라이드(3초후에 슬라이드 우측으로가는거 실행)
-    autoGt = setTimeout(autoGage,5000);
-    } ///////// clearAuto 함수 /////////////
 
 
 

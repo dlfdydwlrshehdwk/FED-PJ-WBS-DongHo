@@ -12,6 +12,9 @@
 }
 @media screen and (max-width:1200px) {
     /* 페이지 2미디어 */
+    .txtbx{
+        margin-bottom: 20px;
+    }
     .bx3{
         padding: 0 20px;
         width: 100%;
@@ -20,6 +23,7 @@
         display: flex;
         width: 100%;
         flex-direction: column;
+        align-items: flex-start;
     }
     .bx3 ul {
         width: 308%;

@@ -10,6 +10,11 @@
 */
 /* 메인프로젝트 css 원본 */
 
+/* 기능주는 클래스 */
+.black {
+    color : #333;
+}
+
 /************************ 페이지 1 시작 ************************/
 #myvid1{
     width: 100%;
@@ -87,7 +92,7 @@ body .pob p{
 }
 /* 사진 넘어가는박스  */
 .bx3{
-    width: 54%;
+    width: 50%;
     /* 오른쪽으로 박스 옮긴거 */
     margin: 0 0 0 auto;
     /* 넘어가는 사진 안보이게 */
@@ -96,38 +101,32 @@ body .pob p{
 /* .bx3 ul */
 .bx3 ul{
     position: relative;
-    left: -78%;
+    left: -156%;
     /* 플렉스박스 사진 가로정렬 */
     display: flex; 
-    width: 308%;
+    width: 312%;
 }
 .bx3 li{
     position: relative;
-    overflow: hidden;
+    transition: left .3s ;
+    /* overflow: hidden; */
 }
+/* .bx3 li:nth-child(7){
+    opacity: .2;
+}
+.bx3 li:nth-child(7) div{
+    opacity: 0;
+} */
 .bx3 li p{
     opacity: 1;
 }
 .bx3 li div{
+    opacity: 1;
     position: absolute;
     width: 100%;
     color: #fff;
     /* padding: 50px 30px; */
     box-sizing: border-box;
-}
-.bx3 li:nth-child(0) div,
-.bx3 li:nth-child(2) div,
-.bx3 li:nth-child(4) div,
-.bx3 li:nth-child(6) div{
-    top: 7%;
-    left: 9%;
-}
-.bx3 li:nth-child(1) div,
-.bx3 li:nth-child(3) div,
-.bx3 li:nth-child(5) div,
-.bx3 li:nth-child(7) div{
-    bottom: 8%;
-    right: -7%;
 }
 
 .bx3 li div h3{
@@ -141,10 +140,16 @@ white-space: nowrap
     line-height: 1;
     transform: translateY(0);
 }
-/* .bx3bottom{
+.bx3bottom{
+    position: absolute;
+    bottom: 5%;
+    left: 5%;
 }
 .bx3top{
-} */
+    position: absolute;
+    top: 5%;
+    left: 5%;
+}
 .bx3 img {
     transition: .3s;
     width: 100%;
