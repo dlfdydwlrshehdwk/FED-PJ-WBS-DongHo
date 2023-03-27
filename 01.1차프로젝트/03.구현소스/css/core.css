@@ -26,6 +26,8 @@ html{
 .nav{
     position: fixed;
     width: 100%;
+    top: -10%;
+    transition: top 1s ease-in-out,opacity 2s ease-in-out;
     /* nav flex박스 */
     display: flex;
     /* 박스크기 */
@@ -35,10 +37,13 @@ html{
     align-items: center;
     justify-content: center;
     z-index: 999;
-
+    opacity: 0;
     color: #fff;
 }
-
+.nav.on{
+    top: 0%;
+    opacity: 1;
+}
 /* 가상요소로 서브메뉴창 만들기 */
 .nav >ul> li::before{
     content: '';
