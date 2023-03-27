@@ -141,23 +141,12 @@ white-space: nowrap
     transform: translateY(0);
 }
 .bx3bottom{
-<<<<<<< HEAD
-    position: absolute;
-    bottom: 5%;
-    left: 5%;
-}
-.bx3top{
-    position: absolute;
-    top: 5%;
-    left: 5%;
-=======
     bottom: 8%;
     left: 10%;
 }
 .bx3top{
     top: 8%;
     left: 10%;
->>>>>>> 99ff6d4f59635e1da5de3ade5b22b59d29f5b534
 }
 .bx3 img {
     transition: .3s;

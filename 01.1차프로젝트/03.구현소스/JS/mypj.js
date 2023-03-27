@@ -157,28 +157,12 @@ function updatePg() { // obj - 변경할 메뉴전체 객체
         qs('.ctbtn').classList.remove('on');
     }
 
-<<<<<<< HEAD
-    // 1번페이지에도착해야 슬라이드 실행
-    if(pgnum === 1){
-        autoSlide();
-    }
-    else{ // 아니라면 슬라이드 초기화
-        clearInterval(autoI);}
-
-    // 페이지가 2,3 이면 li색 검정색, site맵색 검정, 로고 on
-=======
     // 2 페이지 
     // nav li 색 검정
->>>>>>> 99ff6d4f59635e1da5de3ade5b22b59d29f5b534
     if(pgnum === 2 ){
         qsa('.nav ul a').forEach((ele)=>{
             ele.style.color = "#333";
         })
-<<<<<<< HEAD
-        qs('.tabbtn').classList.add('black');
-        logoimg[1].classList.add('on');
-        logoimg[0].classList.remove('on');
-=======
         // nav 로고 이미지 색변경
         qsa('.logo img')[1].classList.add('on');
         qsa('.logo img')[0].classList.remove('on');
@@ -188,28 +172,10 @@ function updatePg() { // obj - 변경할 메뉴전체 객체
         // p2slide.style.transition = "none";
         // p2gage.style.transition = 'none'
         // p2gage.style.left = '-114%' 
->>>>>>> 99ff6d4f59635e1da5de3ade5b22b59d29f5b534
     } // if 
 
     // 3페이지
     else if(pgnum === 3){
-<<<<<<< HEAD
-        qsa('.nav >ul>li a').forEach((ele)=>{
-            ele.style.color = "#333";
-        })
-        qs('.tabbtn').classList.add('black');
-        logoimg[1].classList.add('on');
-        logoimg[0].classList.remove('on');
-    }
-    else{
-        qsa('.nav> ul >li>a').forEach((ele)=>{
-            ele.style.color = "#fff"
-        })
-        qs('.tabbtn').classList.remove('black');
-        logoimg[1].classList.remove('on');
-        logoimg[0].classList.add('on');
-    }
-=======
         // nav li 색변경
         qsa('.nav ul a').forEach((ele)=>{
             ele.style.color ="#333";
@@ -237,7 +203,6 @@ function updatePg() { // obj - 변경할 메뉴전체 객체
         qs('.tbtn').style.color = 'white';
     }
 
->>>>>>> 99ff6d4f59635e1da5de3ade5b22b59d29f5b534
 }//updatePg 함수 ////
 
 
@@ -373,10 +338,7 @@ const goSlide = (seq) => {
     // 1-1. 오른쪽버튼 클릭시 ////////////////
     if (seq) {
          console.log("오른!");
-<<<<<<< HEAD
-=======
          reGage();
->>>>>>> 99ff6d4f59635e1da5de3ade5b22b59d29f5b534
         // 1. 슬라이드 이동전 먼저 잘라낸다!
         // 이유: 슬라이드 순서를 왼쪽이동과 동일하게 함!
         // 중앙확대 트랜지션 적용시 동작이 달라지므로!
@@ -384,11 +346,7 @@ const goSlide = (seq) => {
         // (1-1) 바깥에 나가있는 첫번째 슬라이드
         //       li를 잘라서 맨뒤로 보낸다!
         p2slide.appendChild(clist[0]);
-<<<<<<< HEAD
-        // (1-2) 동시에 left값을 -39%으로 변경한다!
-=======
         // (1-2) 동시에 left값을 -110%으로 변경한다!
->>>>>>> 99ff6d4f59635e1da5de3ade5b22b59d29f5b534
         p2slide.style.left = "-117%";
         // (1-3) 트랜지션 없애기!
         p2slide.style.transition = "none";
@@ -403,11 +361,7 @@ const goSlide = (seq) => {
         // 변경효과가 없음!!! 
         setTimeout(() => {
             p2slide.style.left = "-156%";
-<<<<<<< HEAD
-            p2slide.style.transition = " .4s ease-in-out";                
-=======
             p2slide.style.transition = "left .4s ease-in-out";                
->>>>>>> 99ff6d4f59635e1da5de3ade5b22b59d29f5b534
         }, 10); //// 타임아웃 //////
         // 시간에 0을쓰면 인터발호출시 트랜지션이 안먹히는 에러가 있음
         // 1만써도 괜찮음
@@ -426,11 +380,7 @@ const goSlide = (seq) => {
         // slide.insertBefore(맨끝li,맨앞li)
         p2slide.insertBefore(clist[clist.length - 1], clist[0]);
 
-<<<<<<< HEAD
-        // (2) 동시에 left값을 -117%로 변경한다.
-=======
         // (2) 동시에 left값을 -195%로 변경한다.
->>>>>>> 99ff6d4f59635e1da5de3ade5b22b59d29f5b534
         p2slide.style.left = "-195%";
         // 이때 트랜지션을 없앤다(한번실행후 부터 생기므로!)
         p2slide.style.transition = "none";
@@ -443,21 +393,13 @@ const goSlide = (seq) => {
         setTimeout(() => {
             p2slide.style.left = "-156%";
             p2slide.style.transition = "left .4s ease-in-out";
-<<<<<<< HEAD
-        }, 1); ////// 타임아웃 /////////
-=======
         }, 10); ////// 타임아웃 /////////
->>>>>>> 99ff6d4f59635e1da5de3ade5b22b59d29f5b534
 
     } //////////// else : 왼쪽클릭시 //////
     // 2. 현재 슬라이드 순번과 같은 블릿표시하기
     // 대상: .indic li -> indic변수
     // 2-1. 현재 배너리스트 업데이트하기
-<<<<<<< HEAD
-    clist = qsa(".bx3slide li");
-=======
     // clist = p2slide.querySelectorAll("li");
->>>>>>> 99ff6d4f59635e1da5de3ade5b22b59d29f5b534
     // !!!!! 오른쪽이든 왼쪽이든 먼저 잘라내기 때문에 
     // 순번은 3번째로 일치함!!!!!!
     // console.log("다시수집:",clist);
@@ -484,11 +426,6 @@ p2btns.forEach((ele, idx) => {
         clearAuto();
         // 2. 슬라이드 함수 호출!
         goSlide(idx);
-<<<<<<< HEAD
-        // 게이지 초기화
-        p2gage.style.left = '-114%';
-=======
->>>>>>> 99ff6d4f59635e1da5de3ade5b22b59d29f5b534
     }; ///// click함수 //////
 }); /////// forEach //////////
 
@@ -496,12 +433,9 @@ p2btns.forEach((ele, idx) => {
 let autoI;
 // 타임아웃함수 지우기위한 변수
 let autoT;
-<<<<<<< HEAD
-=======
 // 인터발 
 let autoG;
 let autoGt
->>>>>>> 99ff6d4f59635e1da5de3ade5b22b59d29f5b534
 
 /************************************ 
     함수명: autoSlide
@@ -515,13 +449,8 @@ function autoSlide(){
     // autoG = setInterval(()=>goGage(),5000);
 } ////////////// autoSlide함수 //////////
 
-<<<<<<< HEAD
-// 자동넘김 최초호출! - >페이지 2에서만 하기로함
-// autoSlide();
-=======
 // 자동넘김 최초호출!
 autoSlide();
->>>>>>> 99ff6d4f59635e1da5de3ade5b22b59d29f5b534
 
 /************************************ 
     함수명: clearAuto
@@ -546,8 +475,6 @@ autoT = setTimeout(autoSlide,5000);
 
 
 
-<<<<<<< HEAD
-=======
 function reGage() {
     console.log('게이지삭제')
     p2gage.style.transition = 'none'
@@ -574,7 +501,6 @@ function clearGage(){
 // 
 goGage();
 autoGage();
->>>>>>> 99ff6d4f59635e1da5de3ade5b22b59d29f5b534
 
 
 
