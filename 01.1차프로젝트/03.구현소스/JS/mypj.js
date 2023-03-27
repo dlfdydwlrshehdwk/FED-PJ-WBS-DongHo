@@ -20,11 +20,11 @@ window.addEventListener("DOMContentLoaded",()=>{
     //     window.scrollTo(0,0);
     // },100) // 작동완료
     document.querySelector('.nav').classList.add('on');
+    document.querySelector('.pob').classList.add('on');
 
 // 셀렉터 변수화
 const qs = x =>document.querySelector(x);
 const qsa = x => document.querySelectorAll(x);
-
 
 
 // 데이터저장변수

@@ -40,9 +40,17 @@
     position: relative;
     color: #fff;
 }
+.h1wrap{
+    overflow: hidden;
+}
 .pob h1 {
+    transform: translateY(102%);
+    transition: .4s;
     line-height: min(84px,6vw);
     margin-bottom: 20px;
+}
+.pob.on h1{
+    transform: translateY(0);
 }
 body .pob p{
     margin-bottom: 50px;
