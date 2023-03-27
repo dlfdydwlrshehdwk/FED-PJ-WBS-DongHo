@@ -149,19 +149,39 @@ function updatePg() { // obj - 변경할 메뉴전체 객체
     // 휠 했을때 페이지별 분기
     ///////////////////////////////////////////////////////////
     
-    // 페이지넘버 컨택트동그라미 등장 기능
+    // 컨택트동그라미 등장 기능
     if(pgnum !== 0){
-
         qs('.ctbtn').classList.add('on');
     }
-    else if (pgnum === 0){
+    // 첫페이지
+    if (pgnum === 0){
         qs('.ctbtn').classList.remove('on');
+        qsa('.nav>ul>li>a').forEach((ele)=>{
+            ele.style.color = "white";
+        })
+        // nav 로고 이미지 색변경
+        qsa('.logo img')[0].classList.add('on');
+        qsa('.logo img')[1].classList.remove('on');
+        // 탭버튼 색변경
+        qs('.tbtn').style.color = 'white';
+        qs('.nav').classList.add('on');
+        
     }
-
-    // 2 페이지 
-    // nav li 색 검정
-    if(pgnum === 2 ){
-        qsa('.nav ul a').forEach((ele)=>{
+    // 페이지2
+    else if(pgnum === 1){
+        qsa('.nav>ul>li>a').forEach((ele)=>{
+            ele.style.color = "white";
+        })
+        // nav 로고 이미지 색변경
+        qsa('.logo img')[0].classList.add('on');
+        qsa('.logo img')[1].classList.remove('on');
+        // 탭버튼 색변경
+        qs('.tbtn').style.color = 'white';
+        qs('.nav').classList.add('on');
+    }
+    // 3페이지
+    else if(pgnum === 2 ){
+        qsa('.nav>ul>li> a').forEach((ele)=>{
             ele.style.color = "#333";
         })
         // nav 로고 이미지 색변경
@@ -169,16 +189,13 @@ function updatePg() { // obj - 변경할 메뉴전체 객체
         qsa('.logo img')[0].classList.remove('on');
         // 탭버튼 색변경
         qs('.tbtn').style.color = '#333';
-        // p2slide.style.left = "-156%";
-        // p2slide.style.transition = "none";
-        // p2gage.style.transition = 'none'
-        // p2gage.style.left = '-114%' 
+        qs('.nav').classList.add('on');
     } // if 
 
-    // 3페이지
+    // 4페이지
     else if(pgnum === 3){
         // nav li 색변경
-        qsa('.nav ul a').forEach((ele)=>{
+        qsa('.nav>ul>li> a').forEach((ele)=>{
             ele.style.color ="#333";
         })
         // 로고 이미지 변경
@@ -186,14 +203,31 @@ function updatePg() { // obj - 변경할 메뉴전체 객체
         qsa('.logo img')[0].classList.remove('on');
         // 탭버튼 색변경
         qs('.tbtn').style.color = '#333';
+        qs('.nav').classList.add('on');
     }
+    // 5페이지
+    else if (pgnum === 4){
+        qsa('.nav>ul>li>a').forEach((ele)=>{
+            ele.style.color = "white";
+        })
+        // nav 로고 이미지 색변경
+        qsa('.logo img')[0].classList.add('on');
+        qsa('.logo img')[1].classList.remove('on');
+        // 탭버튼 색변경
+        qs('.tbtn').style.color = 'white';
+        qs('.tbtn').style.opacity = '1';
+        qs('.nav').classList.add('on');
+    }
+    // 랏페이지
     else if(pgnum === 5){
         // 탭버튼 없애기
         qs('.tbtn').style.opacity = 0;
+        qs('.nav').classList.remove('on');
+        
     }
     else{
         // nav li 색변경
-        qsa('.nav ul a').forEach((ele)=>{
+        qsa('.nav>ul>li> a').forEach((ele)=>{
             ele.style.color ="#fff";
         })
         // 로고 이미지 색변경
@@ -202,6 +236,7 @@ function updatePg() { // obj - 변경할 메뉴전체 객체
         // 탭버튼 생기게하기 + 흰색
         qs('.tbtn').style.opacity = 1;
         qs('.tbtn').style.color = 'white';
+        
     }
 
 }//updatePg 함수 ////
@@ -567,7 +602,7 @@ upbtn.onclick = () => {
     // 페이지0으로 가기
     window.scrollTo(0,window.innerHeight*pgnum)
     qs('.ctbtn').classList.remove('on');
-    qsa('.nav ul a').forEach((ele)=>{
+    qsa('.nav>ul>li>a').forEach((ele)=>{
         ele.style.color ="white";
         console.log(pgnum);
     })
@@ -598,21 +633,36 @@ logoa.forEach((ele)=>{
 // 기능 : nav ul에 마우스들어가면 로고이미지 1에 on빼고 로고이미지2에 on넣어주기, 마우스 빠지면 로고이미지2에 on뺴고 로고이미지에 1넣어주기
 
     // 대상 : .nav ul
-    const navul = qs('.nav ul')
-    // 변경대상 : .logo img 2개
-    const logoimg = qsa('.logo img')
-    navul.onmouseenter= () => {
-        logoimg[0].classList.toggle('on');
-        logoimg[1].classList.toggle('on');
-    } // mouseenter ////
+    // const navul = qs('.nav ul')
+    // const navlia = qsa('.nav>ul>li>a');
+    // // 변경대상 : .logo img 2개
+    // const logoimg = qsa('.logo img')
+    // navul.onmouseenter= () => { // navul에 마우스를 올리면
+    //     console.log(logoimg[0])
+    //     console.log(logoimg[1])
+    //     if(logoimg[0].classList.contains('on')){ // 로고이미지가 흰색이라면
+    //         console.log('안녕')
+    //         logoimg[0].classList.remove('on');
+    //         logoimg[1].classList.add('on');
+    //     }
+    //     navlia.forEach((ele)=>{
+    //         console.log(ele)
+    //         if(ele.style.color=='white'){
+    //             ele.style.color = '#333'
+    //         }
+    //     })
 
-    navul.onmouseleave= () => {
-        // 시간차를 줘야할거같아서 0.3초 줌!
-        setTimeout(() => {
-            logoimg[0].classList.toggle('on');
-            logoimg[1].classList.toggle('on');
-        },300)
-    } // mouseenter ////
+
+    // } // mouseenter ////
+    // navul.onmouseleave= () => {
+    //     // 시간차를 줘야할거같아서 0.3초 줌!
+    //     setTimeout(() => {
+    //         if(logoimg[1].classList.contains('on')){
+    //             logoimg[1].classList.remove('on');
+    //             logoimg[0].classList.add('on');
+    //         }
+    //     },300)
+    // } // mouseenter ////
 
     // 완료! // 
 
@@ -638,6 +688,74 @@ ctbtn.onclick = () => {
 }
 
 // 컨택트 버튼 누르면 컨택트페이지로 가기!! 끝////
+
+
+// nav ul 작업
+// nav ul 
+const navul = qs('.nav ul')
+// logo img [0]백 [1]흑 on주면 등장
+const logoimg = qsa('.logo img')
+navul.onmouseenter=()=>{
+    console.log('hi')
+    if(pgnum === 0 ){
+        qsa('.nav ul>li>a').forEach((ele)=>{
+            ele.style.color = 'black';
+        })
+        logoimg[0].classList.remove('on')
+        logoimg[1].classList.add('on')
+        qs('.tbtn').style.color = '#333';
+    } //if ////
+    else if(pgnum === 1){
+        qsa('.nav ul>li>a').forEach((ele)=>{
+            ele.style.color = 'black';
+        })
+        logoimg[0].classList.remove('on')
+        logoimg[1].classList.add('on')
+        qs('.tbtn').style.color = '#333';
+    }
+    else if(pgnum === 4){
+        qsa('.nav ul>li>a').forEach((ele)=>{
+            ele.style.color = 'black';
+        })
+        logoimg[0].classList.remove('on')
+        logoimg[1].classList.add('on')
+        qs('.tbtn').style.color = '#333';
+    }
+    } //mouseenter
+
+navul.onmouseleave=()=>{
+    console.log('hi')
+    if(pgnum === 0 ){
+        setTimeout(()=>{
+            qsa('.nav ul>li>a').forEach((ele)=>{
+                ele.style.color = 'white';
+            })
+            logoimg[1].classList.remove('on')
+            logoimg[0].classList.add('on')
+            qs('.tbtn').style.color = 'white';
+        },200)
+    } //if ////
+    else if(pgnum === 1){
+        setTimeout(()=>{
+            qsa('.nav ul>li>a').forEach((ele)=>{
+                ele.style.color = 'white';
+            })
+            logoimg[1].classList.remove('on')
+            logoimg[0].classList.add('on')
+            qs('.tbtn').style.color = 'white';
+        },200)
+    }
+    else if (pgnum === 4){
+        setTimeout(()=>{
+            qsa('.nav ul>li>a').forEach((ele)=>{
+                ele.style.color = 'white';
+            })
+            logoimg[1].classList.remove('on')
+            logoimg[0].classList.add('on')
+            qs('.tbtn').style.color = 'white';
+        },200)
+    }
+    } //mouseenter
 
 
 });//로드구역 ///
