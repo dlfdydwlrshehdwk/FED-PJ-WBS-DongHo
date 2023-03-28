@@ -140,6 +140,7 @@
 /* 사진넣은곳 안에 설정 */
 .bigtit{
     font-size: 40px;
+    font-weight: bold;
 }
 .tangle{
     font-size: 16px;
