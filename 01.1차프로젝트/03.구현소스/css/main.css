@@ -140,15 +140,16 @@ body .pob p{
 }
 .bx3 li{
     position: relative;
-    transition: left .3s ;
+    transition: left .3s, opacity .3s .3s ;
     /* overflow: hidden; */
 }
-/* .bx3 li:nth-child(7){
+.bx3 li:nth-child(4),
+.bx3 li:nth-child(7){
     opacity: .2;
 }
 .bx3 li:nth-child(7) div{
     opacity: 0;
-} */
+}
 .bx3 li p{
     opacity: 1;
 }
