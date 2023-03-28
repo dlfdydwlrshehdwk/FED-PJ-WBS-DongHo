@@ -223,7 +223,6 @@ function updatePg() { // obj - 변경할 메뉴전체 객체
         // 탭버튼 없애기
         qs('.tbtn').style.opacity = 0;
         qs('.nav').classList.remove('on');
-        
     }
     else{
         // nav li 색변경

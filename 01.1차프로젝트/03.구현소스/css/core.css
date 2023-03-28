@@ -7,8 +7,14 @@
     font-family: 'Montserrat', sans-serif;
     font-family: 'Yusei Magic', sans-serif;
 */
-
-.main,.page,.bx {
+html{
+    overflow-x: hidden;
+}
+/* 기능주는 클래스 */
+.black {
+    color : #333;
+}
+.page,.bx {
     width: 100%;
     height: 100%;
 }
@@ -16,17 +22,15 @@ body *{
     /* outline: 1px dotted red; */
     font-family: 'Montserrat', sans-serif;
 }
-html{
-    overflow-x: hidden;
-    overflow-y: hidden;
-}
+
 
 
 /* nav바 시작 */
 .nav{
     position: fixed;
     width: 100%;
-    top: -10%;
+    /* 잠시변경 서브페이지 만들기위해 만들면 -10%으로 */
+    top: 0%;
     transition: top 1s ease-in-out,opacity 1s ease-in-out;
     /* nav flex박스 */
     display: flex;
@@ -37,7 +41,8 @@ html{
     align-items: center;
     justify-content: center;
     z-index: 999;
-    opacity: 0;
+    /* 잠시변경 서브페이지만들기위해 만들고나면 0 으로 */
+    opacity: 1;
     color: #fff;
 }
 .nav.on{
@@ -482,3 +487,15 @@ html{
     font-size: 1.2rem;
 }
 /* 푸터끝 */
+
+/* 서브페이지 공통 */
+.spage1 h2{
+    font-size: 70px;
+    color: white;
+    margin-bottom: 40px;
+}
+.spage1 p{
+    font-size: 22px;
+    color: #fff;
+    font-weight: bold;
+}

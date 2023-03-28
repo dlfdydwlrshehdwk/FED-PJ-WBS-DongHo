@@ -1,0 +1,104 @@
+@charset "utf-8";
+@import url(./reset.css);
+@import url(./core.css);
+
+/* 폰트 */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&family=Yusei+Magic&display=swap');
+/* 
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Yusei Magic', sans-serif;
+*/
+/* 서브페이지 1 */
+.spage1{
+    position: relative;
+    height: 100vh;
+    font-family: 'Montserrat', 'sans-serif','나눔고딕';
+    font-weight: 500;
+}
+/* 색 이미지 반복 고정 위치크기 */
+.spage1bg{
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: url(/01.1차프로젝트/00.자료수집/02.이미지데이터/sub_business/sub_business_bg.jpg) no-repeat center/cover ;
+    z-index: -1;
+}
+/* 페이지 1 텍스트공간 */
+.textarea{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+/* 페이지1의 아래 박스공간 */
+.bbx{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 80px;
+    background-color: #fff;
+}
+/* 페이지1의 아래 박스공간의 ul */
+.bbx ul {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    text-align: center;
+}
+/* 페이지1의 아래 박스공간의 li */
+.bbx ul> li{
+    flex: 1;
+    font-size: 17px;
+    font-weight: bold;
+    height: 100%;
+    line-height: 80px;
+}
+/* bbx부분 밑줄 밑 글자 오버시 색변경 부분 */
+.bbx ul> li:hover a{
+    color: #00afeb;
+}
+.bbx ul > li::after{
+    content: '';
+    display: block;
+    height: 3px;
+    background-color: #00afeb;
+    transform: translateY(-3px);
+    width: 0;
+    transition:  .3s;
+    margin-left: 50%;
+}
+.bbx ul > li:hover::after{
+    width: 100%;
+    margin-left: 0;
+}
+/* bbx부분 밑줄 밑 글자 오버시 색변경 부분 끝*/
+
+.fromendpagewrap{
+    padding-top: 120px;
+    width: 1515px;
+    margin: 0 auto;
+}
+.spg_ctbx_top{
+    text-align: center;
+}
+.ctbx_top_tit{
+    font-size: 40px;
+    margin: 0 auto 100px;
+}
+/* .spg_ctbx_top_nayong 부분 */
+.subtit{
+    font-size: 18px;
+    font-weight: bold;
+}
+.boldnayong{
+    font-size: 36px;
+}
+.smallnayong{
+    font-size: 15px;
+}
+.psnayong{
+    font-size: 13px;
+}

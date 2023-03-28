@@ -28,10 +28,3 @@ body a{
     text-decoration: none;
     color: #000;
 }
-h1 {
-    font-size: min(60px,6vw);
-}
-p {
-    font-size: min(18px,1.8vw);
-    font-weight: bold;
-}
