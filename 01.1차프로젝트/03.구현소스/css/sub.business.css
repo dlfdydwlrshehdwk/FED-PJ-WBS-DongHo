@@ -75,6 +75,21 @@
     width: 100%;
     margin-left: 0;
 }
+.bbx ul.qw > li::after{
+    content: '';
+    display: block;
+    height: 3px;
+    background-color: #00afeb;
+    transform: translateY(-2px);
+    width: 0;
+    transition:  .3s;
+    margin-left: 50%;
+}
+
+/* 클래스 on주면 글자색과 밑줄색 온! */
+.bbx ul> li.on a{
+    color: #00afeb;
+}
 /* bbx부분 밑줄 밑 글자 오버시 색변경 부분 끝*/
 
 .fromendpagewrap{
