@@ -75,7 +75,7 @@
     width: 100%;
     margin-left: 0;
 }
-.bbx ul.qw > li::after{
+.bbx ul > li::after{
     content: '';
     display: block;
     height: 3px;
@@ -86,34 +86,41 @@
     margin-left: 50%;
 }
 
-/* 클래스 on주면 글자색과 밑줄색 온! */
+/* 클래스 on주면 글자색과 온! */
 .bbx ul> li.on a{
     color: #00afeb;
 }
+.bbx ul > li.on::after{
+    width: 100%;
+    margin-left: 0;
+}
+
+
 /* bbx부분 밑줄 밑 글자 오버시 색변경 부분 끝*/
 
 .fromendpagewrap{
     padding-top: 120px;
+    padding-bottom: 150px;
     margin: 0 auto;
 }
 .ctbx_top_text{
-    width: 1515px;
+    max-width: 1515px;
     text-align: center;
     margin: 0 auto 100px;
 }
-.ctbx_top_tit{
+.ctbx_top_tit {
     text-align: center;
-    font-size: 40px;
-    margin: 0 auto 100px;
+    font-size: min(40px,3.5vw);
+    margin: 0 auto min(100px,8.5vw);
     letter-spacing: -0.2rem;
 }
 /* .spg_ctbx_top_nayong 부분 */
-.subtit{
+.subtit {
     position: relative;
     display: inline-block;
-    font-size: 18px;
+    font-size: min(18px,1.5vw);
     font-weight: 700;
-    margin-bottom: 60px;
+    margin-bottom: min(60px,5.5vw);
 }
 .subtit::after{
     content: '';
@@ -124,27 +131,26 @@
     bottom: -15px;
     left: 0;
 }
-.boldnayong{
-    font-size: 36px;
-    margin-bottom: 43px;
+.boldnayong {
+    font-size: min(36px,3vw);
+    margin-bottom: min(43px,3.6vw);
     letter-spacing: -.2rem;
 }
-.smallnayong p{
-    margin-bottom: 30px;
-    line-height: 1.6;
+.smallnayong p {
+    margin-bottom: min(30px,2.4vw);
+    line-height: 1.8em;
     color: rgba(0,0,0,0.6);
-    font-size: 15px;
+    font-size: min(15px,1.5vw);
     font-weight: bold;
     letter-spacing: -.1rem;
 }
 .psnayong{
-    font-size: 13px;
+    font-size: min(13px,1.4vw);
     /* font-weight: bold; */
 }
 
 /* 페이지에 사진넣는곳 */
 .ctbx_top_img{
-    width: 100%;
     background: url(/01.1차프로젝트/00.자료수집/02.이미지데이터/sub_business/car_security_bg.jpg) no-repeat;
     background-size: cover;
     background-position: center;
@@ -152,27 +158,57 @@
     color: #fff;
 }
 /* 사진넣은곳 안에 설정 */
-.bigtit{
-    font-size: 40px;
+.bigtit {
+    font-size: min(40px,3.2vw);
     font-weight: bold;
-    margin-bottom: 40px;
+    margin-bottom: min(40px,3.5vw);
 }
-.tangle{
-    font-size: 16px;
-    width: 300px;
-    height: 50px;
+.tangle {
+    font-size: min(15px,1.4vw);
+    width: min(300px,25vw);
+    height: min(50px,3.8vw);
     padding: 10px 0 10px;
     border: 2px solid rgb(255,255,255,0.2);
     text-align: center;
     margin-bottom: 20px;
-    line-height: 52px;
+    line-height: min(52px,4.5vw);
+    white-space: nowrap;
+    font-weight: bold;
 }
 .ctbx_top_img_ctbx{
-    display: flex;
-    width: 1515px;
+    max-width: 1515px;
     margin: 0 auto;
+    
+}
+.ulwrap{
+    display: flex;
     justify-content: space-between;
+    align-items: flex-end;
+    padding: 0 30px 0;
 }
 .ctbx_top_img_ctbx ul:last-child{
-    transform: translateY(46px);
+    margin-top: 50px;
+}
+
+/* 미들박스 */
+.middle_wrap{
+    display: flex;
+    padding: 200px 30px 0;
+}
+.leftbx{
+    background: url(/01.1차프로젝트/00.자료수집/02.이미지데이터/sub_business/UNECE_WP.jpg) no-repeat top/90%;
+    width: 40%;
+    padding-right: 70px;
+}
+.rightbx{
+    width: 60%;
+    padding-left: 70px;
+}
+.rightbx li{
+    line-height: 2.5em;
+}
+
+/* 바텀박스 */
+.bottom_wrap{
+    margin-top: 200px;
 }
