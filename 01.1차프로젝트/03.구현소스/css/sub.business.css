@@ -8,6 +8,14 @@
     font-family: 'Montserrat', sans-serif;
     font-family: 'Yusei Magic', sans-serif;
 */
+
+.business_sub_1{
+    display: none;
+}
+.business_sub_2{
+    display: none;
+}
+
 /* 서브페이지 1 */
 .spage1{
     position: relative;
@@ -98,6 +106,8 @@
 
 /* bbx부분 밑줄 밑 글자 오버시 색변경 부분 끝*/
 
+
+
 .fromendpagewrap{
     padding-top: 120px;
     padding-bottom: 150px;
@@ -107,6 +117,7 @@
     max-width: 1515px;
     text-align: center;
     margin: 0 auto 100px;
+    padding: 0 30px;
 }
 .ctbx_top_tit {
     text-align: center;
@@ -151,11 +162,17 @@
 
 /* 페이지에 사진넣는곳 */
 .ctbx_top_img{
-    background: url(/01.1차프로젝트/00.자료수집/02.이미지데이터/sub_business/car_security_bg.jpg) no-repeat;
     background-size: cover;
     background-position: center;
+}
+.ctbx_top_img.ctbx_top_img1{
+    background: url(/01.1차프로젝트/00.자료수집/02.이미지데이터/sub_business/car_security_bg.jpg) no-repeat;
     padding: 11.2rem 0 8.6rem;
     color: #fff;
+}
+.ctbx_top_img.ctbx_top_img2{
+    background: url(/01.1차프로젝트/00.자료수집/02.이미지데이터/sub_business/electronic_bg.jpg) no-repeat;
+    height: min(500px,45vw);
 }
 /* 사진넣은곳 안에 설정 */
 .bigtit {
