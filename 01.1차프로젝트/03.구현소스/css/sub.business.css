@@ -23,6 +23,18 @@
     display: none;
     opacity: 0;
 }
+/* 글자 깔끔하게 나오기 위한 커버박스 */
+.h2wrap{
+    overflow: hidden;
+    margin-bottom: 40px;
+}
+.h2wrap h2 {
+    display: inline-block;
+    transform: translateY(60%);
+    transition:  .8s ease-in-out;
+    opacity: 0;
+    transition-delay: 1s;
+}
 /* 서브페이지 1 */
 .spage1{
     position: relative;
@@ -50,6 +62,14 @@
 }
 /* 페이지1의 아래 박스공간 */
 .bbx{
+    position: absolute;
+    bottom: -10%;
+    width: 100%;
+    height: 80px;
+    background-color: #fff;
+    transition: bottom 1.1s ease-in-out;
+}
+.bbx.on{
     position: absolute;
     bottom: 0;
     width: 100%;

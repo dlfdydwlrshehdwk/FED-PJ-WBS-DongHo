@@ -30,7 +30,7 @@ body *{
     position: fixed;
     width: 100%;
     /* 잠시변경 서브페이지 만들기위해 만들면 -10%으로 */
-    top: 0%;
+    top: -10%;
     transition: top 1s ease-in-out,opacity 1s ease-in-out;
     /* nav flex박스 */
     display: flex;
@@ -42,7 +42,7 @@ body *{
     justify-content: center;
     z-index: 999;
     /* 잠시변경 서브페이지만들기위해 만들고나면 0 으로 */
-    opacity: 1;
+    opacity: 0;
     color: #fff;
 }
 .nav.on{
@@ -492,7 +492,6 @@ body *{
 .spage1 h2{
     font-size: 70px;
     color: white;
-    margin-bottom: 40px;
 }
 .spage1 p{
     font-size: 22px;

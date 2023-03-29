@@ -13,9 +13,9 @@ window.addEventListener("resize", () => {
 
 window.addEventListener("DOMContentLoaded", () => {
     // 새로고침시 화면맨위로설정
-    // setTimeout(()=>{
-    //     window.scrollTo(0,0);
-    // },100) // 작동완료
+    setTimeout(()=>{
+        window.scrollTo(0,0);
+    },100) // 작동완료
     document.querySelector(".nav").classList.add("on");
     document.querySelector(".pob").classList.add("on");
 

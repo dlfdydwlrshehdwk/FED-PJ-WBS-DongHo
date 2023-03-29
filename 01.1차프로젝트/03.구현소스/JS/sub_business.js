@@ -9,12 +9,42 @@ window.addEventListener('DOMContentLoaded',()=>{
     // 변수 모음
     // - 1페이지 맨밑의 .bbx 박스 에 li들 
     const bbxli = qsa('.bbx ul>li');
+
+    // 밑에 박스
+    const bbx = qs('.bbx');
+    console.log(bbx)
     
     // - 서브페이지의 2번째페이지부터 끝까지 가는 랩핑박스
     // .business_sub_1~4 까지 4개가있다. 4개는 dn + opacity 0 상태
     const fromendpagewrap = qsa('.fromendpagewrap')
+
+
+    // 화면 최초실행시
+    // window.location.reload();
+    document.querySelector(".nav").classList.add("on");
+    bbx.classList.add("on");
+    const asdf = document.querySelector('.h2wrap h2').innerHTML;
+    let hcode = ""
+    let idx = 0;
+    for(let x of asdf) {
+        console.log(x);
+        hcode +=`
+                <h2 style = "transition-delay:${idx*0.02}s">${x}</h2>
+                `;
+        idx++;
+    } // for ////
+    qs('.h2wrap').innerHTML = hcode;
+
+    // 새로고침시 화면맨위로설정
+    setTimeout(()=>{
+        window.scrollTo(0,0);
+    },100) // 작동완료
+    document.querySelector(".nav").classList.add("on");
+    bbx.classList.add("on");
+    
     
 
+    // li 들을 누르면 ~~ 에 관한 내용들
     qsa('.bbx ul>li>a').forEach((ele)=>{
         ele.prevendefault
     })
