@@ -34,15 +34,19 @@ window.addEventListener('DOMContentLoaded',()=>{
             ele.classList.add('on');
 
             console.log(fromendpagewrap[idx])
+
+            // for of 문으로 각 서브페이지의 문단을 초기화해줌
             for(let x of fromendpagewrap){
                 x.style.display = 'none';
                 x.style.opacity = 0;
                 x.style.transition = 'none'
-
             }
+
+            // 초기화 함과 동시에 서브페이지의 문단을 선 블럭처리를해주며 
+            // 트랜지션을 줌 -> 동시에 주면 db 는 트랜지션이 안되기때문!
             fromendpagewrap[idx].style.display = 'block';
+            fromendpagewrap[idx].style.transition = 'opacity .3s ease-in'
             setTimeout(()=>{
-                fromendpagewrap[idx].style.transition = 'opacity .3s ease-in'
                 fromendpagewrap[idx].style.opacity = 1;
             },300)
 
