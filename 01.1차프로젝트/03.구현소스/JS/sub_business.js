@@ -38,6 +38,8 @@ window.addEventListener('DOMContentLoaded',()=>{
     const spg1 = qs('.spage1')
     console.log(spg1)
 
+    // 2페이지부터 랩핑박스
+    const fromendpagewrap = qsa('.fromendpagewrap')
 
 
 
@@ -58,21 +60,30 @@ window.addEventListener('DOMContentLoaded',()=>{
     console.log(ahh);
     
     const main = qs('main');
-    // console.log(window)
-    main.addEventListener('scroll',function(){
-        let scTop = window.scrollY;
-        console.log(scTop);
-        if(scTop >= 0 && scTop < hhh / 2){
-            console.log('성공')
-        }
-    })
+    // // console.log(window)
+    // main.addEventListener('wheel',function(){
+    //     let scTop = window.scrollY;
+    //     console.log(scTop);
+    //     // let st = window.top;
+    //     // console.log(st)
+    //     if(scTop < hhh / 2){
+    //         console.log('성공')
+    //     }
+    //     else if(scTop > hhh / 2){
+    //         console.log('실패')
+    //     }
+    // })
+
+    
+
     // 서브페이지 1에서 휠사용시 설정 
     // 지정된 방향으로 내려감 + 글씨 on빼기 배경화면sm빼기
-    spg1.addEventListener('wheel',()=>{
+    window.addEventListener('scroll',()=>{
         // 기본기능을 정지
         event.preventDefault();
         // 휠방향 알아내기
         let wa = event.wheelDelta;
+        
         // console.log(wa) // 밑 = -120 위 120
         console.log('hi');
         let scb = document.querySelector('main').scrollTop;
@@ -89,15 +100,41 @@ window.addEventListener('DOMContentLoaded',()=>{
             spg1bg.classList.add('sm');
         }
     })
+    // spg1.addEventListener('wheel',()=>{
+    //     // 기본기능을 정지
+    //     event.preventDefault();
+    //     // 휠방향 알아내기
+    //     let wa = event.wheelDelta;
+        
+    //     // console.log(wa) // 밑 = -120 위 120
+    //     // console.log('hi');
+    //     let scb = document.querySelector('main').scrollTop;
+    //     if(wa >= -120 && wa <0){
+    //         scrollTo(0,hh);
+    //         qs('.h2wrap').classList.remove("on");
+    //         qs('.pwrap').classList.remove("on");
+    //         spg1bg.classList.remove('sm');
+    //     }
+    //     else if(wa > 0  && wa <= 120){
+    //         scrollTo(0,0)
+    //         qs('.h2wrap').classList.add("on");
+    //         qs('.pwrap').classList.add("on");
+    //         spg1bg.classList.add('sm');
+    //     }
+    // })
 
-
-
+    // console.log(qs('.wrap'))
+    //     qs('.wrap').addEventListener('wheel',function(){
+    //         console.log('hi')
+    //         let scTop = window.scrollY;
+    //         console.log(scTop)
+    //     })
 
 
 
     // - 서브페이지의 2번째페이지부터 끝까지 가는 랩핑박스
     // .business_sub_1~4 까지 4개가있다. 4개는 dn + opacity 0 상태
-    const fromendpagewrap = qsa('.fromendpagewrap')
+    // const fromendpagewrap = qsa('.fromendpagewrap')
 
 
     // 화면 최초실행시
