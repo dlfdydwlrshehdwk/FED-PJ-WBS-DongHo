@@ -253,6 +253,11 @@ window.addEventListener('DOMContentLoaded',()=>{
             console.log(hh)
             // for of 문으로 li클릭시 모든 li의 클래스를 먼저 지워주ㄱㅣ
             for(let x of bbxli){
+                // qsa('.bbx ul>li').forEach((ele)=>{
+                //     console.log(ele.classList.contains('on'));
+                // })
+                // on을 가지고있는 녀석은 안꿈틀거리게 하고싶은데
+                // 현재는 on되어있는 li를 누르면 꿈틀함
                 x.classList.remove('on');
             }
             // 그리고 클래스부여
