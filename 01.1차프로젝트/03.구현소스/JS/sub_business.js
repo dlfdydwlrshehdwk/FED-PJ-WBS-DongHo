@@ -7,6 +7,17 @@ const qsa = (x) => document.querySelectorAll(x);
 
 window.addEventListener('DOMContentLoaded',()=>{
     // 변수 모음
+
+    // nav 바 - 서브에서는 fixed가 아닌 상태
+    const nav = qs('.nav')
+    nav.style.position = 'absolute';
+
+    // 1페이지 배경 
+    const spg1bg = qs('.spage1bg');
+    setTimeout(()=>{
+        spg1bg.classList.add('sm');
+    },3000)
+
     // - 1페이지 맨밑의 .bbx 박스 에 li들 
     const bbxli = qsa('.bbx ul>li');
 
@@ -14,6 +25,58 @@ window.addEventListener('DOMContentLoaded',()=>{
     const bbx = qs('.bbx');
     console.log(bbx)
     
+    // 위치값 이동용변수모음
+    const he = qs('.bbx ul');
+    // ul자체크기
+    const qq = he.scrollHeight;  // -> 81 he 의 높이값
+    // 전체높이
+    const ww = he.getBoundingClientRect().top;
+    // 전체높이에서 ul크기 뺴서 거기로 가기
+    const hh = ww - qq;
+    
+    // 서브페이지 휠 사용시 위한 1페이지 변수
+    const spg1 = qs('.spage1')
+    console.log(spg1)
+
+
+
+
+
+
+
+
+
+
+
+
+    // 서브페이지 1에서 휠사용시 설정 
+    // 지정된 방향으로 내려감 + 글씨 on빼기 배경화면sm빼기
+    spg1.addEventListener('wheel',()=>{
+        // 기본기능을 정지
+        event.preventDefault();
+        // 휠방향 알아내기
+        let wa = event.wheelDelta;
+        console.log(wa) // 밑 = -120 위 120
+
+        if(wa >= -120 && wa <0){
+            scrollTo(0,hh);
+            qs('.h2wrap').classList.remove("on");
+            qs('.pwrap').classList.remove("on");
+            spg1bg.classList.remove('sm');
+        }
+        else if(wa > 0  && wa <= 120){
+            scrollTo(0,0)
+            qs('.h2wrap').classList.add("on");
+            qs('.pwrap').classList.add("on");
+            spg1bg.classList.add('sm');
+        }
+    })
+
+
+
+
+
+
     // - 서브페이지의 2번째페이지부터 끝까지 가는 랩핑박스
     // .business_sub_1~4 까지 4개가있다. 4개는 dn + opacity 0 상태
     const fromendpagewrap = qsa('.fromendpagewrap')
@@ -57,11 +120,11 @@ window.addEventListener('DOMContentLoaded',()=>{
     // document.querySelector(".nav").classList.add("on");
     // bbx.classList.add("on");
     
+    // 1페이지에서 휠 시 hh로 이동
 
-    // 페이지 1의 li를 누르면 ~~
-    // bbxli.forEach((ele))
-    const he = qs('.bbx ul').innerheight;
-    console.log(he)
+
+
+    
     
 
     // li 들을 누르면 ~~ 에 관한 내용들
@@ -75,7 +138,9 @@ window.addEventListener('DOMContentLoaded',()=>{
             qsa('.bbx ul>li>a').forEach((ele)=>{
                 event.preventDefault();
             })
-            console.log(bbxli)
+            // 위치로 가기!
+            scrollTo(0,hh);
+            console.log(hh)
             // for of 문으로 li클릭시 모든 li의 클래스를 먼저 지워주ㄱㅣ
             for(let x of bbxli){
                 x.classList.remove('on');
@@ -83,7 +148,7 @@ window.addEventListener('DOMContentLoaded',()=>{
             // 그리고 클래스부여
             ele.classList.add('on');
 
-            console.log(fromendpagewrap[idx])
+            // console.log(fromendpagewrap[idx])
 
             // for of 문으로 각 서브페이지의 문단을 초기화해줌
             for(let x of fromendpagewrap){
@@ -95,7 +160,7 @@ window.addEventListener('DOMContentLoaded',()=>{
             // 초기화 함과 동시에 서브페이지의 문단을 선 블럭처리를해주며 
             // 트랜지션을 줌 -> 동시에 주면 db 는 트랜지션이 안되기때문!
             fromendpagewrap[idx].style.display = 'block';
-            fromendpagewrap[idx].style.transition = 'opacity .3s ease-in'
+            fromendpagewrap[idx].style.transition = 'opacity .5s ease-in-out'
             setTimeout(()=>{
                 fromendpagewrap[idx].style.opacity = 1;
             },300)
@@ -103,11 +168,38 @@ window.addEventListener('DOMContentLoaded',()=>{
         }
     })
 
+    // 스크롤시 서브페이지 1의 높이의 반정도 내려오면 서브페이지1의 클래스를 지우고 
+    // 서브페이지 2의 내용이 등장하게 끔 하는 그런 기능?
+    
 
 
 
 
 
+    // 코어 자스
+    // 사이트맵 버튼 이동 시작 //////////////////////////////////
+
+    // 메인페이지 버튼
+    btn = qs(".btn");
+    // 사이트맵
+    sitemap = qs(".sitemap");
+    // 사이트맵 버튼
+    stb = qs(".sitemap_btn");
+
+    // 메인페이지 사이트맵 버튼누를시 사이트맵에 클래스 on 추가
+    btn.onclick = () => {
+        // console.log(btn);
+        sitemap.classList.add("show");
+        document.body.style.overflow = "hidden";
+    };
+
+    // 사이트맵에 버튼클릭시 사이트맵에 클래스 on 빼기
+    stb.onclick = () => {
+        sitemap.classList.remove("show");
+        document.body.style.overflow = "visible";
+    };
+    // 완료 !
+    // 사이트맵 버튼 이동 끝 ///////////////////////////////////
 
 
 

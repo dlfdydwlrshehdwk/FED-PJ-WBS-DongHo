@@ -59,8 +59,17 @@
     height: 100vh;
     font-family: 'Montserrat', 'sans-serif','나눔고딕';
     font-weight: 500;
+    transition: .5s ease-in-out;
 }
 /* 색 이미지 반복 고정 위치크기 */
+.spage1bgwrap {
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+}
 .spage1bg{
     position: absolute;
     top: 0;
@@ -68,8 +77,15 @@
     bottom: 0;
     right: 0;
     background: url(/01.1차프로젝트/00.자료수집/02.이미지데이터/sub_business/sub_business_bg.jpg) no-repeat center/cover ;
+    background-attachment: fixed;
     z-index: -1;
+    transition: transform 2s linear;
+    transform: scale(1.3);
 }
+.spage1bg.sm{
+    transform: scale(1);
+}
+
 /* 페이지 1 텍스트공간 */
 .textarea{
     position: absolute;
