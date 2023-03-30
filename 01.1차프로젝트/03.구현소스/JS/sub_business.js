@@ -47,8 +47,25 @@ window.addEventListener('DOMContentLoaded',()=>{
 
 
 
-
-
+    // 서브페이지 1의 높이의 반정도 내려오면 서브페이지1의 클래스를 지우고 
+    // 서브페이지 2의 내용이 등장하게 끔 하는 그런 기능?
+    // 중간 값은 hhh / 2
+    // 변수값 spg1bg
+    const hhh = spg1bg.clientHeight; // 959
+    // 전체문서의 높이값
+    const ahh = qs('main').clientHeight; // 3595
+    console.log(hhh);
+    console.log(ahh);
+    
+    const main = qs('main');
+    // console.log(window)
+    main.addEventListener('scroll',function(){
+        let scTop = window.scrollY;
+        console.log(scTop);
+        if(scTop >= 0 && scTop < hhh / 2){
+            console.log('성공')
+        }
+    })
     // 서브페이지 1에서 휠사용시 설정 
     // 지정된 방향으로 내려감 + 글씨 on빼기 배경화면sm빼기
     spg1.addEventListener('wheel',()=>{
@@ -56,8 +73,9 @@ window.addEventListener('DOMContentLoaded',()=>{
         event.preventDefault();
         // 휠방향 알아내기
         let wa = event.wheelDelta;
-        console.log(wa) // 밑 = -120 위 120
-
+        // console.log(wa) // 밑 = -120 위 120
+        console.log('hi');
+        let scb = document.querySelector('main').scrollTop;
         if(wa >= -120 && wa <0){
             scrollTo(0,hh);
             qs('.h2wrap').classList.remove("on");
@@ -168,8 +186,6 @@ window.addEventListener('DOMContentLoaded',()=>{
         }
     })
 
-    // 스크롤시 서브페이지 1의 높이의 반정도 내려오면 서브페이지1의 클래스를 지우고 
-    // 서브페이지 2의 내용이 등장하게 끔 하는 그런 기능?
     
 
 
