@@ -23,7 +23,7 @@
     display: none;
     opacity: 0;
 }
-/* 글자 깔끔하게 나오기 위한 커버박스 */
+/* 글자 깔끔하게 나오기 위한 h2태그 겉박스 */
 .h2wrap{
     overflow: hidden;
     margin-bottom: 40px;
@@ -33,8 +33,26 @@
     transform: translateY(60%);
     transition:  .8s ease-in-out;
     opacity: 0;
-    transition-delay: 1s;
+    /* transition-delay: 1s; */
 }
+.h2wrap.on h2{
+    transform: translateY(0);
+    opacity: 1;
+} 
+/* 글자 깔끔하게 나오기 위한 p태그 겉박스 */
+.pwrap{
+    overflow: hidden;
+}
+.pwrap p{
+    transform: translateY(60%);
+    transition:  .8s ease-in-out;
+    opacity: 0;
+}
+.pwrap.on p{
+    transform: translateY(0);
+    opacity: 1;
+} 
+
 /* 서브페이지 1 */
 .spage1{
     position: relative;

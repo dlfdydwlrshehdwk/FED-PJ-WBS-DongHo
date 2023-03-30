@@ -20,28 +20,48 @@ window.addEventListener('DOMContentLoaded',()=>{
 
 
     // 화면 최초실행시
-    // window.location.reload();
-    document.querySelector(".nav").classList.add("on");
-    bbx.classList.add("on");
+    // 네브바와 밑에 바를 나타나게하기
+    setTimeout(()=>{
+        document.querySelector(".nav").classList.add("on");
+        bbx.classList.add("on");
+    },400)
     const asdf = document.querySelector('.h2wrap h2').innerHTML;
+
+    // 가운데 큰글씨를 계단식으로 나오게 하기위해 for of 문
     let hcode = ""
     let idx = 0;
     for(let x of asdf) {
         console.log(x);
         hcode +=`
-                <h2 style = "transition-delay:${idx*0.02}s">${x}</h2>
+                <h2 style = "transition-delay:${idx*0.03}s">${x}</h2>
                 `;
         idx++;
     } // for ////
+
+    // 가운데 큰글씨가 네브바와 밑바보다 늦게 나타나게 하기위함
     qs('.h2wrap').innerHTML = hcode;
+    setTimeout(()=>{
+        qs('.h2wrap').classList.add("on");
+        qs('.pwrap').classList.add("on");
+
+    },1300)
 
     // 새로고침시 화면맨위로설정
     setTimeout(()=>{
         window.scrollTo(0,0);
     },100) // 작동완료
-    document.querySelector(".nav").classList.add("on");
-    bbx.classList.add("on");
+    // setTimeout(()=>{
+    //     document.querySelector(".nav").classList.add("on");
+    //     bbx.classList.add("on");
+    // },400)
+    // document.querySelector(".nav").classList.add("on");
+    // bbx.classList.add("on");
     
+
+    // 페이지 1의 li를 누르면 ~~
+    // bbxli.forEach((ele))
+    const he = qs('.bbx ul').innerheight;
+    console.log(he)
     
 
     // li 들을 누르면 ~~ 에 관한 내용들
