@@ -204,6 +204,9 @@
     font-weight: 700;
     margin-bottom: min(60px,5.5vw);
 }
+.spg_ctbx_top form{
+    padding-bottom: 200px;
+}
 .subtit::after{
     content: '';
     position: absolute;
@@ -289,15 +292,20 @@
 }
 
 /* insight부분 */
-.searchbx{
+.searchbx {
     text-align: center;
+    border-bottom: 2px solid;
     margin: 0 auto;
     position: relative;
     max-width: 500px;
     display: flex;
+    padding-bottom: 10px;
+    justify-content: space-between;
 }
 .searchbx span{
     font-size: 15px;
+    box-sizing: border-box;
+    padding-left: 24px;
 }
 .searchbx div{
     font-size: 15px;
@@ -305,13 +313,37 @@
 #search{
     display: none;
 }
-.searchbx_tap{
+input:focus{
+    outline: none;
+}
+.searchbx_tap {
+    position: absolute;
+    overflow: hidden;
+    top: 100%;
+    height: 0;
+    opacity: 0;
+    box-sizing: border-box;
+    border: 2px solid #000;
+    transition:  .4s ease-in-out;
+}
+.searchbx_tap.on {
+    height: 430%;
+    opacity: 1;
     position: absolute;
     top: 100%;
-    left: -1%;
+    box-sizing: border-box;
+    border: 2px solid #000;
+}
+.searchbx_tap > div {
+    /* padding-bottom: 10px; */
+    padding: 10px 15px;
 }
 .snayong_input{
-    width: 200px;
+    width: 60%;
+}
+#snayong{
+    border: none;
+    width: 100%;
 }
 
 /* 미들박스 */
