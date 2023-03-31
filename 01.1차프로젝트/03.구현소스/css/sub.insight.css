@@ -288,6 +288,23 @@
     margin-top: 50px;
 }
 
+/* insight부분 */
+.searchbx{
+    text-align: center;
+    margin: 0 auto;
+    position: relative;
+    max-width: 500px;
+    display: flex;
+}
+#search{
+    display: none;
+}
+.searchbx_tap{
+    position: absolute;
+    top: 100%;
+    left: -1%;
+}
+
 /* 미들박스 */
 .middle_wrap{
     display: flex;
