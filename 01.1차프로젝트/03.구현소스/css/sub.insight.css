@@ -8,18 +8,18 @@
     font-family: 'Montserrat', sans-serif;
     font-family: 'Yusei Magic', sans-serif;
 */
-.business_sub_1{
+.insight_sub_1{
     display: block;
 }
-.business_sub_2{
+.insight_sub_2{
     display: none;
     opacity: 0;
 }
-.business_sub_3{
+.insight_sub_3{
     display: none;
     opacity: 0;
 }
-.business_sub_4{
+.insight_sub_4{
     display: none;
     opacity: 0;
 }
@@ -296,6 +296,12 @@
     max-width: 500px;
     display: flex;
 }
+.searchbx span{
+    font-size: 15px;
+}
+.searchbx div{
+    font-size: 15px;
+}
 #search{
     display: none;
 }
@@ -303,6 +309,9 @@
     position: absolute;
     top: 100%;
     left: -1%;
+}
+.snayong_input{
+    width: 200px;
 }
 
 /* 미들박스 */
