@@ -237,11 +237,12 @@
     background-position: center;
 }
 .ctbx_top_img.ctbx_top_img1{
-    background: url(/01.1차프로젝트/00.자료수집/02.이미지데이터/sub_business/car_security_bg.jpg) no-repeat;
-    padding: 11.2rem 0 8.6rem;
+    background: url(/01.1차프로젝트/00.자료수집/02.이미지데이터/sub_business/product_img01_01\ \(1\).jpg) no-repeat;
+    /* padding: 11.2rem 0 8.6rem; */
+    height: 550px;
     color: #fff;
     background-size: cover;
-    background-position: center;
+    background-position: top;
 }
 .ctbx_top_img.ctbx_top_img2{
     background: url(/01.1차프로젝트/00.자료수집/02.이미지데이터/sub_business/electronic_bg.jpg) no-repeat;
@@ -276,7 +277,6 @@
 .ctbx_top_img_ctbx{
     max-width: 1515px;
     margin: 0 auto;
-    
 }
 .ulwrap{
     display: flex;
@@ -288,9 +288,21 @@
     margin-top: 50px;
 }
 
+/* 서브 txt박스 */
+.sub_txt {
+    font-size: 20px;
+    text-align: center;
+    padding: 0 30px;
+    padding-top: 100px;
+    letter-spacing: -0.075em;
+    line-height: 2em;
+    color: #333;
+    font-weight: bold;
+    background-color: #f7f7f7;
+}
 /* 미들박스 */
 .middle_wrap{
-    display: flex;
+    /* display: flex; */
     padding: 200px 30px 0;
 }
 .leftbx{
@@ -304,6 +316,13 @@
 }
 .rightbx li{
     line-height: 2.5em;
+}
+
+.spg_ctbx_middle_tit{
+    text-align: center;
+    font-size: min(40px,3.8vw);
+    font-weight: bold;
+    letter-spacing: -0.075em;
 }
 
 /* 바텀박스 */
@@ -354,8 +373,6 @@
 }
 .fz15{
     font-size: min(15px,1.3vw);
-    padding-top: 15px;
-    white-space: nowrap;
     color: #666;
 }
 .spg_btbx_nybx_txtbx{
@@ -369,4 +386,50 @@
 }
 .spulbx1 li {
     margin-bottom: 30px;
+}
+
+.product_top_ul {
+    position: relative;
+    display: flex;
+    column-gap: 3%;
+    padding: 100px 30px 0;
+}
+.product_top_ul::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    height: 300px;
+    width: 100%;
+    left: 0;
+    background-color: #f7f7f7;
+    z-index: -1;
+}
+.product_top_iconbx{
+    margin-bottom: 20px;
+}
+.product_top_ul > li {
+    flex: 1;
+    /* border: 1px solid #000; */
+    width: 30%;
+    border-radius: 15px;
+    box-sizing: border-box;
+    padding: 30px;
+    box-shadow: 3px 3px 10px gray;
+    background-color: #fff;
+}
+.product_top_innerbx_tit{
+    margin-bottom: 20px;
+    letter-spacing: -0.2em;
+
+}
+.product_top_innerbx_tit h3{
+    font-size: 20px;
+    font-weight: bold;
+}
+.product_top_innerbx li {
+    list-style: circle;
+    margin-left: 20px;
+    padding-bottom: 15px;
+    font-weight: 500;
+    letter-spacing: -0.075em;
 }
