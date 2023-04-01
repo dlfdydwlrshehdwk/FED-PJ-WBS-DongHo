@@ -178,7 +178,7 @@
     margin: 0 auto;
     transform: translateY(2%);
     transition: transform 1s ease-in-out, opacity 1s .3s ease-in-out;
-    opacity: 0;
+    opacity: 1;
 }
 .fromendpagewrap.up{
     opacity: 1;
@@ -197,6 +197,8 @@
     letter-spacing: -0.2rem;
 }
 /* .spg_ctbx_top_nayong 부분 */
+.spg_ctbx_top{
+}
 .subtit {
     position: relative;
     display: inline-block;
@@ -218,6 +220,9 @@
     margin-bottom: min(43px,3.6vw);
     letter-spacing: -.2rem;
 }
+.smallnayong{
+    text-align: center;
+}
 .smallnayong p {
     margin-bottom: min(30px,2.4vw);
     line-height: 1.8em;
@@ -225,6 +230,15 @@
     font-size: min(15px,1.5vw);
     font-weight: bold;
     letter-spacing: -.1rem;
+}
+.smalltxt p{
+    margin-bottom: min(30px,2.4vw);
+    line-height: 1.8em;
+    color: rgba(0,0,0,0.6);
+    font-size: min(18px,1.8vw);
+    font-weight: bold;
+    letter-spacing: -.1rem;
+    text-align: center;
 }
 .psnayong{
     font-size: min(13px,1.4vw);
@@ -237,11 +251,12 @@
     background-position: center;
 }
 .ctbx_top_img.ctbx_top_img1{
-    background: url(/01.1차프로젝트/00.자료수집/02.이미지데이터/sub_business/car_security_bg.jpg) no-repeat;
-    padding: 11.2rem 0 8.6rem;
+    background: url(/01.1차프로젝트/00.자료수집/02.이미지데이터/sub_business/fescaro_img.jpg) no-repeat;
+    height: min(500px,45vw);
     color: #fff;
     background-size: cover;
     background-position: center;
+    transform: translateY(-20%);
 }
 .ctbx_top_img.ctbx_top_img2{
     background: url(/01.1차프로젝트/00.자료수집/02.이미지데이터/sub_business/electronic_bg.jpg) no-repeat;
@@ -312,7 +327,6 @@
     padding: 0 30px;
 }
 .spg_ctbx_bottom{
-    background-color: #f7f7f7;
     text-align: center;
 }
 .bluebx{
@@ -369,4 +383,66 @@
 }
 .spulbx1 li {
     margin-bottom: 30px;
+}
+
+/* company */
+.sub_company_ul{
+    display: flex;
+    column-gap: 2.5%;
+    text-align: center;
+    margin-bottom: 70px;
+}
+.sub_company_ul li{
+    flex: 1;
+}
+.sub_company_ul li+li{
+    border-left: 1px solid #00000020;
+}
+.sub_company_ul li>div:first-child{
+    font-size: 18px;
+    font-weight: 600;
+    color: #666;
+    margin-bottom: 15px;
+}
+.sub_company_ul li>div:last-child{
+    font-size: 30px;
+    font-weight: bold;
+}
+.spg_ctbx_top .graybx .smalltxt{
+    margin-bottom: 150px;
+}
+.sub_company_ulimg{
+    margin-bottom: 50px;
+    text-align: center;
+}
+.sub_company_ulimg img{
+    max-width: 100%;
+}
+/* .sub_company_ulimg{
+    background: url(/01.1차프로젝트/00.자료수집/02.이미지데이터/sub_business/fescaro_icon.png) no-repeat center/cover;
+    height: 300px;
+    width: 300px;
+} */
+.graybx{
+    background-color: #f7f7f7;
+    margin-top: 200px;
+    padding-bottom: 100px;
+}
+.graybxwrap{
+    padding: 0 30px;
+}
+.bottom_tit{
+    font-size: 36px;
+    font-weight: 600;
+    margin-bottom: 50px;
+}
+.investors_imgbx ul {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 10%;
+}
+.investors_imgbx ul li{
+    width: 25%;
+    margin: 1.5% 0;
+
 }
