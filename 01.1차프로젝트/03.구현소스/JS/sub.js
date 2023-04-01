@@ -10,9 +10,9 @@ window.addEventListener('DOMContentLoaded',()=>{
 
 
     // 새로고침시 화면맨위로설정
-    setTimeout(()=>{
-        window.scrollTo(0,0);
-    },100) // 작동완료
+    // setTimeout(()=>{
+    //     window.scrollTo(0,0);
+    // },100) // 작동완료
     // nav 바 - 서브에서는 fixed가 아닌 상태
     const nav = qs('.nav')
     nav.style.position = 'absolute';

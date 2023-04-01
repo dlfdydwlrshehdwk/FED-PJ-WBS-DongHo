@@ -178,7 +178,15 @@
     margin: 0 auto;
     transform: translateY(2%);
     transition: transform 1s ease-in-out, opacity 1s .3s ease-in-out;
-    opacity: 0;
+    /* 수정후 0으로 ㄱㄱ */
+    opacity: 1;
+}
+.fromendpagewrap:first-child{
+    display: none;
+}
+.fromendpagewrap:last-child{
+    display: block;
+    opacity: 1;
 }
 .fromendpagewrap.up{
     opacity: 1;
@@ -205,7 +213,7 @@
     margin-bottom: min(60px,5.5vw);
 }
 .spg_ctbx_top form{
-    padding-bottom: 200px;
+    padding-bottom: 50px;
 }
 .subtit::after{
     content: '';
@@ -294,13 +302,14 @@
 /* insight부분 */
 .searchbx {
     text-align: center;
-    border-bottom: 2px solid;
+    border-bottom: 3px solid;
     margin: 0 auto;
     position: relative;
     max-width: 500px;
     display: flex;
     padding-bottom: 10px;
     justify-content: space-between;
+    font-weight: 500;
 }
 .searchbx span{
     font-size: 15px;
@@ -348,7 +357,117 @@ input:focus{
 #snayong{
     border: none;
     width: 100%;
+    font-weight: 500;
 }
+.searchbx i{
+    padding-left: 20px;
+}
+/* 아래표시 */
+.fa-chevron-down.on{
+    display: inline-block
+}
+/* 위표시 */
+.fa-chevron-up.on{
+    display: inline-block;
+}
+.fa-chevron-down{
+    display: none
+}
+/* 위표시 */
+.fa-chevron-up{
+    display: none;
+}
+/* 돋보기 */
+.searchsc {
+    border: none;
+    background-color: #fff;
+    padding-right: 20px;
+}
+
+.insight_ul li a{
+    display: flex;
+    padding: 30px;
+    align-items: center;
+    border-top: 1px solid #000;
+    transition: background-color .2s ease-in-out;
+}
+.insight_ul li:hover{
+    background-color: #bbbbbb17;
+}
+.insight_total{
+    font-weight: 500;
+}
+.bluespan{
+    color: #00afeb;
+    font-weight: 500;
+}
+.insight_total{
+    font-size: 15px;
+    margin-bottom: 20px;
+}
+.insight_ul_imgbx img{
+    /* object-fit: cover; */
+    width: 200px
+}
+.insight_ul_textbx{
+padding-left: 30px;
+}
+.insight_ul_textbx h4{
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+.insight_ul_textbx p {
+    font-size: 16px;
+    margin-bottom: 20px;
+    display: -webkit-box;
+    overflow:hidden;
+    text-overflow:ellipsis;
+    -webkit-line-clamp:2;
+    -webkit-box-orient: vertical;
+    line-height: 1.8em;
+    color: #666;
+    font-weight: 500;
+}
+.insight_ul_textbx span{
+    font-size: 14px;
+    font-weight: 500;
+}
+.insight_blog_wrap{
+    max-width: 1515px;
+    padding: 0 30px;
+}
+/* 데모영역 */
+.insight_demo_ul >li >a{
+    display: grid;
+    grid-template-columns: 4,1;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* 미들박스 */
 .middle_wrap{
