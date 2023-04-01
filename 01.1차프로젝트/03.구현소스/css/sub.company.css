@@ -323,11 +323,11 @@
 
 /* 바텀박스 */
 .bottom_wrap{
-    margin-top: 200px;
+    margin-top: 150px;
     padding: 0 30px;
 }
 .spg_ctbx_bottom{
-    text-align: center;
+    /* text-align: center; */
 }
 .bluebx{
     color: #00afeb;
@@ -445,4 +445,58 @@
     width: 25%;
     margin: 1.5% 0;
 
+}
+.spg_top_ulbx{
+    display: flex;
+    margin: 0 auto;
+    text-align: center;
+}
+.spg_top_ulbx li{
+    width: 200px;
+    border: 1px solid #000;
+    font-size: 15px;
+}
+.spg_top_ulbx li a{
+    line-height: 60px;
+}
+.spg_top_ulbx li+li{
+    border-left: none ;
+}
+.spg_btm_ul li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 150px;
+}
+.btmliimg{
+    width: 100%;
+}
+.btm_li_leftbx{
+    padding-right: 50px;
+}
+.btm_li_rghtbx{
+    padding-left: 50px;
+}
+.spg_btm_ul p{
+    font-size: 16px;
+    color: #666666cb;
+    padding-top: 30px;
+    border-top: 1px solid #ddd;
+    font-weight: 600;
+    line-height: 1.8em;
+    letter-spacing: -0.1em;
+}
+.btmstrong{
+    font-size: 40px;
+    font-weight: bold;
+    margin-bottom: 30px;
+    letter-spacing: -0.1em;
+}
+.blue{
+    color: #00afeb;
+}
+.spg_btm_ul li:nth-child(2) .btm_li_leftbx{
+    padding-left: 50px;
+}
+.spg_btm_ul li:nth-child(2) .btm_li_rghtbx{
+    padding: 0;
 }
