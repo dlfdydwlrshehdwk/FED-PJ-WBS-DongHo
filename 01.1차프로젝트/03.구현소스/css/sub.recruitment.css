@@ -178,7 +178,7 @@
     margin: 0 auto;
     transform: translateY(2%);
     transition: transform 1s ease-in-out, opacity 1s .3s ease-in-out;
-    opacity: 0;
+    opacity: 1;
 }
 .fromendpagewrap.up{
     opacity: 1;
