@@ -366,6 +366,7 @@ body *{
     border-radius: 50%;
     text-align: center;
     line-height: 60px;
+    z-index: 9999999999;
 }
 .upbtn:hover i {
     transform: translateY(-5px);

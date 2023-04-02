@@ -7,7 +7,7 @@ const qsa = (x) => document.querySelectorAll(x);
 
 window.addEventListener('DOMContentLoaded',()=>{
     // 변수 모음
-
+    qs('.upbtn').style.zindex= 99999;
     // 윈도우에 스크롤을갈굼
     //  측정이안되었던이유 = 휠질하고 스크롤y를 초기화를 안해줘서 그런듯
     let wh = window.scrollY;
@@ -21,7 +21,6 @@ window.addEventListener('DOMContentLoaded',()=>{
             setTimeout(()=>{
                 qs('.bbx').style.position = 'fixed';
                 qs('.bbx').style.top = 0;
-                qs('.bbx').style.zindex = 9999;
                 qs('.bbx').classList.add('fixed');
             },10)
         }
@@ -30,7 +29,6 @@ window.addEventListener('DOMContentLoaded',()=>{
                 qs('.bbx').style.position = 'absolute';
                 qs('.bbx').style.transition = ' none';
                 qs('.bbx').style.bottom = '';
-                qs('.bbx').style.zindex = 9999;
                 qs('.bbx').style.top = '';
                 qs('.bbx').classList.remove('fixed');
             
