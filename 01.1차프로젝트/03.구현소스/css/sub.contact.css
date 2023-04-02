@@ -514,3 +514,24 @@ address ul>li{
     width: 100%;
     
 }
+
+@media screen and (max-width: 600px ){
+    .gaib ul>li {
+        width: 100%;
+    }
+    .gaib{
+        min-width: 400px;
+    }
+    .ctbx_top_tit {
+        font-size: min(40px,8vw);
+    }
+    .boldnayong {
+        font-size: min(36px,4.5vw);
+    }
+    .mapbx{
+        min-width: 400px;
+    }
+    address{
+        min-width: 400px;
+    }
+}

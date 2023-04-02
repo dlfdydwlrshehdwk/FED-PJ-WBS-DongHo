@@ -60,6 +60,7 @@
     font-family: 'Montserrat', 'sans-serif','나눔고딕';
     font-weight: 500;
     transition: .5s ease-in-out;
+    min-width: 400px;
 }
 /* 색 이미지 반복 고정 위치크기 */
 .spage1bgwrap {
@@ -471,6 +472,30 @@ padding-left: 30px;
 .insight_demo_ul_textbx span{
     font-size: 13px;
 }
+.spg_ctbx_top{
+    max-width: 1515px;
+    margin: 0 auto;
+}
+.insight_demo_ul_textbx p,
+.insight_demo_ul_textbx h4{
+    display: -webkit-box;
+
+overflow:hidden;
+
+text-overflow:ellipsis;
+
+-webkit-line-clamp:2;
+
+-webkit-box-orient: vertical;
+}
+
+
+
+
+
+
+
+
 
 
 
@@ -579,3 +604,54 @@ padding-left: 30px;
 .spulbx1 li {
     margin-bottom: 30px;
 }
+
+
+
+
+
+
+@media screen and (max-width : 1200px) {
+    .insight_demo_ul{
+        grid-template-columns: repeat(3,1fr);
+    } 
+}
+
+
+@media screen and (max-width : 800px) {
+    .insight_demo_ul{
+        grid-template-columns: repeat(2,1fr);
+    } 
+}
+@media screen and (max-width : 600px) {
+    .insight_ul li a {
+        flex-direction: column;
+    }
+    .insight_ul_imgbx{
+        margin-bottom: 15px;
+        text-align: center;
+    }
+    .insight_ul_textbx{
+        padding-left: 0;
+    }
+    .ctbx_top_tit {
+        font-size: 30px;
+    }
+}
+@media screen and (max-width : 500px) {
+    .insight_demo_ul{
+        grid-template-columns: repeat(1,1fr);
+    } 
+    .insight_demo_ul {
+        row-gap: 2%;
+    }
+    .searchbx {
+        width: 90%;
+    }
+    .searchbx div {
+        white-space: nowrap;
+    }
+    .spg_ctbx_top{
+        min-width: 400px;
+    }
+}
+

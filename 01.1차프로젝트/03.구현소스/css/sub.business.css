@@ -187,7 +187,7 @@
 .ctbx_top_text{
     max-width: 1515px;
     text-align: center;
-    margin: 0 auto 100px;
+    margin: 0 auto min(100px,8vw);
     padding: 0 30px;
 }
 .ctbx_top_tit {
@@ -227,7 +227,7 @@
     letter-spacing: -.1rem;
 }
 .psnayong{
-    font-size: min(13px,1.4vw);
+    font-size: min(13px,2.4vw);
     /* font-weight: bold; */
 }
 
@@ -244,15 +244,15 @@
     background-position: center;
 }
 .ctbx_top_img.ctbx_top_img2{
-    background: url(/01.1차프로젝트/00.자료수집/02.이미지데이터/sub_business/electronic_bg.jpg) no-repeat;
+    background: url(/01.1차프로젝트/00.자료수집/02.이미지데이터/sub_business/electronic_bg.jpg) no-repeat center/cover;
     height: min(500px,45vw);
 }
 .ctbx_top_img.ctbx_top_img3{
-    background: url(/01.1차프로젝트/00.자료수집/02.이미지데이터/sub_business/v2x_bg.jpg) no-repeat;
+    background: url(/01.1차프로젝트/00.자료수집/02.이미지데이터/sub_business/v2x_bg.jpg) no-repeat center/cover;
     height: min(500px,45vw);
 }
 .ctbx_top_img.ctbx_top_img4{
-    background: url(/01.1차프로젝트/00.자료수집/02.이미지데이터/sub_business/sdv_bg.jpg) no-repeat;
+    background: url(/01.1차프로젝트/00.자료수집/02.이미지데이터/sub_business/sdv_bg.jpg) no-repeat center/cover;
     height: min(500px,45vw);
 }
 /* 사진넣은곳 안에 설정 */
@@ -304,6 +304,7 @@
 }
 .rightbx li{
     line-height: 2.5em;
+    font-size: min(12px,2vw);
 }
 
 /* 바텀박스 */
@@ -325,13 +326,13 @@
 }
 .bt_tit{
     
-    font-size: 40px;
+    font-size: min(40px,10vw);
     margin-bottom: 20px;
 }
 .bt_txt_ny ul{
     display: inline-block;
-    font-size: 15px;
-    line-height: 1.8em;
+    font-size: min(15px,4.0vw);
+    line-height: 2em;
 }
 .bt_txt_ny li{
     list-style-type: disc;
@@ -369,4 +370,180 @@
 }
 .spulbx1 li {
     margin-bottom: 30px;
+}
+
+@media screen and(max-width : 1200px) {
+    .rightbx li {
+        font-size: min(12px,2.5vw);
+    }
+}
+
+@media screen and (max-width : 800px) {
+    .ctbx_top_tit {
+        font-size: min(40px,6vw);
+    }
+    .subtit {
+        font-size: min(18px,3.5vw);
+    }
+    .boldnayong {
+        font-size: min(36px,4vw);
+    }
+    .smallnayong p {
+        font-size: min(15px,2.2vw);
+    }
+    .ulwrap {
+        flex-direction: column;
+    }
+    .ulwrap ul{
+        width: 100%;
+    }
+    .tangle {
+        font-size: min(15px,3.4vw);
+        width: 100%;
+        height: min(50px,4.5vw);
+        padding: 10px 0 10px;
+        border: 2px solid rgb(255,255,255,0.2);
+        text-align: center;
+        margin-bottom: 20px;
+        line-height: min(52px,5.5vw);
+        white-space: nowrap;
+        font-weight: bold;
+    }
+    .bigtit {
+        font-size: min(40px,7vw);
+        font-weight: bold;
+        margin-bottom: min(40px,4.5vw);
+    }
+    .ctbx_top_img_ctbx ul:last-child {
+        margin-top: 0;
+    }
+    .leftbx {
+        background: url(/01.1차프로젝트/00.자료수집/02.이미지데이터/sub_business/UNECE_WP.jpg) no-repeat center/cover;
+        height: min(450px,60vw);
+        padding-right: 0;
+        width: 100%;;
+    }
+    .rightbx {
+        width: 100%;
+        margin-top: 50px;
+        padding-left: 0;
+    }
+    .middle_wrap {
+        padding: 100px 30px 0;
+        flex-direction: column;
+    }
+    .spg_btbx_nybx ul {
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+    .w-45 {
+        width: 100%;
+    }
+    .spg_btbx_txtbx {
+        padding: 100px 0;
+    }
+    .fz30 {
+        font-size: min(30px,6vw);
+    }
+    .fz15 {
+        font-size: min(15px,2.6vw);
+    }
+    .bt_txt_ny {
+        margin-bottom: 50px;
+    }
+}
+
+@media screen and (max-width : 600px) {
+    .ctbx_top_tit {
+        font-size: min(40px,7vw);
+    }
+    .subtit {
+        font-size: min(18px,6vw);
+    }
+    .boldnayong {
+        font-size: min(36px,6vw);
+    }
+    .smallnayong p {
+        font-size: min(15px,5vw);
+    }
+    .spg_ctbx_top{
+        min-width: 400px;
+    }
+    .psnayong {
+        font-size: min(13px,2.4vw);
+        /* font-weight: bold; */
+    }
+}
+@media screen and (max-width : 400px) {
+    .wrap{
+        min-width: 400px;
+    }
+    .ctbx_top_tit {
+        font-size: min(36px);
+    }
+    .subtit {
+        font-size: min(16px);
+    }
+    .boldnayong {
+        font-size: min(25px);
+    }
+    .smallnayong p {
+        font-size: min(15px);
+    }
+    .subtit {
+        position: relative;
+        display: inline-block;
+        font-size: min(18px);
+        font-weight: 700;
+        margin-bottom: min(30px);
+    }
+    .ctbx_top_img.ctbx_top_img4{
+        height: 300px;
+    }
+    .ctbx_top_img.ctbx_top_img3 {
+        height: min(300px);
+    }
+    .ctbx_top_img.ctbx_top_img2 {
+        height: min(300px);
+    }
+    .psnayong {
+        font-size: min(13px,2.4vw);
+    }
+    .bigtit {
+        font-size: min(30px);
+        font-weight: bold;
+        margin-bottom: min(20px);
+    }
+    .tangle {
+        font-size: min(13px);
+        width: 100%;
+        height: min(30px);
+        padding: 10px 0 10px;
+        border: 2px solid rgb(255,255,255,0.2);
+        text-align: center;
+        margin-bottom: 20px;
+        line-height: 30px;
+        white-space: nowrap;
+        font-weight: bold;
+    }
+    .bt_tit {
+        font-size: 34px;
+        margin-bottom: 20px;
+    }
+    .bt_txt_ny ul {
+        display: inline-block;
+        font-size: min(15px);
+    }
+    .leftbx {
+        background: url(/01.1차프로젝트/00.자료수집/02.이미지데이터/sub_business/UNECE_WP.jpg) no-repeat center/cover;
+        height: min(220px);
+        padding-right: 0;
+        width: 100%;
+    }
+    .fz30 {
+        font-size: min(25px);
+    }
+    .fz15 {
+        font-size: min(13px);
+    }
 }

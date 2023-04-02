@@ -385,6 +385,7 @@ body *{
     max-height: 704px;
     background-color: #fff;
     padding: 0 30px;
+    min-width: 400px;
 }
 
 
