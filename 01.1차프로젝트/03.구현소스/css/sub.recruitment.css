@@ -370,3 +370,107 @@
 .spulbx1 li {
     margin-bottom: 30px;
 }
+.spg_ctbx_top{
+    padding: 0 30px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.bigbluecircle{
+    text-align: center;
+}
+.bigbluecircle img{
+    max-width: 100%;
+}
+.graybx_textbx {
+    font-size: min(17px,1.2vw);
+    padding: 50px 30px;
+    background-color: #f5f5f5;
+    color: #333;
+    width: min(350px,20vw);
+    text-align: center;
+    border-radius: 20px;
+    font-weight: bold;
+    line-height: 1.9;
+    white-space: nowrap;
+}
+.topwrap{
+    position: relative;
+}
+.graybx1{
+    position: absolute;
+    top: -8%;
+    left: min(150px,10vw);
+}
+.graybx1 .bluecircle{
+    right: -25%;
+    bottom: -50%;
+}
+.graybx2 .bluecircle{
+    left: -25%;
+    bottom: -50%;
+}
+.graybx3 .bluecircle{
+    top: -50%;
+    right: -25%;
+}
+.graybx4 .bluecircle{
+    left: -25%;
+    top: -50%;
+}
+
+.graybx2 {
+    position: absolute;
+    top: -8%;
+    right: min(150px,10vw);
+}
+.graybx3{
+    position: absolute;
+    bottom: -8%;
+    left: min(150px,10vw);
+}
+.graybx4{
+    position: absolute;
+    bottom: -8%;
+    right: min(150px,10vw);
+}
+.bluecircle {
+    position: absolute;
+    width: min(150px,10vw);
+    height: min(150px,10vw);
+    border-radius: 50%;
+    border: 5px solid #00afeb;
+    background-color: #fff;
+    z-index: 3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.bluecircletxt {
+    margin-top: 15px;
+    font-size: min(15px,1.1vw);
+    color: #00afeb;
+    font-weight: 500;
+}
+.bluecircle img:nth-child(2){
+    display: none;
+}
