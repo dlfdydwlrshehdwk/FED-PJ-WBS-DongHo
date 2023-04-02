@@ -8,11 +8,82 @@ const qsa = (x) => document.querySelectorAll(x);
 window.addEventListener('DOMContentLoaded',()=>{
     // 변수 모음
 
+    // 윈도우에 스크롤을갈굼
+    //  측정이안되었던이유 = 휠질하고 스크롤y를 초기화를 안해줘서 그런듯
     let wh = window.scrollY;
     window.onscroll = () =>{
+        // 이거하고나니 제대로 작동함
         wh = window.scrollY
-        console.log('hi')
+        // console.log('hi')
         console.log(wh)
+        if(wh>880){
+            qs('.bbx').classList.remove('on');
+            setTimeout(()=>{
+                qs('.bbx').style.position = 'fixed';
+                qs('.bbx').style.top = 0;
+                qs('.bbx').style.zindex = 9999;
+                qs('.bbx').classList.add('fixed');
+            },10)
+        }
+        else{
+            qs('.bbx').classList.add('on');
+                qs('.bbx').style.position = 'absolute';
+                qs('.bbx').style.transition = ' none';
+                qs('.bbx').style.bottom = '';
+                qs('.bbx').style.zindex = 9999;
+                qs('.bbx').style.top = '';
+                qs('.bbx').classList.remove('fixed');
+            
+        }
+        window.addEventListener('wheel',()=>{
+            let wa = event.wheelDelta;
+            // 휠 내릴때 
+            // 글자 사라지고 nav바 만 적용되있음
+            if(wh<450 && wa >=-110){
+                console.log('안녕')
+                qs('.h2wrap').classList.add("on");
+                qs('.pwrap').classList.add("on");
+                spg1bg.classList.add('sm');
+                fromendpagewrap.forEach((ele)=>{
+                    ele.classList.remove('up');
+                })
+            } //if ///
+            // 휠 올릴때 
+            // 글자 사라지고 nav바 만 적용되있음
+            else if(wh>250 && wa <= 110){
+                console.log('?')
+                qs('.h2wrap').classList.remove("on");
+                qs('.pwrap').classList.remove("on");
+                spg1bg.classList.remove('sm');
+                fromendpagewrap.forEach((ele)=>{
+                ele.classList.add('up')
+            })
+            } // else if ////
+
+            
+        }) ///  휠 ///
+        // bbx를 고정하고 해제하고싶은데 아이디어가
+        // console.log(hh)
+        // if(wh >750){
+        //     console.log('안냥')
+        //     qs('.bbx').classList.remove('on');
+        //     setTimeout(()=>{
+        //         qs('.bbx').style.position = 'fixed';
+        //         qs('.bbx').style.top = 0;
+        //         qs('.bbx').style.zindex = 9999;
+        //         qs('.bbx').classList.add('fixed');
+        //     },10)
+        // }
+        // else if(wh>150 ){
+        //     qs('.bbx').classList.add('on');
+        //     setTimeout(()=>{
+        //         qs('.bbx').style.position = 'absolute';
+        //         qs('.bbx').style.bottom = '-10%';
+        //         qs('.bbx').style.zindex = 9999;
+        //         qs('.bbx').style.top = '';
+        //         qs('.bbx').classList.remove('fixed');
+        //     },10)
+        // }
     }
 
     // 새로고침시 화면맨위로설정

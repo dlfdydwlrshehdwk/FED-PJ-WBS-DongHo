@@ -102,6 +102,7 @@
     height: 80px;
     background-color: #fff;
     transition: bottom 1.1s ease-in-out;
+    z-index: 99999999999999999999;
 }
 .bbx.on{
     position: absolute;
@@ -546,4 +547,8 @@
     .fz15 {
         font-size: min(13px);
     }
+}
+
+.ubtn{
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.192);
 }
