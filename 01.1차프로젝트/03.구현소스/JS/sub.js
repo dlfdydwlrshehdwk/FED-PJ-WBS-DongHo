@@ -8,11 +8,17 @@ const qsa = (x) => document.querySelectorAll(x);
 window.addEventListener('DOMContentLoaded',()=>{
     // 변수 모음
 
+    let wh = window.scrollY;
+    window.onscroll = () =>{
+        wh = window.scrollY
+        console.log('hi')
+        console.log(wh)
+    }
 
     // 새로고침시 화면맨위로설정
-    // setTimeout(()=>{
-    //     window.scrollTo(0,0);
-    // },100) // 작동완료
+    setTimeout(()=>{
+        window.scrollTo(0,0);
+    },100) // 작동완료
     // nav 바 - 서브에서는 fixed가 아닌 상태
     const nav = qs('.nav')
     nav.style.position = 'absolute';
@@ -162,7 +168,7 @@ window.addEventListener('DOMContentLoaded',()=>{
 
     spg1.addEventListener('wheel',()=>{
         // 기본기능을 정지
-        event.preventDefault();
+        // event.preventDefault();
         // 휠방향 알아내기
         let wa = event.wheelDelta;
         
@@ -318,6 +324,37 @@ window.addEventListener('DOMContentLoaded',()=>{
     // 사이트맵 버튼 이동 끝 ///////////////////////////////////
 
 
+
+    // 위로가는 화살표 버튼 누르면 위로가기 /////////////////////////////////
+    // 이벤트대상 .upbtn
+    const upbtn = qs(".upbtn");
+
+    upbtn.onclick = () => {
+        // 기본기능 막기
+        event.preventDefault();
+        // pgnum = 0;
+        // 페이지0으로 가기
+        window.scrollTo(0, 0);
+        // scrollTo(0,0)
+            qs('.h2wrap').classList.add("on");
+            qs('.pwrap').classList.add("on");
+            spg1bg.classList.add('sm');
+            fromendpagewrap.forEach((ele)=>{
+                ele.classList.remove('up')
+            })
+        // qs(".ctbtn").classList.remove("on");
+        // qsa(".nav>ul>li>a").forEach((ele) => {
+        //     ele.style.color = "white";
+        // });
+        // // nav 로고 이미지 색변경
+        // qsa(".logo img")[0].classList.add("on");
+        // qsa(".logo img")[1].classList.remove("on");
+        // // 탭버튼 색변경
+        // qs(".tbtn").style.color = "white";
+        // // pgnum 0으로 교체
+    };
+    // 완료 !
+    // 위로가는 화살표 버튼 끝 /////////////////////////////////
 
 
 
