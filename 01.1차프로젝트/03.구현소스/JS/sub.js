@@ -60,6 +60,8 @@ window.addEventListener('DOMContentLoaded',()=>{
 
             
         }) ///  휠 ///
+
+        
         // bbx를 고정하고 해제하고싶은데 아이디어가
         // console.log(hh)
         // if(wh >750){
@@ -127,117 +129,21 @@ window.addEventListener('DOMContentLoaded',()=>{
     let prot_sc = 0;
 
 
-    // 실험용 실패 
-    // // 휠 이벤트설정
-    // // window.addEventListener('wheel',wheelFn, { passive: false })
-
-    // const main = qs('.main')
-    // // 윈도우 높이값
-    // const winH = window.innerHeight;
-
-    // // 전체문서높익밧
-    // const docH = main.clientHeight;
-
-    // // 스크롤한계값
-    // const scLimit = docH - winH;
-
-    // // 스크롤값
-    // let scTop = window.scrollY;
-
-    // // 서브페이지 1의 높이값
-    // const spg1h = spg1.clientHeight;
-    // console.log('윈도우높이값',winH,'\n전체문서높이값',docH,'\n스크롤한계값',scLimit,'\n서브페이지1높이값',spg1h,'\n지금높이값',scTop)
-
-    // // 스크롤이벤트설정
-    // window.addEventListener("scroll", () =>{
-    //     console.log('윈도우높이값',winH,'\n전체문서높이값',docH,'\n스크롤한계값',scLimit,'\n서브페이지1높이값',spg1h,'\n지금높이값',scTop)
-    // });
-
-    // function wheelFn(e) {
-    //     // // 기본기능 멈추기
-    //     // e.preventDefault();
-
-    //     // 광스크롤 막기
-    //     if (prot_sc === 1) return;
-    //     prot_sc = 1;
-    //     setTimeout(() => (prot_sc = 0), 800);
-    //     let 전체문서높이값 = qs('main').clientHeight;
-    //     console.log('전체문서높이값,',전체문서높이값)
-    //     let 지금스크롤바위치 = window.scrollY;
-    //     if(지금스크롤바위치 >= 0 && 지금스크롤바위치 < hh){
-    //         // 기본기능 멈추기
-    //         event.preventDefault();
-    //         scrollTo(0,hh);
-    //                 qs('.h2wrap').classList.remove("on");
-    //                 qs('.pwrap').classList.remove("on");
-    //                 spg1bg.classList.remove('sm');
-    //         console.log('gg')
-    //         console.log('지금스크롤바위치',지금스크롤바위치)
-    //         console.log('hh',hh)
-    //     }
-
-    //     // 휠 방향 알아내기
-    //     // 이벤트객체.wheelDelta
-    //     let dir = e.wheelDelta; //위120 아래 -120
-    // }
-    // function scrollFn() {
-
-    // }
-
-
-
-
-
-
-
-
-    // // 서브페이지 1의 높이의 반정도 내려오면 서브페이지1의 클래스를 지우고 
-    // // 서브페이지 2의 내용이 등장하게 끔 하는 그런 기능?
-    // // 중간 값은 hhh / 2
-    // // 변수값 spg1bg
-    // const hhh = spg1bg.clientHeight; // 959
-    // // 전체문서의 높이값
-    // const ahh = qs('main').clientHeight; // 3595
-    // console.log(hhh);
-    // console.log(ahh);
-    
-    // // const main = qs('main');
-    // // // console.log(window)
-    //실험용
-
-    
-    // 실험용 ////
-    // 서브페이지 1에서 휠사용시 설정 
-    // 지정된 방향으로 내려감 + 글씨 on빼기 배경화면sm빼기
-    // main.addEventListener('scroll',()=>{
-    //     // 기본기능을 정지
-    //     event.preventDefault();
-    //     // 휠방향 알아내기
-    //     let wa = event.wheelDelta;
-        
-    //     // console.log(wa) // 밑 = -120 위 120
-    //     console.log('hi');
-    //     let scb = document.querySelector('main').scrollTop;
-    //     if(wa >= -120 && wa <0){
-    //         scrollTo(0,hh);
-    //         qs('.h2wrap').classList.remove("on");
-    //         qs('.pwrap').classList.remove("on");
-    //         spg1bg.classList.remove('sm');
-    //     }
-    //     else if(wa > 0  && wa <= 120){
-    //         scrollTo(0,0)
-    //         qs('.h2wrap').classList.add("on");
-    //         qs('.pwrap').classList.add("on");
-    //         spg1bg.classList.add('sm');
-    //     }
-    // })
-    // 실험욤 ////
 
     //  쓰던거
 
     spg1.addEventListener('wheel',()=>{
         // 기본기능을 정지
-        // event.preventDefault();
+        event.preventDefault();
+        // 광클방지
+        if(prot_sc == 1){
+            return;
+        }
+
+        prot_sc = 1;
+        setTimeout(()=>{
+            prot_sc = 0;
+        },300)
         // 휠방향 알아내기
         let wa = event.wheelDelta;
         
@@ -246,6 +152,7 @@ window.addEventListener('DOMContentLoaded',()=>{
         let scb = document.querySelector('main').scrollTop;
         // 스크롤 내릴떄
         if(wa >= -120 && wa <0){
+            console.log('왜안됌')
             scrollTo(0,hh);
             qs('.h2wrap').classList.remove("on");
             qs('.pwrap').classList.remove("on");
