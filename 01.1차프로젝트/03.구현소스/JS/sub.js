@@ -136,14 +136,11 @@ window.addEventListener('DOMContentLoaded',()=>{
         // 기본기능을 정지
         event.preventDefault();
         // 광클방지
-        if(prot_sc == 1){
-            return;
-        }
-
+        if(prot_sc === 1) return;
         prot_sc = 1;
         setTimeout(()=>{
             prot_sc = 0;
-        },300)
+        },400)
         // 휠방향 알아내기
         let wa = event.wheelDelta;
         
