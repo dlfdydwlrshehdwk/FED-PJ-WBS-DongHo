@@ -161,6 +161,10 @@ body *{
     width: 15%;
     transition: .3s;
 }
+.ubtn{
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.192);
+    z-index: 99999999999;
+}
 /* 버튼위치이동 */
 .btn {
     font-size: 40px;
