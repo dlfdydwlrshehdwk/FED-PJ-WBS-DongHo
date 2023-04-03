@@ -52,12 +52,12 @@ window.addEventListener("DOMContentLoaded", () => {
     const s3 = qs(".stage3");
     const s4 = qs(".stage4");
     const s5 = qs(".stage5");
-
+    const qor = 100;
     // 휠이벤트설정
     window.addEventListener("wheel", wheelFn, { passive: false });
     // 스크롤이벤트설정
     window.addEventListener("scroll", scrollFn, { passive: false });
-
+    console.log(qs('#pg1').innerHeight)
     const retVal = (x) => x.getBoundingClientRect().top;
     function scrollFn() {
         let hhh = window.scrollY;
@@ -69,9 +69,9 @@ window.addEventListener("DOMContentLoaded", () => {
             if (point < 150 && point > -150) ele.classList.add("on");
             else ele.classList.remove("on");
         });
-        console.log((window.innerHeight * 2) - 200 + 'px')
+        console.log(window.innerHeight)
         console.log(hhh);
-        if(hhh > (window.innerHeight) - 200){
+        if(hhh > (window.innerHeight) - qor){
             let hcode =""
         let idx = 0;
             for(let x of h1[0]){
@@ -84,7 +84,7 @@ window.addEventListener("DOMContentLoaded", () => {
             console.log( qs('#pg'+(2)))
             qs('#pg'+(2)).querySelector('.stage').innerHTML = hcode;
         }
-        if(hhh > (window.innerHeight*2) - 200){
+        if(hhh > (window.innerHeight*2) - qor){
             let hcode =""
             let idx = 0;
             for(let x of h1[1]){
@@ -96,7 +96,7 @@ window.addEventListener("DOMContentLoaded", () => {
             }
             qs('#pg'+(3)).querySelector('.stage').innerHTML = hcode;
         }
-        if(hhh > (window.innerHeight * 3) - 200){
+        if(hhh > (window.innerHeight * 3) - qor){
             let hcode =""
         let idx = 0;
             for(let x of h1[2]){
@@ -108,7 +108,7 @@ window.addEventListener("DOMContentLoaded", () => {
             }
             qs('#pg'+(4)).querySelector('.stage').innerHTML = hcode;
         }
-        if(hhh > (window.innerHeight * 4) - 200){
+        if(hhh > (window.innerHeight * 4) - qor){
             let hcode =""
         let idx = 0;
             for(let x of h1[3]){
