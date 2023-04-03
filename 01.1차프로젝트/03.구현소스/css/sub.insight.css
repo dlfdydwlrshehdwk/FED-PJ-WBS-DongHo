@@ -103,6 +103,7 @@
     height: 80px;
     background-color: #fff;
     transition: bottom 1.1s ease-in-out;
+    z-index: 9;
 }
 .bbx.on{
     position: absolute;
