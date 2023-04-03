@@ -12,6 +12,12 @@
 }
 @media screen and (max-width:1200px) {
     /* 페이지 2미디어 */
+    .bx3 li:nth-child(7){
+        opacity: 1;
+    }
+    .bx3 li:nth-child(7) div{
+        opacity: 1;
+    }
     .txtbx{
         margin-bottom: 20px;
     }
@@ -159,6 +165,12 @@
 }
 
 @media screen and (max-width: 600px ) {
+    .bx3 li:nth-child(7){
+        opacity: .2;
+    }
+    .bx3 li:nth-child(7) div{
+        opacity: 0;
+    }
     .bx3 ul {
         width: 308%;
     }
@@ -170,9 +182,10 @@
     }
     .bx3 {
         overflow: hidden;
-        width: 100%;
+        width: 100vw;
         margin: 0 auto;
         padding: 0px 10px;
+        box-sizing: border-box;
     }
 
     /* 5페이지 */
@@ -207,5 +220,8 @@
     }
     #pg6 {
         max-height: 585px;
+    }
+    html{
+        overflow-y: auto;
     }
 }

@@ -15,7 +15,7 @@ html{
     color : #333;
 }
 .page,.bx {
-    width: 100%;
+    width: 100vw;
     height: 100vh;
 }
 body *{
@@ -28,7 +28,7 @@ body *{
 /* nav바 시작 */
 .nav{
     position: fixed;
-    width: 100%;
+    width: 100vw;
     /* 잠시변경 서브페이지 만들기위해 만들면 -10%으로 */
     top: -10%;
     transition: top 1s ease-in-out,opacity 1s ease-in-out;
@@ -172,6 +172,7 @@ body *{
     top: 50%;
     right: 3%;
     transform: translateY(-50%);
+    padding-right: 15px;
 }
 .smbx{
     position: relative;

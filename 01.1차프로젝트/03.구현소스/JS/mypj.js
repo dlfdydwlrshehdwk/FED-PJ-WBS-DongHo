@@ -6,7 +6,7 @@ if (window.innerWidth < 800) mob = 1;
 
 // 리사이즈를해서 보이는크기가 800이하일경우 mob를 1로
 window.addEventListener("resize", () => {
-    if (window.innerWidth < 800) mob = 1;
+    if (window.innerWidth < 600) mob = 1;
     else mob = 0;
     console.log("리사이즈mob:", mob);
 });
@@ -60,14 +60,67 @@ window.addEventListener("DOMContentLoaded", () => {
 
     const retVal = (x) => x.getBoundingClientRect().top;
     function scrollFn() {
+        let hhh = window.scrollY;
         if (!mob) return;
 
         page.forEach((ele) => {
             let point = retVal(ele);
-            console.log(point);
+            // console.log(point);
             if (point < 150 && point > -150) ele.classList.add("on");
             else ele.classList.remove("on");
         });
+        console.log((window.innerHeight * 2) - 200 + 'px')
+        console.log(hhh);
+        if(hhh > (window.innerHeight) - 200){
+            let hcode =""
+        let idx = 0;
+            for(let x of h1[0]){
+                if(x ==="") x="&nbsp;";
+                hcode +=`
+                <h1 style = "transition-delay:${idx*0.02}s">${x}</h1>
+                `;
+                idx++;
+            }
+            console.log( qs('#pg'+(2)))
+            qs('#pg'+(2)).querySelector('.stage').innerHTML = hcode;
+        }
+        if(hhh > (window.innerHeight*2) - 200){
+            let hcode =""
+            let idx = 0;
+            for(let x of h1[1]){
+                if(x ==="") x="&nbsp;";
+                hcode +=`
+                <h1 style = "transition-delay:${idx*0.02}s">${x}</h1>
+                `;
+                idx++;
+            }
+            qs('#pg'+(3)).querySelector('.stage').innerHTML = hcode;
+        }
+        if(hhh > (window.innerHeight * 3) - 200){
+            let hcode =""
+        let idx = 0;
+            for(let x of h1[2]){
+                if(x ==="") x="&nbsp;";
+                hcode +=`
+                <h1 style = "transition-delay:${idx*0.02}s">${x}</h1>
+                `;
+                idx++;
+            }
+            qs('#pg'+(4)).querySelector('.stage').innerHTML = hcode;
+        }
+        if(hhh > (window.innerHeight * 4) - 200){
+            let hcode =""
+        let idx = 0;
+            for(let x of h1[3]){
+                if(x ==="") x="&nbsp;";
+                hcode +=`
+                <h1 style = "transition-delay:${idx*0.02}s">${x}</h1>
+                `;
+                idx++;
+            }
+            qs('#pg'+(5)).querySelector('.stage').innerHTML = hcode;
+        }
+
     }
 
     // 휠 이벤트 함수 만들기
@@ -227,6 +280,8 @@ window.addEventListener("DOMContentLoaded", () => {
         if (pgnum !== 1) {
             compStop();
         }
+
+        // 컨택버튼과 업버튼 위치바꾸는 거
         let tg1 = document.querySelector(".ctbtn");
         let tg2 = document.querySelector(".upbtn");
 
@@ -568,12 +623,16 @@ window.addEventListener("DOMContentLoaded", () => {
     // 메인페이지 사이트맵 버튼누를시 사이트맵에 클래스 on 추가
     btn.onclick = () => {
         // console.log(btn);
-        sitemap.classList.add("show");
-        document.body.style.overflow = "hidden";
+        sitemap.style.display = 'block'
+        setTimeout(()=>{
+            sitemap.classList.add("show");
+            document.body.style.overflow = "hidden";
+        })
     };
 
     // 사이트맵에 버튼클릭시 사이트맵에 클래스 on 빼기
     stb.onclick = () => {
+        sitemap.style.display = 'none'
         sitemap.classList.remove("show");
         document.body.style.overflow = "visible";
     };

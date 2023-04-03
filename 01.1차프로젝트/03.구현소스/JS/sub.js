@@ -329,7 +329,28 @@ window.addEventListener('DOMContentLoaded',()=>{
     // 완료 !
     // 위로가는 화살표 버튼 끝 /////////////////////////////////
 
+    const navul = qs(".nav ul");
+    // logo img [0]백 [1]흑 on주면 등장
+    const logoimg = qsa(".logo img");
+    navul.onmouseenter = () => {
+        console.log("hi");
+            qsa(".nav ul>li>a").forEach((ele) => {
+                ele.style.color = "black";
+            });
+            logoimg[0].classList.remove("on");
+            logoimg[1].classList.add("on");
+            qs(".tbtn").style.color = "#333";}
 
+            navul.onmouseleave = () => {
+                console.log("hi");
+                    setTimeout(() => {
+                        qsa(".nav ul>li>a").forEach((ele) => {
+                            ele.style.color = "white";
+                        });
+                        logoimg[1].classList.remove("on");
+                        logoimg[0].classList.add("on");
+                        qs(".tbtn").style.color = "white";
+                    }, 200);}
 
 
 
