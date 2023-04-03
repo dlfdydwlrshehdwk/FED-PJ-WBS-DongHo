@@ -16,7 +16,7 @@ html{
 }
 .page,.bx {
     width: 100%;
-    height: 100%;
+    height: 100vh;
 }
 body *{
     /* outline: 1px dotted red; */
