@@ -5,8 +5,12 @@ const qs = (x) => document.querySelector(x);
 const qsa = (x) => document.querySelectorAll(x);
 window.addEventListener('DOMContentLoaded',()=>{
     const gg = document.querySelector('.bbx').clientHeight;
+    const spg1bg = qs('.spage1bg');
+    // 2페이지부터 랩핑박스
+    const fromendpagewrap = qsa('.fromendpagewrap')
     // 변수 모음
     qs('.upbtn').style.zindex= 99999;
+    console.log(window.innerHeight - gg)
     // 윈도우에 스크롤을갈굼
     //  측정이안되었던이유 = 휠질하고 스크롤y를 초기화를 안해줘서 그런듯
     let wh = window.scrollY;
@@ -15,7 +19,7 @@ window.addEventListener('DOMContentLoaded',()=>{
         wh = window.scrollY
         // console.log('hi')
         console.log(wh)
-        if(wh>880){
+        if(wh>window.innerHeight - gg){
             qs('.bbx').classList.remove('on');
             setTimeout(()=>{
                 qs('.bbx').style.position = 'fixed';
@@ -32,7 +36,15 @@ window.addEventListener('DOMContentLoaded',()=>{
                 qs('.bbx').classList.remove('fixed');
         }
 
-        if( wh >= window.innerHeight - gg) {
+        if( wh > window.innerHeight - gg) {
+            qs('.h2wrap').classList.remove("on");
+                qs('.pwrap').classList.remove("on");
+                spg1bg.classList.remove('sm');
+                fromendpagewrap.forEach((ele)=>{
+                ele.classList.add('up')
+            })
+        }
+        else {
             qs('.h2wrap').classList.add("on");
                 qs('.pwrap').classList.add("on");
                 spg1bg.classList.add('sm');
@@ -105,7 +117,7 @@ window.addEventListener('DOMContentLoaded',()=>{
     nav.style.position = 'absolute';
 
     // 1페이지 배경 
-    const spg1bg = qs('.spage1bg');
+    
     setTimeout(()=>{
         spg1bg.classList.add('sm');
     },3000)
@@ -132,8 +144,7 @@ window.addEventListener('DOMContentLoaded',()=>{
     const spg1 = qs('.spage1')
     console.log(spg1)
 
-    // 2페이지부터 랩핑박스
-    const fromendpagewrap = qsa('.fromendpagewrap')
+    
 
     // 광스크롤 금지 변수
     let prot_sc = 0;
@@ -292,16 +303,44 @@ window.addEventListener('DOMContentLoaded',()=>{
     stb = qs(".sitemap_btn");
 
     // 메인페이지 사이트맵 버튼누를시 사이트맵에 클래스 on 추가
+    // btn.onclick = () => {
+    //     // console.log(btn);
+    //     sitemap.classList.add("show");
+    //     document.body.style.overflow = "hidden";
+    // };
+
+    // // 사이트맵에 버튼클릭시 사이트맵에 클래스 on 빼기
+    // stb.onclick = () => {
+    //     sitemap.classList.remove("show");
+    //     document.body.style.overflow = "visible";
+    // };
+    // 완료 !
+    // 사이트맵 버튼 이동 끝 ///////////////////////////////////
+
+    // 사이트맵 버튼 이동 시작 //////////////////////////////////
+
+    // 메인페이지 버튼
+    btn = qs(".btn");
+    // 사이트맵
+    sitemap = qs(".sitemap");
+    // 사이트맵 버튼
+    stb = qs(".sitemap_btn");
+
+    // 메인페이지 사이트맵 버튼누를시 사이트맵에 클래스 on 추가
     btn.onclick = () => {
         // console.log(btn);
-        sitemap.classList.add("show");
-        document.body.style.overflow = "hidden";
+        sitemap.style.display = 'block'
+        setTimeout(()=>{
+            sitemap.classList.add("show");
+            document.body.style.overflow = "hidden";
+        })
     };
 
     // 사이트맵에 버튼클릭시 사이트맵에 클래스 on 빼기
     stb.onclick = () => {
+        sitemap.style.display = 'none'
         sitemap.classList.remove("show");
-        document.body.style.overflow = "visible";
+        document.body.style.overflow = "";
     };
     // 완료 !
     // 사이트맵 버튼 이동 끝 ///////////////////////////////////
