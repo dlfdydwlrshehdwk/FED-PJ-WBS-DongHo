@@ -156,9 +156,9 @@
         top: 0;
         transform: translateY(0);
     }
-    .sitemap.show {
+    /* .sitemap.show {
         overflow-y: scroll;
-    }
+    } */
     #pg6 {
         max-height: 598px;
     }

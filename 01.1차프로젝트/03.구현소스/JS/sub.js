@@ -3,9 +3,8 @@
 // 셀렉터 변수화
 const qs = (x) => document.querySelector(x);
 const qsa = (x) => document.querySelectorAll(x);
-
-
 window.addEventListener('DOMContentLoaded',()=>{
+    const gg = document.querySelector('.bbx').clientHeight;
     // 변수 모음
     qs('.upbtn').style.zindex= 99999;
     // 윈도우에 스크롤을갈굼
@@ -31,8 +30,19 @@ window.addEventListener('DOMContentLoaded',()=>{
                 qs('.bbx').style.bottom = '';
                 qs('.bbx').style.top = '';
                 qs('.bbx').classList.remove('fixed');
-            
         }
+
+        if( wh >= window.innerHeight - gg) {
+            qs('.h2wrap').classList.add("on");
+                qs('.pwrap').classList.add("on");
+                spg1bg.classList.add('sm');
+                fromendpagewrap.forEach((ele)=>{
+                    ele.classList.remove('up');
+                })
+        }
+
+
+
         window.addEventListener('wheel',()=>{
             let wa = event.wheelDelta;
             // 휠 내릴때 
@@ -105,7 +115,7 @@ window.addEventListener('DOMContentLoaded',()=>{
 
     // 밑에 박스
     const bbx = qs('.bbx');
-    console.log(bbx)
+    console.log(bbx.clientHeight)
     
     // 위치값 이동용변수모음
     const he = qs('.bbx ul');

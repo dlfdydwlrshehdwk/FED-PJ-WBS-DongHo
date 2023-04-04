@@ -101,7 +101,9 @@ window.addEventListener("DOMContentLoaded", () => {
 
 
         // 모바일쿼리시 기능 글씨 올라오는거 
-        if(hhh > (window.innerHeight) - qor){
+        if(hhh > (window.innerHeight) - qor 
+        // || hhh < (window.innerHeight)*2
+        ){
             let hcode =""
         let idx = 0;
             for(let x of h1[0]){
@@ -114,7 +116,9 @@ window.addEventListener("DOMContentLoaded", () => {
             console.log( qs('#pg'+(2)))
             qs('#pg'+(2)).querySelector('.stage').innerHTML = hcode;
         }
-        if(hhh > (window.innerHeight*2) - qor){
+        if(hhh > (window.innerHeight*2) - qor 
+        // || hhh < (window.innerHeight) * 3
+        ){
             let hcode =""
             let idx = 0;
             for(let x of h1[1]){
@@ -126,7 +130,9 @@ window.addEventListener("DOMContentLoaded", () => {
             }
             qs('#pg'+(3)).querySelector('.stage').innerHTML = hcode;
         }
-        if(hhh > (window.innerHeight * 3) - qor){
+        if(hhh > (window.innerHeight * 3) - qor 
+        // || hhh < (window.innerHeight) * 4
+        ){
             let hcode =""
         let idx = 0;
             for(let x of h1[2]){
@@ -138,7 +144,9 @@ window.addEventListener("DOMContentLoaded", () => {
             }
             qs('#pg'+(4)).querySelector('.stage').innerHTML = hcode;
         }
-        if(hhh > (window.innerHeight * 4) - qor){
+        if(hhh > (window.innerHeight * 4) - qor 
+        // || hhh < (window.innerHeight) * 5
+        ){
             let hcode =""
         let idx = 0;
             for(let x of h1[3]){
@@ -155,6 +163,7 @@ window.addEventListener("DOMContentLoaded", () => {
 
     // 휠 이벤트 함수 만들기
     function wheelFn(e) {
+        // 사이즈가 일정이상이면 휠이 안되게 
         if (mob) return;
 
         // 기본기능 멈추기

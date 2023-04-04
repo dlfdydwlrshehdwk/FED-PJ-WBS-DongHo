@@ -123,7 +123,8 @@
 /* 페이지1의 아래 박스공간의 li */
 .bbx ul> li{
     flex: 1;
-    font-size: 17px;
+    font-size: min(17px,2.8vw);
+    white-space: nowrap;
     font-weight: bold;
     height: 100%;
     line-height: 80px;
