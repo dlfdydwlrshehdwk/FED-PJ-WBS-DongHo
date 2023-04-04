@@ -107,7 +107,8 @@ body .pob p{
 /************************ 페이지 2 시작 ************************/
 #pg2{
     position: relative;
-    background: url(/01.1차프로젝트/00.자료수집/02.이미지데이터/main_business_bg.jpg);
+    /* background: url(/01.1차프로젝트/00.자료수집/02.이미지데이터/main_business_bg.jpg); */
+    background: url(../image/main_business_bg.jpg);
 }
 .p2wrap{
     /* 플렉스박스 */
