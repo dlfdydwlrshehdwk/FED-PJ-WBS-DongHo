@@ -1,7 +1,7 @@
 // 변수한개를 지정 mob
 // width가 800이하일떄 변수가 1이된다. 이상일땐 0
 let mob = 0;
-if (window.innerWidth < 800) mob = 1;
+if (window.innerWidth < 600) mob = 1;
 // console.log("처음mob:",mob);
 
 // 리사이즈를해서 보이는크기가 800이하일경우 mob를 1로
@@ -9,6 +9,12 @@ window.addEventListener("resize", () => {
     if (window.innerWidth < 600) mob = 1;
     else mob = 0;
     console.log("리사이즈mob:", mob);
+    if(mob ===1){
+        document.querySelector('.ctbtn').style.display = 'none';
+    }
+    else if(mob === 0) {
+        document.querySelector('.ctbtn').style.display = 'block';
+    }
 });
 
 window.addEventListener("DOMContentLoaded", () => {
@@ -18,7 +24,7 @@ window.addEventListener("DOMContentLoaded", () => {
     },100) // 작동완료
     document.querySelector(".nav").classList.add("on");
     document.querySelector(".pob").classList.add("on");
-
+    
     // 셀렉터 변수화
     const qs = (x) => document.querySelector(x);
     const qsa = (x) => document.querySelectorAll(x);
@@ -59,6 +65,8 @@ window.addEventListener("DOMContentLoaded", () => {
     window.addEventListener("scroll", scrollFn, { passive: false });
     console.log(qs('#pg1').innerHeight)
     const retVal = (x) => x.getBoundingClientRect().top;
+
+
     function scrollFn() {
         let hhh = window.scrollY;
         if (!mob) return;
@@ -71,6 +79,28 @@ window.addEventListener("DOMContentLoaded", () => {
         });
         console.log(window.innerHeight)
         console.log(hhh);
+        // 모바일때 네브바가 딸려오게하기 기능
+        if(hhh > 150){
+            qs('.nav').style.backgroundColor = '#fff';
+            qs('.nav').style.height = '80px';
+            qs('.btn').style.color = '#000'
+            qsa(".logo img")[1].classList.add("on");
+            qsa(".logo img")[0].classList.remove("on");
+            qs(".tbtn").style.color = "#333";
+        }
+        else {
+            qs('.nav').style.backgroundColor = '';
+            qs('.nav').style.height = '120px';
+            qs('.btn').style.color = '#fff'
+
+            qsa(".logo img")[0].classList.add("on");
+            qsa(".logo img")[1].classList.remove("on");
+            qs(".tbtn").style.color = "#fff";
+        }
+
+
+
+        // 모바일쿼리시 기능 글씨 올라오는거 
         if(hhh > (window.innerHeight) - qor){
             let hcode =""
         let idx = 0;

@@ -8,7 +8,8 @@
     font-family: 'Yusei Magic', sans-serif;
 */
 html{
-    overflow-x: hidden;
+    /* overflow-x: hidden; */
+    font-family: 'Montserrat', sans-serif;
 }
 /* 기능주는 클래스 */
 .black {
@@ -238,9 +239,10 @@ body *{
 .sitemap_main{
     opacity: 0;
     position: fixed;
-    overflow-y: auto;
+    /* overflow-y: auto; */
     width: 100vw;
     top: 50%;
+    height: 100vh;
     transform: translateY(-50%);
     max-width: 1515px;
     margin: 0 auto;
@@ -290,7 +292,7 @@ body *{
     margin-right: 15px;
 }
 .sitewrap{
-    padding: 0 50px;
+    padding: 150px 50px;
 }
 
 
@@ -316,8 +318,10 @@ body *{
     position: fixed;    
     bottom: 4%;
     right: 2%;
-    width: 60px;
-    height: 60px;
+    width: min(60px,5vw);
+    min-width: 40px;
+    min-height: 40px;
+    height:min(60px,5vw);
     transition: .4s ease-in-out;
     z-index: 1;
     cursor: pointer;
@@ -326,19 +330,22 @@ body *{
     bottom:12%
 }
 .ctcircle{
+    border-radius: 50%;
     overflow: hidden;
     position: absolute;
     bottom: 0;
     right: 0;
-    width: 60px;
-    height: 60px;
+    width: min(60px,5vw);
+    min-width: 40px;
+    min-height: 40px;
+    height:min(60px,5vw);
     background-color: #fff;
     border-radius: 75px;
     transition:  .3s;
 }
 .ctcircle div{
     opacity: 0;
-    transform: translate(18%, 100%);
+    transform: translate(23%, 50%);
     font-size: 16px;
     font-weight: bold;
 }
@@ -365,8 +372,10 @@ body *{
     opacity: 1;
     bottom: 4%;
     right: 2%;
-    width: 60px;
-    height: 60px;
+    width: min(60px,5vw);
+    min-width: 40px;
+    min-height: 40px;
+    height:min(60px,5vw);
     transition: .4s ease-in-out;
     background-color: #fff;
     font-size: 30px;
@@ -376,10 +385,15 @@ body *{
     z-index: 9999999999;
 }
 .upbtn:hover i {
-    transform: translateY(-5px);
+    top: 45%;
+    font-weight: bold;font-size: 24px;
 }
 .upbtn i {
     transition: .3s ease-in-out;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
 }
 .on.upbtn{
     opacity: 1;
@@ -508,4 +522,11 @@ body *{
     font-size: 22px;
     color: #fff;
     font-weight: bold;
+}
+
+@media screen and (max-width: 600px) {
+    .ftbt ul li:last-child{
+        margin-left: 0;
+        margin-top: 5px;
+    }
 }

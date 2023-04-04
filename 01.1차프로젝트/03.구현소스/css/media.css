@@ -178,7 +178,7 @@
         font-size: min(64px,9vw);
     }
     p {
-        font-size: min(20px,8vw);
+        font-size: min(17px,8vw);
     }
     .bx3 {
         overflow: hidden;
@@ -223,5 +223,39 @@
     }
     html{
         overflow-y: auto;
+    }
+    .sitemap_main {
+        overflow-y: auto;
+    }
+    .p5ul ul li {
+        padding: 1.2rem 0;
+    }
+    .p5txtarea textarea {
+        height: 4.5rem;
+    }
+    #pg6 {
+        padding: 0 30px 0 0;
+    }
+    .logo img {
+        margin-left: 30px;
+    }
+    .btn {
+        padding-right: 30px;
+    }
+    .ftbt ul{
+        flex-direction: column;
+        margin-left: 0;
+    }
+    .ftbt span {
+        font-size: min(1.5rem,11px);
+        color: #666;
+        font-weight: 500;
+    }
+    .ftbt ul li a {
+        font-size: min(1.6rem,14px);
+    }
+    .upbtn i {
+        transition: .3s ease-in-out;
+        font-size: 20px;
     }
 }

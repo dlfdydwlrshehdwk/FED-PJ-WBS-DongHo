@@ -85,6 +85,8 @@ body .pob p{
 }
 .circle{
     width: min(80px,7vw);
+    min-width: 40px;
+    min-height: 40px;
     height: min(80px,7vw);
     background-color: #00afeb;
     border-radius: 75px;
