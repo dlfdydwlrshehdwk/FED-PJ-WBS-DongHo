@@ -158,7 +158,8 @@ window.addEventListener('DOMContentLoaded',()=>{
 
     spg1.addEventListener('wheel',()=>{
         // 기본기능을 정지
-        event.preventDefault();
+        // event.preventDefault();
+        console.log('...')
         // 광클방지
         if(prot_sc === 1) return;
         prot_sc = 1;
