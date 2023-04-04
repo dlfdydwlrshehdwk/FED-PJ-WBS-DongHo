@@ -9,6 +9,7 @@ html{
 }
 body{
     /* background-color: skyblue; */
+    overflow-x: hidden;
 }
 html, body{
     margin: 0;

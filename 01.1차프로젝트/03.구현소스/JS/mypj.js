@@ -634,7 +634,7 @@ window.addEventListener("DOMContentLoaded", () => {
     stb.onclick = () => {
         sitemap.style.display = 'none'
         sitemap.classList.remove("show");
-        document.body.style.overflow = "visible";
+        document.body.style.overflow = "";
     };
     // 완료 !
     // 사이트맵 버튼 이동 끝 ///////////////////////////////////

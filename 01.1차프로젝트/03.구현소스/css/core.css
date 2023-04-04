@@ -237,7 +237,9 @@ body *{
 }
 .sitemap_main{
     opacity: 0;
-    position: relative;
+    position: fixed;
+    overflow-y: auto;
+    width: 100vw;
     top: 50%;
     transform: translateY(-50%);
     max-width: 1515px;
@@ -246,7 +248,7 @@ body *{
 }
 .sitemap.show .sitemap_main{
     opacity: 1;
-    position: relative;
+    position: fixed;
     top: 50%;
     transform: translateY(-50%);
     max-width: 1515px;
