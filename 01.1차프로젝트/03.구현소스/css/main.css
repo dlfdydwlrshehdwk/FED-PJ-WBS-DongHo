@@ -19,6 +19,9 @@ html{
 main{
     /* height: 100%; */
 }
+body{
+    overflow-y: hidden;
+}
 h1 {
     font-size: min(60px,6vw);
 }

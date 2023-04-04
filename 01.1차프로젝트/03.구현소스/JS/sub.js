@@ -4,6 +4,8 @@
 const qs = (x) => document.querySelector(x);
 const qsa = (x) => document.querySelectorAll(x);
 window.addEventListener('DOMContentLoaded',()=>{
+
+
     const gg = document.querySelector('.bbx').clientHeight;
     const spg1bg = qs('.spage1bg');
     // 2페이지부터 랩핑박스
@@ -13,7 +15,39 @@ window.addEventListener('DOMContentLoaded',()=>{
     console.log(window.innerHeight - gg)
     // 윈도우에 스크롤을갈굼
     //  측정이안되었던이유 = 휠질하고 스크롤y를 초기화를 안해줘서 그런듯
-    let wh = window.scrollY;
+    
+
+
+
+        window.addEventListener('wheel',()=>{
+            let wa = event.wheelDelta;
+            // 휠 내릴때 
+            // 글자 사라지고 nav바 만 적용되있음
+            if(wh<450 && wa >=-110){
+                console.log('안녕')
+                qs('.h2wrap').classList.add("on");
+                qs('.pwrap').classList.add("on");
+                spg1bg.classList.add('sm');
+                fromendpagewrap.forEach((ele)=>{
+                    ele.classList.remove('up');
+                })
+            } //if ///
+            // 휠 올릴때 
+            // 글자 사라지고 nav바 만 적용되있음
+            else if(wh>250 && wa <= 110){
+                console.log('?')
+                qs('.h2wrap').classList.remove("on");
+                qs('.pwrap').classList.remove("on");
+                spg1bg.classList.remove('sm');
+                fromendpagewrap.forEach((ele)=>{
+                ele.classList.add('up')
+            })
+            } // else if ////
+
+            
+        }) ///  휠 ///
+
+        let wh = window.scrollY;
     window.onscroll = () =>{
         // 이거하고나니 제대로 작동함
         wh = window.scrollY
@@ -52,37 +86,6 @@ window.addEventListener('DOMContentLoaded',()=>{
                     ele.classList.remove('up');
                 })
         }
-
-
-
-        window.addEventListener('wheel',()=>{
-            let wa = event.wheelDelta;
-            // 휠 내릴때 
-            // 글자 사라지고 nav바 만 적용되있음
-            if(wh<450 && wa >=-110){
-                console.log('안녕')
-                qs('.h2wrap').classList.add("on");
-                qs('.pwrap').classList.add("on");
-                spg1bg.classList.add('sm');
-                fromendpagewrap.forEach((ele)=>{
-                    ele.classList.remove('up');
-                })
-            } //if ///
-            // 휠 올릴때 
-            // 글자 사라지고 nav바 만 적용되있음
-            else if(wh>250 && wa <= 110){
-                console.log('?')
-                qs('.h2wrap').classList.remove("on");
-                qs('.pwrap').classList.remove("on");
-                spg1bg.classList.remove('sm');
-                fromendpagewrap.forEach((ele)=>{
-                ele.classList.add('up')
-            })
-            } // else if ////
-
-            
-        }) ///  휠 ///
-
         
         // bbx를 고정하고 해제하고싶은데 아이디어가
         // console.log(hh)
