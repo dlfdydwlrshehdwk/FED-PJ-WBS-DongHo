@@ -76,7 +76,8 @@
     left: 0;
     bottom: 0;
     right: 0;
-    background: url(/01.1차프로젝트/00.자료수집/02.이미지데이터/sub_business/sub_product_bg.jpg) no-repeat center/cover ;
+    /* background: url(/01.1차프로젝트/00.자료수집/02.이미지데이터/sub_business/sub_product_bg.jpg) no-repeat center/cover ; */
+    background: url(../image/sub_business/sub_product_bg.jpg) no-repeat center/cover;
     background-attachment: fixed;
     z-index: -1;
     transition: transform 2s linear;
@@ -238,7 +239,8 @@
     background-position: center;
 }
 .ctbx_top_img.ctbx_top_img1{
-    background: url(/01.1차프로젝트/00.자료수집/02.이미지데이터/sub_business/product_img01_01\ \(1\).jpg) no-repeat;
+    /* background: url(/01.1차프로젝트/00.자료수집/02.이미지데이터/sub_business/product_img01_01\ \(1\).jpg) no-repeat; */
+    background: url(../image/sub_business/product_img01_01\ \(1\).jpg) no-repeat;
     /* padding: 11.2rem 0 8.6rem; */
     height: min(550px,50vw);
     color: #fff;

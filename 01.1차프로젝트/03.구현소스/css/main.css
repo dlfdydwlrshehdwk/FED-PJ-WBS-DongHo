@@ -490,7 +490,8 @@ animation: nhd2 2s ease-in-out forwards;
     position: absolute;
     width: 100%;
     height: 100%;
-    background: url(/01.1차프로젝트/00.자료수집/02.이미지데이터/main_contact_bg.jpg) no-repeat center/cover ;
+    /* background: url(/01.1차프로젝트/00.자료수집/02.이미지데이터/main_contact_bg.jpg) no-repeat center/cover ; */
+    background: url(../image/main_contact_bg.jpg) no-repeat center/cover;
 }
 .p5cont{
     max-width: 1515px;

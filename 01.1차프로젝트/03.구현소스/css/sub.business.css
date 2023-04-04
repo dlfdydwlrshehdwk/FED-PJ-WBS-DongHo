@@ -76,7 +76,8 @@
     left: 0;
     bottom: 0;
     right: 0;
-    background: url(/01.1차프로젝트/00.자료수집/02.이미지데이터/sub_business/sub_business_bg.jpg) no-repeat center/cover ;
+    /* background: url(/01.1차프로젝트/00.자료수집/02.이미지데이터/sub_business/sub_business_bg.jpg) no-repeat center/cover ; */
+    background: url(../image/sub_business/sub_business_bg.jpg) no-repeat center/cover;
     background-attachment: fixed;
     z-index: -1;
     transition: transform 2s linear;
@@ -238,22 +239,26 @@
     background-position: center;
 }
 .ctbx_top_img.ctbx_top_img1{
-    background: url(/01.1차프로젝트/00.자료수집/02.이미지데이터/sub_business/car_security_bg.jpg) no-repeat;
+    /* background: url(/01.1차프로젝트/00.자료수집/02.이미지데이터/sub_business/car_security_bg.jpg) no-repeat; */
+    background: url(../image/sub_business/car_security_bg.jpg) no-repeat;
     padding: 11.2rem 0 8.6rem;
     color: #fff;
     background-size: cover;
     background-position: center;
 }
 .ctbx_top_img.ctbx_top_img2{
-    background: url(/01.1차프로젝트/00.자료수집/02.이미지데이터/sub_business/electronic_bg.jpg) no-repeat center/cover;
+    /* background: url(/01.1차프로젝트/00.자료수집/02.이미지데이터/sub_business/electronic_bg.jpg) no-repeat center/cover; */
+    background: url(../image/sub_business/electronic_bg.jpg) no-repeat center/cover;
     height: min(500px,45vw);
 }
 .ctbx_top_img.ctbx_top_img3{
-    background: url(/01.1차프로젝트/00.자료수집/02.이미지데이터/sub_business/v2x_bg.jpg) no-repeat center/cover;
+    /* background: url(/01.1차프로젝트/00.자료수집/02.이미지데이터/sub_business/v2x_bg.jpg) no-repeat center/cover; */
+    background: url(../image/sub_business/v2x_bg.jpg) no-repeat center/cover;
     height: min(500px,45vw);
 }
 .ctbx_top_img.ctbx_top_img4{
-    background: url(/01.1차프로젝트/00.자료수집/02.이미지데이터/sub_business/sdv_bg.jpg) no-repeat center/cover;
+    /* background: url(/01.1차프로젝트/00.자료수집/02.이미지데이터/sub_business/sdv_bg.jpg) no-repeat center/cover; */
+    background: url(../image/sub_business/sdv_bg.jpg) no-repeat center/cover;
     height: min(500px,45vw);
 }
 /* 사진넣은곳 안에 설정 */
@@ -295,7 +300,9 @@
     padding: 200px 30px 0;
 }
 .leftbx{
-    background: url(/01.1차프로젝트/00.자료수집/02.이미지데이터/sub_business/UNECE_WP.jpg) no-repeat top/90%;
+    /* background: url(/01.1차프로젝트/00.자료수집/02.이미지데이터/sub_business/UNECE_WP.jpg) no-repeat top/90%; */
+    background: url(../image/sub_business/UNECE_WP.jpg) no-repeat top/90%;
+
     width: 40%;
     padding-right: 70px;
 }
@@ -419,7 +426,8 @@
         margin-top: 0;
     }
     .leftbx {
-        background: url(/01.1차프로젝트/00.자료수집/02.이미지데이터/sub_business/UNECE_WP.jpg) no-repeat center/cover;
+        /* background: url(/01.1차프로젝트/00.자료수집/02.이미지데이터/sub_business/UNECE_WP.jpg) no-repeat center/cover; */
+        background: url(../image/sub_business/UNECE_WP.jpg) no-repeat center/cover;
         height: min(450px,60vw);
         padding-right: 0;
         width: 100%;;
@@ -536,7 +544,8 @@
         font-size: min(15px);
     }
     .leftbx {
-        background: url(/01.1차프로젝트/00.자료수집/02.이미지데이터/sub_business/UNECE_WP.jpg) no-repeat center/cover;
+        /* background: url(/01.1차프로젝트/00.자료수집/02.이미지데이터/sub_business/UNECE_WP.jpg) no-repeat center/cover; */
+        background: url(../image/sub_business/UNECE_WP.jpg) no-repeat center/cover;
         height: min(220px);
         padding-right: 0;
         width: 100%;
