@@ -1,0 +1,25 @@
+/* 프로젝트 - 2 메인 CSS  */
+
+@charset "utf-8";
+
+/* 상단영역 */
+.nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 30px;
+}
+.navlist ul {
+    display: flex;
+}
+.navlist li {
+    padding-right: 10px;
+}
+/* 상단영역끝 */
+/* 메인영역 */
+.pg1{
+    background-color: #eee;
+}
+/* 메인영역끝 */
+/* 하단영역 */
+/* 하단영역끝 */
+

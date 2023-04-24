@@ -1,0 +1,69 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond&family=Montserrat:wght@400;500&family=Yusei+Magic&display=swap');
+/* 빛나는글씨css */
+/* 
+font-family: 'Cormorant Garamond', serif;
+font-family: 'Montserrat', sans-serif;
+font-family: 'Yusei Magic', sans-serif; */
+html{
+    font-size: 1vw
+}
+html, body,ul{
+    margin: 0;
+    padding: 0;
+    font-family: 'Cormorant Garamond', serif;
+    
+}
+
+.wrap{
+    height: 100vh;
+}
+.bg{
+    height: 100%;
+}
+.wrap ul{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+}
+ul>li{
+    list-style: none;
+    flex: 1;
+    display: flex;
+    align-items: center;
+}
+ul>li>a{
+    font-size: 4rem;
+
+
+    background: url(../MPimg/kmk.jpg) repeat-y;
+    background-clip: text;
+    -webkit-background-clip: text;
+    /* -webkit-transform: translate3d(0,0,0); */
+    /* -webkit-backface-visibility: hidden; */
+
+
+    -webkit-animation: aitf 4s linear infinite;
+}
+@-webkit-keyframes aitf {
+    0% { background-position: 0% 50%; }
+	100% { background-position: 100% 50%; }
+}
+a:hover{
+    -webkit-text-fill-color: transparent;
+}
+/* ul>li:first-child a{
+    perspective: 150px;
+} */
+
+
+
+
+
+
+
+
+
+
