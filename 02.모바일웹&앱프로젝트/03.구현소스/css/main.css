@@ -21,10 +21,35 @@
 }
 /* 메인영역끝 */
 /* 하단영역 */
-.ftlogo img{
-    width: 40px;
-    height: 40px;
+.ftwrap{
+    height: 400px;
 }
-
+footer{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: center;
+    text-align: center;
+    background-color: #fff;
+    height: 400px;
+}
+.ft_txtbx{
+    font-size: 4rem;
+    font-weight: bold;
+    margin-bottom: 60px;
+}
+.ftlogo img{
+    width: 30px;
+    height: 30px;
+}
+.blink ol{
+    display: flex;
+    justify-content: center;
+    gap: 0 40px;
+    align-items: center;
+}
+.blink{
+    font-size: 1.5rem;
+}
 /* 하단영역끝 */
 
