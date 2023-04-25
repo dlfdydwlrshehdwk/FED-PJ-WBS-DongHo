@@ -7,6 +7,7 @@
     display: flex;
     justify-content: space-between;
     padding: 0 30px;
+    height: 100px;
 }
 .navlist ul {
     display: flex;
@@ -16,9 +17,19 @@
 }
 /* 상단영역끝 */
 /* 메인영역 */
-.pg1{
+body{
     background-color: #eee;
 }
+.pg1{
+    padding: 0 30px;
+}
+/* 흘러가는 글씨 */
+.pg1 section {
+    font-size: 10rem;
+    white-space: nowrap;
+    border-bottom: 1px solid #000;
+}
+
 /* 메인영역끝 */
 /* 하단영역 */
 .ftwrap{
