@@ -59,6 +59,135 @@ body{
     object-fit: fill;
     border-radius: 75% 75% 0 0 ;
 }
+/* 2페이지  */
+.pg2{
+    background-color: #fff;
+}
+.pg2_txtwrap{
+    text-align: center;
+    padding: 5rem;
+    font-size: 3rem;
+}
+.pg2_inlineImg{
+    display: inline-block;
+}
+
+/* 3페이지 */
+.pg3{
+    background-color: #fafafa;
+}
+.pg3wrap{
+    position: relative;
+    height: 100vh;
+}
+.pg3imgbx{
+    position: absolute;
+    overflow: hidden;
+}
+.pg3imgbx img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+/* 왼쪽박스 */
+.pg3_leftbx{
+    width: 10rem;
+    height: 20rem;
+    bottom: 10%;
+    left: 0%;
+}
+/* 큰박스 */
+.pg3_bigbx{
+    width: 33rem;
+    height: 70rem;
+    top: 0%;
+    left: 15%;
+}
+/* 가운데박스 */
+.pg3_centerbx{
+    width: 11rem;
+    height: 14rem;
+    top: 40%;
+    left: 64%;
+}
+/* 오른쪽박스 */
+.pg3_rightbx{
+    width: 15rem;
+    height: 19rem;
+    right: 5%;
+    top: 50%;
+}
+/* 밑박스 */
+.pg3_btmbx{
+    width: 15rem;
+    height: 20rem;
+    bottom: 0;
+    right: 28%;
+}
+/* pg3 인라인박스 */
+.pg3inlinebx{
+    display: inline-block;
+    position: absolute;
+}
+.pg3_lefttext{
+    top: 50%;
+    transform: rotate(270deg);
+    left: 5%;
+    font-size: 1.4rem;
+}
+.pg3_centertext{
+    top: 62%;
+    left: 54%;
+    font-size: 3.5rem;
+}
+.pg3_bttext{
+    bottom: 5%;
+    left: 35%;
+}
+/* 버튼들 */
+.pg3_btns{
+    display: flex;
+    position: absolute;
+    justify-content: space-between;
+    bottom: 0%;
+    width: 100%;
+    padding: 0 30px 20px;
+    box-sizing: border-box;
+    font-size: 1.2rem;
+}
+/* 4페이지 */
+.pg4{
+    background-color: #fff;
+}
+.p4cont{
+    width: 70rem;
+    margin: 0 auto;
+    padding: 10rem 0;
+}
+.p4cont ul{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    border-top: 1px solid #000;
+}
+.p4cont ul li{
+    display: flex;
+    border-bottom: 1px solid #000;
+    padding: 1.5rem 0;
+    
+}
+.p4cont ul li div:first-child{
+    font-size: 6rem;
+    width: 60%;
+}
+.p4cont ul li div:last-child{
+    font-size: 1.5rem;
+    line-height: 3;
+}
+.p4span{
+    line-height: 3;
+    font-size: 2rem;
+}
 /* 메인영역끝 */
 /* 하단영역 */
 .ftwrap{
