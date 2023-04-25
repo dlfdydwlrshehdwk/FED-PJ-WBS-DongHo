@@ -8,6 +8,11 @@
     justify-content: space-between;
     padding: 0 30px;
     height: 100px;
+    width: 100%;
+    box-sizing: border-box;
+    position: fixed;
+    align-items: center;
+    font-weight: 500;
 }
 .navlist ul {
     display: flex;
@@ -21,7 +26,15 @@ body{
     background-color: #eee;
 }
 .pg1{
+    position: relative;
     padding: 0 30px;
+    height: 100vh;
+}
+/* 흘러가는 글씨 랩 */
+.scwrap{
+    position: absolute;
+    top: 30%;
+    transform: translateY(-50%);
 }
 /* 흘러가는 글씨 */
 .pg1 section {
@@ -29,7 +42,23 @@ body{
     white-space: nowrap;
     border-bottom: 1px solid #000;
 }
-
+/* 찌글찌글랩 */
+.zgzgwrap{
+    z-index: -1;
+    position: absolute;
+    bottom: 0%;
+    left: 50%;
+    transform: translate(-50%,0%);
+    width: 1000px;
+    height: 650px;
+    text-align: center;
+}
+.zgzgwrap video{
+    width: 80%;
+    height: 100%;
+    object-fit: fill;
+    border-radius: 75% 75% 0 0 ;
+}
 /* 메인영역끝 */
 /* 하단영역 */
 .ftwrap{
