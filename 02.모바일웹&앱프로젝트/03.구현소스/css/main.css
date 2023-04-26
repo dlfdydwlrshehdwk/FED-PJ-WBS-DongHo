@@ -21,6 +21,10 @@
     padding-right: 10px;
     font-family: asd;
 }
+.logo svg {
+    width: 3.4rem;
+    height: auto;
+}
 /* 상단영역끝 */
 /* 메인영역 */
 body{
