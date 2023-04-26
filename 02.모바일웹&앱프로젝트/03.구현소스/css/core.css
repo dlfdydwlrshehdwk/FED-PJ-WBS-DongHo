@@ -1,3 +1,19 @@
+/* 프로젝트 - 2 코어 CSS  */
+@charset "utf-8";
+
+/* 폰트 */
+@font-face {
+    font-family: asd;
+    src: url(../font/CircularStd-Book.1f2c8f7.woff2);
+}
+@font-face{
+    font-family: sdf;
+    src: url(../font/Hatton-Light.a83de3f.woff2);
+}
+@font-face{
+    font-family: dfg;
+    src: url(../font/Hatton-Regular.9256132.woff2);
+}
 /* 파랑글씨 클래스 */
 .blue{
     color : blue;

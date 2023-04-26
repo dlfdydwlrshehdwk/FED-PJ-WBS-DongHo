@@ -54,7 +54,7 @@ body{
     text-align: center;
 }
 .zgzgwrap video{
-    width: 80%;
+    width: 85%;
     height: 100%;
     object-fit: fill;
     border-radius: 75% 75% 0 0 ;
@@ -67,9 +67,15 @@ body{
     text-align: center;
     padding: 5rem;
     font-size: 3rem;
+    font-family: dfg;
 }
 .pg2_inlineImg{
     display: inline-block;
+    height: 4rem;
+    transform: translateY(25%);
+}
+.pg2_inlineImg img{
+    height: 100%;
 }
 
 /* 3페이지 */
