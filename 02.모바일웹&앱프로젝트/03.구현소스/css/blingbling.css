@@ -11,6 +11,7 @@ font-family: 'Yusei Magic', sans-serif; */
     font-family: 'Cormorant Garamond', serif;
 }
 .wrap{
+    position: relative;
     height: 100vh;
 }
 .bg{
@@ -21,7 +22,7 @@ font-family: 'Yusei Magic', sans-serif; */
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    height: 100%;
+    gap : 4rem 0;
 }
 .bg ul>li{
     position: relative;
@@ -30,9 +31,10 @@ font-family: 'Yusei Magic', sans-serif; */
     display: flex;
     align-items: center;
     z-index: 1;
+    text-align: center;
 }
 .bg ul>li>a{
-    font-size: 4rem;
+    font-size: 3.5rem;
     font-weight: 500;
     background: url(../img/kmk.jpg) repeat-y;
     background-clip: text;
@@ -49,6 +51,34 @@ font-family: 'Yusei Magic', sans-serif; */
     -webkit-text-fill-color: transparent;
 }
 
+.pr {
+    
+}
+.pr img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 1s;
+}
+.pr li:hover img{
+    transform: scale(1.1);
+}
+.pr li {
+    /* position: absolute; */
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+}
+.prleft {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.prright {
+    position: absolute;
+    right: 0;
+    top: 20%;
+}
 
 
 
