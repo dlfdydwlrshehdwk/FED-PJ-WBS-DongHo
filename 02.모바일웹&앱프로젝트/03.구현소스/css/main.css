@@ -2,30 +2,6 @@
 
 @charset "utf-8";
 
-/* 상단영역 */
-.nav {
-    display: flex;
-    justify-content: space-between;
-    padding: 0 30px;
-    height: 100px;
-    width: 100%;
-    box-sizing: border-box;
-    position: fixed;
-    align-items: center;
-    font-weight: 500;
-}
-.navlist ul {
-    display: flex;
-}
-.navlist li {
-    padding-right: 10px;
-    font-family: asd;
-}
-.logo svg {
-    width: 3.4rem;
-    height: auto;
-}
-/* 상단영역끝 */
 /* 메인영역 */
 body{
     background-color: #eee;
@@ -205,44 +181,4 @@ body{
     font-weight: normal;
 }
 /* 메인영역끝 */
-/* 하단영역 */
-.ftwrap{
-    height: 400px;
-}
-footer{
-    font-family: sdf;
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    justify-content: center;
-    text-align: center;
-    background-color: #fff;
-    height: 450px;
-}
-.ft_txtbx{
-    font-size: 3rem;
-    font-weight: bold;
-    margin-bottom: 80px;
-    letter-spacing: 3px;
-}
-.ftlogo{
-    width: 50px;
-    height: 50px;
-}
-.ftlogo img{
-    width: 100%;
-    height: 100%;
-}
-.blink ol{
-    display: flex;
-    justify-content: center;
-    gap: 0 40px;
-    align-items: center;
-}
-.blink{
-    font-size: 1rem;
-    font-family: asd;
-    font-weight: 500;
-}
-/* 하단영역끝 */
 

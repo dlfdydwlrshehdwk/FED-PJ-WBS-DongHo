@@ -5,16 +5,11 @@
 font-family: 'Cormorant Garamond', serif;
 font-family: 'Montserrat', sans-serif;
 font-family: 'Yusei Magic', sans-serif; */
-html{
-    font-size: 1vw
-}
-html, body,ul{
+.bg ul{
     margin: 0;
     padding: 0;
     font-family: 'Cormorant Garamond', serif;
-    
 }
-
 .wrap{
     height: 100vh;
 }
@@ -28,35 +23,31 @@ html, body,ul{
     align-items: center;
     height: 100%;
 }
-ul>li{
+.bg ul>li{
+    position: relative;
     list-style: none;
     flex: 1;
     display: flex;
     align-items: center;
+    z-index: 1;
 }
-ul>li>a{
+.bg ul>li>a{
     font-size: 4rem;
-
-
+    font-weight: 500;
     background: url(../img/kmk.jpg) repeat-y;
     background-clip: text;
     -webkit-background-clip: text;
     /* -webkit-transform: translate3d(0,0,0); */
     /* -webkit-backface-visibility: hidden; */
-
-
     -webkit-animation: aitf 4s linear infinite;
 }
 @-webkit-keyframes aitf {
     0% { background-position: 0% 50%; }
 	100% { background-position: 100% 50%; }
 }
-a:hover{
+.bg ul>li a:hover{
     -webkit-text-fill-color: transparent;
 }
-/* ul>li:first-child a{
-    perspective: 150px;
-} */
 
 
 
