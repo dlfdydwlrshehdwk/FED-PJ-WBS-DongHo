@@ -1,13 +1,16 @@
 /* 프로젝트 - 2 메인 CSS  */
 
 @charset "utf-8";
-
+html,body{
+    /* overflow-x: hidden; */
+}
 /* 메인영역 */
 body{
     background-color: #eee;
+    overflow-x: hidden;
 }
 .pg1{
-    position: relative;
+    /* position: relative; */
     padding: 0 30px;
     height: 100vh;
 }
@@ -36,7 +39,7 @@ body{
 }
 .zgzgwrap video{
     width: 85%;
-    height: 100%;
+    height: 103%;
     object-fit: fill;
     border-radius: 75% 75% 0 0 ;
 }

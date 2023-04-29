@@ -15,4 +15,23 @@ $(()=>{ // JQB
         글씨 등장 
         + 글씨 등장이 좀 다양하고 귀여운데 이건 
     */
+
+    // 로고 누르면 메인페이지로
+    $('.logo').css({
+        position:'relative' ,
+        zIndex : 1,
+    })
+    $('.logo').click(()=>{
+        console.log('로고')
+        $(location).attr("href","index.html")
+    })
+
+    $('.navlist ul').find('li').eq(2).click(()=>{
+        console.log('로그인')
+        $('.loginbg').fadeIn()
+    })
+    $('.close').click(function(){
+        $('.loginbg').fadeOut()
+    })
+
 }); // JQB
