@@ -8,13 +8,14 @@
     <!-- Favicon 굳 -->
     <link href='./img/favi.JPG' rel='icon' sizes='32x32' type='image/jpg'>
     <!-- css들 -->
-    <link rel="stylesheet" href="./css/reset.css">
-    <link rel="stylesheet" href="./css/core.css">
     <!-- 중에 메인 -->
-    <!-- <link rel="stylesheet" href="./css/main.css"> -->
+    <link rel="stylesheet" href="./css/member.css">
     <!-- 중에 미디어쿼리 -->
     <link rel="stylesheet" href="./css/media.css">
     <!-- JS -->
+    <!-- 제이쿼리 -->
+    <script src="./js/jquery-3.6.0.min.js"></script>
+    <script src="./js/jquery-ui.min.js"></script>
     <script src="./js/main.js"></script>
 </head>
 <body>
@@ -122,7 +123,109 @@
     <!-- 상단영역 끝 -->
     <!-- 메인영역 -->
     <div>
-        <main></main>
+        <main>
+            
+                <!-- 2-2. 타이틀 -->
+                <h2 class="stit">Member</h2>
+                <!-- 2-3. 컨텐츠박스 -->
+                <section class="scont">
+                    <form action="process.php" method="post">
+                        <ul>
+                            <!-- 1. 아이디 -->
+                            <li>
+                                <label  class="itit" for="mid">아이디</label>
+                                <input type="text" name="mid"
+                                id="mid" maxlength="20" placeholder="아이디를 입력해주세요">
+                                <!-- 메시지박스 -->
+                                <span class="msg"></span>
+                            </li>
+                            <!-- 2. 비밀번호 -->
+                            <li>
+                                <label  class="itit" for="mpw">비밀번호</label>
+                                <input type="password" name="mpw"
+                                id="mpw" maxlength="20" placeholder="비밀번호를 입력해주세요">
+                                <!-- 메시지박스 -->
+                                <span class="msg"></span>
+                            </li>
+                            <!-- 3. 비밀번호확인 -->
+                            <li>
+                                <label  class="itit" for="mpw2">비밀번호확인</label>
+                                <input type="password" name="mpw2"
+                                id="mpw2" maxlength="20" placeholder="비밀번호를 입력해주세요">
+                                <!-- 메시지박스 -->
+                                <span class="msg"></span>
+                            </li>
+                            <!-- 4. 이름 -->
+                            <li>
+                                <label  class="itit" for="mnam">이름</label>
+                                <input type="text" name="mnam"
+                                id="mnam" maxlength="20" placeholder="이름을 입력해주세요">
+                                <!-- 메시지박스 -->
+                                <span class="msg"></span>
+                            </li>
+                            <!-- 5. 성별 -->
+                            <li>
+                                <span class="itit">성별</span>
+                                <label for="gen1">남성</label>
+                                <input type="radio" name="gen" id="gen1">
+                                <label for="gen2">여성</label>
+                                <input type="radio" name="gen" id="gen2">
+                                <!-- 
+                                    라디오버튼의 name속성을 같은 이름으로 쓰면 그룹핑되어서 하나만 선택된다.
+                                    checked 속성은 처음 기본선택옵션임
+                                 -->
+
+                            <!-- 6. 이메일  -->
+                            <li>
+                                <label class="itit" for="email1">이메일</label>
+                                <input type="text" name="email1" id="email1" placeholder="이메일 앞주소">
+                                <span class="gol">@</span>
+                                <select name="seleml" id="seleml">
+                                    <option value="init">선택해주세요</option>
+                                    <option value="naver.com">
+                                        naver.com
+                                    </option>
+                                    <option value="daum.net">
+                                        daum.net
+                                    </option>
+                                    <option value="hanmail.net">
+                                        hanmail.net
+                                    </option>
+                                    <option value="gmail.com">
+                                        gmail.com
+                                    </option>
+                                    <option value="free">
+                                        직접입력
+                                    </option>
+                                </select>
+                                <!-- 메시지박스 -->
+                                <span class="msg"></span>
+                            </li>
+                            <!-- 7.이메일뒷주소 -->
+                            <li>
+                                <label class="ee" for="email2">이메일뒷주소직접입력</label>
+                                <input type="text" name="email2" id="email2" placeholder="이메일뒷주소"> 
+                            </li>
+                            <!-- 8. 서브밋버튼 -->
+                            <li><input id="btnj" type="submit" value="가입하기"></li>
+
+
+                            <!-- 
+                                [ 참고 : submit기능]
+                                1. 일반button 요소가 form요소 안에 위치하면 클릭시 서브밋된다.
+                                2. 어떤요소라도 js코드로 form요소의 submit내장함수를 호출하면 submit된다. 
+
+
+                                <button>버튼전송</button>
+                                <a href="#" onclick="document.querySelector('form').submit()">a요소 전송</a> 
+                             -->
+
+                            <!-- 서브밋버튼은 클릭시 form요소에 모든 입력내용을 action지정 페이지로 전송한다. -->
+                        </ul>
+                    </form>
+                </section>
+            
+        </main>
     </div>
     <!-- 메인영역끝 -->
     <!-- 하단영역 -->

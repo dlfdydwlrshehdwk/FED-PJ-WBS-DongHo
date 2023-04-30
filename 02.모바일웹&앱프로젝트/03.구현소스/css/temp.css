@@ -1,3 +1,6 @@
 /* 프로젝트 - 2 temp CSS  */
 
 @charset "utf-8";
+
+@import url(./core.css);
+@import url(./reset.css);
