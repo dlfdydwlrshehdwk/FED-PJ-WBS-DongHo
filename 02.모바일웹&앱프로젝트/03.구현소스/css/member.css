@@ -80,7 +80,7 @@
 .scont input[type="password"]{
     width: 340px;
     height: 36px;
-    font-size: 2rem;
+    font-size: 1rem;
     border: 1px solid #777;
     border-radius: 5px;
     padding-left: 5px;
@@ -102,7 +102,7 @@
     width: 146px;
     height: 40px;
     border-radius: 5px;
-    font-size: 2rem;
+    font-size: 1.3rem;
 }
 /* 이메일 뒷주소 */
 #email2{
@@ -116,7 +116,9 @@
 .ee{
     display: none;
 }
-
+.genlabel{
+    font-size: 1.3rem;
+}
 /* 가입하기버튼 */
 #btnj{
     position: absolute;
