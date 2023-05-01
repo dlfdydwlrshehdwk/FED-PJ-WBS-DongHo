@@ -1,0 +1,56 @@
+/* 프로젝트 - 2 sub CSS  */
+
+@charset "utf-8";
+
+@import url(./core.css);
+@import url(./reset.css);
+
+.bigpicture{
+    width: 100%;
+    height: 80vh;
+}
+.bigpicture img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.tit{
+    height: 20vh;
+    font-size: 3.3rem;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+}
+
+.mdsize{
+    width: 35%;
+    height: 40vh;
+    margin: 0 auto;
+}
+.mdsize img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.bigpicture2{
+    height: 80vh;
+    width: 100%;
+}
+.bigpicture2 img{
+    width: 100%;
+    height: 100%;
+}
+.colorbgwrap{
+    background-color : rgb(191 214 179);
+
+}
+.colorbg{
+}
+.colorbg h2{
+    margin: 1rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
