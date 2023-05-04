@@ -1,3 +1,4 @@
+//                  1 TEAMAKER'SGUESTHOUSE                  //
 타이틀
 TEAMAKER'SGUESTHOUSE
 
@@ -31,8 +32,9 @@ Our design is a distillation of the process
 of herbal tea production, the Latvian wilderness, 
 and traditional rural Latvian building typologies
 where the hearth was the focal point of shelters.
+//                  1 TEAMAKER'SGUESTHOUSE                  //
 
-
+//                          2 N1C                        //
 타이틀
 N1C
 
@@ -62,7 +64,9 @@ budget figures by 78%.
 색배경
 A Community built project
 for a community led charity.
+//                            2 N1C                        //
 
+//                   3  ST DIONIS ROAD                      //
 타이틀
 ST DIONIS
 ROAD
@@ -83,7 +87,9 @@ looking out to the rear of the property.
 x
 색배경
 x
+//                   3  ST DIONIS ROAD                      //
 
+//                  4 COLOURED CONCRETE HOUSE                 //
 타이틀
 COLOURED
 CONCRETE
@@ -107,7 +113,9 @@ rgb(221, 201, 201);
 Simple & sleek
 with a splash of
 personality.
+//                  4 COLOURED CONCRETE HOUSE                 //
 
+//                        5 WHYTELEAFE HILL                        //
 타이틀
 WHYTELEAFE HILL
 작은내용
@@ -121,24 +129,97 @@ X
 X
 색배경
 X
+//                        5 WHYTELEAFE HILL                        //
 
-
-
-
-
+//                            6 MANOR ROAD                       //
 
 타이틀
+MANOR ROAD
 작은내용
+Based in Reigate, Surrey this project for a private client involved a
+contemporary rear extension and extensive internal renovations.
+
+
+Initially, the brief was to create a traditional extension with
+pitched tiled roofs and bi-fold doors with wide frames and
+hinges, but after several design workshops, we were able to
+develop a proposal that gave them a balcony space instead of a
+pitched roof which doubled their area and gave them the prime
+views across the garden to enjoy their tea from.
 하프내용
+Downstairs, the idea of bi-fold doors soon disappeared 
+and was replaced with a fully glazed sliding door system 
+with an opening corner. Careful detailing and a precise 
+eye on specifications ensured that a glazed system with 
+only 18mm frames allowed maximum amounts of daylight 
+to flood the interiors.
+
+The result is a glass and aluminium-clad extension with an 
+opening corner that blends the interior into the exterior
+ giving them space to truly enjoy their garden. Our project 
+ has been widely published across multiple publications 
+ including Real Homes and Build it magazine.
 배경색
+rgb(229, 222, 216);
 색배경
+All the coouple wanted was a place for them to enjoy
+their garden, sip their tea and watch the world go by.
+//                            6 MANOR ROAD                       //
+
+//                            7 THE MEADOWS                       //
+
 타이틀
+THE MEADOWS
 작은내용
+The brief called for increasing the amount of natural daylight
+across the house and reconfiguring the layout in order to create a
+functional and beautiful set of spaces. In turn, the house was
+gutted, opened out to create open plan living, and open rooms
+flooded with natural daylight.
 하프내용
+Our specifications included a material palette of timbers 
+and silestone is consistently spread across the house, with 
+differing treatment to the silestone depending on it’s 
+application.
+
+Typically across the kitchen and bathroom spaces we 
+utilised a full gloss finish, whilst at the stair detail we were 
+able to grit the stair with a sand blast finish to ensure we 
+had enough slip resistance.
+
+This helped to both lighten the spaces and make each 
+room feel part of the same family.
 배경색
+#dfe6e0;
 색배경
+Originally built in the 1870s,
+the design opens up the house reminiscent 
+of it's original use of an open biliard hall.
+
+//                            7 THE MEADOWS                       //
+
+//                            8 CAMBRIDGE ROAD                       //
+
 타이틀
+CAMBRIDGE ROAD
 작은내용
+A loved family home in Hounslow has been designed to maximize
+the light, space, and openness. Impressive living space is
+proposed with full height glazing that wraps into the ceiling and a
+double-height atrium in the centre of the space.
 하프내용
+The existing building with a number of small spaces 
+internally and cluttered facade has been given a go-ahead 
+to a double-height rear extension with an internal 
+reconfiguration of the main house and a three-level side 
+extension.
+The feature glazed rear extension has been designed to 
+maximize the height, light, and openness of the living 
+space with an amazing double-height heart/atrium, 
+connecting the building with the rest of the house. 
+The loved family home design approach was to create spaces 
+of openness and generosity, giving a nod to the beautiful home.
+The additional side extension is designed to be self-sufficient and independent from the main house. This is to offer privacy and independence to visitors, as well as infilling the unused drive and creating a private and secure rear garden.
 배경색
 색배경
+//                            8 CAMBRIDGE ROAD                       //
