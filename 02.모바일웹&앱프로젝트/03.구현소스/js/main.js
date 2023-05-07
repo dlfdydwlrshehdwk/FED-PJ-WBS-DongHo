@@ -185,8 +185,9 @@ $(()=>{ // JQB
     setTimeout(()=>{
         $('.p4span').animate({opacity:'1'},800);
     },2000)
-    }
+    } // 주르륵 함수 //
 
+    // 슥슥슥슥 휘잉
     // 기본셋팅잡기~
     $('.pg3wrap>div').eq(0).find('img').css({
         transform:"translateX(-100%)",
@@ -205,7 +206,7 @@ $(()=>{ // JQB
         transform:"translateX(100%)",
     })
 
-
+    // 슥슥슥슥 휘잉
     function ssgssg() {
         $('.pg3wrap>div').eq(0).find('img')
         .css({
@@ -233,10 +234,27 @@ $(()=>{ // JQB
             transition : ".5s linear .4s",
             transform:"translateX(-0)"
         })
+
+        $('.pg3_centertext span').css({
+            // opacity : '0',
+            transform : 'translateY(0%)',
+            display : 'inline-block',
+            transition : '1s 3s'
+        })
+        setTimeout(()=>{
+            $('.pg3_lefttext_ro').addClass('on')
+        },3000)
+
     }
 
     setTimeout(ssgssg,500)
 
+    // 슥슥슥 기본셋팅잡기
+    $('.pg3_centertext span').css({
+        // opacity : '0',
+        transform : 'translateY(150%)',
+        display : 'inline-block'
+    })
 
 
 

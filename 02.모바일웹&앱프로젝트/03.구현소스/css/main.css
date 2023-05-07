@@ -139,8 +139,22 @@ body{
     left: 8%;
     transform: rotate(270deg);
     font-size: 1.4rem;
+    /* overflow: hidden; */
+    
+}
+.pg3_lefttext_ro{
+    transform: rotate(180deg);
+    transform-origin: right;
+    transition: transform 1s, opacity 2s  ;
+    opacity: 0;
+}
+.pg3_lefttext_ro.on{
+    transform: rotate(0deg);
+    transform-origin: right;
+    opacity: 1;
 }
 .pg3_centertext{
+    overflow: hidden;
     top: 49%;
     left: 54%;
     font-size: 3.5rem;
