@@ -33,6 +33,8 @@ $(()=>{ // JQB
     $('.close').click(function(){
         $('.loginbg').fadeOut()
     })
+    // 로고 누르면 메인페이지로
+
     // p2g높이 
     let pg2h = $('.pg2').height()
     // 윈도우높이
@@ -48,6 +50,7 @@ $(()=>{ // JQB
     
     $(window).on('scroll',function(){
         // 돔 기준 pg4의 머리 까지 거리
+        let pg3h = $('.pg3').offset().top
         let pg4h = $('.pg4').offset().top
         // 윈도우 스크롤높이 체크! -> 이게 밖에 전역변수로 놓으니까 안바뀜..
         hhh = $(this).scrollTop();
@@ -55,11 +58,17 @@ $(()=>{ // JQB
         
         let asdfg = pg4h/3 *2 - hhh 
         // 페이지 4의 이벤트 실행높이값
-        let asdf = pg4h/3 *2 - hhh 
-        console.log(asdf , hhh)
+        let asdf = pg3h/3 *2 - hhh 
+        console.log(asdfg , hhh)
         if(hhh >= pg2h){
             bobobong()
         }
+        if (hhh >= asdfg){
+            // ssgssg();
+        }
+
+
+        
         if( asdf <= 0 ){
             zrr();
         }
@@ -203,14 +212,18 @@ $(()=>{ // JQB
         transform:"translateY(-100%)",
     })
     $('.pg3wrap>div').eq(3).find('img').css({
-        transform:"translateY(100%)",
+        transform:"translateY(110%)",
     })
     $('.pg3wrap>div').eq(4).find('img').css({
         transform:"translateX(100%)",
     })
 
     // 슥슥슥슥 휘잉
+    // 슥슥 1회만 허용
+    let sgsg = 0;
     function ssgssg() {
+        if(sgsg) return;
+        sgsg=1;
         $('.pg3wrap>div').eq(0).find('img')
         .css({
             transition : ".5s linear",
@@ -250,12 +263,12 @@ $(()=>{ // JQB
 
     }
 
-    setTimeout(ssgssg,500)
+    // setTimeout(ssgssg,500)
 
     // 슥슥슥 기본셋팅잡기
     $('.pg3_centertext span').css({
         // opacity : '0',
-        transform : 'translateY(150%)',
+        transform : 'translateY(190%)',
         display : 'inline-block'
     })
 
