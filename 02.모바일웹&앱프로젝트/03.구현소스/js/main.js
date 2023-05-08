@@ -52,6 +52,9 @@ $(()=>{ // JQB
         // 윈도우 스크롤높이 체크! -> 이게 밖에 전역변수로 놓으니까 안바뀜..
         hhh = $(this).scrollTop();
 
+        
+        let asdfg = pg4h/3 *2 - hhh 
+        // 페이지 4의 이벤트 실행높이값
         let asdf = pg4h/3 *2 - hhh 
         console.log(asdf , hhh)
         if(hhh >= pg2h){
