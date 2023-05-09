@@ -75,7 +75,7 @@ $(()=>{ // JQB
 
 
         
-        if( asdfg <= 0 ){
+        if( asdfg <= -100 ){
             zrr();
         }
 
@@ -302,19 +302,22 @@ $(()=>{ // JQB
         display : 'inline-block'
     })
 
-    let by = ['V','I','T','A','&nbsp;','A','R','C','H','I','T','E','C','T','U','R','E']
-    let by2 = ['V','I','T','A','&nbsp;','A','R','C','H','I','T','E','C','T','U','R','E']
+    // 글씨를 잘라낼수도있다고 생각해서 배열화를 시놔놔버림
+    let by = ['V','I','T','A','&nbsp;','A','R','C','H','I','T','E','C','T','U','R','E','&nbsp;']
+    let by2 = ['V','I','T','A','&nbsp;','A','R','C','H','I','T','E','C','T','U','R','E','&nbsp;']
 
     let hcode ="";
     let hcode2 ="";
     const sc1div = $('.sc1 > div');
     const sc2div = $('.sc2 > div');
+    // 배열 짤라서 한글자씩 스팬태그로 넣기 윗줄
     for(let x of by){
         // console.log(x)
         hcode += `
-            <span>${x}</span>
+        <span>${x}</span>
         `;
     }
+    // 배열 짤라서 한글자씩 스팬태그로 넣기 밑줄
     for(let x of by2){
         console.log(x)
         hcode2 += `
@@ -322,19 +325,97 @@ $(()=>{ // JQB
         `;
     }
     // console.log(hcode)
+    // hcode 넣기 윗줄 아랫줄
     sc1div.html(hcode);
     sc2div.html(hcode2);
 
 
-    // 첫번째 줄의 첫번째 span의 넓이구하기
-    let qwe = sc1div.find('span').eq(0)
-    let qwew = qwe.width()
-    console.log(qwe,qwew)
-    
-    // 첫번째 줄의 마지막 span의 넓이구하기
-    let ewq = sc1div.find('span').eq(by.length - 1)
-    let rewq = ewq.width()
+    function 메인1페이지기능구현해보고싶었던거(){
+        
+        // 첫번째 줄의 첫번째 span의 넓이구하기
+        let qwe = sc1div.find('span').eq(0)
+        let qwew = qwe.width()
+        console.log(qwe,qwew)
+        
+        // 첫번째 줄의 마지막 span의 넓이구하기
+        let ewq = sc1div.find('span').eq(by.length - 1)
+        let rewq = ewq.width()
+        
+        console.log(ewq,rewq)
+    }
+    // 미완 /////////////////////////////
 
-    console.log(ewq,rewq)
+
+    // 흘러가는 글씨~ // 
+    // 합칠부분 많음
+    function setFlowBanner(){
+        // 섹션랩 너비
+        let zxc = $('.sc1').width();
+        // 글자랩 너비
+        let zxcv = $('.sc1>div').width();
+        // console.log(zxc,zxcv)
+        // 섹션랩과 글자랩의 크기를 맞춰줬음
+        // 섹션의 width100vw가 되어있어서 글자박스의 크기보다 작아서 ...
+        zxc = zxcv;
+        $('.sc1').width(zxc);
+        $('.sc2').width(zxc);
+        // console.log(zxc,zxcv)
+        // 배너1 - sc1div 배너2 - sc2div
+
+        // 래핑박스 변수 - 공용
+        let $wrap = $('.scwrap')
+        // 래핑박스 가로크기 - 공용
+        let wrapWidth = $('.sc1 >div').eq(0).width();
+        // 스팬담고있는 div 가로크기 - 이건 따로~
+        let listWidth1 = $('.sc1 >div').eq(0).width();
+        let listWidth2 = sc2div.width();
+        // 이동속도 픽셀 - 조정능능
+        const speed = 92;
+
+
+
+        // 리스트복제1 - 따로
+        let $clone1 = sc1div.clone();
+        sc1div.parent().append($clone1);
+        
+        // 리스트복제2 - 따로
+        let $clone2 = sc2div.clone();
+        sc2div.parent().append($clone2);
+
+        flowBannerAct1();
+        flowBannerAct2();
+
+        // 배너실행함수 
+        function flowBannerAct1(){
+            // 무한반복을 위해 리스트를 복제 후 배너에 추가
+            if(listWidth1 < wrapWidth){
+                const listCount = Math.ceil(listWidth1 * 2 / listWidth1);
+                for(let i =2; i <listCount; i++){
+                    $clone1 = $clone1.clone();
+                    $wrap.append($clone1);
+                }
+            }
+            console.log(listWidth1)
+            $wrap.find('section').eq(0).css({
+                'animation':`${listWidth1/speed}s linear infinite flowRolling1`
+            });
+        }; // flowBannerAct1
+
+        function flowBannerAct2(){
+            // 무한반복을 위해 리스트를 복제 후 배너에 추가
+            if(listWidth2 < wrapWidth){
+                const listCount = Math.ceil(wrapWidth * 2 / listWidth2);
+                for(let i =2; i <listCount; i++){
+                    $clone2 = $clone2.clone();
+                    $wrap.append($clone2);
+                }
+            }
+            $wrap.find('section').eq(1).css({
+                'animation':`${listWidth2/speed}s linear infinite flowRolling2`
+            });
+        }; // flowBannerAct2
+    }
+    // 흘러가는글씨 최초호출
+    setFlowBanner();
 
 }); // JQB

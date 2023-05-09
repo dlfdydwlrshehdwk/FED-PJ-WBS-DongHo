@@ -27,10 +27,36 @@ body{
     overflow-x: hidden;
 }
 /* 흘러가는 글씨 */
-.pg1 section {
+.pg1 span{
     font-size: 10rem;
+}
+.pg1 section >div{
+    display: flex;
+}
+.pg1 section {
     white-space: nowrap;
+    /* border-bottom: 1px solid #000; */
+    /* 이시이지 반방마 */
+    /* animation: flowRolling 10s linear  infinite  ; */
+}
+.pg1 section > div{
     border-bottom: 1px solid #000;
+}
+@keyframes flowRolling1 {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+@keyframes flowRolling2 {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(0%);
+    }
 }
 /* 찌글찌글랩 */
 .zgzgwrap{
@@ -63,6 +89,12 @@ body{
     display: inline-block;
     height: 4rem;
     transform: translateY(25%);
+}
+.sc1{
+    display: flex;
+}
+.sc2{
+    display: flex;
 }
 .pg2_inlineImg img{
     height: 100%;
