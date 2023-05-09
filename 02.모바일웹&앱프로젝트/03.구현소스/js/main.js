@@ -386,6 +386,7 @@ $(()=>{ // JQB
         flowBannerAct2();
 
         // 배너실행함수 
+        // 윗글씨 무한재생 // 아래함와와 합치기 쌉가능
         function flowBannerAct1(){
             // 무한반복을 위해 리스트를 복제 후 배너에 추가
             if(listWidth1 < wrapWidth){
@@ -400,7 +401,7 @@ $(()=>{ // JQB
                 'animation':`${listWidth1/speed}s linear infinite flowRolling1`
             });
         }; // flowBannerAct1
-
+        // 밑글씨 무한재생 // 윗함수랑 합쳐서 사용 쌉가능
         function flowBannerAct2(){
             // 무한반복을 위해 리스트를 복제 후 배너에 추가
             if(listWidth2 < wrapWidth){
@@ -417,5 +418,15 @@ $(()=>{ // JQB
     }
     // 흘러가는글씨 최초호출
     setFlowBanner();
+
+
+
+
+
+
+
+
+
+
 
 }); // JQB
