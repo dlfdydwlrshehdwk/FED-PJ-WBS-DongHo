@@ -97,9 +97,18 @@ $(()=>{ // JQB //
 
 
     // 변수모음
-    let pno = 0; // 방향에따른 늘고줄을 변수 
-    let qwe = 0; // 글자나 이미지를 나오게하기위한 내맘대로변수
+    // 방향에따른 늘고줄을 변수 
+    let pno = 0; 
+    // 글자나 이미지를 나오게하기위한 내맘대로변수
+    let qwe = 0; 
+    let lih = $('.projectul li').height();
+    let lih10 = $('.projectul li').height()/10
+    
+    console.log(lih10);
+
     $(window).on('wheel',wheelFn);
+
+
     function wheelFn(){
         // 되나안되나 테스트
         console.log('휠')
@@ -118,50 +127,81 @@ $(()=>{ // JQB //
         // console.log(delta,pno)
         moveScroll();
         apdprpd();
+
+        console.log(pno)
     };
 
-
+    // ul과 이미지가 움직여요 함수 //
     function moveScroll(){
         // 글귀 움직이기
+        // ul자체가 올라가게 설정되어있음.
         $('.projectul')
-        // .find('li')
+        // li의 10분의 1크기만큼 왔다갔다~
         .css({
-            transform : `translateY(${-pno /10 + '%'})`
+            transform : `translateY(${-pno * lih10 + 'px'})`
         });
+        
         // 이미지 움직이기
         $('.prleft, .prright').css({
             transform : `translateY(${-pno + '%'})`
         });
     };
+    // ul과 이미지가 움직여요 함수 //
 
+
+
+    // 어페애에엔드 프리이펜드으 함수 //
     function apdprpd(){
-        // console.log('어페엔드프리펜드')
-        // 변수
-        // ul
+        console.log('어페엔드프리펜드')
+        // 변수모음
+        // ul 그잡채
         const projectul = $('.projectul')
+        // li의 첫번째 요소 
         let a = projectul.find('li').first()
+        // li의 마지막요소
         let b = projectul.find('li').last()
-        // console.log(qwe)
-        if(qwe===3){
-            projectul.append(`
-            <li><a>Hello${qwe}<br> Nice to meet U!</a></li>
-            `)
-            qwe=0;
+        // li하나의 높이값
+        let lih = $('.projectul li').height();
+        // 높이값 구해야되는데... 
+        // let wh = $(window).offset().top;
+        // 돔기준에서 메인의 윗대가리 위치차이
+        let mh = $('main').offset().top;
+        // 돔기준에서 ul의 윗대가리 위치차이
+        let ulh = $('.projectul').offset().top;
+        
+        if(ulh <= -lih){
+            // ul의 트랜스폼y를 0으로 바꾸고
+            projectul.css({
+                transform : 'translateY(0px)'
+            })
+            ulh = 0;
+            moveScroll()
+            // 맨위의 li를 잘른후 밑에다가 쳐박는다.
+        }
+        
+        
+        console.log(mh,ulh,-lih)
+        // if(qwe===3){
+        //     projectul.append(`
+        //     <li><a>Hello${qwe}<br> Nice to meet U!</a></li>
+        //     `)
+        //     qwe=0;
             
-        }
-        else if(qwe===-3){
-            qwe=0;
-            projectul.prepend(`
-            <li><a>Hello${qwe}<br> Nice to meet U!</a></li>
-            `)
-        }
-        // console.log(projectul.find('li').eq(0))
-        // 
-        let c = projectul.position();
-        console.log(c)
+        // }
+        // else if(qwe===-3){
+        //     qwe=0;
+        //     projectul.prepend(`
+        //     <li><a>Hello${qwe}<br> Nice to meet U!</a></li>
+        //     `)
+        // }
+        // // console.log(projectul.find('li').eq(0))
+        // // 
+        // let c = projectul.position();
+        // console.log(c)
     }
-
-
-
-
+    // 어페애에엔드 프리이펜드으 함수 //
+    
+    
+    
+    
 }) // JQB //

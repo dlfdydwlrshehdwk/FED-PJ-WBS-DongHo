@@ -50,8 +50,8 @@ $(()=>{ // JQB
     
     $(window).on('scroll touchstart',function(){
         // 돔 기준 pg4의 머리 까지 거리
-        let pg3h = $('.pg3').offset().top
-        let pg4h = $('.pg4').offset().top
+        let pg3h = $('.pg3').offset().top;
+        let pg4h = $('.pg4').offset().top;
         // 윈도우 스크롤높이 체크! -> 이게 밖에 전역변수로 놓으니까 안바뀜..
         hhh = $(this).scrollTop();
 
@@ -319,7 +319,7 @@ $(()=>{ // JQB
     }
     // 배열 짤라서 한글자씩 스팬태그로 넣기 밑줄
     for(let x of by2){
-        console.log(x)
+        // console.log(x)
         hcode2 += `
             <span>${x}</span>
         `;
@@ -341,7 +341,7 @@ $(()=>{ // JQB
         let ewq = sc1div.find('span').eq(by.length - 1)
         let rewq = ewq.width()
         
-        console.log(ewq,rewq)
+        // console.log(ewq,rewq)
     }
     // 미완 /////////////////////////////
 
@@ -396,7 +396,7 @@ $(()=>{ // JQB
                     $wrap.append($clone1);
                 }
             }
-            console.log(listWidth1)
+            // console.log(listWidth1)
             $wrap.find('section').eq(0).css({
                 'animation':`${listWidth1/speed}s linear infinite flowRolling1`
             });
