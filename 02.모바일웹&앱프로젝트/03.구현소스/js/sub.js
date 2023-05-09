@@ -169,18 +169,36 @@ $(()=>{ // JQB //
         // 돔기준에서 ul의 윗대가리 위치차이
         let ulh = $('.projectul').offset().top;
         
-        if(ulh <= -lih){
+        if(ulh == -lih){
             // ul의 트랜스폼y를 0으로 바꾸고
-            projectul.css({
-                transform : 'translateY(0px)'
-            })
             ulh = 0;
-            moveScroll()
+            pno =0;
+            $('.projectul').css({
+                transform : `translateY(0px)`
+            })
+            // moveScroll()
             // 맨위의 li를 잘른후 밑에다가 쳐박는다.
+
+            console.log(mh,ulh,-lih)
         }
-        
-        
         console.log(mh,ulh,-lih)
+
+        // 내일의 할일 
+        // 어페에엔드 프리펜드 ㄴ ㅇ ㄱ
+        // ul의 갭값 구해서 높이에에 적용
+        // 밑으로하는건 했으니 살짝수정해서 위로갈떄도 되게 조건문
+        
+        // 다하면 사진도 기준값정해서 어페에엔드 프리펜드
+
+
+
+
+
+
+
+
+        
+        
         // if(qwe===3){
         //     projectul.append(`
         //     <li><a>Hello${qwe}<br> Nice to meet U!</a></li>
