@@ -48,7 +48,7 @@ $(()=>{ // JQB
     // 2페이지의 높이가 윈도우높이의 33%가 되면
     let hhh = $(window).scrollTop()
     
-    $(window).on('scroll',function(){
+    $(window).on('scroll touchstart',function(){
         // 돔 기준 pg4의 머리 까지 거리
         let pg3h = $('.pg3').offset().top
         let pg4h = $('.pg4').offset().top
@@ -60,16 +60,22 @@ $(()=>{ // JQB
         // 페이지 4의 이벤트 실행높이값
         let asdf = pg3h/3 *2 - hhh 
         console.log(asdfg , hhh)
+        // 2번째 페이지 액션실행
         if(hhh >= pg2h){
             bobobong()
         }
+        // 3번째 페이지 액션실행
         if (hhh >= asdfg){
             ssgssg();
         }
+        // 4번째 페이지 액션실행
+        // if (hhh>=asdf){
+        //     ziingziing();
+        // }
 
 
         
-        if( asdf <= 0 ){
+        if( asdfg <= 0 ){
             zrr();
         }
 
@@ -222,41 +228,65 @@ $(()=>{ // JQB
     // 슥슥 1회만 허용
     let sgsg = 0;
     function ssgssg() {
+        // 1회만 실행하기
         if(sgsg) return;
         sgsg=1;
+
+        // 왼쪽박스
         $('.pg3wrap>div').eq(0).find('img')
         .css({
             transition : ".5s linear",
             transform:"translateX(-0)"
         })
+        // 큰박스
         $('.pg3wrap>div').eq(1).find('img')
         .css({
             transition : "1.2s ease-out 1.5s",
             transform:"rotate(360deg)",
             borderRadius : "0"
         })
+        // 세번째박스
         $('.pg3wrap>div').eq(2).find('img')
         .css({
             transition : ".5s linear .7s",
             transform:"translateX(-0)"
         })
+        // 밑박스
         $('.pg3wrap>div').eq(3).find('img')
         .css({
             transition : ".5s linear 1.2s",
             transform:"translateX(-0)"
         })
+        // 맨오른쪽박스
         $('.pg3wrap>div').eq(4).find('img')
         .css({
             transition : ".5s linear .4s",
             transform:"translateX(-0)"
         })
 
+        // 가운데 글씨문구 액션
         $('.pg3_centertext span').css({
             // opacity : '0',
             transform : 'translateY(0%)',
             display : 'inline-block',
             transition : '1s 3s'
         })
+        // 맨아래 글씨문구 액션
+        $('.pg3_bttext_wrap').css({
+            opacity : '1',
+            transform:'translateX(0%)',
+            transition : '1s 3s'
+        })
+        // 버튼들 액션
+        $('.pg3_btns>div').css({
+            opacity : '1',
+            transform : 'translateY(0%)',
+            transition : '1s 3.5s'
+        })
+
+
+
+
         setTimeout(()=>{
             $('.pg3_lefttext_ro').addClass('on')
         },3000)
@@ -272,6 +302,39 @@ $(()=>{ // JQB
         display : 'inline-block'
     })
 
+    let by = ['V','I','T','A','&nbsp;','A','R','C','H','I','T','E','C','T','U','R','E']
+    let by2 = ['V','I','T','A','&nbsp;','A','R','C','H','I','T','E','C','T','U','R','E']
 
+    let hcode ="";
+    let hcode2 ="";
+    const sc1div = $('.sc1 > div');
+    const sc2div = $('.sc2 > div');
+    for(let x of by){
+        // console.log(x)
+        hcode += `
+            <span>${x}</span>
+        `;
+    }
+    for(let x of by2){
+        console.log(x)
+        hcode2 += `
+            <span>${x}</span>
+        `;
+    }
+    // console.log(hcode)
+    sc1div.html(hcode);
+    sc2div.html(hcode2);
+
+
+    // 첫번째 줄의 첫번째 span의 넓이구하기
+    let qwe = sc1div.find('span').eq(0)
+    let qwew = qwe.width()
+    console.log(qwe,qwew)
+    
+    // 첫번째 줄의 마지막 span의 넓이구하기
+    let ewq = sc1div.find('span').eq(by.length - 1)
+    let rewq = ewq.width()
+
+    console.log(ewq,rewq)
 
 }); // JQB

@@ -15,7 +15,7 @@ body{
 }
 .pg1{
     /* position: relative; */
-    padding: 0 30px;
+    /* padding: 0 30px; */
     height: 100vh;
 }
 /* 흘러가는 글씨 랩 */
@@ -23,6 +23,8 @@ body{
     position: absolute;
     top: 30%;
     transform: translateY(-50%);
+    width: 100vw;
+    overflow-x: hidden;
 }
 /* 흘러가는 글씨 */
 .pg1 section {
@@ -33,11 +35,11 @@ body{
 /* 찌글찌글랩 */
 .zgzgwrap{
     z-index: -1;
-    position: absolute;
-    bottom: 0%;
+    position: relative;
+    bottom: -31%;
     left: 50%;
     transform: translate(-50%,0%);
-    width: 1000px;
+    width: 65%;
     height: 650px;
     text-align: center;
 }
@@ -162,6 +164,12 @@ body{
 .pg3_bttext{
     bottom: 5%;
     left: 35%;
+    overflow: hidden;
+}
+.pg3_bttext_wrap{
+    /* position: absolute; */
+    transform: translateX(-100%);
+    opacity: 0;
 }
 /* 버튼들 */
 .pg3_btns{
@@ -173,6 +181,11 @@ body{
     padding: 0 30px 20px;
     box-sizing: border-box;
     font-size: 1.2rem;
+    overflow: hidden;
+}
+.pg3_btns>div{
+    opacity: 0;
+    transform: translateY(200%);
 }
 /* 4페이지 */
 .pg4{

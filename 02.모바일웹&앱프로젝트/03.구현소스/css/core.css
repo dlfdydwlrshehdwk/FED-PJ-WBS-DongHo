@@ -14,6 +14,9 @@
     font-family: dfg;
     src: url(../font/Hatton-Regular.9256132.woff2);
 }
+body{
+    overflow-x: hidden;
+}
 /* 파랑글씨 클래스 */
 .blue{
     color : #5e8cff;
