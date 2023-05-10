@@ -101,14 +101,13 @@ $(()=>{ // JQB //
     let pno = 0; 
     // 글자나 이미지를 나오게하기위한 내맘대로변수
     let qwe = 0; 
-    let lih = $('.projectul li').height();
-    let lih10 = $('.projectul li').height()/10
-    
-    console.log(lih10);
+    // 패딩포함 li의 높이 / 10
+    let lih10 = $('.projectul li').innerHeight()/10
 
+    // 휠이벤트 시작하기 //
     $(window).on('wheel',wheelFn);
 
-
+    // 휠이벤트 함수 //
     function wheelFn(){
         // 되나안되나 테스트
         console.log('휠')
@@ -125,7 +124,9 @@ $(()=>{ // JQB //
         }
         
         // console.log(delta,pno)
+        // ul과 이미지가 움직여요 함수
         moveScroll();
+        // 어페에에엔드 프리펜드 글씨 짤라서 위로올라가는 함수
         apdprpd();
 
         console.log(pno)
@@ -133,6 +134,12 @@ $(()=>{ // JQB //
 
     // ul과 이미지가 움직여요 함수 //
     function moveScroll(){
+        // 갮값
+        let c = 4;
+        // 갮값 /10 
+        let d = c/10;
+        console.log(`${(-pno * lih10)+(d + 'rem')}`)
+
         // 글귀 움직이기
         // ul자체가 올라가게 설정되어있음.
         $('.projectul')
@@ -156,30 +163,37 @@ $(()=>{ // JQB //
         // 변수모음
         // ul 그잡채
         const projectul = $('.projectul')
-        // li의 첫번째 요소 
+        // li의 첫번째 요소 - 어펜드 프리펜드용
         let a = projectul.find('li').first()
-        // li의 마지막요소
+        // li의 마지막요소 - 어펜드 프리펜드용
         let b = projectul.find('li').last()
-        // li하나의 높이값
-        let lih = $('.projectul li').height();
-        // 높이값 구해야되는데... 
-        // let wh = $(window).offset().top;
+        // li하나의 높이값(패딩포함)
+        let lih = $('.projectul li').innerHeight();
+        // lih 내림계산
+        let lihn = Math.floor(lih);
         // 돔기준에서 메인의 윗대가리 위치차이
         let mh = $('main').offset().top;
         // 돔기준에서 ul의 윗대가리 위치차이
         let ulh = $('.projectul').offset().top;
+        // ulh 내림계산
+        let ulhn = Math.floor(ulh)
+        console.log(lihn,ulhn);
         
-        if(ulh == -lih){
+        // ul윗대가리가 li의 높이값이랑 같아지면.. =li높이만큼 한칸 나간다면
+        if(ulhn <= -lihn){
             // ul의 트랜스폼y를 0으로 바꾸고
             ulh = 0;
             pno =0;
             $('.projectul').css({
                 transform : `translateY(0px)`
             })
-            // moveScroll()
             // 맨위의 li를 잘른후 밑에다가 쳐박는다.
+            projectul.append(a)
 
             console.log(mh,ulh,-lih)
+
+
+
         }
         console.log(mh,ulh,-lih)
 
