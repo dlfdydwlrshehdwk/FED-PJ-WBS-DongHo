@@ -64,10 +64,10 @@ body{
     object-fit: cover;
     transition: 1s;
 }
-.pr li:hover img{
+.pr div:hover img{
     transform: scale(1.1);
 }
-.pr li {
+.pr li >div{
     /* position: absolute; */
     position: relative;
     overflow: hidden;
