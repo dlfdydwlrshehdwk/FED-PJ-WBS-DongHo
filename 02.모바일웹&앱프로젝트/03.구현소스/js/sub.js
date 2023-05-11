@@ -2,10 +2,9 @@ $('html,body').animate({scrollTop : '0px'})
 
 $(()=>{ // JQB //
 
-    // console.log('hi')
-    // 패럴렉스 배경~
-    const pr = $('.pr')
+    // 왼쪽이미지 박스 변수
     const prleft = $('.prleft li')
+    // 오른쪽 이미지 박스 변수
     const prright = $('.prright li')
 
     // 패럴렉스 왼쪽 애들조정 1 6 11 16
@@ -49,7 +48,8 @@ $(()=>{ // JQB //
         width : "32rem",
         height : "23rem",
         right : "10%",
-        marginBottom : "20rem"
+        marginBottom : "20rem",
+        paddingTop : "10rem"
     })
     // 2 7 12 17 22
     prright.find('div:nth-child(5n+2)').css({
@@ -85,8 +85,7 @@ $(()=>{ // JQB //
 
     // li하나의 높이값(패딩포함)
     let lih = $('.projectul li').innerHeight();
-    // lih 내림계산
-    let lihn = Math.floor(lih);
+
     // 밑으로 내릴때 위에가 비어보이니까 기준값을 위에 하나있게 셋팅하기
     $('.projectul').css({
         transform : `translate(-50%,0)`,
@@ -109,6 +108,7 @@ $(()=>{ // JQB //
     // 밑으로 내릴때 위에가 비어보이니까 기준값을 위에 하나있게 셋팅하기
     $('.prright').css({
         top : -prrlih + 'px',
+        // transition : '.4s linear'
     })
     
 
@@ -142,6 +142,7 @@ $(()=>{ // JQB //
     // 휠이벤트 시작하기 //
     $(window).on('wheel',wheelFn);
 
+    // startSS();
     // 휠이벤트 함수 //
     function wheelFn(){
         // 되나안되나 테스트
@@ -149,11 +150,13 @@ $(()=>{ // JQB //
         // 방향체크
         let delta = event.wheelDelta;
         // 방향에 따른 ...
+        // 휠 내릴떄
         if(delta < 0){
             pno++;
             qwe++;
             pno2++;
         }
+        // 휠 올릴떄
         else {
             pno--;
             qwe--;
@@ -301,11 +304,30 @@ $(()=>{ // JQB //
         // 휠내릴때
         if(prrh <= -prrlih*2){
             console.log('내릴떄조건맞니?') // 충족
+
+            // 부드럽게 해보는중 - 실패1
+            // pno2=0;
+            // prright.append(z)
+            // prright.css({
+            //     transform : `translateY(0)`,
+            //     transition : '0.4s linear ',
+            // })
+            // setTimeout(()=>{
+            //     prright.css({
+            //         transition : 'none',
+            //     })
+            // },400)
+
+
+
+            // 원래꺼
             pno2 = 0;
             prright.append(z)
             prright.css({
-                transform : `translateY(0)`
+                transform : `translateY(0)`,
             })
+            
+            
         }
         // 휠올릴때
         else if(prrh >= 0){
@@ -317,18 +339,12 @@ $(()=>{ // JQB //
             })
         }
 
-        // 밥먹고와서 오른쪽박스 위로올릴때 기준정하면 끝!
-
-
-
-
-
-
-        
     }
     // 어페애에엔드 프리이펜드으 함수 //
     
     
-    
-    
+
+    // 마지막으로 트랜지션을 주고 막기함수 만들어주고
+    // 트랜스폼할때 트랜지션 없애고 다시 트랜지션 주기
+
 }) // JQB //
