@@ -77,7 +77,7 @@ $(()=>{ // JQB //
         width : "28rem",
         height : "23rem",
         right : "-9%",
-        marginBottom : "45rem"
+        paddingBottom : "45rem"
     })
 
 
@@ -103,6 +103,12 @@ $(()=>{ // JQB //
     // 밑으로 내릴때 위에가 비어보이니까 기준값을 위에 하나있게 셋팅하기
     $('.prleft').css({
         top : -prlih + 'px',
+    })
+    // li의 하나의 높이값
+    let prrlih = $('.prright li').innerHeight();
+    // 밑으로 내릴때 위에가 비어보이니까 기준값을 위에 하나있게 셋팅하기
+    $('.prright').css({
+        top : -prrlih + 'px',
     })
     
 
@@ -239,6 +245,7 @@ $(()=>{ // JQB //
 
 
 
+        // 글씨 위아래로갈때 어펜드 프리펜드 
 
         // ul윗대가리가 li의 높이값이랑 같아지면.. =li높이만큼 한칸 나간다면
         // 스크롤을 내리면 맨위 li를 맨밑으로내릴때의 조건!
@@ -309,6 +316,8 @@ $(()=>{ // JQB //
                 transform : `translateY(0)`
             })
         }
+
+        // 밥먹고와서 오른쪽박스 위로올릴때 기준정하면 끝!
 
 
 
