@@ -5,27 +5,62 @@
 @import url(./core.css);
 @import url(./reset.css);
 
+.bigpicturewrap{
+    overflow: hidden;
+}
 .bigpicture{
     width: 100%;
-    height: 80vh;
-    /* background: url(../img/coloured_start.jpg) no-repeat 100%/100%; */
+    height: 75vh;
+    /* 그림 아래에서 위로 튀어나오게 하기위한... */
+    overflow: hidden;
+    transform: scale(1.3);
 }
 .bigpicture img{
     width: 100%;
     height: 100%;
     object-fit: cover;
+    transition: translateY .5s ease-in-out;
+    /* 그림 아래에서 위로 튀어나오기위한 셋팅조건 */
+    transform: translateY(50%);
 }
+/* 이미지 겉박스에 클래스 on주면 아래에서 위로 튀어나오게 */
+.bigpicture.on img{
+    transition: 1s ease-in-out;
+    /* 그림 아래에서 위로 튀어나오기위한 셋팅조건 */
+    transform: translateY(0%);
+}
+/* 그림 아래에서 위로 튀어나오기위한 셋팅조건 */
+/* .bigpicture.on{
+    transition: 2s ease-in-out;
+    transform: scale(1);
+} */
 
+.titwrap{
+    margin-top: 1rem;
+}
 .tit{
-    height: 20vh;
+    height: 25vh;
     font-size: 3.3rem;
-    display: flex;
-    flex-direction: column;
+    /* display: flex; */
+    /* flex-direction: column; */
+    flex-direction: row;
     text-align: center;
     justify-content: center;
     font-family: sdf;
-}
 
+    letter-spacing: -7px;
+}
+.tit span{
+    opacity: 0;
+    display: inline-block;
+    transform : translateY(100%);
+    transition: .3s linear;
+    
+}
+.tit.on span{
+    opacity: 1;
+    transform: translateY(0%);
+}
 .mdsize{
     width: 35%;
     height: 40vh;

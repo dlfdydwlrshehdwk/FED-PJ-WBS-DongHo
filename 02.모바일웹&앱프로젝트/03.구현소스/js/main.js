@@ -1,5 +1,6 @@
 $(()=>{ // JQB
 
+    startSS();
     console.log('hi')
 
     // 기능구현해야할 리스트
@@ -15,25 +16,6 @@ $(()=>{ // JQB
         글씨 등장 
         + 글씨 등장이 좀 다양하고 귀여운데 이건 
     */
-
-    // 로고 누르면 메인페이지로
-    $('.logo').css({
-        position:'relative' ,
-        zIndex : 1,
-    })
-    $('.logo').click(()=>{
-        console.log('로고')
-        $(location).attr("href","index.html")
-    })
-
-    $('.navlist ul').find('li').eq(2).click(()=>{
-        console.log('로그인')
-        $('.loginbg').fadeIn()
-    })
-    $('.close').click(function(){
-        $('.loginbg').fadeOut()
-    })
-    // 로고 누르면 메인페이지로
 
     // p2g높이 
     let pg2h = $('.pg2').height()
@@ -421,7 +403,20 @@ $(()=>{ // JQB
 
 
 
+    // // gnb부분 누르면 하얀색부분이 화면덮기
+    // // whiteone에 클래스를 주면됩니다 gnb메뉴를 누르면
+    // $('.white a').on('click',function(e){
+    //     e.preventDefault();
+    //     console.log('흰원')
+    //     // 1. 흰원에 클래스 on주기
+    //     $('.whiteone').addClass('on')
+    //     // 2. 서브페이지로 이동하기
 
+    //     // 3. 서브페이지 구성되는걸뿌리기?
+
+
+
+    // })
 
 
 

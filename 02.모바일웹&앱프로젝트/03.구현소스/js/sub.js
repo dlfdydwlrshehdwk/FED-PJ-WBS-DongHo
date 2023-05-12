@@ -138,7 +138,7 @@ $(()=>{ // JQB //
     // 이미지박스 li의 높이 /20
     // 왼쪽
     let imgh20 = $('.prleft li').innerHeight()/20
-    console.log(imgh20)
+    // console.log(imgh20)
     // 휠이벤트 시작하기 //
     $(window).on('wheel',wheelFn);
 
@@ -342,9 +342,74 @@ $(()=>{ // JQB //
     }
     // 어페애에엔드 프리이펜드으 함수 //
     
+
+
+    // 서브페이지 함수구역 - 프로젝트 뿌려주는부분
+    // 큰그림 아래에서 위로
+    $('.bigpicture').css({
+        transition : '2s linear',
+        transform : 'scale(1)',
+    })
+    $('.bigpicture').addClass('on')
+
+    let zxc = $('.tit span')
+    let dsa = zxc.eq(0).text()
+    let dsa2 = zxc.eq(1).text()
+    let dsa3 = zxc.eq(2).text()
+    console.log(dsa)
+
+    hcode(dsa,$('.tit'),dsa2,dsa3)
+    setTimeout(()=>{
+        $('.tit').addClass('on')
+    },10)
+    // hcode(dsa2,$('.tit'))
+    // hcode(dsa3,$('.tit'))
+
+    function hcode(a,b,c,d){    
+        let hcode = ""
+        let idx = 0;
+        for(let x of a){
+            if(x === "") x= "&nbsp;";
+            console.log(x)
+            hcode += `
+            <span style="transition-delay:${1+idx*0.015}s;">${x}</span>
+            `
+            idx++;
+        }
+        hcode += `<br>`
+        for(let x of c){
+            if(x === "") x= "&nbsp;";
+            console.log(x)
+            hcode += `
+            <span style="transition-delay:${1+idx*0.015}s;">${x}</span>
+            `
+            idx++;
+        }
+        hcode += `<br>`
+        for(let x of d){
+            if(x === "") x= "&nbsp;";
+            console.log(x)
+            hcode += `
+            <span style="transition-delay:${1+idx*0.015}s;">${x}</span>
+            `
+            idx++;
+        }
+        hcode += `<br>`
+        
+        b.html(hcode)
+    }
+
+
+    console.log(hcode)
     
 
-    // 마지막으로 트랜지션을 주고 막기함수 만들어주고
-    // 트랜스폼할때 트랜지션 없애고 다시 트랜지션 주기
+
+
+
+
+
+
+
+
 
 }) // JQB //
