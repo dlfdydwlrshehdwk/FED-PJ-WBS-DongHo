@@ -23,7 +23,7 @@ body{
     position: absolute;
     top: 30%;
     transform: translateY(-50%);
-    width: 100vw;
+    width: 100%;
     overflow-x: hidden;
 }
 /* 흘러가는 글씨 */

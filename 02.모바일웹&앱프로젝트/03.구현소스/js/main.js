@@ -396,6 +396,7 @@ $(()=>{ // JQB
             $wrap.find('section').eq(1).css({
                 'animation':`${listWidth2/speed}s linear infinite flowRolling2`
             });
+            // console.log(wrapWidth,listWidth1)
         }; // flowBannerAct2
     }
     // 흘러가는글씨 최초호출
