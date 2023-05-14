@@ -24,9 +24,78 @@ data에 모달창 변수값을 만들어주고  모달창 : 0;
 템플릿 작성 -> HTML 코드를 뷰의 template 안으로 넣으면됨
 데이터바인딩 -> 자주변경될 데이터들을 밑에 저장해놓고 데이터바인딩한다.{{}}
 데이터파일을 익스포트/임포트를 해와 뷰에서 데이터변수로 만들어준다.
+자주쓰는 / 변경될거같은 내용이 있는 부분을 컴포넌트화 시켜줌
+자식컴포넌트에서 부모데이터를 써야할만한게 있다면 프롭스를 시켜줌 자식에서 부모로
+불린값이 필요하다면 true/false 커스텀 이벤트로 자식에서 부모로 메세지주기
+인풋값을 필요한다면 v-model
 
 
 
+
+
+
+
+
+
+
+라우터 쓰는이유 페이지 나눌때 - 페이지를 여러개 만들고 싶을때 사용
+
+1. 설치 
+npm install vue-router@4      뷰3버전이기에 호환되는 4버전사용
+npm run serve 끄고하기 에러남
+
+2. 라우터파일 생성 
+src 폴더 안에 아무데나 router.js 파일만들기
+import { createWebHistory, createRouter } from "vue-router";
+
+const routes = [
+  {
+    path: "/경로",
+    component: import해온 컴포넌트,
+  }
+];
+
+const router = createRouter({
+  history: createWebHistory(),
+  routes,
+});
+
+export default router;
+
+복붙 
+공식처럼 사용법임 그냥 이해할 필요 x 
+path와 component 부분을 수정하여 사용할 예정
+
+ex) 누군가 /list로 접속하면 <List> 보여주는 ... (router.js 에서의 설정임!) 
+import { createWebHistory, createRouter } from "vue-router";
+import List from './components/List.vue';
+
+const routes = [
+  {
+    path: "/list",
+    component: List,
+  }
+];
+
+const router = createRouter({
+  history: createWebHistory(),
+  routes,
+});
+
+export default router;
+
+3. main.js에서 라우터를 사용한다고 설정 (main.js 에서 작성부분!)
+
+import router from './router'
+createApp(App).use(router).mount('#app') 
+
+ex) import 라우터작명 from './router.js'
+
+createApp(App).use(라우터작명).mount('#app')
+
+4. 원하는곳에 <router-view></router-view> 추가
+App.vue의 내부에 HTML에 아무대나 저 태그 추가하면
+라우터로 구분된 페이지를 보여줌
 
 
 
@@ -46,3 +115,6 @@ gnb 3가지 정도가 sub.html
 
 v-if = "x==y" 도있지만
 v-else-if = " x == y" 이런것도가능
+
+뷰컴포넌트만들때 
+뷰 프레임워크에서 < + 엔터 하면 html의 ! 처럼 양식 만들어줌
