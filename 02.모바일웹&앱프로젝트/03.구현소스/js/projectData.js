@@ -1,17 +1,17 @@
-let pdata = {
+let pdata = [{
     "TEAMAKER'S GUESTHOUSE" : {
-        "메인사진" : "teamakers_start",
-        "제목" : "teamakers",
-		"작은사진" : "teamakers_small",
-		"작은사진텍스트" : "Our entry to the Teamakers Guest House competition received<br>an honourable mention in this open international competition.<br><br>A considered approach has been taken to design a building that<br>sits comfortably in the current context. Careful attention has<br>been paid to the material choices to reflect the function of the<br>building while being aesthetically distinct and proudly represent<br>the Lauku Tea brand and your continued narrative.<br><br><br>We have thoughtfully composed a building that opens up to<br>nature so that guests can experience more of their surroundings<br>while they work.<br>",
-		"큰사진" : "teamakers_big",
-		"중간사진" : "teamakers_half",
-		"중간사진텍스트" : "The spaces allows for two intertwining journeys to occur as the tea maker<br> meanders from the outdoors to the<br>indoors, from production to accommodation. Central to<br>our design is the drying chimney. Used as a highly<br>controlled drying space, this drying chimney is<br>constructed from recycled stone with an added pink dye<br>to create a warm to touch, terrazzo style chimney space<br>reminiscent to the speckled patterns of tea leaves<br>",
-		"배경색박스텍스트" : "Our design is a distillation of the process<br>of herbal tea production, the Latvian wilderness,<br>and traditional rural Latvian building typologies<br>where the hearth was the focal point of shelters.",
-		"배경색박스배경색" : "red",
-		"마지막사진" : "teamakers_last",
-		"다음프로젝트명" : "N1C",
-		"다음프로젝트메인사진" : "teamakers_next"
+        메인사진 : "teamakers_start",
+        제목 : "teamakers",
+		작은사진 : "teamakers_small",
+		작은사진텍스트" : "Our entry to the Teamakers Guest House competition received<br>an honourable mention in this open international competition.<br><br>A considered approach has been taken to design a building that<br>sits comfortably in the current context. Careful attention has<br>been paid to the material choices to reflect the function of the<br>building while being aesthetically distinct and proudly represent<br>the Lauku Tea brand and your continued narrative.<br><br><br>We have thoughtfully composed a building that opens up to<br>nature so that guests can experience more of their surroundings<br>while they work.<br>",
+		큰사진 : "teamakers_big",
+		중간사진 : "teamakers_half",
+		중간사진텍스트 : "The spaces allows for two intertwining journeys to occur as the tea maker<br> meanders from the outdoors to the<br>indoors, from production to accommodation. Central to<br>our design is the drying chimney. Used as a highly<br>controlled drying space, this drying chimney is<br>constructed from recycled stone with an added pink dye<br>to create a warm to touch, terrazzo style chimney space<br>reminiscent to the speckled patterns of tea leaves<br>",
+		배경색박스텍스트 : "Our design is a distillation of the process<br>of herbal tea production, the Latvian wilderness,<br>and traditional rural Latvian building typologies<br>where the hearth was the focal point of shelters.",
+		배경색박스배경색 : "red",
+		마지막사진 : "teamakers_last",
+		다음프로젝트명 : "N1C",
+		다음프로젝트메인사진 : "teamakers_next"
     },
     "N1C" : {
         "메인사진" : "n1c_start",
@@ -111,6 +111,6 @@ let pdata = {
 		"다음프로젝트명" : "마지막 프로젝트 입니다.",
 		"다음프로젝트메인사진" : "cambridgeroad_next"
     },
-};
+}];
 
 export default pdata;
