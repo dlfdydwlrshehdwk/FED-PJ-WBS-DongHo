@@ -5,6 +5,7 @@ import pjdata from './tempData/data-project.js'
 // 캣휠 가져오기
 import catWheel from "./catwheel.js";
 
+
 // 상단영역 메뉴 뷰 템플릿 셋팅
 Vue.component("top-comp",{
     template:comData.tarea,
@@ -57,10 +58,9 @@ new Vue({
 new Vue({
     el:"#login",
     created:function(){
-
+        
     },
     mounted:function(){
-
     },
 })
 

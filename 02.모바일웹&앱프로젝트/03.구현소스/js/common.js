@@ -1,11 +1,6 @@
-//  공통 JS : common.js
-
-logo();
-
-
-// 로고관련
+console.log('공통이다.')
+logo()
 function logo(){
-    console.log('공통이다.')
     // 로고 누르면 메인페이지로
     $('.logo').css({
         position:'relative' ,
@@ -38,4 +33,4 @@ function logo(){
         $('.loginbg').fadeOut()
     })
     // 로고 누르면 메인페이지로
-}
+};
