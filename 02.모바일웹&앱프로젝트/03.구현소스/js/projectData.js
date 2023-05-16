@@ -135,6 +135,57 @@ let pdata = [
 		"다음프로젝트명" : "마지막 프로젝트 입니다.",
 		"다음프로젝트메인사진" : "cambridgeroad_next"
     },
+    {
+		"영어소제목" : "8번째데이터",
+		"id" : 8,
+		"타이틀" : "8번째^데이터",
+        "메인사진" : "cambridgeroad_start",
+        "제목" : "CAMBRIDGE ROAD",
+		"작은사진" : "cambridgeroad_small",
+		"작은사진텍스트" : "어쩌구저쩌구",
+		"큰사진" : "cambridgeroad_big",
+		"중간사진" : "cambridgeroad_half",
+		"중간사진텍스트" : "어쩌구저쩌구텍스트",
+		"배경색박스텍스트" : "어저구저쩌구",
+		"배경색박스배경색" : "red",
+		"마지막사진" : "cambridgeroad_last",
+		"다음프로젝트명" : "마지막 프로젝트 입니다.",
+		"다음프로젝트메인사진" : "cambridgeroad_next"
+    },
+    {
+		"영어소제목" : "9번째데이터",
+		"id" : 9,
+		"타이틀" : "9번째^데이터",
+        "메인사진" : "cambridgeroad_start",
+        "제목" : "CAMBRIDGE ROAD",
+		"작은사진" : "cambridgeroad_small",
+		"작은사진텍스트" : "어쩌구저쩌구",
+		"큰사진" : "cambridgeroad_big",
+		"중간사진" : "cambridgeroad_half",
+		"중간사진텍스트" : "어쩌구저쩌구텍스트",
+		"배경색박스텍스트" : "어저구저쩌구",
+		"배경색박스배경색" : "red",
+		"마지막사진" : "cambridgeroad_last",
+		"다음프로젝트명" : "마지막 프로젝트 입니다.",
+		"다음프로젝트메인사진" : "cambridgeroad_next"
+    },
+    {
+		"영어소제목" : "cambridgeroad",
+		"id" : 10,
+		"타이틀" : "10번째^데이터",
+        "메인사진" : "cambridgeroad_start",
+        "제목" : "CAMBRIDGE ROAD",
+		"작은사진" : "cambridgeroad_small",
+		"작은사진텍스트" : "어쩌구저쩌구",
+		"큰사진" : "cambridgeroad_big",
+		"중간사진" : "cambridgeroad_half",
+		"중간사진텍스트" : "어쩌구저쩌구텍스트",
+		"배경색박스텍스트" : "어저구저쩌구",
+		"배경색박스배경색" : "red",
+		"마지막사진" : "cambridgeroad_last",
+		"다음프로젝트명" : "마지막 프로젝트 입니다.",
+		"다음프로젝트메인사진" : "cambridgeroad_next"
+    },
 ];
 
 export default pdata;
