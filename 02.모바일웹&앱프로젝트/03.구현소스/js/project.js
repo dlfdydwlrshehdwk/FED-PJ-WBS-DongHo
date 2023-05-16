@@ -28,7 +28,7 @@ Vue.component("main-comp",{
     mounted(){
         // 프로젝트페이지 li들 ^를 br태그로 하기
         function setting(){
-            for(let i = 0; i <9;i++){
+            for(let i = 0; i <11;i++){
                 let a = $('.projectul li').eq(i).find('a').html();
                  $('.projectul li').eq(i).find('a').html(a.replaceAll('^','<br>'));
             }

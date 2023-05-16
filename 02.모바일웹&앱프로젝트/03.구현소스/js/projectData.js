@@ -119,9 +119,9 @@ let pdata = [
 		"다음프로젝트메인사진" : "themeadows_next"
     },
     {
-		"영어소제목" : "cambridgeroad",
+		"영어소제목" : "embankment",
 		"id" : 7,
-		"타이틀" : "CAMBRIDGE^ROAD",
+		"타이틀" : "EMBANKMENT",
         "메인사진" : "cambridgeroad_start",
         "제목" : "CAMBRIDGE ROAD",
 		"작은사진" : "cambridgeroad_small",
@@ -136,9 +136,9 @@ let pdata = [
 		"다음프로젝트메인사진" : "cambridgeroad_next"
     },
     {
-		"영어소제목" : "8번째데이터",
+		"영어소제목" : "nightingale",
 		"id" : 8,
-		"타이틀" : "8번째^데이터",
+		"타이틀" : "NIGHTINGALE",
         "메인사진" : "cambridgeroad_start",
         "제목" : "CAMBRIDGE ROAD",
 		"작은사진" : "cambridgeroad_small",
@@ -153,9 +153,9 @@ let pdata = [
 		"다음프로젝트메인사진" : "cambridgeroad_next"
     },
     {
-		"영어소제목" : "9번째데이터",
+		"영어소제목" : "swisslandhill",
 		"id" : 9,
-		"타이틀" : "9번째^데이터",
+		"타이틀" : "SWISSLAND^HILL",
         "메인사진" : "cambridgeroad_start",
         "제목" : "CAMBRIDGE ROAD",
 		"작은사진" : "cambridgeroad_small",
@@ -170,9 +170,9 @@ let pdata = [
 		"다음프로젝트메인사진" : "cambridgeroad_next"
     },
     {
-		"영어소제목" : "cambridgeroad",
+		"영어소제목" : "westhumble",
 		"id" : 10,
-		"타이틀" : "10번째^데이터",
+		"타이틀" : "WESTHUMBLE",
         "메인사진" : "cambridgeroad_start",
         "제목" : "CAMBRIDGE ROAD",
 		"작은사진" : "cambridgeroad_small",
