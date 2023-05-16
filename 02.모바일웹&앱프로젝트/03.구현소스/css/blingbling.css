@@ -28,6 +28,7 @@ body{
     /* gap : 4rem 0; */
 }
 .bg ul>li{
+    font-family: sdf;
     position: relative;
     list-style: none;
     padding: 2rem 0;

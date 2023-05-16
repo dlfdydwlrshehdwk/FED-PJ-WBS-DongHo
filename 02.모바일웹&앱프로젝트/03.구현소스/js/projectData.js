@@ -34,7 +34,7 @@ let pdata = [
 		"다음프로젝트메인사진" : "n1c_next"
     },
     {
-		"영어소제목" : "stdionisroad",
+		"eg" : "stdionisroad",
 		"id" : 2,
 		"타이틀" : "ST^DIONIS^ROAD",
         "메인사진" : "stdionis_start",
@@ -51,7 +51,7 @@ let pdata = [
 		"다음프로젝트메인사진" : "stdionis_next"
     },
     {
-		"영어소제목" : "colouredconcretehouse",
+		"eg" : "colouredconcretehouse",
 		"id" : 3,
 		"타이틀" : "COLOURED^CONCRETE^HOUSE",
         "메인사진" : "coloured_start",
@@ -68,7 +68,7 @@ let pdata = [
 		"다음프로젝트메인사진" : "coloured_next"
     },
     {
-		"영어소제목" : "whyteleafehill",
+		"eg" : "whyteleafehill",
 		"id" : 4,
 		"타이틀" : "WHYTELEAFE^HILL",
         "메인사진" : "whyteleafe_start",
@@ -85,7 +85,7 @@ let pdata = [
 		"다음프로젝트메인사진" : "whyteleafe_next"
     },
     {
-		"영어소제목" : "manororad",
+		"eg" : "manororad",
 		"id" : 5,
 		"타이틀" : "MANOR^ROAD",
         "메인사진" : "manorroad_start",
@@ -102,7 +102,7 @@ let pdata = [
 		"다음프로젝트메인사진" : "manorroad_next"
     },
     {
-		"영어소제목" : "themeadows",
+		"eg" : "themeadows",
 		"id" : 6,
 		"타이틀" : "THE^MEADOWS",
         "메인사진" : "themeadows_start",
@@ -119,7 +119,7 @@ let pdata = [
 		"다음프로젝트메인사진" : "themeadows_next"
     },
     {
-		"영어소제목" : "embankment",
+		"eg" : "embankment",
 		"id" : 7,
 		"타이틀" : "EMBANKMENT",
         "메인사진" : "cambridgeroad_start",
@@ -136,7 +136,7 @@ let pdata = [
 		"다음프로젝트메인사진" : "cambridgeroad_next"
     },
     {
-		"영어소제목" : "nightingale",
+		"eg" : "nightingale",
 		"id" : 8,
 		"타이틀" : "NIGHTINGALE",
         "메인사진" : "cambridgeroad_start",
@@ -153,7 +153,7 @@ let pdata = [
 		"다음프로젝트메인사진" : "cambridgeroad_next"
     },
     {
-		"영어소제목" : "swisslandhill",
+		"eg" : "swisslandhill",
 		"id" : 9,
 		"타이틀" : "SWISSLAND^HILL",
         "메인사진" : "cambridgeroad_start",
@@ -170,7 +170,7 @@ let pdata = [
 		"다음프로젝트메인사진" : "cambridgeroad_next"
     },
     {
-		"영어소제목" : "westhumble",
+		"eg" : "westhumble",
 		"id" : 10,
 		"타이틀" : "WESTHUMBLE",
         "메인사진" : "cambridgeroad_start",
