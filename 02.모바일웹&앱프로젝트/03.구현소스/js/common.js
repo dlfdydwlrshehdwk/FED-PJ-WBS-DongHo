@@ -8,7 +8,7 @@ function logo(){
     })
     $('.logo').click(function(){
         // 1. 흰원에 클래스 on주기
-        $('.whiteone').addClass('on');
+        white()
 
         // let a = $(this).className
         // console.log(a)
@@ -34,3 +34,6 @@ function logo(){
     })
     // 로고 누르면 메인페이지로
 };
+function white(){
+    $('.whiteone').addClass('on');
+}

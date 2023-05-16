@@ -99,41 +99,7 @@ const comData = {
 `,
 
     login:`
-    <div class="loginbg">
-            <div class="loginwrap">
-                <div class="login_logo">
-                    <img src="./img/favi.JPG" alt="">
-                </div>
-                <div class="loginbx">
-                    <div>
-                        <div>
-                            <span>아이디&nbsp;&nbsp;  </span>
-                            <input type="text" name="id" id="id" maxlength="10">
-                        </div>
-                        <div>
-                            <span>비밀번호</span>
-                            <input type="password" name="pw" id="pw" maxlength="10">
-                        </div>
-                    </div>
-                    <div class="login">
-                        <span>로그인</span>
-                    </div>
-                </div>
-                <div class="close">
-                    X
-                </div>
-                <div class="graybx">
-                    <span><a href="">아이디/비밀번호 찾기</a></span>
-                    <span><a href="">회원가입</a></span>
-                </div>
-            </div>
-        </div>
-    `,
-    white:`
-    <div class="whiteonewrap">
-            <div class="whiteone">
-            </div>
-        </div>
+    
     `,
     marea:`
     <main>
@@ -292,7 +258,7 @@ const comData = {
                             <!-- 만든이 -->
                             <li>
                                 <div>The one who made it</div>
-                                <p>김동호</p>
+                                <p>Dong Ho Kim</p>
                             </li>
                         </ul>
                         <span class="p4span">Show your project</span>
@@ -337,6 +303,37 @@ const comData = {
                 </div>
             </footer>
         </div>
+    `,
+    login:`
+    <div class="loginbg">
+        <div class="loginwrap">
+            <div class="login_logo">
+                <img src="./img/favi.JPG" alt="">
+            </div>
+            <div class="loginbx">
+                <div>
+                    <div>
+                        <span>아이디&nbsp;&nbsp;  </span>
+                        <input type="text" name="id" id="id" maxlength="10">
+                    </div>
+                    <div>
+                        <span>비밀번호</span>
+                        <input type="password" name="pw" id="pw" maxlength="10">
+                    </div>
+                </div>
+                <div class="login">
+                    <span>로그인</span>
+                </div>
+            </div>
+            <div class="close">
+                X
+            </div>
+            <div class="graybx">
+                <span><a href="">아이디/비밀번호 찾기</a></span>
+                <span><a href="">회원가입</a></span>
+            </div>
+        </div>
+    </div>
     `,
 
 

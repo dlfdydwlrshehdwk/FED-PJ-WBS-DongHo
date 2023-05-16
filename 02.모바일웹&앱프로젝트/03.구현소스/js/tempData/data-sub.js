@@ -1,6 +1,6 @@
 let sdata = {
     mainarea :`
-    <main>
+        <main>
             <div class="bigpicturewrap">
                 <div class="bigpicture">
                     <img src="./img/coloured_start.jpg" alt="">
@@ -70,8 +70,6 @@ let sdata = {
 
                 </div>
             </section>
-
-
         </main>
     `,
 }

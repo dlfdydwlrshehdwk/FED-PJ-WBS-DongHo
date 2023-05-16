@@ -167,7 +167,7 @@ function catWheel(){
         // 어페에에엔드 프리펜드 글씨 짤라서 위로올라가는 함수
         apdprpd();
 
-        console.log('pno',pno,'pno2',pno2)
+        // console.log('pno',pno,'pno2',pno2)
     };
 
     // ul과 이미지가 움직여요 함수 //
@@ -211,7 +211,7 @@ function catWheel(){
         let ulh = $('.projectul').offset().top;
         // ulh 내림계산
         let ulhn = Math.floor(ulh)
-        console.log('li높이값:',2*lihn,'\nul의 윗대가리:',ulhn);
+        // console.log('li높이값:',2*lihn,'\nul의 윗대가리:',ulhn);
 
         // 그림 변수
         // 왼쪽박스
@@ -225,7 +225,7 @@ function catWheel(){
         // 돔기준에서 왼쪽pr박스 의 윗대가리 위치차이
         let prlh = prleft.offset().top;
 
-        console.log('pr list높이',prllih,'prl박스 윗대가리',prlh)
+        // console.log('pr list높이',prllih,'prl박스 윗대가리',prlh)
 
         // 오른박스
         const prright = $('.prright')
@@ -238,7 +238,7 @@ function catWheel(){
         // 돔기준에서 왼쪽pr박스 의 윗대가리 위치차이
         let prrh = prleft.offset().top;
 
-        console.log('pr list높이',prlih,'prl박스 윗대가리',prlh)
+        // console.log('pr list높이',prlih,'prl박스 윗대가리',prlh)
 
 
 
@@ -262,7 +262,7 @@ function catWheel(){
                 projectul.append(a)
 
             },10)
-            console.log('li높이값:',2*lihn,'\nul의 윗대가리:',ulhn);
+            // console.log('li높이값:',2*lihn,'\nul의 윗대가리:',ulhn);
         }
         // 스크롤 올릴때
         else if(ulhn >= 0){
