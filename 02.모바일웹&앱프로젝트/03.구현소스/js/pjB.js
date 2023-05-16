@@ -1,21 +1,23 @@
 
-
 // 프로젝트 뿌려주기
 function pjB(){
+    console.log('pj뿌리기')
+    
     $('html,body').animate({scrollTop : '0px'})
     // 서브페이지 함수구역 - 프로젝트 뿌려주는부분
-    // 큰그림 아래에서 위로
+    // 큰그림 아래에서 위로오게 클래스on주기
+    $('.bigpicture').addClass('on')
+    // 큰그림 커지는효과
     $('.bigpicture').css({
         transition : '2s linear',
         transform : 'scale(1)',
     })
-    $('.bigpicture').addClass('on')
 
     let zxc = $('.tit span')
     let dsa = zxc.eq(0).text()
     let dsa2 = zxc.eq(1).text()
     let dsa3 = zxc.eq(2).text()
-    console.log(dsa)
+    // console.log(dsa)
 
     hcode(dsa,$('.tit'),dsa2,dsa3)
     setTimeout(()=>{
@@ -59,7 +61,7 @@ function pjB(){
     }
 
 
-    console.log(hcode)
+    // console.log(hcode)
 }
 
 export default pjB;

@@ -1,6 +1,6 @@
 let pdata = [
     {
-		"영어소제목" : "teamakers",
+		"eg" : "teamakers",
 		"id" : 0,
 		"타이틀" : "TEAMAKER'S^GUESTHOUSE",
         "메인사진" : "teamakers_start",
@@ -17,7 +17,7 @@ let pdata = [
 		"다음프로젝트메인사진" : "teamakers_next"
     },
     {
-		"영어소제목" : "n1c",
+		"eg" : "n1c",
 		"id" : 1,
 		"타이틀" : "N1C",
         "메인사진" : "n1c_start",
@@ -108,7 +108,7 @@ let pdata = [
         "메인사진" : "themeadows_start",
         "제목" : "THE MEADOWS",
 		"작은사진" : "themeadows_small",
-		"작은사진텍스트" : "어쩌구저쩌구",
+		"작은사진텍스트" : 0,
 		"큰사진" : "themeadows_big",
 		"중간사진" : "themeadows_half",
 		"중간사진텍스트" : "어쩌구저쩌구텍스트",

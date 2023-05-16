@@ -4,8 +4,8 @@ let pjdata = {
             <div class="wrap">
                 <div class="bg">
                     <ul class="projectul">
-                        <li v-for="(v,i) in data" class="white">
-                        <a>
+                        <li v-for="(v,i) in data" :key="i" class="white2">
+                        <a @click="md = 1; push = i">
                         {{v.타이틀}}
                         </a>
                         </li>
@@ -18,135 +18,135 @@ let pjdata = {
                         <li>
                             <div>
                                 <a href="">
-                                    <img src="./img/108degrees_small.jpg" alt="">
+                                    <img src="./img/108degrees/small.jpg" alt="">
                                 </a>
                             </div>
                             <div>
                                 <a href="">
-                                    <img src="./img/buckhurst_start.jpg" alt="">
+                                    <img src="./img/buckhurst/start.jpg" alt="">
                                 </a>
                             </div>
                             <div>
                                 <a href="">
-                                    <img src="./img/buckhurst_colorbg.jpg" alt="">
+                                    <img src="./img/buckhurst/colorbg.jpg" alt="">
                                 </a>
                             </div>
                             <div>
                                 <a href="">
-                                    <img src="./img/buckhurst_half.jpg" alt="">
+                                    <img src="./img/buckhurst/half.jpg" alt="">
                                 </a>
                             </div>
                             <div>
                                 <a href="">
-                                    <img src="./img/buckhurst_colorbg.jpg" alt="">
-                                </a>
-                            </div>
-                        </li>
-                        <li>
-                            <div>
-                                <a href="">
-                                    <img src="./img/manorroad_start.jpg" alt="">
-                                </a>
-                            </div>
-                            <div>
-                                <a href="">
-                                    <img src="./img/manorroad_big.jpg" alt="">
-                                </a>
-                            </div>
-                            <div>
-                                <a href="">
-                                    <img src="./img/manorroad_half.gif" alt="">
-                                </a>
-                            </div>
-                            <div>
-                                <a href="">
-                                    <img src="./img/manorroad_last.jpg" alt="">
-                                </a>
-                            </div>
-                            <div>
-                                <a href="">
-                                    <img src="./img/manorroad_next.jpg" alt="">
+                                    <img src="./img/buckhurst/colorbg.jpg" alt="">
                                 </a>
                             </div>
                         </li>
                         <li>
                             <div>
                                 <a href="">
-                                    <img src="./img/dental_small.jpg" alt="">
+                                    <img src="./img/manorroad/start.jpg" alt="">
                                 </a>
                             </div>
                             <div>
                                 <a href="">
-                                    <img src="./img/dental_big.jpg" alt="">
+                                    <img src="./img/manorroad/big.jpg" alt="">
                                 </a>
                             </div>
                             <div>
                                 <a href="">
-                                    <img src="./img/dental_half.jpg" alt="">
+                                    <img src="./img/manorroad/half.gif" alt="">
                                 </a>
                             </div>
                             <div>
                                 <a href="">
-                                    <img src="./img/dental_half2.jpg" alt="">
+                                    <img src="./img/manorroad/last.jpg" alt="">
                                 </a>
                             </div>
                             <div>
                                 <a href="">
-                                    <img src="./img/dental_last.jpg" alt="">
-                                </a>
-                            </div>
-                        </li>
-                        <li>
-                            <div>
-                                <a href="">
-                                    <img src="./img/108degrees_small.jpg" alt="">
-                                </a>
-                            </div>
-                            <div>
-                                <a href="">
-                                    <img src="./img/buckhurst_start.jpg" alt="">
-                                </a>
-                            </div>
-                            <div>
-                                <a href="">
-                                    <img src="./img/buckhurst_colorbg.jpg" alt="">
-                                </a>
-                            </div>
-                            <div>
-                                <a href="">
-                                    <img src="./img/buckhurst_half.jpg" alt="">
-                                </a>
-                            </div>
-                            <div>
-                                <a href="">
-                                    <img src="./img/buckhurst_colorbg.jpg" alt="">
+                                    <img src="./img/manorroad/next.jpg" alt="">
                                 </a>
                             </div>
                         </li>
                         <li>
                             <div>
                                 <a href="">
-                                    <img src="./img/nightingale_big.jpg" alt="">
+                                    <img src="./img/dental/small.jpg" alt="">
                                 </a>
                             </div>
                             <div>
                                 <a href="">
-                                    <img src="./img/nightingale_half.jpg" alt="">
+                                    <img src="./img/dental/big.jpg" alt="">
                                 </a>
                             </div>
                             <div>
                                 <a href="">
-                                    <img src="./img/nightingale_last.jpg" alt="">
+                                    <img src="./img/dental/half.jpg" alt="">
                                 </a>
                             </div>
                             <div>
                                 <a href="">
-                                    <img src="./img/nightingale_next.png" alt="">
+                                    <img src="./img/dental/half2.jpg" alt="">
                                 </a>
                             </div>
                             <div>
                                 <a href="">
-                                    <img src="./img/nightingale_start.jpg" alt="">
+                                    <img src="./img/dental/last.jpg" alt="">
+                                </a>
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                                <a href="">
+                                    <img src="./img/108degrees/small.jpg" alt="">
+                                </a>
+                            </div>
+                            <div>
+                                <a href="">
+                                    <img src="./img/buckhurst/start.jpg" alt="">
+                                </a>
+                            </div>
+                            <div>
+                                <a href="">
+                                    <img src="./img/buckhurst/colorbg.jpg" alt="">
+                                </a>
+                            </div>
+                            <div>
+                                <a href="">
+                                    <img src="./img/buckhurst/half.jpg" alt="">
+                                </a>
+                            </div>
+                            <div>
+                                <a href="">
+                                    <img src="./img/buckhurst/colorbg.jpg" alt="">
+                                </a>
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                                <a href="">
+                                    <img src="./img/nightingale/big.jpg" alt="">
+                                </a>
+                            </div>
+                            <div>
+                                <a href="">
+                                    <img src="./img/nightingale/half.jpg" alt="">
+                                </a>
+                            </div>
+                            <div>
+                                <a href="">
+                                    <img src="./img/nightingale/last.jpg" alt="">
+                                </a>
+                            </div>
+                            <div>
+                                <a href="">
+                                    <img src="./img/nightingale/next.png" alt="">
+                                </a>
+                            </div>
+                            <div>
+                                <a href="">
+                                    <img src="./img/nightingale/start.jpg" alt="">
                                 </a>
                             </div>
                         </li>
@@ -157,195 +157,217 @@ let pjdata = {
                         <li>
                             <div>
                                 <a href="">
-                                    <img src="./img/108degrees_small.jpg" alt="">
+                                    <img src="./img/108degrees/small.jpg" alt="">
                                 </a>
                             </div>
                             <div>
                                 <a href="">
-                                    <img src="./img/buckhurst_start.jpg" alt="">
+                                    <img src="./img/buckhurst/start.jpg" alt="">
                                 </a>
                             </div>
                             <div>
                                 <a href="">
-                                    <img src="./img/buckhurst_colorbg.jpg" alt="">
+                                    <img src="./img/buckhurst/colorbg.jpg" alt="">
                                 </a>
                             </div>
                             <div>
                                 <a href="">
-                                    <img src="./img/buckhurst_half.jpg" alt="">
+                                    <img src="./img/buckhurst/half.jpg" alt="">
                                 </a>
                             </div>
                             <div>
                                 <a href="">
-                                    <img src="./img/buckhurst_colorbg.jpg" alt="">
-                                </a>
-                            </div>
-                        </li>
-                        <li>
-                            <div>
-                                <a href="">
-                                    <img src="./img/108degrees_small.jpg" alt="">
-                                </a>
-                            </div>
-                            <div>
-                                <a href="">
-                                    <img src="./img/buckhurst_start.jpg" alt="">
-                                </a>
-                            </div>
-                            <div>
-                                <a href="">
-                                    <img src="./img/buckhurst_colorbg.jpg" alt="">
-                                </a>
-                            </div>
-                            <div>
-                                <a href="">
-                                    <img src="./img/buckhurst_half.jpg" alt="">
-                                </a>
-                            </div>
-                            <div>
-                                <a href="">
-                                    <img src="./img/buckhurst_colorbg.jpg" alt="">
+                                    <img src="./img/buckhurst/colorbg.jpg" alt="">
                                 </a>
                             </div>
                         </li>
                         <li>
                             <div>
                                 <a href="">
-                                    <img src="./img/108degrees_small.jpg" alt="">
+                                    <img src="./img/108degrees/small.jpg" alt="">
                                 </a>
                             </div>
                             <div>
                                 <a href="">
-                                    <img src="./img/buckhurst_start.jpg" alt="">
+                                    <img src="./img/buckhurst/start.jpg" alt="">
                                 </a>
                             </div>
                             <div>
                                 <a href="">
-                                    <img src="./img/buckhurst_colorbg.jpg" alt="">
+                                    <img src="./img/buckhurst/colorbg.jpg" alt="">
                                 </a>
                             </div>
                             <div>
                                 <a href="">
-                                    <img src="./img/buckhurst_half.jpg" alt="">
+                                    <img src="./img/buckhurst/half.jpg" alt="">
                                 </a>
                             </div>
                             <div>
                                 <a href="">
-                                    <img src="./img/buckhurst_colorbg.jpg" alt="">
-                                </a>
-                            </div>
-                        </li>
-                        <li>
-                            <div>
-                                <a href="">
-                                    <img src="./img/108degrees_small.jpg" alt="">
-                                </a>
-                            </div>
-                            <div>
-                                <a href="">
-                                    <img src="./img/buckhurst_start.jpg" alt="">
-                                </a>
-                            </div>
-                            <div>
-                                <a href="">
-                                    <img src="./img/buckhurst_colorbg.jpg" alt="">
-                                </a>
-                            </div>
-                            <div>
-                                <a href="">
-                                    <img src="./img/buckhurst_half.jpg" alt="">
-                                </a>
-                            </div>
-                            <div>
-                                <a href="">
-                                    <img src="./img/buckhurst_colorbg.jpg" alt="">
+                                    <img src="./img/buckhurst/colorbg.jpg" alt="">
                                 </a>
                             </div>
                         </li>
                         <li>
                             <div>
                                 <a href="">
-                                    <img src="./img/108degrees_small.jpg" alt="">
+                                    <img src="./img/108degrees/small.jpg" alt="">
                                 </a>
                             </div>
                             <div>
                                 <a href="">
-                                    <img src="./img/buckhurst_start.jpg" alt="">
+                                    <img src="./img/buckhurst/start.jpg" alt="">
                                 </a>
                             </div>
                             <div>
                                 <a href="">
-                                    <img src="./img/buckhurst_colorbg.jpg" alt="">
+                                    <img src="./img/buckhurst/colorbg.jpg" alt="">
                                 </a>
                             </div>
                             <div>
                                 <a href="">
-                                    <img src="./img/buckhurst_half.jpg" alt="">
+                                    <img src="./img/buckhurst/half.jpg" alt="">
                                 </a>
                             </div>
                             <div>
                                 <a href="">
-                                    <img src="./img/buckhurst_colorbg.jpg" alt="">
+                                    <img src="./img/buckhurst/colorbg.jpg" alt="">
+                                </a>
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                                <a href="">
+                                    <img src="./img/108degrees/small.jpg" alt="">
+                                </a>
+                            </div>
+                            <div>
+                                <a href="">
+                                    <img src="./img/buckhurst/start.jpg" alt="">
+                                </a>
+                            </div>
+                            <div>
+                                <a href="">
+                                    <img src="./img/buckhurst/colorbg.jpg" alt="">
+                                </a>
+                            </div>
+                            <div>
+                                <a href="">
+                                    <img src="./img/buckhurst/half.jpg" alt="">
+                                </a>
+                            </div>
+                            <div>
+                                <a href="">
+                                    <img src="./img/buckhurst/colorbg.jpg" alt="">
+                                </a>
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                                <a href="">
+                                    <img src="./img/108degrees/small.jpg" alt="">
+                                </a>
+                            </div>
+                            <div>
+                                <a href="">
+                                    <img src="./img/buckhurst/start.jpg" alt="">
+                                </a>
+                            </div>
+                            <div>
+                                <a href="">
+                                    <img src="./img/buckhurst/colorbg.jpg" alt="">
+                                </a>
+                            </div>
+                            <div>
+                                <a href="">
+                                    <img src="./img/buckhurst/half.jpg" alt="">
+                                </a>
+                            </div>
+                            <div>
+                                <a href="">
+                                    <img src="./img/buckhurst/colorbg.jpg" alt="">
                                 </a>
                             </div>
                         </li>
                     </ol>
                 </div>
             </div>
-        </main>
-        
-    `,
-    modal:`
-    <div class="modal">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            <div class="modal" v-if=" md == true">
         <div class="bigpicturewrap">
         <div class="bigpicture">
-            <img src="./img/coloured_start.jpg" alt="">
+            <img :src="
+            './img/'+data[push].eg+'/start.jpg'
+            " alt="">
         </div>
     </div>
     <div class="titwrap">
         <div class="tit">
-            <span>COLOURED</span>
-            <span>CONCRETE</span>
-            <span>HOUSE</span>
+            {{data[push].타이틀}}
         </div>
     </div>
     <div class="mdsizewrap">
         <div class="mdsize">
-            <img src="./img/coloured_small.jpg" alt="">
+            <img :src="
+            './img/'+data[push].eg+'/small.jpg'
+            " alt="">
         </div>
         <div class="mdsizetxt">
-            <p>This private 4 storey house in Singapore is built with a pigmented</p>
-            <p>concrete structure as it's primary structural system. Pigments</p>
-            <p>change colour as you escalate up the building.</p>
+            {{data[push].작은사진텍스트}}
         </div>
     </div>
     <div class="bigpicture2wrap">
         <div class="bigpicture2">
-            <img src="./img/coloured_big.jpg" alt="">
+            <img :src="
+            './img/'+data[push].eg+'/big.jpg'
+            " alt="">
         </div>
     </div>
     <section class="img50txt50wrap">
         <div class="img50txt50">
             <div class="img50txt50_imgbx">
-                <img src="./img/coloured_half.jpg" alt="">
+                <img :src="
+                './img/'+data[push].eg+'/half.jpg'
+                " alt="">
             </div>
             <div class="img50txt50_txtbx">
-                Externally, the building alternately shifts the facade plain<br>
-                in order to articulate the facade as well as creating all-<br>
-                important shading for the bedrooms and living spaces.<br><br>
-                layouts are orientated to ensure both cross and stack<br>
-                The building is powered through rooftop solar panels and<br>
-                ventilation throughout the house to minimize the need for<br>
-                mechanical ventilation.<br>
+                {{data[push].중간사진텍스트}}
             </div>
         </div>
     </section>
     <div class="colorbgwrap">
         <div class="colorbg">
             <h2>
-                <span>Simple & sleek</span>
-                <span>with a splash of</span>
-                <span>personality</span>
+                {{data[push].배경색박스텍스트}}
             </h2>
         </div>
     </div>
@@ -360,14 +382,20 @@ let pjdata = {
             </div>
             <div class="nextPRimgbxwrap">
                 <div class="nextPRimgbx">
-                    <img src="./img/coloured_next.jpg" alt="">
+                    <img :src="
+                    './img/'+data[push].eg+'/next.jpg'
+                    " alt="">
                 </div>
             </div>
 
         </div>
     </section>
-    
     </div>
+        </main>
+        
+    `,
+    modal:`
+    
     `,
 }
 

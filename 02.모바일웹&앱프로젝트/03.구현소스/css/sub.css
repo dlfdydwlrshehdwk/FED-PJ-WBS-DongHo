@@ -19,7 +19,7 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transition: translateY .5s ease-in-out;
+    transition: transform .5s ease-in-out;
     /* 그림 아래에서 위로 튀어나오기위한 셋팅조건 */
     transform: translateY(50%);
 }
