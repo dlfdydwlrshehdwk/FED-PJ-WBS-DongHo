@@ -4,17 +4,10 @@ let pjdata = {
             <div class="wrap">
                 <div class="bg">
                     <ul class="projectul">
-                        <li class="white"><a>Hello11<br> Nice to meet U!</a></li>
-                        <li class="white"><a>Hello1<br> Nice to meet U!</a></li>
-                        <li class="white"><a>Hello2<br> Nice to meet U!</a></li>
-                        <li class="white"><a>Hello3<br> Nice to meet U!</a></li>
-                        <li class="white"><a>Hello4<br> Nice to meet U!</a></li>
-                        <li class="white"><a>Hello5<br> Nice to meet U!</a></li>
-                        <li class="white"><a>Hello6<br> Nice to meet U!</a></li>
-                        <li class="white"><a>Hello7<br> Nice to meet U!</a></li>
-                        <li class="white"><a>Hello8<br> Nice to meet U!</a></li>
-                        <li class="white"><a>Hello9<br> Nice to meet U!</a></li>
-                        <li class="white"><a>Hello10<br> Nice to meet U!</a></li>
+                        <li v-for="(v,i) in 11" class="white">
+                        <a>Hello{{i}}<br> Nice to meet U!</a>
+                        </li>
+                        
                     </ul>
                 </div>
                 <!-- 패럴렉스 이미지 리스트~ -->
