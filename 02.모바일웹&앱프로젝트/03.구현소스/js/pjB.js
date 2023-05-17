@@ -6,6 +6,7 @@ function pjB(){
     $('html,body').animate({scrollTop : '0px'})
     // 서브페이지 함수구역 - 프로젝트 뿌려주는부분
     // 큰그림 아래에서 위로오게 클래스on주기
+    console.log($('.bigpicture'))
     $('.bigpicture').addClass('on')
     // 큰그림 커지는효과
     $('.bigpicture').css({

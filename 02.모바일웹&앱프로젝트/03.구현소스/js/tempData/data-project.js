@@ -1,5 +1,5 @@
 let pjdata = {
-    mainarea : `
+    mainarea: `
     <main>
             <div class="wrap">
                 <div class="bg">
@@ -15,280 +15,86 @@ let pjdata = {
                 <!-- 왼쪽 이미지 -->
                 <div class="pr">
                     <ol class="prleft">
-                        <li>
+                        <li v-for="(v,i) in data" :key="i">
                             <div>
                                 <a href="">
-                                    <img src="./img/108degrees/small.jpg" alt="">
+                                    <img :src="
+                                    './img/'+data[i].eg+'/small.jpg'
+                                    " alt="">
                                 </a>
                             </div>
                             <div>
                                 <a href="">
-                                    <img src="./img/buckhurst/start.jpg" alt="">
+                                    <img :src="
+                                    './img/'+data[i].eg+'/start.jpg'
+                                    " alt="">
                                 </a>
                             </div>
                             <div>
                                 <a href="">
-                                    <img src="./img/buckhurst/colorbg.jpg" alt="">
+                                    <img :src="
+                                    './img/'+data[i].eg+'/last.jpg'
+                                    " alt="">
                                 </a>
                             </div>
                             <div>
                                 <a href="">
-                                    <img src="./img/buckhurst/half.jpg" alt="">
+                                    <img :src="
+                                    './img/'+data[i].eg+'/half.jpg'
+                                    " alt="">
                                 </a>
                             </div>
                             <div>
                                 <a href="">
-                                    <img src="./img/buckhurst/colorbg.jpg" alt="">
-                                </a>
-                            </div>
-                        </li>
-                        <li>
-                            <div>
-                                <a href="">
-                                    <img src="./img/manorroad/start.jpg" alt="">
-                                </a>
-                            </div>
-                            <div>
-                                <a href="">
-                                    <img src="./img/manorroad/big.jpg" alt="">
-                                </a>
-                            </div>
-                            <div>
-                                <a href="">
-                                    <img src="./img/manorroad/half.gif" alt="">
-                                </a>
-                            </div>
-                            <div>
-                                <a href="">
-                                    <img src="./img/manorroad/last.jpg" alt="">
-                                </a>
-                            </div>
-                            <div>
-                                <a href="">
-                                    <img src="./img/manorroad/next.jpg" alt="">
+                                    <img :src="
+                                    './img/'+data[i].eg+'/big.jpg'
+                                    " alt="">
                                 </a>
                             </div>
                         </li>
-                        <li>
-                            <div>
-                                <a href="">
-                                    <img src="./img/dental/small.jpg" alt="">
-                                </a>
-                            </div>
-                            <div>
-                                <a href="">
-                                    <img src="./img/dental/big.jpg" alt="">
-                                </a>
-                            </div>
-                            <div>
-                                <a href="">
-                                    <img src="./img/dental/half.jpg" alt="">
-                                </a>
-                            </div>
-                            <div>
-                                <a href="">
-                                    <img src="./img/dental/half2.jpg" alt="">
-                                </a>
-                            </div>
-                            <div>
-                                <a href="">
-                                    <img src="./img/dental/last.jpg" alt="">
-                                </a>
-                            </div>
-                        </li>
-                        <li>
-                            <div>
-                                <a href="">
-                                    <img src="./img/108degrees/small.jpg" alt="">
-                                </a>
-                            </div>
-                            <div>
-                                <a href="">
-                                    <img src="./img/buckhurst/start.jpg" alt="">
-                                </a>
-                            </div>
-                            <div>
-                                <a href="">
-                                    <img src="./img/buckhurst/colorbg.jpg" alt="">
-                                </a>
-                            </div>
-                            <div>
-                                <a href="">
-                                    <img src="./img/buckhurst/half.jpg" alt="">
-                                </a>
-                            </div>
-                            <div>
-                                <a href="">
-                                    <img src="./img/buckhurst/colorbg.jpg" alt="">
-                                </a>
-                            </div>
-                        </li>
-                        <li>
-                            <div>
-                                <a href="">
-                                    <img src="./img/nightingale/big.jpg" alt="">
-                                </a>
-                            </div>
-                            <div>
-                                <a href="">
-                                    <img src="./img/nightingale/half.jpg" alt="">
-                                </a>
-                            </div>
-                            <div>
-                                <a href="">
-                                    <img src="./img/nightingale/last.jpg" alt="">
-                                </a>
-                            </div>
-                            <div>
-                                <a href="">
-                                    <img src="./img/nightingale/next.png" alt="">
-                                </a>
-                            </div>
-                            <div>
-                                <a href="">
-                                    <img src="./img/nightingale/start.jpg" alt="">
-                                </a>
-                            </div>
-                        </li>
-        
+                        
+                        
                     </ol>
                     <!-- 오른쪽 이미지 -->
                     <ol class="prright">
-                        <li>
+                        <li v-for="(v,i) in data" key="i">
                             <div>
                                 <a href="">
-                                    <img src="./img/108degrees/small.jpg" alt="">
+                                    <img :src="
+                                    './img/'+data[i].eg+'/start.jpg'
+                                    " alt="">
                                 </a>
                             </div>
                             <div>
                                 <a href="">
-                                    <img src="./img/buckhurst/start.jpg" alt="">
+                                    <img :src="
+                                    './img/'+data[i].eg+'/half.jpg'
+                                    " alt="">
                                 </a>
                             </div>
                             <div>
                                 <a href="">
-                                    <img src="./img/buckhurst/colorbg.jpg" alt="">
+                                    <img :src="
+                                    './img/'+data[i].eg+'/next.jpg'
+                                    " alt="">
                                 </a>
                             </div>
                             <div>
                                 <a href="">
-                                    <img src="./img/buckhurst/half.jpg" alt="">
+                                    <img :src="
+                                    './img/'+data[i].eg+'/big.jpg'
+                                    " alt="">
                                 </a>
                             </div>
                             <div>
                                 <a href="">
-                                    <img src="./img/buckhurst/colorbg.jpg" alt="">
-                                </a>
-                            </div>
-                        </li>
-                        <li>
-                            <div>
-                                <a href="">
-                                    <img src="./img/108degrees/small.jpg" alt="">
-                                </a>
-                            </div>
-                            <div>
-                                <a href="">
-                                    <img src="./img/buckhurst/start.jpg" alt="">
-                                </a>
-                            </div>
-                            <div>
-                                <a href="">
-                                    <img src="./img/buckhurst/colorbg.jpg" alt="">
-                                </a>
-                            </div>
-                            <div>
-                                <a href="">
-                                    <img src="./img/buckhurst/half.jpg" alt="">
-                                </a>
-                            </div>
-                            <div>
-                                <a href="">
-                                    <img src="./img/buckhurst/colorbg.jpg" alt="">
+                                    <img :src="
+                                    './img/'+data[i].eg+'/small.jpg'
+                                    " alt="">
                                 </a>
                             </div>
                         </li>
-                        <li>
-                            <div>
-                                <a href="">
-                                    <img src="./img/108degrees/small.jpg" alt="">
-                                </a>
-                            </div>
-                            <div>
-                                <a href="">
-                                    <img src="./img/buckhurst/start.jpg" alt="">
-                                </a>
-                            </div>
-                            <div>
-                                <a href="">
-                                    <img src="./img/buckhurst/colorbg.jpg" alt="">
-                                </a>
-                            </div>
-                            <div>
-                                <a href="">
-                                    <img src="./img/buckhurst/half.jpg" alt="">
-                                </a>
-                            </div>
-                            <div>
-                                <a href="">
-                                    <img src="./img/buckhurst/colorbg.jpg" alt="">
-                                </a>
-                            </div>
-                        </li>
-                        <li>
-                            <div>
-                                <a href="">
-                                    <img src="./img/108degrees/small.jpg" alt="">
-                                </a>
-                            </div>
-                            <div>
-                                <a href="">
-                                    <img src="./img/buckhurst/start.jpg" alt="">
-                                </a>
-                            </div>
-                            <div>
-                                <a href="">
-                                    <img src="./img/buckhurst/colorbg.jpg" alt="">
-                                </a>
-                            </div>
-                            <div>
-                                <a href="">
-                                    <img src="./img/buckhurst/half.jpg" alt="">
-                                </a>
-                            </div>
-                            <div>
-                                <a href="">
-                                    <img src="./img/buckhurst/colorbg.jpg" alt="">
-                                </a>
-                            </div>
-                        </li>
-                        <li>
-                            <div>
-                                <a href="">
-                                    <img src="./img/108degrees/small.jpg" alt="">
-                                </a>
-                            </div>
-                            <div>
-                                <a href="">
-                                    <img src="./img/buckhurst/start.jpg" alt="">
-                                </a>
-                            </div>
-                            <div>
-                                <a href="">
-                                    <img src="./img/buckhurst/colorbg.jpg" alt="">
-                                </a>
-                            </div>
-                            <div>
-                                <a href="">
-                                    <img src="./img/buckhurst/half.jpg" alt="">
-                                </a>
-                            </div>
-                            <div>
-                                <a href="">
-                                    <img src="./img/buckhurst/colorbg.jpg" alt="">
-                                </a>
-                            </div>
-                        </li>
+                        
                     </ol>
                 </div>
             </div>
@@ -394,9 +200,9 @@ let pjdata = {
         </main>
         
     `,
-    modal:`
+    modal: `
     
     `,
-}
+};
 
 export default pjdata;

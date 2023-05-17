@@ -33,12 +33,20 @@ Vue.component("main-comp",{
                  $('.projectul li').eq(i).find('a').html(a.replaceAll('^','<br>'));
             }
         }
+        // 모달안의 애들이 안잡힘.
         function hi(){
             $('.white2').click(()=>{
                 console.log('hi실행')
-                pjB()
-                
+                  $(()=>{
+                      pjB()
+                  })  
             })
+            $('.bigpicture').on('click',()=>{
+                console.log('hi')
+            })
+        }
+        function setting2(){
+
         }
         // function white(){
         //     $('.white2').click(()=>{
@@ -56,27 +64,6 @@ Vue.component("main-comp",{
 
     },
 }); // 메인영역 템플릿 셋팅
-
-// 모달영역 메뉴 뷰 템플릿 셋팅
-// Vue.component("modal-comp",{
-//     template : pjdata.modal,
-//     data(){
-//         return{
-//             md : false,
-//         }
-//     }
-// }); 
-// 모달영역 템플릿 셋팅
-
-// 로그인영역 메뉴 뷰 템플릿 셋팅
-// Vue.component("login-comp",{
-//     template : comData.tarea,
-// }); // 로그인영역 템플릿 셋팅
-
-// // 화이트영역 메뉴 뷰 템플릿 셋팅
-// Vue.component("white-comp",{
-//     template : comData.white,
-// }); // 화이트영역 템플릿 셋팅
 
 
 // 상단영역 뷰 인스턴스 생성
@@ -102,17 +89,6 @@ new Vue({
         // 캣휠 실행
         catWheel()
         console.log(data[1])
+        $('.bigpicture').addClass('on')
     },
 })
-
-// 모달영역 뷰 인스턴스 생성
-
-// new Vue({
-//     el:"#modal",
-//     created:function(){
-        
-//     },
-//     mounted:function(){
-//         pjB()
-//     },
-// })

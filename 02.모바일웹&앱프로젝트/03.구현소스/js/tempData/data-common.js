@@ -189,23 +189,23 @@ const comData = {
                     <!-- 이미지 박스들~ -->
                     <!-- 왼쪽박스 -->
                     <div class="pg3_leftbx pg3imgbx">
-                        <img src="./img/108degrees_last.jpg" alt="">
+                        <img src="./img/swisslandhill/big.jpg" alt="">
                     </div>
                     <!-- 왼쪽에서 제일큰박스 -->
                     <div class="pg3_bigbx pg3imgbx">
-                        <img src="./img/108degrees_next.jpg" alt="">
+                        <img src="./img/swisslandhill/start.jpg" alt="">
                     </div>
                     <!-- 가운데박스 -->
                     <div class="pg3_centerbx pg3imgbx">
-                        <img src="./img/108degrees_small.jpg" alt="">
+                        <img src="./img/swisslandhill/half.jpg" alt="">
                     </div>
                     <!-- 밑박스 -->
                     <div class="pg3_btmbx pg3imgbx">
-                        <img src="./img/108degrees_start.jpg" alt="">
+                        <img src="./img/swisslandhill/next.jpg" alt="">
                     </div>
                     <!-- 오른쪽박스 -->
                     <div class="pg3_rightbx pg3imgbx">
-                        <img src="./img/buckhurst_colorbg.jpg" alt="">
+                        <img src="./img/swisslandhill/last.jpg" alt="">
                     </div>
 
                     <!-- 텍스트박스들~ -->
@@ -223,6 +223,7 @@ const comData = {
                         </div>
                     </div>
                     <!-- 버튼들 -->
+                    <!--
                     <div class="pg3_btns">
                         <div class="leftbtn">
                             <a href="">
@@ -237,6 +238,7 @@ const comData = {
                             </a>
                         </div>
                     </div>
+                    -->
 
                 </div>
             </div>
