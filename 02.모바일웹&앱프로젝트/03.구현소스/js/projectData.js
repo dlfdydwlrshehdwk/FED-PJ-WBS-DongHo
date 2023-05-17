@@ -70,9 +70,18 @@ let pdata = [
         작은사진텍스트: `
 		Set in Whyteleafe hill, Surrey, this 9 unit scheme is located on a<br>corner plot set to replace a large single dwelling. The proposal<br>uses materiality to mirror the immediate context of St Luke's<br>church and the neighboring houses.
 		`,
-        중간사진텍스트: "어쩌구저쩌구텍스트",
-        배경색박스텍스트: "어저구저쩌구",
-        배경색박스배경색: "red",
+        중간사진텍스트: `
+		음 ... 이건 데이터가 없네요..<br>
+		그래서 한자한자 대충 만들어 봅니다.<br>
+		이거하느라 몇일밤을 샜더니 피곤해 죽겠어요<br>
+		좋은곳에 취직하고싶네요^_^.<br>
+		감사합니다.
+		`,
+        배경색박스텍스트: `
+		Today is very good.<br>
+		but i'm so tired~ hahahahaha~~~ 
+		`,
+        배경색박스배경색: "#ccc",
         다음프로젝트명: "MANOR ROAD",
     },
     {
