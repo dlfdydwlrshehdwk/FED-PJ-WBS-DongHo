@@ -20,7 +20,14 @@ N1C
 The N1C centre is the new home for the Somalian Youth<br>Development Resource Centre (SYDRC) and the Dragon Hall<br>Trust who are both charities providing education and activities at<br>and from the new community building.
 
 하프내용
-The centre piece of the project was a seating and<br>reception desk fit out designed to be oiled and assembled<br>purely by volunteers at the centre, which significantly<br>reduced construction costs and also embedded the<br> construction process into their own ethos of being for the<br>community and delivered by the community.<br><br>Initially billed as a project on a tight budget, we set out<br>designing a scheme which centred around their charity<br> ethos – the community. Through employing the use of<br>their volunteers we designed a scheme that was<br>numbered and easy to construct removing the need for a<br>professional fit out company. This not only embedded a<br>sense of story in the space, it also reduced their initial<br>budget figures by 78%.
+The centre piece of the project was a seating and<br>reception desk fit out designed to be oiled and assembled<br>
+purely by volunteers at the centre, which significantly<br>reduced construction costs and also embedded the<br> 
+construction process into their own ethos of being for the<br>community and delivered by the community.<br><br>
+Initially billed as a project on a tight budget, we set out<br>designing a scheme which centred around their charity<br>
+ ethos – the community. Through employing the use of<br>their volunteers we designed a scheme that was<br>numbered and easy to construct removing the need for a<br>
+professional fit out company. This not only embedded a<br>
+sense of story in the space, it also reduced their initial<br>
+budget figures by 78%.
 
 색배경
 A Community built project<br>for a community led charity.
@@ -31,7 +38,15 @@ A Community built project<br>for a community led charity.
 ST DIONIS<br>ROAD
 
 작은내용
-Set in St Dionis Road, Parsons Green the brief was to completely<br>renovate the existing Victorian terrace property to create a family<br>home whilst providing numerous extensions to the rear, loft, and<br>basement of the property.<br><br><br>Our designs included a completely open plan living space at the<br>ground floor fitted with multiple roof lights and crittall windows<br>opening out to the garden. Upstairs various additions allow for<br>additional bedroom spaces and bathrooms with wider views<br>looking out to the rear of the property.
+Set in St Dionis Road, Parsons Green the brief was to completely<br>
+renovate the existing Victorian terrace property to create a family<br>
+home whilst providing numerous extensions to the rear, loft, and<br>
+basement of the property.<br><br><br>
+Our designs included a completely open plan living space at the<br>
+ground floor fitted with multiple roof lights and crittall windows<br>
+opening out to the garden. Upstairs various additions allow for<br>
+additional bedroom spaces and bathrooms with wider views<br>
+looking out to the rear of the property.
 하프내용
 x
 색배경
@@ -42,9 +57,17 @@ x
 타이틀
 COLOURED<br>CONCRETE<br>HOUSE
 작은내용
-This private 4 storey house in Singapore is built with a pigmented<br>concrete structure as it's primary structural system. Pigments<br>change colour as you escalate up the building.
+This private 4 storey house in Singapore is built with a pigmented<br>
+concrete structure as it's primary structural system. Pigments<br>
+change colour as you escalate up the building.
 하프내용
-Externally, the building alternately shifts the facade plain<br>in order to articulate the facade as well as creating all-<br>important shading for the bedrooms and living spaces.<br><br>The building is powered through rooftop solar panels and<br>layouts are orientated to ensure both cross and stack<br> ventilation throughout the house to minimize the need for<br>mechanical ventilation.
+Externally, the building alternately shifts the facade plain<br>
+in order to articulate the facade as well as creating all-<br>
+important shading for the bedrooms and living spaces.<br><br>
+The building is powered through rooftop solar panels and<br>
+layouts are orientated to ensure both cross and stack<br>
+ ventilation throughout the house to minimize the need for<br>
+mechanical ventilation.
 배경색
 rgb(221, 201, 201);
 색배경

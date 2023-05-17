@@ -13,53 +13,98 @@ function pjB(){
         transition : '2s linear',
         transform : 'scale(1)',
     })
+    // 큰그림 밑에 글씨를 리플레이스해서 ^ -> br태그로
 
-    let zxc = $('.tit span')
-    let dsa = zxc.eq(0).text()
-    let dsa2 = zxc.eq(1).text()
-    let dsa3 = zxc.eq(2).text()
-    // console.log(dsa)
+    let bigtxt = ""
+    bigtxt = $('.tit').html()
+    console.log(bigtxt)
+    $('.tit').html(bigtxt.replaceAll('^','<br>'))
 
-    hcode(dsa,$('.tit'),dsa2,dsa3)
-    setTimeout(()=>{
-        $('.tit').addClass('on')
-    },10)
-    // hcode(dsa2,$('.tit'))
-    // hcode(dsa3,$('.tit'))
+    // function txtChange(a,txt){
+    //     let txt = ""
+    //     txt = a.html()
+    //     a.html(txt.replaceAll('^','<br>'))
+    // }
 
-    function hcode(a,b,c,d){    
-        let hcode = ""
-        let idx = 0;
-        for(let x of a){
-            if(x === "") x= "&nbsp;";
-            console.log(x)
-            hcode += `
-            <span style="transition-delay:${1+idx*0.015}s;">${x}</span>
-            `
-            idx++;
-        }
-        hcode += `<br>`
-        for(let x of c){
-            if(x === "") x= "&nbsp;";
-            console.log(x)
-            hcode += `
-            <span style="transition-delay:${1+idx*0.015}s;">${x}</span>
-            `
-            idx++;
-        }
-        hcode += `<br>`
-        for(let x of d){
-            if(x === "") x= "&nbsp;";
-            console.log(x)
-            hcode += `
-            <span style="transition-delay:${1+idx*0.015}s;">${x}</span>
-            `
-            idx++;
-        }
-        hcode += `<br>`
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    // let zxc = $('.tit span')
+    // let dsa = zxc.eq(0).text()
+    // let dsa2 = zxc.eq(1).text()
+    // let dsa3 = zxc.eq(2).text()
+    // // console.log(dsa)
+
+    // // 맨위에 그림 두둥! 하고 등장하기
+    // hcode(dsa,$('.tit'),dsa2,dsa3)
+    // setTimeout(()=>{
+    //     $('.tit').addClass('on')
+    // },10)
+    // // hcode(dsa2,$('.tit'))
+    // // hcode(dsa3,$('.tit'))
+
+    // function hcode(a,b,c,d){    
+    //     let hcode = ""
+    //     let idx = 0;
+    //     for(let x of a){
+    //         if(x === "") x= "&nbsp;";
+    //         console.log(x)
+    //         hcode += `
+    //         <span style="transition-delay:${1+idx*0.015}s;">${x}</span>
+    //         `
+    //         idx++;
+    //     }
+    //     hcode += `<br>`
+    //     for(let x of c){
+    //         if(x === "") x= "&nbsp;";
+    //         console.log(x)
+    //         hcode += `
+    //         <span style="transition-delay:${1+idx*0.015}s;">${x}</span>
+    //         `
+    //         idx++;
+    //     }
+    //     hcode += `<br>`
+    //     for(let x of d){
+    //         if(x === "") x= "&nbsp;";
+    //         console.log(x)
+    //         hcode += `
+    //         <span style="transition-delay:${1+idx*0.015}s;">${x}</span>
+    //         `
+    //         idx++;
+    //     }
+    //     hcode += `<br>`
         
-        b.html(hcode)
-    }
+    //     b.html(hcode)
+    // }
 
 
     // console.log(hcode)
