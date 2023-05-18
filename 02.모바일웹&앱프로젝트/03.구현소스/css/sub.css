@@ -179,7 +179,7 @@
     font-size: 2.5rem;
     font-weight: 400;
     font-family: sdf;
-    /* opacity: 0; */
+    opacity: 0;
     transform: scale(.9);
     display: inline-block;
 }
@@ -215,8 +215,7 @@
     opacity: 1;
     /* transform: translateY(100%); */
 }
-.nextPRtxtwrap.on .nextPRtxt div{
-    
+.nextPRwrap.on .nextPRtxt div{
     opacity: 1;
     transform: translateY(0);
 }
@@ -238,7 +237,7 @@
 }
 
 .nextPRtxt div{
-    transition: .2s;
+    transition: .6s linear;
     display: inline-block;
     transform: translateY(30%);
     opacity: 0;

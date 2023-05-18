@@ -16,14 +16,23 @@ function pjB() {
         let tgc = $('.img50txt50wrap')
         let tgd = $('.colorbgwrap')
         let tge = $('.nextPRwrap')
-
+        // 윈도크기의 반
         let winH2 = $(window).height()/2
         console.log($(window).height()/2)
         // a에서 tga 돔기준값
         let tgaP = tga.offset().top
-        console.log(tgaP)
+        let tgbP = tgb.offset().top
+        let tgcP = tgc.offset().top
+        let tgdP = tgd.offset().top
+        let tgeP = tge.offset().top
+        
+        console.log(tgbP)
 
         if(tgaP <= winH2) tga.addClass('on');
+        if(tgbP <= winH2) $('.bigpicture2').addClass('on');
+        if(tgcP <= winH2) tgc.addClass('on');
+        if(tgdP <= winH2) tgd.addClass('on');
+        if(tgeP <= winH2) tge.addClass('on');
 
 
 
@@ -152,7 +161,7 @@ function pjB() {
         // console.log(x);
         else {
             hcode3 += `
-                <div style = "transition-delay:${idx3 * 0.02}s;">${x}</div>`;
+                <div style = "transition-delay:${idx3 * 0.01}s;">${x}</div>`;
         }
         idx3++;
     }
