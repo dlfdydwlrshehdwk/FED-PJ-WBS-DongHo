@@ -17,8 +17,7 @@ let pdata = [
         eg: "n1c",
         id: 1,
         타이틀: "N1C",
-        작은사진텍스트:
-            "The N1C centre is the new home for the Somalian Youth<br>Development Resource Centre (SYDRC) and the Dragon Hall<br>Trust who are both charities providing education and activities at<br>and from the new community building.",
+        작은사진텍스트:"The N1C centre is the new home for the Somalian Youth<br>Development Resource Centre (SYDRC) and the Dragon Hall<br>Trust who are both charities providing education and activities at<br>and from the new community building.",
         중간사진텍스트: `The centre piece of the project was a seating and<br>reception desk fit out designed to be oiled and assembled<br>
 		purely by volunteers at the centre, which significantly<br>reduced construction costs and also embedded the<br> 
 		construction process into their own ethos of being for the<br>community and delivered by the community.<br><br>

@@ -34,25 +34,6 @@ function pjB() {
         if(tgdP <= winH2) tgd.addClass('on');
         if(tgeP <= winH2) tge.addClass('on');
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
         })
     }
     scroll();
@@ -170,9 +151,12 @@ function pjB() {
 
     $('.nextPRtxt').on('click', function(){
         // clip-path: ellipse(100% 120% at 50% 100%);
-        $('.nextPRimgbx').animate({
-            clipPath: 'ellipse(100% 120% at 50% 100%)'
-        },400)
+        $('.nextPRimgbx').css({
+            clipPath : 'ellipse(100% 120% at 50% 100%)',
+            transition : '1s',
+            transform: 'translateY(-72%)'
+        })
+
     })
 
 

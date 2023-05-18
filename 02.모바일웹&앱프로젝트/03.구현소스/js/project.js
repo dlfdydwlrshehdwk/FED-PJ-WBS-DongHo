@@ -28,14 +28,17 @@ Vue.component("main-comp",{
     data(){
         return{
             data : data,
-            md:1,
+            md:false,
             push : 0,
         }
     },
     methods:{
         nextItem(pm){
-            this.push += 1;
-            $(".modal").animate({scrollTop:"0"},1);
+            setTimeout(()=>{
+                this.push += 1;
+                $(".modal").animate({scrollTop:"0"},1);
+                // pjB();
+            },1400)
         },
         mdScroll(){
             // console.log(777);
@@ -51,7 +54,7 @@ Vue.component("main-comp",{
             }
         }
         setting()
-        $(()=>{pjB()})
+        // $(()=>{pjB()})
 
 
         // 모달안의 애들이 안잡힘.
@@ -59,28 +62,13 @@ Vue.component("main-comp",{
             $('.white2').click(()=>{
                 console.log('hi실행')
                 $(()=>{
-                    pjB();
+                    setTimeout(()=>{
+                        pjB();
+                    },10)
                 });  
-            })
-            $('.bigpicture').on('click',()=>{
-                console.log('hi')
             })
         }
         hi()
-
-
-
-        // function white(){
-        //     $('.white2').click(()=>{
-                
-        //         $('.whiteone').addClass('on');
-        //         setTimeout(()=>{
-        //             this.md=true;
-        //         },400)
-        //     })
-        // }
-        // white()
-
         
 $(()=>{
 
@@ -131,6 +119,9 @@ new Vue({
         $('.nextPRtxt').on('click', function(){
             console.log('초기화 클릭')
             initCss()
+            setTimeout(()=>{
+                pjB()
+            },1000)
         })
 
     },
