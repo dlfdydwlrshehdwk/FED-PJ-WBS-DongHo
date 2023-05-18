@@ -50,6 +50,9 @@
 
     letter-spacing: -7px;
 }
+
+/* 상세페이지 애니메션션 선셋팅 */
+/* 맨위 글씨 */
 .tit span{
     opacity: 0;
     display: inline-block;
@@ -57,34 +60,63 @@
     transition: .3s linear;
     
 }
+/* 클래스 준 글씨 */
 .tit.on span{
     opacity: 1;
     transform: translateY(0%);
 }
+/* 작은사진부분 겉박스 */
 .mdsize{
     width: 35%;
     height: 40vh;
     margin: 0 auto;
+    overflow: hidden;
 }
+/* 작은사진 선셋팅 */
 .mdsize img{
     width: 100%;
     height: 100%;
     object-fit: cover;
+    transform: translateY(100%);
+    opacity: 0;
 }
-.mdsizetxt{
+/* 작은사진에 클래스 주면 */
+.mdsizewrap.on img{
+    opacity: 1;
+    transform: translateY(0);
+    transition: .5s;
+}
+/* 중간사이즈 글씨 선셋팅 */
+.mdsizewrap .mdsizetxt{
     margin: 5rem auto;
     font-size: 1rem;
     width: 30%;
     white-space: nowrap;
+    opacity: 0;
+    transform: scale(.95);
 }
+/* 중간사이즈 글씨 클래스주면 */
+.mdsizewrap.on .mdsizetxt{
+    opacity: 1;
+    transition: 2s ease-out;
+    transform: scale(1);
+}
+/* 큰그림 겉박스 사이징 */
 .bigpicture2{
     height: 80vh;
     width: 100%;
 }
+/* 큰그림 이미지 선셋팅 */
 .bigpicture2 img{
     width: 100%;
-    height: 100%;
+    height: 0%;
 }
+/* 큰그림 이미지 클래스주면 */
+.bigpicture2.on img{
+    height: 100%;
+    transition: .7s ease-out;
+}
+/* 반반박스 */
 .img50txt50{
     display: flex;
     justify-content: center;
@@ -95,13 +127,25 @@
 .mdsizetxt p{
     font-family: asd;
 }
+/* 반반박스 이미지 겉박스 */
 .img50txt50_imgbx{
     width: 40%;
     aspect-ratio: 1000/800;
+    overflow: hidden;
+    
 }
 .img50txt50_imgbx img{
     width: 100%;
     height: 100%;
+    transform: rotate(312deg) scale(1.2);
+    opacity: 0;
+}
+.img50txt50wrap.on .img50txt50_imgbx img{
+    opacity: 1;
+    width: 100%;
+    height: 100%;
+    transform: rotate(360deg) scale(1.0);
+    transition: .6s ease-in-out;
 }
 .img50txt50_txtbx{
     width: 30%;

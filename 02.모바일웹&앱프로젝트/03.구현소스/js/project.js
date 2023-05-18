@@ -26,7 +26,7 @@ Vue.component("main-comp",{
     data(){
         return{
             data : data,
-            md:0,
+            md:true,
             push : 0,
         }
     },
@@ -36,7 +36,7 @@ Vue.component("main-comp",{
             $(".modal").animate({scrollTop:"0"},1);
         },
         mdScroll(){
-            console.log(777);
+            // console.log(777);
             catWheel(true,true);
         }
     },
@@ -48,24 +48,26 @@ Vue.component("main-comp",{
                  $('.projectul li').eq(i).find('a').html(a.replaceAll('^','<br>'));
             }
         }
+        setting()
+        $(()=>{pjB()})
+
+
         // 모달안의 애들이 안잡힘.
         function hi(){
             $('.white2').click(()=>{
-            })
                 console.log('hi실행')
-                  $(()=>{
-                      pjB();
-
-                     
-
-                  })  
+                $(()=>{
+                    pjB();
+                });  
+            })
             $('.bigpicture').on('click',()=>{
                 console.log('hi')
             })
         }
-        function setting2(){
+        hi()
 
-        }
+
+
         // function white(){
         //     $('.white2').click(()=>{
                 
@@ -76,8 +78,6 @@ Vue.component("main-comp",{
         //     })
         // }
         // white()
-        hi()
-        setting()
 
         
 $(()=>{

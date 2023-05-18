@@ -57,7 +57,7 @@ let pjdata = {
                     </ol>
                     <!-- 오른쪽 이미지 -->
                     <ol class="prright">
-                        <li v-for="(v,i) in data" key="i">
+                        <li v-for="(v,i) in data" :key="i">
                             <div>
                                 <a href="">
                                     <img :src="

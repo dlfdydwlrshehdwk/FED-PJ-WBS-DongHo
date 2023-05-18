@@ -53,7 +53,7 @@ new Vue({
     },
     mounted:function(){
         // 화면뿌
-        pjB()
+        // pjB()
     },
 })
 
