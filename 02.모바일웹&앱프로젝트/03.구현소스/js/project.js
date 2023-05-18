@@ -35,6 +35,7 @@ Vue.component("main-comp",{
     methods:{
         nextItem(pm){
             setTimeout(()=>{
+                initCss()
                 this.push += 1;
                 $(".modal").animate({scrollTop:"0"},1);
                 // setTimeout(()=>{
@@ -69,6 +70,7 @@ Vue.component("main-comp",{
             })
         }
         hi()
+        
         $('.nextPRtxt').on('click', function(){
             console.log('초기화 클릭')
             initCss()
