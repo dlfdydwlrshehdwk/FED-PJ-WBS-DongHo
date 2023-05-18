@@ -215,10 +215,12 @@
     opacity: 1;
     /* transform: translateY(100%); */
 }
+/* 넥스트박스랩에 클래스를주면... */
 .nextPRwrap.on .nextPRtxt div{
     opacity: 1;
     transform: translateY(0);
 }
+/* 넥스트 이미지 박스 선셋팅 */
 .nextPRimgbx{
     text-align: center;
     /* -webkit-clip-path: circle(50% at 50% 100%); */
@@ -228,6 +230,11 @@
     -webkit-clip-path: ellipse(25% 35% at 50% 100%);
     clip-path: ellipse(28% 80% at 50% 100%);
     aspect-ratio: 100/40;
+
+    transform: translateY(80%) scale(0.8);
+}
+.nextPRwrap.on .nextPRimgbx{
+    transform: translateY(1%) scale(1);
 }
 .nextPRimgbx img{
     width: 100%;

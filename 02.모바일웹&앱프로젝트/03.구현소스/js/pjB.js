@@ -8,7 +8,7 @@ function pjB() {
     // 스크롤 이벤트
     function scroll(){ // -> window안됨 , .modal 기준 됨 o 
         $('.modal').on('scroll', function(){
-            console.log('안녕')
+            // console.log('안녕')
 
         // 대상들
         let tga = $('.mdsizewrap')
@@ -26,7 +26,7 @@ function pjB() {
         let tgdP = tgd.offset().top
         let tgeP = tge.offset().top
         
-        console.log(tgbP)
+        // console.log(tgbP)
 
         if(tgaP <= winH2) tga.addClass('on');
         if(tgbP <= winH2) $('.bigpicture2').addClass('on');
@@ -168,7 +168,12 @@ function pjB() {
     // 이곳에 잘라넣은 글씨 hcode를 넣어주세요
     tit3.html(hcode3);
 
-
+    $('.nextPRtxt').on('click', function(){
+        // clip-path: ellipse(100% 120% at 50% 100%);
+        $('.nextPRimgbx').animate({
+            clipPath: 'ellipse(100% 120% at 50% 100%)'
+        },400)
+    })
 
 
 

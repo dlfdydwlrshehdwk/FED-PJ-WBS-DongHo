@@ -8,6 +8,8 @@ import catWheel from "./catwheel.js";
 import data from './projectData.js'
 // 서브페이지 화면뿌 가져오기
 import pjB from './pjB.js';
+// css초기화 가져오기
+import initCss from "./init.js";
 
 
 // 상단영역 메뉴 뷰 템플릿 셋팅
@@ -26,7 +28,7 @@ Vue.component("main-comp",{
     data(){
         return{
             data : data,
-            md:true,
+            md:1,
             push : 0,
         }
     },
@@ -126,7 +128,10 @@ new Vue({
         catWheel(false,false);
         console.log(data[1])
         $('.bigpicture').addClass('on')
-
+        $('.nextPRtxt').on('click', function(){
+            console.log('초기화 클릭')
+            initCss()
+        })
 
     },
 })
