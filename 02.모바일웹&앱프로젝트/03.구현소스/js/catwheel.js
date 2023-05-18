@@ -240,7 +240,7 @@ function catWheel(pm1,pm2){
         // 돔기준에서 왼쪽pr박스 의 윗대가리 위치차이
         let prlh = prleft.offset().top;
 
-        // console.log('pr list높이',prllih,'prl박스 윗대가리',prlh)
+        console.log('pr list높이',prllih,'prl박스 윗대가리',prlh)
 
         // 오른박스
         const prright = $('.prright')
@@ -253,7 +253,7 @@ function catWheel(pm1,pm2){
         // 돔기준에서 왼쪽pr박스 의 윗대가리 위치차이
         let prrh = prleft.offset().top;
 
-        // console.log('pr list높이',prlih,'prl박스 윗대가리',prlh)
+        console.log('pr list높이',prlih,'prl박스 윗대가리',prlh)
 
 
 

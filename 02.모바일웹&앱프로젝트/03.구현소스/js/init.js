@@ -13,7 +13,7 @@ function initCss(){
     setTimeout(()=>{
         $('.nextPRimgbx').css({
             transition : 'none',
-            transform: 'translateY(0)',
+            transform: 'translateY(2%)',
             clipPath : 'ellipse(28% 80% at 50% 100%)',
         })
         

@@ -25,6 +25,7 @@ body{
     justify-content: center;
     flex-direction: column;
     align-items: center;
+    z-index: 99;
     /* gap : 4rem 0; */
 }
 .bg ul>li{
@@ -90,6 +91,7 @@ body{
 /* 모달창 */
 .modal{
     position: fixed;
+    z-index: 999999;
     top: 0;
     left: 0;
     bottom: 0;

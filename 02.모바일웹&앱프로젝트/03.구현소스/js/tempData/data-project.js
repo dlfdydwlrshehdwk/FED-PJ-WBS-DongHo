@@ -168,9 +168,7 @@ let pjdata = {
             </div>
         </div>
     </section>
-    <div class="colorbgwrap" 
-    v-if="data[push].배경색박스텍스트 !==''
-    ">
+    <div class="colorbgwrap">
         <div class="colorbg" v-bind:style="data[push].배경색박스배경색">
             <h2 v-html="data[push].배경색박스텍스트">
                 

@@ -4,7 +4,7 @@ function pjB() {
 
     // 화면위로가기!
     $("html,body").animate({ scrollTop: "0px" });
-
+    let asd =0;
     // 스크롤 이벤트
     function scroll(){ // -> window안됨 , .modal 기준 됨 o 
         $('.modal').on('scroll', function(){
@@ -26,7 +26,7 @@ function pjB() {
         let tgdP = tgd.offset().top
         let tgeP = tge.offset().top
         
-        // console.log(tgbP)
+        console.log(tgbP)
 
         if(tgaP <= winH2) tga.addClass('on');
         if(tgbP <= winH2) $('.bigpicture2').addClass('on');
@@ -34,6 +34,9 @@ function pjB() {
         if(tgdP <= winH2) tgd.addClass('on');
         if(tgeP <= winH2) tge.addClass('on');
 
+
+        asd = $('.nextPRimgbxwrap').offset().top
+            console.log(asd)
         })
     }
     scroll();
@@ -153,10 +156,12 @@ function pjB() {
         $('.nextPRimgbx').css({
             clipPath : 'ellipse(100% 120% at 50% 100%)',
             transition : '1s',
-            transform: 'translateY(-70%)'
+            transform: `translateY(${-asd+'px'})`
         })
 
     })
+
+    
 
 
 

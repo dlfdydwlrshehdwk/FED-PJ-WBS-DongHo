@@ -11,7 +11,7 @@ let pdata = [
             "The spaces allows for two intertwining journeys to occur as the tea maker<br> meanders from the outdoors to the<br>indoors, from production to accommodation. Central to<br>our design is the drying chimney. Used as a highly<br>controlled drying space, this drying chimney is<br>constructed from recycled stone with an added pink dye<br>to create a warm to touch, terrazzo style chimney space<br>reminiscent to the speckled patterns of tea leaves<br>",
         배경색박스텍스트:
             "Our design is a distillation of the process^of herbal tea production, the Latvian wilderness,^and traditional rural Latvian building typologies^where the hearth was the focal point of shelters.",
-        배경색박스배경색: "red",
+        배경색박스배경색: {backgroundColor :'rgb(245, 126, 126)'},
         다음프로젝트명: "N1C",
     },
     {
@@ -48,7 +48,7 @@ let pdata = [
 		looking out to the rear of the property.`,
         중간사진텍스트: "어쩌구저쩌구텍스트",
         배경색박스텍스트: "어저구저쩌구",
-        배경색박스배경색: "red",
+        배경색박스배경색: {backgroundColor :"skyblue"},
         다음프로젝트명: "COLOURED CONCRETE HOUSE",
     },
     {
@@ -62,7 +62,7 @@ let pdata = [
 		change colour as you escalate up the building.`,
         중간사진텍스트: `Externally, the building alternately shifts the facade plain<br>in order to articulate the facade as well as creating all-<br>important shading for the bedrooms and living spaces.<br><br>The building is powered through rooftop solar panels and<br>layouts are orientated to ensure both cross and stack<br> ventilation throughout the house to minimize the need for<br>mechanical ventilation.`,
         배경색박스텍스트: `Simple & sleek<br>with a splash of<br>personality.`,
-        배경색박스배경색: "rgb(221, 201, 201)",
+        배경색박스배경색: {backgroundColor :"rgb(221, 201, 201)"},
         다음프로젝트명: "WHYTELEAFE HILL",
     },
     {
@@ -85,7 +85,7 @@ let pdata = [
 		Today is very good.<br>
 		but i'm so tired~ hahahahaha~~~ 
 		`,
-        배경색박스배경색: "#ccc",
+        배경색박스배경색: {backgroundColor : "#ccc"},
         다음프로젝트명: "MANOR ROAD",
     },
     {
@@ -121,7 +121,7 @@ let pdata = [
         배경색박스텍스트: `
 		Originally built in the 1870s,<br>the design opens up the house reminiscent<br> of it's original use of an open biliard hall.
 		`,
-        배경색박스배경색: "#dfe6e0",
+        배경색박스배경색: { backgroundColor : "#dfe6e0"},
         다음프로젝트명: "CAMBRIDGE ROAD",
     },
     {
@@ -155,10 +155,8 @@ let pdata = [
 		The garden has been reconfigured to provide a better link<br> with the living space – made perfect for entertaining and<br> relaxing all the same. The aged ground floor extension has<br> been updated by installing a clean box skylight with<br> minimal frame and steel doors. The rest of the ground<br> floor has been thoroughly refurbished with timber wall<br> panels and integrated joinery.<br><br><br>
 		The biggest change on the first floor has been the<br> reconfiguration of the master suite. Two adjoining<br> rooms have been combined to provide an airy and generous<br> space, with an unintrusive part dedicated to a walk-i<br>n wardrobe and a generous shower room. The bathroom is<br> finished in beautiful cream Venetian plaster and steel<br> doors throughout.
 		`,
-        배경색박스텍스트: `
-		The project is not about increasing<br>  the size of home, but ensuring<br>  that what is inside works with the<br> lifestyle of the client.
-		`,
-        배경색박스배경색: "rgb(230, 217, 200)",
+        배경색박스텍스트: ``,
+        배경색박스배경색: { backgroundColor : 'red'},
         다음프로젝트명: "SWISSLAND HILL.",
     },
     {
@@ -190,7 +188,7 @@ let pdata = [
 		A quiet and considered structure that is<br>
 		meticulously designed to be mm perfect.
 		`,
-        배경색박스배경색: "rgb(191, 214, 179)",
+        배경색박스배경색: { backgroundColor : 'rgb(191,214,179'},
         다음프로젝트명: "WESTHUMBLE",
     },
     {
