@@ -27,7 +27,7 @@ let pdata = [
 		professional fit out company. This not only embedded a<br>
 		sense of story in the space, it also reduced their initial<br>
 		budget figures by 78%.`,
-        배경색박스텍스트: `A Community built project<br>for a community led charity.`,
+        배경색박스텍스트: `A Community built project^for a community led charity.`,
         배경색박스배경색: "red",
     },
     {
@@ -58,7 +58,7 @@ let pdata = [
 		concrete structure as it's primary structural system. Pigments<br>
 		change colour as you escalate up the building.`,
         중간사진텍스트: `Externally, the building alternately shifts the facade plain<br>in order to articulate the facade as well as creating all-<br>important shading for the bedrooms and living spaces.<br><br>The building is powered through rooftop solar panels and<br>layouts are orientated to ensure both cross and stack<br> ventilation throughout the house to minimize the need for<br>mechanical ventilation.`,
-        배경색박스텍스트: `Simple & sleek<br>with a splash of<br>personality.`,
+        배경색박스텍스트: `Simple & sleek^with a splash of^personality.`,
         배경색박스배경색: "rgb(221, 201, 201)",
         다음프로젝트명: "WHYTELEAFE HILL",
     },
@@ -78,7 +78,7 @@ let pdata = [
 		감사합니다.
 		`,
         배경색박스텍스트: `
-		Today is very good.<br>
+		Today is very good.^
 		but i'm so tired~ hahahahaha~~~ 
 		`,
         배경색박스배경색: "#ccc",
@@ -96,7 +96,7 @@ let pdata = [
 		Downstairs, the idea of bi-fold doors soon disappeared<br>and was replaced with a fully glazed sliding door system<br>with an opening corner. Careful detailing and a precise<br>eye on specifications ensured that a glazed system with<br> only 18mm frames allowed maximum amounts of daylight<br>to flood the interiors.<br><br>The result is a glass and aluminium-clad extension with an<br>opening corner that blends the interior into the exterior<br>giving them space to truly enjoy their garden. Our project<br>has been widely published across multiple publications<br>including Real Homes and Build it magazine.
 		`,
         배경색박스텍스트: `
-		All the coouple wanted was a place for them to enjoy<br>their garden, sip their tea and watch the world go by.
+		All the coouple wanted was a place for them to enjoy^their garden, sip their tea and watch the world go by.
 		`,
         배경색박스배경색: "rgb(229, 222, 216)",
         다음프로젝트명: "THE MEADOWS",
@@ -113,7 +113,7 @@ let pdata = [
 		Our specifications included a material palette of timbers<br>and silestone is consistently spread across the house, with<br>differing treatment to the silestone depending on it’s<br>application.<br><br>Typically across the kitchen and bathroom spaces we<br>utilised a full gloss finish, whilst at the stair detail we were<br>able to grit the stair with a sand blast finish to ensure we<br>had enough slip resistance.<br><br>This helped to both lighten the spaces and make each<br>room feel part of the same family.
 		`,
         배경색박스텍스트: `
-		Originally built in the 1870s,<br>the design opens up the house reminiscent<br> of it's original use of an open biliard hall.<br>
+		Originally built in the 1870s,^the design opens up the house reminiscent^ of it's original use of an open biliard hall.<br>
 		`,
         배경색박스배경색: "#dfe6e0",
         다음프로젝트명: "CAMBRIDGE ROAD",
@@ -148,7 +148,7 @@ let pdata = [
 		The biggest change on the first floor has been the<br> reconfiguration of the master suite. Two adjoining<br> rooms have been combined to provide an airy and generous<br> space, with an unintrusive part dedicated to a walk-i<br>n wardrobe and a generous shower room. The bathroom is<br> finished in beautiful cream Venetian plaster and steel<br> doors throughout.
 		`,
         배경색박스텍스트: `
-		The project is not about increasing<br>  the size of home, but ensuring<br>  that what is inside works with the<br> lifestyle of the client.
+		The project is not about increasing^  the size of home, but ensuring^  that what is inside works with the^ lifestyle of the client.
 		`,
         배경색박스배경색: "rgb(230, 217, 200)",
         다음프로젝트명: "SWISSLAND HILL.",
@@ -178,7 +178,7 @@ let pdata = [
 		The result is a quiet and transparent structure that is<br> designed to merge into the surrounding landscape as well<br> as the existing house. Internally, the timber soffits are<br> lined as acoustic panels to ensure the bustle of the gym is<br> contained, it also has considered temperature controls<br> through the use of an air source heat pump. Externally, the<br> timber paneling wraps up into a curved timber soffit<br> which translates seamlessly from inside to outside<br> through the slimline glazing units.
 		`,
         배경색박스텍스트: `
-		A quiet and considered structure that is<br>
+		A quiet and considered structure that is^
 		meticulously designed to be mm perfect.
 		`,
         배경색박스배경색: "rgb(191, 214, 179)",
@@ -210,8 +210,8 @@ building to merge beautifully within its natural setting.
 Living space feels like it is merging into the surroundings<br> by views opening up towards trees, and fields on either<br> side of the building, making one feel one with nature.
 		`,
         배경색박스텍스트: `
-		The building is designed<br>
-		to make the visitor feel<br>
+		The building is designed^
+		to make the visitor feel^
 		at on with nature
 		`,
         배경색박스배경색: "rgb(216, 213, 186)",

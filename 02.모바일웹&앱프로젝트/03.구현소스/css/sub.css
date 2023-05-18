@@ -191,15 +191,10 @@
     transform: scale(1);
 
 }
+
+/* 넥스트 랩 */
 .nextPRtxtwrap{
     text-align: center;
-}
-.nextPRtxt{
-    position: relative;
-    text-align: center;
-    font-size: 12rem;
-    letter-spacing: -1rem;
-    font-family: sdf;
 }
 .nextPRtxt::before{
     content: '';
@@ -208,6 +203,22 @@
     height: 1px;
     background-color:black;
     width: 100%;
+}
+
+/* 넥스트 글씨 선셋팅*/
+.nextPRtxt{
+    position: relative;
+    text-align: center;
+    font-size: 12rem;
+    letter-spacing: -2rem;
+    font-family: sdf;
+    opacity: 1;
+    /* transform: translateY(100%); */
+}
+.nextPRtxtwrap.on .nextPRtxt div{
+    
+    opacity: 1;
+    transform: translateY(0);
 }
 .nextPRimgbx{
     text-align: center;
@@ -224,4 +235,11 @@
     height: 100%;
     object-position: 0 50%;
     object-fit: cover;
+}
+
+.nextPRtxt div{
+    transition: .2s;
+    display: inline-block;
+    transform: translateY(30%);
+    opacity: 0;
 }

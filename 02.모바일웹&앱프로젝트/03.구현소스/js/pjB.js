@@ -5,10 +5,45 @@ function pjB() {
     // 화면위로가기!
     $("html,body").animate({ scrollTop: "0px" });
 
-
+    // 스크롤 이벤트
     function scroll(){ // -> window안됨 , .modal 기준 됨 o 
         $('.modal').on('scroll', function(){
             console.log('안녕')
+
+        // 대상들
+        let tga = $('.mdsizewrap')
+        let tgb = $('.bigpicture2wrap')
+        let tgc = $('.img50txt50wrap')
+        let tgd = $('.colorbgwrap')
+        let tge = $('.nextPRwrap')
+
+        let winH2 = $(window).height()/2
+        console.log($(window).height()/2)
+        // a에서 tga 돔기준값
+        let tgaP = tga.offset().top
+        console.log(tgaP)
+
+        if(tgaP <= winH2) tga.addClass('on');
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         })
     }
     scroll();
@@ -60,9 +95,6 @@ function pjB() {
     // 스몰텍스트 br처리
     let stxt = $('.mdsizetxt').text();
     $('.mdsizetxt').html(stxt)
-    setTimeout(()=>{
-        $('.mdsizewrap').addClass('on')
-    },10)
 
     // 반그림 반글 텍스트 br태그 처리
     let htxt = $('.img50txt50_txtbx').text()
@@ -100,6 +132,33 @@ function pjB() {
     }
     // tit에 잘라넣은 글씨 hcode를 넣어주세요
     tit2.html(hcode2);
+
+
+    // 넥스트 프로젝트 간지나게 촤르륵
+
+    // 뿌려야하는곳
+    let tit3 =$('.nextPRtxt');
+    // 뿌려야하는것
+    let nexttxt = $('.nextPRtxt').text();
+    // 담을공간
+    let hcode3 = "";
+    // 증가할 변수
+    let idx3 = 0;
+    for (let x of nexttxt){
+        if (x === "^") {
+            x = "&nbsp";
+            hcode3 += x;
+        }
+        // console.log(x);
+        else {
+            hcode3 += `
+                <div style = "transition-delay:${idx3 * 0.02}s;">${x}</div>`;
+        }
+        idx3++;
+    }
+    // 이곳에 잘라넣은 글씨 hcode를 넣어주세요
+    tit3.html(hcode3);
+
 
 
 

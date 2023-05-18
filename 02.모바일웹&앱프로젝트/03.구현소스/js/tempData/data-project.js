@@ -179,9 +179,7 @@ let pjdata = {
         <div class="nextPR">
             <div class="nextPRtxtwrap">
                 <a href="" @click.prevent="nextItem()">
-                    <span class="nextPRtxt">
-                        NEXT PROJECT
-                    </span>
+                    <span class="nextPRtxt">NEXT^^PROJECT</span>
                 </a>
             </div>
             <div class="nextPRimgbxwrap">
