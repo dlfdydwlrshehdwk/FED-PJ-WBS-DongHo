@@ -37,7 +37,9 @@ Vue.component("main-comp",{
             setTimeout(()=>{
                 this.push += 1;
                 $(".modal").animate({scrollTop:"0"},1);
-                // pjB();
+                // setTimeout(()=>{
+                //     pjB();
+                // }) 
             },1400)
         },
         mdScroll(){
@@ -54,8 +56,6 @@ Vue.component("main-comp",{
             }
         }
         setting()
-        // $(()=>{pjB()})
-
 
         // 모달안의 애들이 안잡힘.
         function hi(){
@@ -69,6 +69,13 @@ Vue.component("main-comp",{
             })
         }
         hi()
+        $('.nextPRtxt').on('click', function(){
+            console.log('초기화 클릭')
+            initCss()
+            // setTimeout(()=>{
+            //     pjB()
+            // },1000)
+        })
         
 $(()=>{
 
@@ -119,9 +126,9 @@ new Vue({
         $('.nextPRtxt').on('click', function(){
             console.log('초기화 클릭')
             initCss()
-            setTimeout(()=>{
-                pjB()
-            },1000)
+            // setTimeout(()=>{
+            //     pjB()
+            // },1000)
         })
 
     },
