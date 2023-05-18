@@ -9,7 +9,7 @@ let pdata = [
         중간사진텍스트:
             "The spaces allows for two intertwining journeys to occur as the tea maker<br> meanders from the outdoors to the<br>indoors, from production to accommodation. Central to<br>our design is the drying chimney. Used as a highly<br>controlled drying space, this drying chimney is<br>constructed from recycled stone with an added pink dye<br>to create a warm to touch, terrazzo style chimney space<br>reminiscent to the speckled patterns of tea leaves<br>",
         배경색박스텍스트:
-            "Our design is a distillation of the process<br>of herbal tea production, the Latvian wilderness,<br>and traditional rural Latvian building typologies<br>where the hearth was the focal point of shelters.",
+            "Our design is a distillation of the process^of herbal tea production, the Latvian wilderness,^and traditional rural Latvian building typologies^where the hearth was the focal point of shelters.",
         배경색박스배경색: "red",
         다음프로젝트명: "N1C",
     },

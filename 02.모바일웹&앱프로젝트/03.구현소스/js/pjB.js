@@ -64,6 +64,42 @@ function pjB() {
         $('.mdsizewrap').addClass('on')
     },10)
 
+    // 반그림 반글 텍스트 br태그 처리
+    let htxt = $('.img50txt50_txtbx').text()
+    $('.img50txt50_txtbx').html(htxt)
+
+
+    // 칼라데이터 텍스트 br태그 처리
+    // let ctxt = $('.colorbg h2').text()
+    // $('.colorbg h2').html(ctxt)
+
+    // 타이틀 샤라락 나오기
+    // 뿌려야되는곳 칼라박스의 h2
+    let tit2 = $(".colorbg h2");
+    // 뿌려야하는것
+    let colortxt = $(".colorbg h2").text()
+
+    let hcode2 = "";
+    let idx2 = 0;
+
+    // 글씨 개별 출력 bigtxt <br>이 안먹던것을
+    // 조건문을통해 x를 발견시 hcode에 x = <br> 변수를 +=로 넣고 else로
+    // 나머지 글자를 넣는 방식으로 하였다.
+    for (let x of colortxt) {
+        if (x === "^") {
+            x = "<br>";
+            hcode2 += x;
+        }
+        // console.log(x);
+        else {
+            hcode2 += `
+                <span style = "transition-delay:${idx2 * 0.02}s;">${x}</span>`;
+        }
+
+        idx2++;
+    }
+    // tit에 잘라넣은 글씨 hcode를 넣어주세요
+    tit2.html(hcode2);
 
 
 
@@ -91,8 +127,6 @@ function pjB() {
 
 
 
-
-    
 
     // 글씨 자르는거 예시/
     // function zrrtxt(a,b){
