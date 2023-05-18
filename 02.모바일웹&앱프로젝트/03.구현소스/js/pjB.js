@@ -18,7 +18,7 @@ function pjB(){
     let bigtxt = ""
     bigtxt = $('.tit').html()
     console.log(bigtxt)
-    $('.tit').html(bigtxt.replaceAll('^','<br>'))
+    // $('.tit').html(bigtxt.replaceAll('^','<br>'))
 
     // 글씨들 다 br태그로 바꾸는 함수를 만들까 생각중 05-18
     // function txtChange(a,txt){
@@ -30,91 +30,79 @@ function pjB(){
 
     // 타이틀 샤라락 나오기
     let tit = $('.tit')
-    console.log(tit)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    // let zxc = $('.tit span')
-    // let dsa = zxc.eq(0).text()
-    // let dsa2 = zxc.eq(1).text()
-    // let dsa3 = zxc.eq(2).text()
-    // // console.log(dsa)
-
-    // // 맨위에 그림 두둥! 하고 등장하기
-    // hcode(dsa,$('.tit'),dsa2,dsa3)
-    // setTimeout(()=>{
-    //     $('.tit').addClass('on')
-    // },10)
-    // // hcode(dsa2,$('.tit'))
-    // // hcode(dsa3,$('.tit'))
-
-    // function hcode(a,b,c,d){    
-    //     let hcode = ""
+    let br = '<br>'
+    // bigtxt로 따놨음
+    let hcode = "";
+    let idx = 0;
+    // 글씨 개별 출력 bigtxt \n수정이 필요할듯
+    for(let x of bigtxt){
+        // if(x ==="^") x ='\n'
+        hcode +=`
+        <span style = "transition-delay:${idx*0.02}s;">${x}</span>
+        `
+        idx++
+    }
+    tit.html(hcode)
+    // console.log(hcode)
+    setTimeout(()=>{
+        tit.addClass('on')
+    },1000)
+    
+    // function zrrtxt(a,b){
+    //     let hcode = "";
     //     let idx = 0;
     //     for(let x of a){
     //         if(x === "") x= "&nbsp;";
-    //         console.log(x)
     //         hcode += `
-    //         <span style="transition-delay:${1+idx*0.015}s;">${x}</span>
+    //         <div style = "transition-delay:${idx*0.02}s;">${x}</div>
     //         `
     //         idx++;
+    //         b.html(hcode)
     //     }
-    //     hcode += `<br>`
-    //     for(let x of c){
-    //         if(x === "") x= "&nbsp;";
-    //         console.log(x)
-    //         hcode += `
-    //         <span style="transition-delay:${1+idx*0.015}s;">${x}</span>
-    //         `
-    //         idx++;
-    //     }
-    //     hcode += `<br>`
-    //     for(let x of d){
-    //         if(x === "") x= "&nbsp;";
-    //         console.log(x)
-    //         hcode += `
-    //         <span style="transition-delay:${1+idx*0.015}s;">${x}</span>
-    //         `
-    //         idx++;
-    //     }
-    //     hcode += `<br>`
-        
-    //     b.html(hcode)
+    //     setTimeout(()=>{
+    //         b.addClass('on');
+    //     },1000)
     // }
 
+    // 두번째 이미지 등장씬
+    // 스크롤시
+    $(window).on('scroll',function(){
+        console.log('하위')
+    })
 
-    // console.log(hcode)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   
 }
 
 export default pjB;
