@@ -1,5 +1,15 @@
+// 휠실행제어 변수
+let wsts;
 
-function catWheel(){
+function catWheel(pm1,pm2){
+
+    // 휠실행제어 변수 업데이트!
+    wsts = pm1;
+    console.log("맨위:",wsts);
+
+    // 하위코드 재실행 방지!
+    if(pm2) return;
+
     // 왼쪽이미지 박스 변수
     const prleft = $('.prleft li')
     // 오른쪽 이미지 박스 변수
@@ -138,13 +148,18 @@ function catWheel(){
     let imgh20 = $('.prleft li').innerHeight()/20
     // console.log(imgh20)
     // 휠이벤트 시작하기 //
-    $(window).on('wheel',wheelFn);
+    window.addEventListener("wheel",wheelFn);
+    // $(window).on('wheel',wheelFn);
+    // window.removeEventListener("wheel",wheelFn);
 
     // startSS();
     // 휠이벤트 함수 //
     function wheelFn(){
+        if(wsts) return;
+        console.log("휠함수:",wsts);
+
         // 되나안되나 테스트
-        console.log('휠')
+        console.log('휠',wsts)
         // 방향체크
         let delta = event.wheelDelta;
         // 방향에 따른 ...

@@ -30,6 +30,16 @@ Vue.component("main-comp",{
             push : 0,
         }
     },
+    methods:{
+        nextItem(pm){
+            this.push += 1;
+            $(".modal").animate({scrollTop:"0"},1);
+        },
+        mdScroll(){
+            console.log(777);
+            catWheel(true,true);
+        }
+    },
     mounted(){
         // 프로젝트페이지 li들 ^를 br태그로 하기
         function setting(){
@@ -44,7 +54,10 @@ Vue.component("main-comp",{
             })
                 console.log('hi실행')
                   $(()=>{
-                      pjB()
+                      pjB();
+
+                     
+
                   })  
             $('.bigpicture').on('click',()=>{
                 console.log('hi')
@@ -66,6 +79,12 @@ Vue.component("main-comp",{
         hi()
         setting()
 
+        
+$(()=>{
+
+    })
+
+       
 
     },
 }); // 메인영역 템플릿 셋팅
@@ -104,8 +123,12 @@ new Vue({
     },
     mounted:function(){
         // 캣휠 실행
-        catWheel()
+        catWheel(false,false);
         console.log(data[1])
         $('.bigpicture').addClass('on')
+
+
     },
 })
+
+    

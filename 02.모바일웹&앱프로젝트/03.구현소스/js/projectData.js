@@ -129,7 +129,7 @@ let pdata = [
         중간사진텍스트: `
 		The existing building with a number of small spaces<br>internally and cluttered facade has been given a go-ahead<br>to a double-height rear extension with an internal<br>reconfiguration of the main house and a three-level side<br> extension.<br>The feature glazed rear extension has been designed to<br> maximize the height, light, and openness of the living<br>space with an amazing double-height heart/atrium,<br>connecting the building with the rest of the house.<br>The loved family home design approach was to create spaces<br>of openness and generosity, giving a nod to the beautiful home.<br>The additional side extension is designed to be self-sufficient and independent<br> from the main house. This is to offer privacy and independence to visitors, as well as infilling the unused drive and creating a private and secure<br>rear garden.
 		`,
-        배경색박스텍스트: "어저구저쩌구",
+        배경색박스텍스트: "",
         배경색박스배경색: "red",
         다음프로젝트명: "NIGHTINGALE.",
     },

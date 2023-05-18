@@ -12,8 +12,13 @@
             // 0. 내가 누른 단어 뽑기
             let a = $(this).text().toLowerCase()
             let b = $(this).attr('title')
-            // console.log(a,b)
+            console.log(a,b)
 
+            let pname = location.href.split("/");
+            pname = pname[pname.length-1].split(".")[0];
+            console.log(pname,a,pname===a);
+
+            if(pname===a) return;
             
             // 1. 흰원에 클래스 on주기
             $('.whiteone').addClass('on');

@@ -5,7 +5,7 @@ let pjdata = {
                 <div class="bg">
                     <ul class="projectul">
                         <li v-for="(v,i) in data" :key="i" class="white2">
-                        <a @click="md = 1; push = i">
+                        <a @click="md = 1; push = i;mdScroll()">
                         {{v.타이틀}}
                         </a>
                         </li>
@@ -137,9 +137,7 @@ let pjdata = {
         </div>
     </div>
     <div class="titwrap">
-        <div class="tit">
-            {{data[push].타이틀}}
-        </div>
+        <div class="tit">{{data[push].타이틀}}</div>
     </div>
     <div class="mdsizewrap">
         <div class="mdsize">
@@ -170,7 +168,7 @@ let pjdata = {
             </div>
         </div>
     </section>
-    <div class="colorbgwrap">
+    <div class="colorbgwrap" v-if="data[push].배경색박스텍스트.trim()!=''">
         <div class="colorbg">
             <h2>
                 {{data[push].배경색박스텍스트}}
@@ -180,7 +178,7 @@ let pjdata = {
     <section class="nextPRwrap">
         <div class="nextPR">
             <div class="nextPRtxtwrap">
-                <a href="">
+                <a href="" @click.prevent="nextItem()">
                     <span class="nextPRtxt">
                         NEXT PROJECT
                     </span>
