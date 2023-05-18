@@ -15,13 +15,18 @@ Vue.component("top-comp",{
     template:comData.tarea,
 }); // 상단영역 템플릿 셋팅
 
+// 로그인영역 메뉴 뷰 템플릿 셋팅
+Vue.component("login-comp",{
+    template:comData.login,
+}); // 상단영역 템플릿 셋팅
+
 // 메인영역 메뉴 뷰 템플릿 셋팅
 Vue.component("main-comp",{
     template : pjdata.mainarea,
     data(){
         return{
             data : data,
-            md:false,
+            md:true,
             push : 0,
         }
     },
@@ -36,11 +41,11 @@ Vue.component("main-comp",{
         // 모달안의 애들이 안잡힘.
         function hi(){
             $('.white2').click(()=>{
+            })
                 console.log('hi실행')
                   $(()=>{
                       pjB()
                   })  
-            })
             $('.bigpicture').on('click',()=>{
                 console.log('hi')
             })
@@ -70,6 +75,18 @@ Vue.component("main-comp",{
 
 new Vue({
     el:"#top",
+    created:function(){
+        
+
+    },
+    mounted:function(){
+    },
+})
+
+// 로그인영역 뷰 인스턴스 생성
+
+new Vue({
+    el:"#login",
     created:function(){
         
 

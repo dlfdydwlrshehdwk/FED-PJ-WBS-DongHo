@@ -20,11 +20,18 @@ function pjB(){
     console.log(bigtxt)
     $('.tit').html(bigtxt.replaceAll('^','<br>'))
 
+    // 글씨들 다 br태그로 바꾸는 함수를 만들까 생각중 05-18
     // function txtChange(a,txt){
     //     let txt = ""
     //     txt = a.html()
     //     a.html(txt.replaceAll('^','<br>'))
     // }
+
+
+    // 타이틀 샤라락 나오기
+    let tit = $('.tit')
+    console.log(tit)
+
 
 
 
