@@ -26,7 +26,7 @@ Vue.component("main-comp",{
     data(){
         return{
             data : data,
-            md:true,
+            md:0,
             push : 0,
         }
     },
