@@ -35,16 +35,14 @@ Vue.component("main-comp",{
     methods:{
         nextItem(pm){
             setTimeout(()=>{
-                initCss()
                 this.push += 1;
+                initCss()
+                // 안돼요 맨끝페이지에서 첫페이지로 가게하고싶어요
+                // if(this.push == 8) this.push = 0; 
                 $(".modal").animate({scrollTop:"0"},1);
-                // setTimeout(()=>{
-                //     pjB();
-                // }) 
             },1400)
         },
         mdScroll(){
-            // console.log(777);
             catWheel(true,true);
         }
     },
@@ -128,11 +126,6 @@ new Vue({
             //     pjB()
             // },1000)
         })
-        // setTimeout(()=>{
-        //     if($(".modal")){
-        //         console.log($(".tit"))
-        //     }
-        // },10)
         
     },
 })

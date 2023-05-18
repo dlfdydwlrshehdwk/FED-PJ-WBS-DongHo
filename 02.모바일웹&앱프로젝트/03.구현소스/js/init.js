@@ -16,6 +16,7 @@ function initCss(){
             transform: 'translateY(0)',
             clipPath : 'ellipse(28% 80% at 50% 100%)',
         })
+        
     },1410)
 }
 

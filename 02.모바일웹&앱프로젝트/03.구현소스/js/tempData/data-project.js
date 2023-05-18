@@ -4,7 +4,7 @@ let pjdata = {
             <div class="wrap">
                 <div class="bg">
                     <ul class="projectul">
-                        <li v-for="(v,i) in data" :key="i" class="white2">
+                        <li v-for="(v,i) in data" :key="i" class="white2" >
                         <a @click="md = 1; push = i;mdScroll()">
                         {{v.타이틀}}
                         </a>
@@ -137,7 +137,7 @@ let pjdata = {
         </div>
     </div>
     <div class="titwrap">
-        <div class="tit" v-html="data[push].타이틀"></div>
+        <div class="tit" v-html="data[push].타이틀2"></div>
     </div>
     <div class="mdsizewrap">
         <div class="mdsize">
@@ -145,8 +145,8 @@ let pjdata = {
             './img/'+data[push].eg+'/small.jpg'
             " alt="">
         </div>
-        <div class="mdsizetxt">
-            {{data[push].작은사진텍스트}}
+        <div class="mdsizetxt" v-html="data[push].작은사진텍스트">
+            
         </div>
     </div>
     <div class="bigpicture2wrap">
@@ -163,15 +163,17 @@ let pjdata = {
                 './img/'+data[push].eg+'/half.jpg'
                 " alt="">
             </div>
-            <div class="img50txt50_txtbx">
-                {{data[push].중간사진텍스트}}
+            <div class="img50txt50_txtbx" v-html="data[push].중간사진텍스트">
+                
             </div>
         </div>
     </section>
-    <div class="colorbgwrap" v-if="data[push].배경색박스텍스트.trim()!=''">
-        <div class="colorbg">
-            <h2>
-                {{data[push].배경색박스텍스트}}
+    <div class="colorbgwrap" 
+    v-if="data[push].배경색박스텍스트 !==''
+    ">
+        <div class="colorbg" v-bind:style="data[push].배경색박스배경색">
+            <h2 v-html="data[push].배경색박스텍스트">
+                
             </h2>
         </div>
     </div>

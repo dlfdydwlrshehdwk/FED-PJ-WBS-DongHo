@@ -156,10 +156,10 @@ function catWheel(pm1,pm2){
     // 휠이벤트 함수 //
     function wheelFn(){
         if(wsts) return;
-        console.log("휠함수:",wsts);
+        // console.log("휠함수:",wsts);
 
         // 되나안되나 테스트
-        console.log('휠',wsts)
+        // console.log('휠',wsts)
         // 방향체크
         let delta = event.wheelDelta;
         // 방향에 따른 ...

@@ -48,18 +48,18 @@ function pjB() {
     });
 
     // 큰그림 밑에 글씨를 리플레이스해서 ^ -> br태그로
-    // let bigtxt = "";
-    // bigtxt = $(".tit").html();
-    // // $('.tit').html(bigtxt.replaceAll('^', '<br>'))
+    let bigtxt = "";
+    bigtxt = $(".tit").html();
+    $('.tit').html(bigtxt.replaceAll('^', '<br>'))
 
     // // 타이틀 샤라락 나오기
     let tit = $(".tit");
-    // let hcode = "";
-    // let idx = 0;
+    let hcode = "";
+    let idx = 0;
 
-    // // 글씨 개별 출력 bigtxt <br>이 안먹던것을
-    // // 조건문을통해 x를 발견시 hcode에 x = <br> 변수를 +=로 넣고 else로
-    // // 나머지 글자를 넣는 방식으로 하였다.
+    // 글씨 개별 출력 bigtxt <br>이 안먹던것을
+    // 조건문을통해 x를 발견시 hcode에 x = <br> 변수를 +=로 넣고 else로
+    // 나머지 글자를 넣는 방식으로 하였다.
     // for (let x of bigtxt) {
     //     if (x === "^") {
     //         x = "<br>";
@@ -76,10 +76,10 @@ function pjB() {
     // // tit에 잘라넣은 글씨 hcode를 넣어주세요
     // tit.html(hcode);
 
-    // 1초뒤 (화면전환 애니가 돌아가는시간(넣을예정)) 클래스를 주어 애니메이션
-    setTimeout(() => {
-        tit.addClass("on");
-    }, 1000);
+    // // 1초뒤 (화면전환 애니가 돌아가는시간(넣을예정)) 클래스를 주어 애니메이션
+    // setTimeout(() => {
+    //     tit.addClass("on");
+    // }, 1000);
 
     // 스몰텍스트 br처리
     // let stxt = $('.mdsizetxt').text();
@@ -153,7 +153,7 @@ function pjB() {
         $('.nextPRimgbx').css({
             clipPath : 'ellipse(100% 120% at 50% 100%)',
             transition : '1s',
-            transform: 'translateY(-72%)'
+            transform: 'translateY(-70%)'
         })
 
     })
