@@ -73,19 +73,15 @@ Vue.component("main-comp",{
         
         $('.nextPRtxt').on('click', function(){
             console.log('초기화 클릭')
-            initCss()
+            initCss();
             // setTimeout(()=>{
             //     pjB()
             // },1000)
         })
         
-$(()=>{
+    
 
-    })
-
-       
-
-    },
+    }
 }); // 메인영역 템플릿 셋팅
 
 
@@ -132,7 +128,12 @@ new Vue({
             //     pjB()
             // },1000)
         })
-
+        // setTimeout(()=>{
+        //     if($(".modal")){
+        //         console.log($(".tit"))
+        //     }
+        // },10)
+        
     },
 })
 

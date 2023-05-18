@@ -53,8 +53,7 @@ function pjB() {
     // // $('.tit').html(bigtxt.replaceAll('^', '<br>'))
 
     // // 타이틀 샤라락 나오기
-    // let tit = $(".tit");
-
+    let tit = $(".tit");
     // let hcode = "";
     // let idx = 0;
 
@@ -83,12 +82,12 @@ function pjB() {
     }, 1000);
 
     // 스몰텍스트 br처리
-    let stxt = $('.mdsizetxt').text();
-    $('.mdsizetxt').html(stxt)
+    // let stxt = $('.mdsizetxt').text();
+    // $('.mdsizetxt').html(stxt)
 
-    // 반그림 반글 텍스트 br태그 처리
-    let htxt = $('.img50txt50_txtbx').text()
-    $('.img50txt50_txtbx').html(htxt)
+    // // 반그림 반글 텍스트 br태그 처리
+    // let htxt = $('.img50txt50_txtbx').text()
+    // $('.img50txt50_txtbx').html(htxt)
 
 
     // 칼라데이터 텍스트 br태그 처리

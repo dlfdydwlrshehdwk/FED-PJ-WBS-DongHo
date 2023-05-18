@@ -2,7 +2,7 @@ let pdata = [
     {
         eg: "teamakers",
         id: 0,
-        타이틀: "TEAMAKER'S^GUESTHOUSE",
+        타이틀: `TEAMAKER'S<br>GUESTHOUSE`,
         제목: "TEAMAKER",
         작은사진텍스트:
             "Our entry to the Teamakers Guest House competition received<br>an honourable mention in this open international competition.<br><br>A considered approach has been taken to design a building that<br>sits comfortably in the current context. Careful attention has<br>been paid to the material choices to reflect the function of the<br>building while being aesthetically distinct and proudly represent<br>the Lauku Tea brand and your continued narrative.<br><br><br>We have thoughtfully composed a building that opens up to<br>nature so that guests can experience more of their surroundings<br>while they work.<br>",
@@ -32,7 +32,7 @@ let pdata = [
     {
         eg: "stdionisroad",
         id: 2,
-        타이틀: "ST^DIONIS^ROAD",
+        타이틀: `ST<br>DIONIS<br>ROAD`,
         제목: "ST DIONIS ROAD",
         작은사진텍스트: `Set in St Dionis Road, Parsons Green the brief was to completely<br>
 		renovate the existing Victorian terrace property to create a family<br>

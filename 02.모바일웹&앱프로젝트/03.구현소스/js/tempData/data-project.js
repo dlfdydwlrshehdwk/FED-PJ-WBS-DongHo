@@ -137,7 +137,7 @@ let pjdata = {
         </div>
     </div>
     <div class="titwrap">
-        <div class="tit">{{data[push].타이틀}}</div>
+        <div class="tit" v-html="data[push].타이틀"></div>
     </div>
     <div class="mdsizewrap">
         <div class="mdsize">
