@@ -152,7 +152,9 @@ It's a nice house that looks like a novel.
 		The garden has been reconfigured to provide a better link<br> with the living space – made perfect for entertaining and<br> relaxing all the same. The aged ground floor extension has<br> been updated by installing a clean box skylight with<br> minimal frame and steel doors. The rest of the ground<br> floor has been thoroughly refurbished with timber wall<br> panels and integrated joinery.<br><br><br>
 		The biggest change on the first floor has been the<br> reconfiguration of the master suite. Two adjoining<br> rooms have been combined to provide an airy and generous<br> space, with an unintrusive part dedicated to a walk-i<br>n wardrobe and a generous shower room. The bathroom is<br> finished in beautiful cream Venetian plaster and steel<br> doors throughout.
 		`,
-        배경색박스텍스트: ``,
+        배경색박스텍스트: `
+        British nurse who gained fame for her outstanding work skills<br> in the British Army Field Hospital during the Crimean War.<br> He established the foundation of modern nursing and made<br> efforts to reform military medical care and foster nurses.
+        `,
         배경색박스배경색: { backgroundColor : 'red'},
         다음프로젝트명: "SWISSLAND HILL.",
     },
