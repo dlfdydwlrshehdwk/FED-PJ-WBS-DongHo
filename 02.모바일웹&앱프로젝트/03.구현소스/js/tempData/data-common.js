@@ -249,7 +249,7 @@ const comData = {
                         <ul>
                             <!-- 프로젝트 개수 -->
                             <li>
-                                <div>12</div>
+                                <div>10</div>
                                 <p>Projects</p>
                             </li>
                             <!-- 나의 2번째 프로젝트 -->
@@ -315,7 +315,7 @@ const comData = {
             <div class="loginbx">
                 <div>
                     <div>
-                        <span>아이디&nbsp;&nbsp;  </span>
+                        <span>아이디&nbsp;&nbsp;&nbsp;  </span>
                         <input type="text" name="id" id="id" maxlength="10">
                     </div>
                     <div>

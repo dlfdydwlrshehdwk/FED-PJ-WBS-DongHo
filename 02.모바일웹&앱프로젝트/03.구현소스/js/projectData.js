@@ -29,7 +29,7 @@ let pdata = [
 		sense of story in the space, it also reduced their initial<br>
 		budget figures by 78%.`,
         배경색박스텍스트: `A Community built project<br>for a community led charity.`,
-        배경색박스배경색: "red",
+        배경색박스배경색: {backgroundColor : "#9078d3"},
     },
     {
         eg: "stdionisroad",
@@ -46,8 +46,8 @@ let pdata = [
 		opening out to the garden. Upstairs various additions allow for<br>
 		additional bedroom spaces and bathrooms with wider views<br>
 		looking out to the rear of the property.`,
-        중간사진텍스트: "어쩌구저쩌구텍스트",
-        배경색박스텍스트: "어저구저쩌구",
+        중간사진텍스트: "무언가 텍스트가 들어가야 하는<br>그런 위치에 <br>그런 곳",
+        배경색박스텍스트: "어저구저쩌구<br>blah blah..<br>어절씨구 절씨구",
         배경색박스배경색: {backgroundColor :"skyblue"},
         다음프로젝트명: "COLOURED CONCRETE HOUSE",
     },
@@ -75,15 +75,12 @@ let pdata = [
 		Set in Whyteleafe hill, Surrey, this 9 unit scheme is located on a<br>corner plot set to replace a large single dwelling. The proposal<br>uses materiality to mirror the immediate context of St Luke's<br>church and the neighboring houses.
 		`,
         중간사진텍스트: `
-		음 ... 이건 데이터가 없네요..<br>
-		그래서 한자한자 대충 만들어 봅니다.<br>
-		이거하느라 몇일밤을 샜더니 피곤해 죽겠어요<br>
-		좋은곳에 취직하고싶네요^_^.<br>
-		감사합니다.
+		I can see the house.<br>
+a house visible through thick trees.<br>
+It's a nice house that looks like a novel.
 		`,
         배경색박스텍스트: `
-		Today is very good.<br>
-		but i'm so tired~ hahahahaha~~~ 
+		What kind of house do you want to live in when you turn 60?
 		`,
         배경색박스배경색: {backgroundColor : "#ccc"},
         다음프로젝트명: "MANOR ROAD",
@@ -137,7 +134,7 @@ let pdata = [
 		The existing building with a number of small spaces<br>internally and cluttered facade has been given a go-ahead<br>to a double-height rear extension with an internal<br>reconfiguration of the main house and a three-level side<br> extension.<br>The feature glazed rear extension has been designed to<br> maximize the height, light, and openness of the living<br>space with an amazing double-height heart/atrium,<br>connecting the building with the rest of the house.<br>The loved family home design approach was to create spaces<br>of openness and generosity, giving a nod to the beautiful home.<br>The additional side extension is designed to be self-sufficient and independent<br> from the main house. This is to offer privacy and independence to visitors, as well as infilling the unused drive and creating a private and secure<br>rear garden.
 		`,
         배경색박스텍스트:"We're PeriPera!!!",
-        배경색박스배경색: { backgroundColor : 'red'},
+        배경색박스배경색: { backgroundColor : '#d0eb87'},
         다음프로젝트명: "NIGHTINGALE.",
     },
     {
@@ -222,7 +219,7 @@ Living space feels like it is merging into the surroundings<br> by views opening
 		to make the visitor feel<br>
 		at on with nature
 		`,
-        배경색박스배경색: "rgb(216, 213, 186)",
+        배경색박스배경색:{backgroundColor :"rgb(216, 213, 186)"} ,
         다음프로젝트명: "TEAMAKER",
     },
 ];
