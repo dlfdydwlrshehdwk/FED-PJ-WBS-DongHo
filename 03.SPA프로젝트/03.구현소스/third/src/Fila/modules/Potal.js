@@ -2,6 +2,7 @@
 
 import "../css/potal.css"
 import $ from 'jquery';
+import { Link } from "react-router-dom";
 
 // 제이쿼리 로드구역 함수
 function jqFn(){
@@ -59,16 +60,16 @@ function Potal(){
             {/* 세로로 4개있어야 할 글자들 */}
             <div className="ilgtxt">
                 <div>
-                    <a href="">MOUNTAIN</a>
+                    <Link to='/mountain' >MOUNTAIN</Link>
                 </div>
                 <div>
-                    <a href="">WOODS</a>
+                <Link to='/woods'>WOODS</Link>
                 </div>
                 <div>
-                    <a href="">CANYON</a>
+                <Link to='/canyon'>CANYON</Link>
                 </div>
                 <div>
-                    <a href="">ELEMENTS</a>
+                <Link to='/elements'>ELEMENTS</Link>
                 </div>
             </div>
             {/* 가로선 2개 */}

@@ -4,6 +4,10 @@
     width: 100%;
     height: 100vh;
     position: relative;
+    background-repeat: no-repeat;
+    background-position: 100% 100%;
+    background-size: cover;
+    background-color: red;
 }
 .tit{
     position: absolute;
@@ -11,5 +15,5 @@
     left: 50%;
     transform: translate(-50%,-50%);
     font-size: 10rem;
-    /* color: white; */
+    color: white;
 }
