@@ -1,13 +1,18 @@
 import React from 'react';
 import Bgbx from "./modules/Bgbx";
+import FlowSpan from './modules/FlowSpan';
+import Mart from './modules/Mart';
+import Mtext from './modules/Mtext';
 import Potal from "./modules/Potal";
-import Vid from './modules/Vid';
 
 function Canyon(){
     return(
         <>
             <Bgbx sub="canyon" title="CANYON"/>
-            <Vid />
+            <Mtext tit="canyon"/>
+            <FlowSpan />
+            <FlowSpan />
+            <Mart />
             <Potal />
         </>
     )

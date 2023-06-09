@@ -1,0 +1,12 @@
+.mtwrap {
+    text-align: center;
+}
+.mtwrap h1{
+    font-size: 4rem;
+    margin: 0;
+    padding-bottom: 1.5rem;
+}
+.mtwrap p{
+    margin: 0;
+    font-size: 1.2rem;
+}

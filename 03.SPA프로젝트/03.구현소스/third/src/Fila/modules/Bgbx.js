@@ -14,7 +14,8 @@ function Bgbx(props){
                     <div className="bag20bx">
                         <img className="bgbx" src={bgsrc[props.sub]} />
                         <div className='vidwrap'>
-                            
+                            <img src=''/>
+                            <h1>PLAY ▶</h1>
                         </div>
                     </div>
 

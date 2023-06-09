@@ -1,0 +1,37 @@
+.animated-title {
+    font-size: 60px;
+    font-family: "Raleway", Sans-serif;
+    font-weight: 300;
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    padding: 100px 0;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+.animated-title .track {
+    position: absolute;
+    white-space: nowrap;
+    will-change: transform;
+    animation: marquee 10s linear infinite;
+}
+.wt{
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+    color: white;
+}
+@keyframes marquee {
+    from {
+        transform: translateX(-50%);
+    }
+    to {
+        transform: translateX(0%);
+    }
+}
+@media (hover: hover) and (min-width: 700px) {
+    .animated-title .content {
+        -webkit-transform: translateY(calc(100% - 8rem));
+        transform: translateY(calc(100% - 8rem));
+    }
+}

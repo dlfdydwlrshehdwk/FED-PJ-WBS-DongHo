@@ -30,10 +30,26 @@
 .vidwrap{
     /* 삭제예정 */
     border: 1px solid; 
-    width: 80%;
+    width: 90%;
     aspect-ratio: 16/9;
     position: absolute;
-    bottom: -30%;
+    top: 85%;
+    left: 50%;
+    /* transform: translate(-50%, -50%); */
+    transform: translateX(-50%);
+}
+.vidwrap h1{
+    margin: 0;
+    position: absolute;
+    top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    /* -webkit-text-fill-color: transparent; */
+    /* background: linear-gradient(to left,gray,white,silver); */
+}
+
+@media screen and (min-width: 768px) {
+}
+
+@media screen and (min-width: 1024px) {
 }
