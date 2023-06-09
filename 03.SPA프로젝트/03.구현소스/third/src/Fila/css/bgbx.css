@@ -1,13 +1,14 @@
 /* bgbx.css */
-
+.bgbxwrap{
+    position: relative;
+    width: 100%;
+    height: 160vh;
+}
 .bgbx{
     width: 100%;
-    height: 100vh;
-    position: relative;
-    background-repeat: no-repeat;
-    background-position: 100% 100%;
-    background-size: cover;
+    height: 100%;
     background-color: red;
+    object-fit: cover;
 }
 .tit{
     position: absolute;
@@ -16,4 +17,23 @@
     transform: translate(-50%,-50%);
     font-size: 10rem;
     color: white;
+    z-index: 1;
+}
+.bagbx{
+    height: 100vh;
+    position: relative;
+}
+.bag20bx{
+    height: 120%;
+    position: relative;
+}
+.vidwrap{
+    /* 삭제예정 */
+    border: 1px solid; 
+    width: 80%;
+    aspect-ratio: 16/9;
+    position: absolute;
+    bottom: -30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
