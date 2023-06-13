@@ -4,9 +4,9 @@ import React from "react";
 function FlowSpan() {
     return (
         <>
-            <div class="animated-title">
-                <div class="track">
-                    <div class="content">
+            <div className="animated-title">
+                <div className="track">
+                    <div className="content">
                         <span className="wt">SHOP THE COLLECTION↗</span>
                         <span className="bt">SHOP THE COLLECTION↗</span>
                         <span className="wt">SHOP THE COLLECTION↗</span>
