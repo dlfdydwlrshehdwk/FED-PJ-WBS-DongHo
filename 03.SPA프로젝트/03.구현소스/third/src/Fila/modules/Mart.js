@@ -1,5 +1,6 @@
 import React from "react";
-import "../css/mart.css"
+import "../css/mart.css";
+import $ from "jquery";
 function Mart(){
 
     const mart = [
@@ -41,17 +42,39 @@ function Mart(){
         },
     ];
 
+    // 제이쿼리 로드구역 함수 /////////
+    let mob = 0;
+    if($(window).width() < 600) mob = 1;
+    function jqFn() {
+        $(() => {
+            $(window).on('resize',()=>{
+                if($(window).width() >= 600 ) mob = 0;
+                else mob = 1;
+
+                if(mob){
+                    console.log($('.marta span').last())
+                    $('.arrow').fadeOut();
+                }
+                else {
+                    $('.arrow').fadeIn();
+                }
+            })
+
+        }); //////// jQB ///////////
+    } ////////////// jQFn ///////////
+
     return(
         <>
             <section className="martsc">
                 <h1>POP-UP<br/>STORES</h1>
                 <ul className="martul">
                     {
-                        mart.map(x=>
-                        <li>
+                        mart.map((x,i)=>
+                        <li key={i}>
                             <a className="marta">
                                 <div>
-                                    <h2>{x.city}</h2>
+                                    <span>{x.city}</span>
+                                    <span className="arrow">↗</span>
                                 </div>
                                 <div>
                                     <p>{x.addr.split('^')[0]}</p>
@@ -59,15 +82,16 @@ function Mart(){
                                         x.addr == "" ?
                                         <p>comming soon</p> : <p>{x.addr.split('^')[1]}</p>
                                     }
-                                    
                                 </div>
                             </a>
                         </li>
-                            
+
                             )
                     }
                 </ul>
             </section>
+            {/* 빈루트를 만들고 JS로드함수포함 */}
+            {jqFn()}
         </>
     )
 }
