@@ -8,11 +8,13 @@ import Elements from './Fila/Elements';
 import Mountain from './Fila/Mountain';
 import Main from './Fila/Main';
 import Layout from './Fila/Layout';
+import ScrollTop from './Fila/common/ScrollTop';
 
 
 export default function App(){
   return(
     <BrowserRouter>
+    <ScrollTop /> 
     <Routes>
       <Route path='/' element={<Layout />}>
         <Route index element={<Main />} />
