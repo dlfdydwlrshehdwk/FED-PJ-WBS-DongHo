@@ -3,6 +3,13 @@ import '../css/bgbx.css';
 import bgsrc from '../Bg';
 import React from 'react';
 
+const vidisrc = {
+    mountaine : "./images/mountain/vid.jpg",
+    woods : "./images/woods/vid.jpg",
+    elements : "./images/elements/vid.jpg",
+    canyon : "./images/canyon/vid.jpg",
+}
+
 function Bgbx(props){
     return(
         <>
@@ -14,7 +21,9 @@ function Bgbx(props){
                     <div className="bag20bx">
                         <img className="bgbx" src={bgsrc[props.sub]} />
                         <div className='vidwrap'>
-                            <img src=''/>
+                            <img src={
+                                vidisrc[props.sub]
+                            }/>
                             <h1>PLAY ▶</h1>
                         </div>
                     </div>
