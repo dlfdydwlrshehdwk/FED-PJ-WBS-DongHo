@@ -5,6 +5,7 @@ import FlowSpan from "./modules/FlowSpan";
 import Mart from "./modules/Mart";
 import Blackbx from "./modules/Blackbx";
 import Nav from "./modules/Nav";
+import Markbx from "./modules/Markbx";
 
 function Mountain(){
     return(
@@ -13,6 +14,7 @@ function Mountain(){
             <Bgbx sub="mountain" title="MOUNTAIN"/>
             <Mtext tit="mountain" />
             <FlowSpan />
+            <Markbx tit="mountain"/>
             <FlowSpan />
             <Mart />
             <Blackbx />
