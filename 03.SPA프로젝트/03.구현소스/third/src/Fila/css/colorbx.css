@@ -1,0 +1,28 @@
+
+.colorbx_wrap {
+    position: relative;
+    width: 85vw;
+    margin: 0 auto;
+    padding-top: 30vh;
+}
+.colorbg{
+    width: 100%;
+    height: 55vh;
+}
+.colorbx_wrap img{
+    width: 100%;
+    height: 100%;
+}
+
+.color1 {
+    width: 85%;
+    position: absolute;
+    top: 30%;
+    z-index: 1;
+    left: 18%;
+}
+.color2{
+    top: 83%;
+    position: absolute;
+    width: 65%;
+}

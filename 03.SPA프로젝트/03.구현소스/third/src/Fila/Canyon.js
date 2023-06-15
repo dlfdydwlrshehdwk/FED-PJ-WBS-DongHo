@@ -7,6 +7,7 @@ import Mart from './modules/Mart';
 import Mtext from './modules/Mtext';
 import Nav from './modules/Nav';
 import Potal from "./modules/Potal";
+import Tmarkbx from './modules/Tmarkbx';
 
 function Canyon(){
     return(
@@ -15,6 +16,7 @@ function Canyon(){
             <Bgbx sub="canyon" title="CANYON"/>
             <Mtext tit="canyon"/>
             <FlowSpan />
+            <Tmarkbx tit="canyon" />
             <Markbx tit="canyon"/>
             <FlowSpan />
             <Mart />

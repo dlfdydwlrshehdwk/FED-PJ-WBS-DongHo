@@ -6,6 +6,9 @@ import Mart from "./modules/Mart";
 import Blackbx from "./modules/Blackbx";
 import Nav from "./modules/Nav";
 import Markbx from "./modules/Markbx";
+import Tmarkbx from "./modules/Tmarkbx";
+import Item from "./modules/Item";
+import ColorBx from "./modules/ColorBx";
 
 function Elements(){
     return(
@@ -14,7 +17,11 @@ function Elements(){
             <Bgbx sub="elements" title="ELEMENTS"/>
             <Mtext tit="elements"/>
             <FlowSpan />
+            <Tmarkbx tit="elements"/>
+            <Item />
+            <ColorBx tit="elements"/>
             <Markbx tit="elements" />
+            <ColorBx tit="elements"/>
             <FlowSpan />
             <Mart />
             <Blackbx />

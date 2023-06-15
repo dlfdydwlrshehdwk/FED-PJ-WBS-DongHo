@@ -1,5 +1,6 @@
 import Bgbx from "./modules/Bgbx";
 import Blackbx from "./modules/Blackbx";
+import ColorBx from "./modules/ColorBx";
 import FlowSpan from "./modules/FlowSpan";
 import Markbx from "./modules/Markbx";
 import Mart from "./modules/Mart";
@@ -15,6 +16,7 @@ function Woods(){
             <Bgbx sub="woods" title="WOODS"/>
             <Mtext tit="woods"/>
             <FlowSpan />
+            <ColorBx tit="woods"/>
             <Tmarkbx tit="woods"/>
             <Markbx tit="woods" />
             <FlowSpan />

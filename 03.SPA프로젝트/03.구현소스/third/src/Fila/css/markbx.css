@@ -12,14 +12,13 @@
     height: 100%;
 }
 
-.mark_leftimg{
-    width: 40vw;
-    transform: translate(25%, 5%);
+.mark_leftimg {
+    width: 60vw;
+    transform: translate(0%, 5%);
 }
 .mark_rightimg{
-    width: 40vw;
+    width: 60vw;
     margin: 0 0 0 auto;
-    transform: translate(-25%, 5%);
 }
 .markimg{
     width: 20vw;

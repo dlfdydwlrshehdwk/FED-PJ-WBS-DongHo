@@ -6,6 +6,9 @@ import Mart from "./modules/Mart";
 import Blackbx from "./modules/Blackbx";
 import Nav from "./modules/Nav";
 import Markbx from "./modules/Markbx";
+import ColorBx from "./modules/ColorBx";
+import Tmarkbx from "./modules/Tmarkbx";
+import Item from "./modules/Item";
 
 function Mountain(){
     return(
@@ -14,7 +17,10 @@ function Mountain(){
             <Bgbx sub="mountain" title="MOUNTAIN"/>
             <Mtext tit="mountain" />
             <FlowSpan />
+            <Item />
+            <ColorBx tit="mountain"/>
             <Markbx tit="mountain"/>
+            <Tmarkbx tit="mountain" />
             <FlowSpan />
             <Mart />
             <Blackbx />
