@@ -28,14 +28,16 @@ function Tmarkbx(props){
     return(
         <>
         <section className="tmarkbx_wrap">
-            <div className="tmark_bgimg">
-                <img src={img[props.tit]['bg']} alt=""/>
-            </div>
-            <div className="tmarkl">
-                <img src={img[props.tit]['front']} alt=""/>
-            </div>
-            <div className="tmarkr">
-                <img src={img[props.tit]['mark']} alt=""/>
+            <div className="tmarkbx">
+                <div className="tmark_bgimg">
+                    <img src={img[props.tit]['bg']} alt=""/>
+                </div>
+                <div className="tmarkl">
+                    <img src={img[props.tit]['front']} alt=""/>
+                </div>
+                <div className="tmarkr">
+                    <img src={img[props.tit]['mark']} alt=""/>
+                </div>
             </div>
         </section>
         </>
