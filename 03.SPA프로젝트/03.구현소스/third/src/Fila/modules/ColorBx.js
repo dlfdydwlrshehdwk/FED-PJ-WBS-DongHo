@@ -10,7 +10,7 @@ const img = {
     elements : {
         one : "./images/elements/one.jpg",
         two : "./images/elements/two.jpg",
-        color : {color : 'gray'}
+        color : {color : '#c6d4e0'}
     },
     woods : {
         one : "./images/woods/one.jpg",

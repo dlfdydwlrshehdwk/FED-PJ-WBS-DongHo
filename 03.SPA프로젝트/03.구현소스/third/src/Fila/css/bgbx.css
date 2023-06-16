@@ -51,6 +51,10 @@
     transform: translate(-50%, -50%);
     /* -webkit-text-fill-color: transparent; */
     /* background: linear-gradient(to left,gray,white,silver); */
+    filter: invert(1);
+    mix-blend-mode: difference;
+    -webkit-text-stroke: 1px transparent;
+    background-color: transparent;
 }
 
 @media screen and (min-width: 768px) {
