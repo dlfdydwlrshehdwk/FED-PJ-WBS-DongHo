@@ -3,13 +3,14 @@
     text-align: center;
     width: 85vw;
     margin: 0 auto;
+    padding-top: 30%;
 }
 .mtwrap h1{
-    font-size: 4rem;
+    font-size: 10vw;
     margin: 0;
     padding-bottom: 1.5rem;
 }
-.mtwrap p{
+.mtwrap p {
     margin: 0;
-    font-size: 1.2rem;
+    font-size: 1.5vw;
 }

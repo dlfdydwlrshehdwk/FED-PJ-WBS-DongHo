@@ -57,8 +57,18 @@
     background-color: transparent;
 }
 
-@media screen and (min-width: 768px) {
-}
-
-@media screen and (min-width: 1024px) {
+@media screen and (max-width: 400px) {
+    .vidwrap{
+        /* 삭제예정 */
+        /* border: 1px solid;  */
+        width: 90%;
+        aspect-ratio: 16/9;
+        position: absolute;
+        top: 85%;
+        left: 50%;
+        /* transform: translate(-50%, -50%); */
+        transform: translateX(-50%);
+    
+        height:50vh;
+    }
 }

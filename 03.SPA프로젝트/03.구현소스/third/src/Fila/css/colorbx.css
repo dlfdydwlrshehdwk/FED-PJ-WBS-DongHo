@@ -3,11 +3,15 @@
     position: relative;
     width: 85vw;
     margin: 0 auto;
-    padding-top: 30vh;
+    margin-top: 20%;
+    height: 200px;
 }
 .colorbg{
+    position: absolute;
     width: 64%;
-    height: 55vh;
+    height: 60vw;
+    top: 15%;
+    right: 0;
 }
 .colorbx_wrap img{
     width: 100%;
@@ -17,12 +21,31 @@
 .color1 {
     width: 46%;
     position: absolute;
-    top: 30%;
+    top: 0%;
     z-index: 1;
-    left: 18%;
+    left: 50%;
+    transform: translateX(-50%);
 }
 .color2{
     top: 83%;
     position: absolute;
     width: 65%;
+}
+
+@media screen and (min-width: 480px) {
+    .colorbx_wrap {
+        height: 400px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .colorbx_wrap {
+        height: 800px;
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    .colorbx_wrap {
+        height: 1400px;
+    }
 }

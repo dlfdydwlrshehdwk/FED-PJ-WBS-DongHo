@@ -2,17 +2,17 @@
     position: relative;
     width: 85%;
     margin: 0 auto;
-    padding-top: 40vh;
+    padding-top: 30%;
 }
 .tmarkbx{
     position: relative;
 }
 .tmarkl{
     position: absolute;
-    top: 70%;
     /* height: 50vh; */
     width: 46%;
     right: 5%;
+    top: 50%;
     transform: translateY(-50%);
 }
 .tmarkl img{
@@ -47,25 +47,15 @@
         width: 25vw;
     top: -15%;
     }
-    .tmarkl{
-        top: 65%;
-    }
 }
 @media screen and (min-width: 1280px) {
     .tmarkbx_wrap .tmarkr{
         width: 21vw;
         top: -17%;
     }
-    .tmarkl{
-        top: 50%;
-        /* height: 64%; */
-    }
     
 }
 @media screen and (min-width: 1920px) {
     .tmarkbx_wrap .tmarkr{
-    }
-    .tmarkl{
-        top: 56%;
     }
 }

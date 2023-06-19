@@ -1,7 +1,7 @@
 .markbx_wrap{
     position: relative;
     width: 85vw;
-    padding-top: 20vh;
+    padding-top: 10vh;
     margin: 0 auto; 
 }
 .markbx{
@@ -13,11 +13,11 @@
 }
 
 .mark_leftimg {
-    width: 60vw;
+    width: 52vw;
     transform: translate(0%, 5%);
 }
 .mark_rightimg{
-    width: 60vw;
+    width: 53vw;
     margin: 0 0 0 auto;
 }
 .markimg{

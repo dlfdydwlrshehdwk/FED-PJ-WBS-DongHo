@@ -2,17 +2,18 @@ import React from "react";
 import "../css/colorbx.css";
 import $ from "jquery"
 
+
 function jqFn() {
     $(() => {
 
-        let a = $('.colorbx_wrap').height();
-        // let b = 
     }); //////// jQB ///////////
 } ////////////// jQFn ///////////
 
-
 function ColorBx(props){
     
+
+
+
     // const img = {
     //     canyon : {
     //         two : "./images/canyon/" + props.num2 + ".jpg",
@@ -50,9 +51,7 @@ function ColorBx(props){
                     </div>
                 </div>
             </section>
-            {
-                jqFn()
-            }
+            {jqFn()}
         </>
     )
 }
