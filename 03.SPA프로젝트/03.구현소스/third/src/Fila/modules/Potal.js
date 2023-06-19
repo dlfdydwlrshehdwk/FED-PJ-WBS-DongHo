@@ -4,9 +4,71 @@ import "../css/potal.css"
 import $ from 'jquery';
 import { Link } from "react-router-dom";
 
+function dom(){
+    window.addEventListener('DOMContentLoaded',()=>{
+    
+        console.log('돔')
+
+        const cursorRounded = document.querySelector('.rounded');
+        const cursorPointed = document.querySelector('.pointed');
+        
+        
+        const moveCursor = (e)=> {
+          const mouseY = e.clientY;
+          const mouseX = e.clientX;
+           
+          cursorRounded.style.transform = `translate3d(${mouseX}px, ${mouseY}px, 0)`;
+          
+          cursorPointed.style.transform = `translate3d(${mouseX}px, ${mouseY}px, 0)`;
+         
+        }
+        
+        
+        window.addEventListener('mousemove', moveCursor);
+    })
+}
+
+
 // 제이쿼리 로드구역 함수
 function jqFn(){
     $(()=>{
+
+    let rounded = $('.rounded');
+    let pointed = $('.pointed');
+
+    const moveCursor = (e) =>{
+        console.log('마우스')
+        let mouseX = e.screenX;
+        let mouseY = e.screenY;
+        console.log(mouseX,mouseY)
+
+        rounded.css({
+            transform : `translate3d(${mouseX}px, ${mouseY}px, 0)`
+        })
+        pointed.css({
+            transform : `translate3d(${mouseX}px, ${mouseY}px, 0)`
+        })
+
+    }
+
+    $(window).on('mousemove',moveCursor);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
  // 줄위치 조정
  $('.ss').eq(0).css({
     left : '20%'
@@ -88,7 +150,12 @@ function Potal(){
                 <div className="bgi2"></div>
             </div>
         </section>
+        <div className="cursor rounded">
+            <img src="../images/mouse.png"/>
+        </div>
+        <div className="cursor pointed"></div>
         {jqFn()}
+        {dom()}
         </>
     )
 }

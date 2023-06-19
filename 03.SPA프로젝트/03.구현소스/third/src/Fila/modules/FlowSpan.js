@@ -42,6 +42,7 @@ function jqFn(pm) {
     }); //////// jQB ///////////
 } ////////////// jQFn ///////////
 
+
 function FlowSpan(props) {
 
 
@@ -60,7 +61,11 @@ function FlowSpan(props) {
                     </div>
                 </div>
             </section>
-            {jqFn(props.color)}
+            {
+                setTimeout(()=>{
+                    jqFn(props.color)
+                },10)
+            }
         </>
     );
 }
