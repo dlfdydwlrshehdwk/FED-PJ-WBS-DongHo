@@ -17,7 +17,7 @@
     overflow-x: hidden;
     overflow-y: hidden;
     z-index: 2;
-    position: absolute;
+    /* position: absolute; */
     height: 60px;
     padding-top: 5%;
 }
@@ -31,26 +31,21 @@
     overflow-x: hidden;
     overflow-y: hidden;
     z-index: 2;
-    position: absolute;
+    /* position: absolute; */
     bottom: 0;
     height: 60px;
     padding-bottom: 5%;
 }
 
 
-
-
-
-
-
-
-
-
 .blackbx_track {
-    position: absolute;
+    display: flex;
+    /* position: absolute; */
     white-space: nowrap;
     will-change: transform;
-    animation: marquee 10s linear infinite;
+    width: 200%;
+    
+    transform: translateX(-50%);
 }
 .blackbx_wt{
     -webkit-text-stroke-width: .5px;
@@ -64,15 +59,20 @@
     color: red;
     font-size: 2rem;
 }
+.blackbx_content{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    /* animation: marquee 5s linear infinite; */
+}
 .blackbx_content span{
-    padding: 0 2.5%;
 }
 @keyframes marquee {
     from {
-        transform: translateX(-50%);
+        transform: translateX(0%);
     }
     to {
-        transform: translateX(0%);
+        transform: translateX(50%);
     }
 }
 @media (hover: hover) and (min-width: 700px) {

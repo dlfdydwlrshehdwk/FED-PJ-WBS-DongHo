@@ -26,7 +26,7 @@
         transform: translateX(-50%);
     }
     to {
-        transform: translateX(0%);
+        transform: translateX(50%);
     }
 }
 @media (hover: hover) and (min-width: 700px) {

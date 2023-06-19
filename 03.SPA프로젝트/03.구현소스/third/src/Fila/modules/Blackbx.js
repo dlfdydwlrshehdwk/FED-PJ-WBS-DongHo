@@ -18,6 +18,12 @@ function Blackbx(){
         <div className="blackbx_flowbx1">
             <div className="blackbx_track">
                 <div className="blackbx_content">
+                    <div className="blackbx_wt">#FILAEXPLORE</div>
+                    <div className="blackbx_bt">운동화는 휠라</div>
+                    <div className="blackbx_wt">#FILAEXPLORE</div>
+                    <div className="blackbx_bt">운동화는 휠라</div>
+                </div>
+                <div className="blackbx_content">
                     <span className="blackbx_wt">#FILAEXPLORE</span>
                     <span className="blackbx_bt">운동화는 휠라</span>
                     <span className="blackbx_wt">#FILAEXPLORE</span>
@@ -27,6 +33,12 @@ function Blackbx(){
         </div>
         <div className="blackbx_flowbx2">
             <div className="blackbx_track">
+                <div className="blackbx_content">
+                    <span className="blackbx_bt">운동화는 휠라</span>
+                    <span className="blackbx_wt">#FILAEXPLORE</span>
+                    <span className="blackbx_bt">운동화는 휠라</span>
+                    <span className="blackbx_wt">#FILAEXPLORE</span>
+                </div>
                 <div className="blackbx_content">
                     <span className="blackbx_bt">운동화는 휠라</span>
                     <span className="blackbx_wt">#FILAEXPLORE</span>
