@@ -31,9 +31,10 @@ function Tmarkbx(props){
             <div className="tmarkbx">
                 <div className="tmark_bgimg">
                     <img src={img[props.tit]['bg']} alt=""/>
-                </div>
                 <div className="tmarkl">
                     <img src={img[props.tit]['front']} alt=""/>
+                </div>
+
                 </div>
                 <div className="tmarkr">
                     <img src={img[props.tit]['mark']} alt=""/>

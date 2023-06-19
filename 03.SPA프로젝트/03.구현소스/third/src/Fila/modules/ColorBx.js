@@ -1,6 +1,14 @@
 import React from "react";
 import "../css/colorbx.css";
+import $ from "jquery"
 
+function jqFn() {
+    $(() => {
+
+        let a = $('.colorbx_wrap').height();
+        // let b = 
+    }); //////// jQB ///////////
+} ////////////// jQFn ///////////
 
 
 function ColorBx(props){
@@ -42,6 +50,9 @@ function ColorBx(props){
                     </div>
                 </div>
             </section>
+            {
+                jqFn()
+            }
         </>
     )
 }

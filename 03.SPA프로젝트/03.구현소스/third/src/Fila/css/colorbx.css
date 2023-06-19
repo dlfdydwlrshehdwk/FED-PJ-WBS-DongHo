@@ -6,7 +6,7 @@
     padding-top: 30vh;
 }
 .colorbg{
-    width: 100%;
+    width: 64%;
     height: 55vh;
 }
 .colorbx_wrap img{
@@ -15,7 +15,7 @@
 }
 
 .color1 {
-    width: 85%;
+    width: 46%;
     position: absolute;
     top: 30%;
     z-index: 1;
