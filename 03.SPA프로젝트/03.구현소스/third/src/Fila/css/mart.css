@@ -7,8 +7,9 @@
     src: url(../font/HelveticaNeue/HelveticaNeueLTPro-Lt.otf);
 }
 .martsc{
-    padding: 10%;
     position: relative;
+    max-width: 85vw;
+    margin: 0 auto;
 }
 .martul{
     list-style: none;

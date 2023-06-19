@@ -15,12 +15,12 @@ function Canyon(){
             <Nav />
             <Bgbx sub="canyon" title="CANYON"/>
             <Mtext tit="canyon"/>
-            <FlowSpan />
+            <FlowSpan color="red" />
             <Tmarkbx tit="canyon" />
             <Markbx tit="canyon"/>
-            <FlowSpan />
-            <Mart />
-            <Blackbx />
+            <FlowSpan color="red" />
+            <Mart color="red"/>
+            <Blackbx color1="red" color2="#efdece"/>
             <Potal />
         </>
     )

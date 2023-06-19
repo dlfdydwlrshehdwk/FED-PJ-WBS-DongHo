@@ -16,15 +16,15 @@ function Elements(){
             <Nav />
             <Bgbx sub="elements" title="ELEMENTS"/>
             <Mtext tit="elements"/>
-            <FlowSpan />
+            <FlowSpan  color="#a6e057"/>
             <Tmarkbx tit="elements"/>
             <Item />
-            <ColorBx tit="elements"/>
+            <ColorBx tit="elements" num="one" bgc="#c6d4e0"/>
             <Markbx tit="elements" />
-            <ColorBx tit="elements"/>
-            <FlowSpan />
-            <Mart />
-            <Blackbx />
+            <ColorBx tit="elements" num="two" bgc="#c6d4e0"/>
+            <FlowSpan  color="#a6e057"/>
+            <Mart color="#a6e057"/>
+            <Blackbx color1="#a6e057" color2="#b6d4dc"/>
             <Potal />
         </>
     )

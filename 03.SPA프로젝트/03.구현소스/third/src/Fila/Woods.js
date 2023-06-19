@@ -15,13 +15,13 @@ function Woods(){
             <Nav />
             <Bgbx sub="woods" title="WOODS"/>
             <Mtext tit="woods"/>
-            <FlowSpan />
-            <ColorBx tit="woods"/>
+            <FlowSpan color="#b23794" />
+            <ColorBx tit="woods" num="one" bgc="#f4dfcd"/>
             <Tmarkbx tit="woods"/>
             <Markbx tit="woods" />
             <FlowSpan />
-            <Mart />
-            <Blackbx />
+            <Mart color="#b23794"/>
+            <Blackbx color1="#b23794" color2="#b23794"/>
             <Potal />
         </>
     )

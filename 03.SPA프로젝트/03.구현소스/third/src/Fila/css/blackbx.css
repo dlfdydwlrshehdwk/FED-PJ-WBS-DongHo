@@ -17,7 +17,7 @@
     overflow-x: hidden;
     overflow-y: hidden;
     z-index: 2;
-    /* position: absolute; */
+    position: absolute;
     height: 60px;
     padding-top: 5%;
 }
@@ -31,7 +31,7 @@
     overflow-x: hidden;
     overflow-y: hidden;
     z-index: 2;
-    /* position: absolute; */
+    position: absolute;
     bottom: 0;
     height: 60px;
     padding-bottom: 5%;
@@ -40,39 +40,36 @@
 
 .blackbx_track {
     display: flex;
-    /* position: absolute; */
+    position: absolute;
     white-space: nowrap;
     will-change: transform;
     width: 200%;
-    
-    transform: translateX(-50%);
+    animation: marquee1 5s linear infinite;
 }
 .blackbx_wt{
-    -webkit-text-stroke-width: .5px;
-    -webkit-text-stroke-color: white;
-    color: transparent;
+    /* -webkit-text-stroke-width: .5px; */
+    /* -webkit-text-stroke-color: white; */
+    /* color: transparent; */
     font-size: 2rem;
 }
 .blackbx_bt{
-    /* -webkit-text-stroke-width: 1px; */
-    /* -webkit-text-stroke-color: red; */
-    color: red;
     font-size: 2rem;
 }
 .blackbx_content{
     width: 100%;
     display: flex;
     justify-content: space-evenly;
-    /* animation: marquee 5s linear infinite; */
 }
-.blackbx_content span{
+.blackbx_content div{
+    text-align: center;
+    margin: 0 2.5%;
 }
-@keyframes marquee {
+@keyframes marquee1 {
     from {
-        transform: translateX(0%);
+        transform: translateX(-50%);
     }
     to {
-        transform: translateX(50%);
+        transform: translateX(0%);
     }
 }
 @media (hover: hover) and (min-width: 700px) {

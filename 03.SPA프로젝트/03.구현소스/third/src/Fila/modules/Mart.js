@@ -1,7 +1,7 @@
 import React from "react";
 import "../css/mart.css";
 import $ from "jquery";
-function Mart(){
+function Mart(props){
 
     const mart = [
         {
@@ -59,6 +59,22 @@ function Mart(){
                     $('.arrow').fadeIn();
                 }
             })
+
+            $('.martul li').hover(
+                function(){
+                    console.log('hi')
+                    $(this).css({
+                        color : props.color,
+                        transition : '.4s '
+                    })
+                },
+                function(){
+                    $(this).css({
+                        color : 'black',
+                        transition : '.4s '
+                    })
+                }
+            )
 
         }); //////// jQB ///////////
     } ////////////// jQFn ///////////

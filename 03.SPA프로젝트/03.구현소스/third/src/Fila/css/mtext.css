@@ -1,5 +1,8 @@
 .mtwrap {
+    position: relative;
     text-align: center;
+    width: 85vw;
+    margin: 0 auto;
 }
 .mtwrap h1{
     font-size: 4rem;

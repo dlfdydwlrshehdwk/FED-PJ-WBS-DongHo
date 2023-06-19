@@ -16,14 +16,14 @@ function Mountain(){
             <Nav />
             <Bgbx sub="mountain" title="MOUNTAIN"/>
             <Mtext tit="mountain" />
-            <FlowSpan />
+            <FlowSpan  color="#f79a26"/>
             <Item />
-            <ColorBx tit="mountain"/>
+            <ColorBx tit="mountain" num="one" bgc="#eceaef"/>
             <Markbx tit="mountain"/>
             <Tmarkbx tit="mountain" />
-            <FlowSpan />
-            <Mart />
-            <Blackbx />
+            <FlowSpan  color="#f79a26"/>
+            <Mart color="#f79a26"/>
+            <Blackbx color1="#f79a26" color2="#e0d8f7"/>
             <Potal />
         </>
     )

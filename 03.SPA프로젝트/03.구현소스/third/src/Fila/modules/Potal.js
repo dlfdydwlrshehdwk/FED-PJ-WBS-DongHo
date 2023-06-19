@@ -29,23 +29,23 @@ $('.gs').eq(1).css({
 
 
 $('.ilgtxt div').eq(0).css({
-    top : '10vw',
-    left : '-8vw',
+    top : '12vw',
+    left : '-11vw',
     transform: 'rotate(-90deg)'
 })
 $('.ilgtxt div').eq(1).css({
-    top : '7vw',
-    right : '-4vw',
+    top : '8vw',
+    right : '-7vw',
     transform: 'rotate(90deg)'
 })
 $('.ilgtxt div').eq(2).css({
-    bottom : '7vw',
-    right : '-5vw',
+    bottom : '8vw',
+    right : '-8vw',
     transform: 'rotate(90deg)'
 })
 $('.ilgtxt div').eq(3).css({
     bottom : '9vw',
-    left : '-7vw',
+    left : '-9vw',
     transform: 'rotate(-90deg)'
 })
     }); // JQB // 
