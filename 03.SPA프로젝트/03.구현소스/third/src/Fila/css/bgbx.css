@@ -29,16 +29,24 @@
     position: relative;
 }
 .vidwrap{
-    /* 삭제예정 */
-    /* border: 1px solid;  */
     width: 90%;
     aspect-ratio: 16/9;
     position: absolute;
     top: 85%;
     left: 50%;
-    /* transform: translate(-50%, -50%); */
     transform: translateX(-50%);
 }
+.vidwrap iframe{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    /* opacity: 0; */
+}
+
 .vidwrap img{
     width: 100%;
     height: 100%;
