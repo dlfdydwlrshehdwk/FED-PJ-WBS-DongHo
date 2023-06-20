@@ -14,3 +14,20 @@
     margin: 0;
     font-size: 1.5vw;
 }
+
+
+
+
+.gamanhi{
+    position: relative;
+    z-index: 1;
+}
+.umzicyu{
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    color: goldenrod;
+    z-index: -1;
+    opacity: .5;
+}
