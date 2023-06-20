@@ -15,7 +15,7 @@ function jqFn(){
         $('body').on('mousemove',e=>{
             posX = e.pageX + "px";
             posY = e.pageY + "px";
-            console.log(posX, posY);
+            // console.log(posX, posY);
 
             $('#cursor').css({
                 left : posX,

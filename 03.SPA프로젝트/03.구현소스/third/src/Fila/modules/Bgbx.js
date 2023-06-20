@@ -2,6 +2,7 @@
 import '../css/bgbx.css';
 import bgsrc from '../Bg';
 import { useState } from 'react';
+import $ from 'jquery'
 
 
 
@@ -24,10 +25,44 @@ const vidisrc = {
     }
 }
 
+function jqFn(){
+    $(()=>{
+        console.log('비지비엑')
+        let a = $('.vidwrap_imgbx')
+        let b = $('.vidwrap_vidbx')
+        let c = $('.playbtn')
+        console.log(a,b,c)
+        c.on('click',()=>{
+            a.css({
+                opacity : 0
+            })
+            b.css({
+                opacity : 1
+            })
+        })
+    })
+}
+
+function onVid(){
+        console.log('온비드')
+        let a = $('.vidwrap_imgbx')
+        let b = $('.vidwrap_vidbx')
+        let c = $('.playbtn')
+        c.click(()=>{
+            a.css({
+                opacity : 0
+            })
+            b.css({
+                opacity : 1
+            })
+        })
+}
+
+
 function Bgbx(props){
     const [vid, setVid] = useState(0);
 
-    
+
     return(
         <>
             <div className="bgbxwrap">
@@ -37,24 +72,21 @@ function Bgbx(props){
                     </div>
                     <div className="bag20bx">
                         <img className="bgbx" src={bgsrc[props.sub]} />
-                        <div className='vidwrap'>
+                        <div className='vidwrap vidwrap_imgbx'>
                             <img src={vidisrc[props.sub].isrc
                             }/>
-                            <h1>PLAY ▶</h1>
+                            <h1 onClick={console.log('누름')}
+                            className='playbtn'>PLAY ▶</h1>
                         </div>
-                    <div className='vidwrap'>
-                        <iframe
-                        src={vidisrc[props.sub].vsrc} title='동영상'   
-                        ></iframe>
+                        <div className='vidwrap vidwrap_vidbx'>
+                            <iframe
+                            src={vidisrc[props.sub].vsrc} title='동영상'   
+                            ></iframe>
+                        </div>
                     </div>
-
-                        </div>
-
-
-
-
                 </div>
             </div>
+            {jqFn()}
         </>
     )
 };

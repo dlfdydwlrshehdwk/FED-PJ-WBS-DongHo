@@ -21,7 +21,6 @@ function Mtext(props){
         },
     }
     let a = mtdata[props.tit]
-    console.log(a.p.split('^')[0])
     return(
         <>
             <section className='mtwrap'>

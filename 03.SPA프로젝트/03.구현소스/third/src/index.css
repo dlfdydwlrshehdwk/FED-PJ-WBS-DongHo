@@ -7,7 +7,12 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
   
+overflow-y: scroll;
+}
+body::-webkit-scrollbar {
+  display: none; /* 크롬, 사파리, 오페라, 엣지 */
 }
 
 code {
@@ -18,3 +23,4 @@ code {
 p{
   margin: 0;
 }
+

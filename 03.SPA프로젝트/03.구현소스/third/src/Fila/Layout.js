@@ -3,10 +3,6 @@ import $ from "jquery";
 import React, { useState } from 'react';
 function jqFn(){
     $(()=>{
-
-        console.log('하하하',$('body'))
-        
-
     })
 }
 
