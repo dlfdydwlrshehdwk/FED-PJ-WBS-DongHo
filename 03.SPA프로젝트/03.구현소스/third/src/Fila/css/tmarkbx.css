@@ -1,0 +1,61 @@
+.tmarkbx_wrap{
+    position: relative;
+    width: 85%;
+    margin: 0 auto;
+    padding-top: 30%;
+}
+.tmarkbx{
+    position: relative;
+}
+.tmarkl{
+    position: absolute;
+    /* height: 50vh; */
+    width: 46%;
+    right: 5%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.tmarkl img{
+    width: 100%;
+    height: 100%;
+}
+.tmark_bgimg > img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    aspect-ratio: 1316/1024;
+}
+.tmarkbx_wrap .tmarkr{
+    position: absolute;
+    width: 30vw;
+    top: -20%;
+    left: 5%;
+}
+.tmarkr img{
+    width: 100%;
+    height: 100%;
+}
+
+@media screen and (min-width: 480px) {
+    .tmarkbx_wrap .tmarkr{
+        width: 25vw;
+    top: -15%;
+    }
+}
+@media screen and (min-width: 768px) {
+    .tmarkbx_wrap .tmarkr{
+        width: 25vw;
+    top: -15%;
+    }
+}
+@media screen and (min-width: 1280px) {
+    .tmarkbx_wrap .tmarkr{
+        width: 21vw;
+        top: -17%;
+    }
+    
+}
+@media screen and (min-width: 1920px) {
+    .tmarkbx_wrap .tmarkr{
+    }
+}

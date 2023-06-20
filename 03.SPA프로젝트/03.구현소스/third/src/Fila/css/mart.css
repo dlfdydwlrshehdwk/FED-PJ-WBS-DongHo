@@ -1,0 +1,71 @@
+@font-face {
+    font-family: 'hele';
+    src: url(../font/HelveticaNeue/HelveticaNeueLTPro-Md.otf);
+}
+@font-face {
+    font-family: 'hele2';
+    src: url(../font/HelveticaNeue/HelveticaNeueLTPro-Lt.otf);
+}
+.martsc{
+    position: relative;
+    max-width: 90vw;
+    margin: 0 auto;
+}
+.martul{
+    list-style: none;
+    padding: 0;
+    font-family: 'hele2';
+}
+.martul li{
+    padding: 15px 0;
+}
+.martsc h1{
+    text-align: center;
+    font-size: 8vw;
+    font-weight: normal;
+    line-height: 1;
+}
+.martul span{
+    font-family: 'hele';
+    /* font-weight: bold; */
+    font-size: 2rem;
+}
+.marta{
+    display: flex;
+    flex-direction: column;
+}
+.marta div:last-child{
+    padding-left: 8%;
+    font-size: 1.2rem;
+    line-height: 1.5;
+    margin-top: 10px;
+}
+
+
+@media screen and (min-width : 600px) {
+    .marta{
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .marta div:last-child{
+        text-align: right;
+    }
+
+}
+@media screen and (min-width : 780px) {
+    .martul span {
+        font-size: 3.7vw;
+    }
+    .marta div:last-child {
+        font-size: 1.4rem;
+    }
+}
+@media screen and (min-width : 1280px) {
+    .martul span {
+        font-size: 4.0vw;
+    }
+    .marta div:last-child {
+        font-size: 1.6rem;
+    }
+
+}

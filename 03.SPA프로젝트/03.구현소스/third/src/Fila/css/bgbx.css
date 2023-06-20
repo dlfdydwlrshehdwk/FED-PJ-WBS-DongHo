@@ -1,0 +1,91 @@
+/* bgbx.css */
+.bgbxwrap{
+    position: relative;
+    width: 100%;
+    height: 160vh;
+    z-index: 99;
+}
+.bgbx{
+    width: 100%;
+    height: 100%;
+    background-color: red;
+    object-fit: cover;
+}
+.tit{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-size: 5rem;
+    color: white;
+    z-index: 1;
+}
+.bagbx{
+    height: 100vh;
+    position: relative;
+}
+.bag20bx{
+    height: 120%;
+    position: relative;
+}
+.vidwrap{
+    width: 90%;
+    aspect-ratio: 16/9;
+    position: absolute;
+    top: 85%;
+    left: 50%;
+    transform: translateX(-50%);
+    pointer-events: none;
+}
+.vidwrap iframe{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    /* opacity: 0; */
+}
+.vidwrap_imgbx{
+    opacity: 1;
+    transition: opacity .3s;
+}
+.vidwrap_vidbx{
+    opacity: 0;
+    transition: opacity .3s;
+}
+
+.vidwrap img{
+    width: 100%;
+    height: 100%;
+}
+.vidwrap h1{
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* -webkit-text-fill-color: transparent; */
+    /* background: linear-gradient(to left,gray,white,silver); */
+    filter: invert(1);
+    mix-blend-mode: difference;
+    -webkit-text-stroke: 1px transparent;
+    background-color: transparent;
+}
+
+@media screen and (max-width: 400px) {
+    .vidwrap{
+        /* 삭제예정 */
+        /* border: 1px solid;  */
+        width: 90%;
+        aspect-ratio: 16/9;
+        position: absolute;
+        top: 85%;
+        left: 50%;
+        /* transform: translate(-50%, -50%); */
+        transform: translateX(-50%);
+    
+        height:50vh;
+    }
+}

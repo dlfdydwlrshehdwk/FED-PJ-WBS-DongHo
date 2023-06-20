@@ -1,0 +1,53 @@
+.nav {
+    position: fixed;
+    width: 100%;
+    height: 0;
+    top: 0;
+    left: 0;
+    /* right: 0; */
+    /* bottom: 0; */
+    z-index: 1;
+}
+.nav a{
+    text-decoration: none;
+    color: black;
+    font-size: 1.5rem;
+    font-weight: bold;
+    display: inline-block;
+}
+.navtxt div{
+    position: absolute;
+}
+.navtxt div:nth-child(1){
+    top: 0;
+    left: 0;
+    right: auto;
+    bottom: auto;
+} 
+.navtxt div:nth-child(1) a{
+    transform: rotate(270deg) translateX(-100%);
+    -webkit-transform-origin: left top 1px;
+} 
+
+.navtxt div:nth-child(2){
+    right: 0;
+} 
+.navtxt div:nth-child(2) a{
+    transform: rotate(90deg) translateX(100%);
+    transform-origin: right top 1px;
+} 
+.navtxt div:nth-child(3){
+    top : 98vh;
+    right : 0;
+} 
+.navtxt div:nth-child(3) a{
+    transform: rotate(90deg) translateX(0%);
+    transform-origin: right top 1px;
+} 
+.navtxt div:nth-child(4){
+    top : 98vh
+} 
+.navtxt div:nth-child(4) a{
+    transform: rotate(270deg);
+    transform-origin: left top 1px;
+} 

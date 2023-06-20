@@ -1,0 +1,29 @@
+.markbx_wrap{
+    position: relative;
+    width: 85vw;
+    padding-top: 10vh;
+    margin: 0 auto; 
+}
+.markbx{
+    position: relative;
+}
+.markbx_wrap img{
+    width: 100%;
+    height: 100%;
+}
+
+.mark_leftimg {
+    width: 52vw;
+    transform: translate(0%, 5%);
+}
+.mark_rightimg{
+    width: 53vw;
+    margin: 0 0 0 auto;
+}
+.markimg{
+    width: 20vw;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
