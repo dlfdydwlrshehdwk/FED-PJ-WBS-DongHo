@@ -1,5 +1,27 @@
 import React from 'react';
 import '../css/mtext.css';
+import $ from 'jquery';
+
+function jqFn(){
+    $(()=>{
+        console.log('스크롤함수가 실행이되나요?')
+
+        let last_scrollTop = 0;
+        $(window).on('scroll',function(){
+            // 스크롤할때 맨위에서부터의 값
+            let tmp = $(this).scrollTop();
+            // 스크롤이 내려가는경우
+            if(tmp>last_scrollTop){
+                 console.log('내려가요')
+            }
+            // 스크롤이 올라가는경우
+            else{
+                console.log('올라가요')
+            }
+            last_scrollTop = tmp;
+        })
+    })
+}
 
 function Mtext(props){
     const mtdata = {
@@ -33,6 +55,7 @@ function Mtext(props){
                     <p>{a.p.split('^')[2]}</p>
                 }
             </section>
+            {jqFn()}
         </>
     )
 }
