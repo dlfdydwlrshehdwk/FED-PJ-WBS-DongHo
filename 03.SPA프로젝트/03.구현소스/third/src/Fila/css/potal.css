@@ -78,3 +78,219 @@ body{
             z-index: 9999999;
             pointer-events: none;
 }
+
+/* 휠라신발 빨강색인부분 */
+.cls-1 {
+    /* 색깔만 */
+    fill: transparent;
+  }
+  /* 신발줄묶는곳테두리 선 */
+  .cls-2 {
+    /* 색깔만 */
+    fill: transparent;
+  }
+
+  .cls-2, .cls-3, .cls-4, .cls-5, .cls-6, .cls-7 {
+    stroke: black;
+    stroke-miterlimit: 10;
+  }
+    .cls-6{
+    stroke: transparent;
+    stroke-miterlimit: 10;
+  }
+
+  /* 신발줄묶는곳테두리 선 */
+  .cls-3 {
+    /* 색깔만 */
+    /* fill: #352e3d; */
+    fill : none;
+
+  }
+
+  .cls-4 {
+    /* fill: none; */
+    fill: transparent;
+    /* 380이 그려진거 */
+    stroke-dasharray: 300%;
+    stroke-dashoffset: 300%;
+  }
+
+  /* 신발 선따는부분 600으로하기 */
+  .cls-5 {
+    fill: #fff;
+    stroke-dasharray: 300%;
+    stroke-dashoffset: 300%;
+    /* transition: 0.1s linear; */
+  }
+  /* 신발줄묶는곳테두리 선 */
+  .cls-6 {
+    /* 몰?루 */
+    fill: none;
+  }
+
+  /* 신발밑창 */
+  .cls-7 {
+    /* 밑창색 */
+    fill: transparent;
+    /* 480되면 그려짐 */
+    stroke-dasharray: 300%;
+    stroke-dashoffset: 300%;
+  }
+
+  /* 신발 파랑부분 */
+  .cls-8 {
+    /* 색깔만 */
+    fill: #0f086b;
+    opacity: 0;
+  }
+
+  .shoessvg{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 50%;
+    z-index: 3
+    ;
+  }
+
+  .shoessvg.on .cls-1 {
+    /* 색깔만 */
+    animation: fill1 4s linear forwards;
+  }
+  @keyframes fill1 {
+    0%{
+        /* fill : none; */
+        opacity: 0;
+    }
+    30%{
+        fill :#c60000;
+        opacity: 1;
+    }
+    50%{
+        /* fill :none; */
+        opacity: 0;
+    }
+    70%{
+        fill :#c60000;
+        opacity: 1;
+    }
+    80%{
+        fill :none;
+        opacity: 0;
+    }
+    100%{
+        fill :#c60000;
+        opacity: 1;
+    }
+  }
+
+  /* 신발 파랑부분 */
+  .shoessvg.on .cls-8 {
+    /* 색깔만 */
+    animation: fill2 4s linear forwards;
+  }
+
+  @keyframes fill2 {
+    0%{
+        opacity: 0;
+    }
+    10%{
+        fill : #0f086b;
+        opacity: 1;
+    }
+    30%{
+        opacity: 0;
+    }
+    50%{
+        fill :#0f086b;
+        opacity: 1;
+    }
+    70%{
+        opacity: 0;
+    }
+    80%{
+        fill :#0f086b;
+        opacity: 1;
+    }
+    90%{
+        opacity: 0;
+
+    }
+    100%{
+        fill :#0f086b;
+        opacity: 1;
+    }
+  }
+
+  .shoessvg.on .cls-3 {
+    /* 색깔만 */
+    transition: 4s linear;
+    fill: #352e3d;
+  }
+  .shoessvg.on .cls-4 {
+    animation: fill4 4s linear forwards;
+  }
+  @keyframes fill4 {
+    0%{
+        fill: transparent;
+        stroke-dasharray: 300%;
+        stroke-dashoffset: 300%;
+        /* transition: fill 4s; */
+        
+    }
+    100%{
+        fill: transparent;
+        stroke-dasharray: 380%;
+        stroke-dashoffset: 300%;
+    }
+  }
+
+  /* 신발 선따는부분 600으로하기 */
+  .shoessvg.on .cls-5 {
+    fill: #fff;
+    animation: fill5 4s linear forwards;
+  }
+  @keyframes fill5 {
+        0%{
+
+            stroke-dasharray: 300%;
+    stroke-dashoffset: 300%;
+        }
+        100%{
+            stroke-dasharray: 600%;
+    stroke-dashoffset: 300%;
+        }
+  }
+
+  /* 신발밑창 */
+  .shoessvg.on .cls-7 {
+    /* 밑창색 */
+    fill: transparent;
+    animation: fill7 4s linear forwards;
+  }
+  @keyframes fill7 {
+    0%{
+        /* 480되면 그려짐 */
+    stroke-dasharray: 300%;
+    stroke-dashoffset: 300%;
+    }
+    100%{
+        stroke-dasharray: 480%;
+    stroke-dashoffset: 300%;
+    }
+  }
+  /* 신발남는 라인 */
+  .shoessvg.on .cls-6{
+    animation: fill6 4s linear forwards;
+    stroke-miterlimit: 10;
+  }
+
+  @keyframes fill6 {
+    0%{
+        stroke: transparent;
+    }
+    100%{
+        stroke: black;
+    }
+  }

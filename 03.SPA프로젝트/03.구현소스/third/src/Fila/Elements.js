@@ -24,7 +24,7 @@ function Elements(){
             <FlowSpan  color="#a6e057"/>
             <Mart color="#a6e057"/>
             <Blackbx color1="#a6e057" color2="#b6d4dc"/>
-            <Potal />
+            <Potal bbx="0"/>
         </>
     )
 }

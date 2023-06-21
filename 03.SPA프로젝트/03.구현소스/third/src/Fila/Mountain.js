@@ -24,7 +24,7 @@ function Mountain(){
             <FlowSpan  color="#f79a26"/>
             <Mart color="#f79a26"/>
             <Blackbx color1="#f79a26" color2="#e0d8f7"/>
-            <Potal />
+            <Potal bbx="0"/>
         </>
     )
 }

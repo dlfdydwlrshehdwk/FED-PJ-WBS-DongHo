@@ -21,7 +21,7 @@ function Canyon(){
             <FlowSpan color="red" />
             <Mart color="red"/>
             <Blackbx color1="red" color2="#efdece"/>
-            <Potal />
+            <Potal bbx="0"/>
         </>
     )
 }

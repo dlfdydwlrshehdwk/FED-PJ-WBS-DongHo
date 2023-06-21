@@ -6,6 +6,26 @@ function jqFn(){
     $(()=>{
         console.log('스크롤함수가 실행이되나요?')
 
+        function upAni(){
+            
+            let a = $('.umzicyu')
+            // console.log('밑으로움직여',a)
+            a.addClass('down')
+
+            setTimeout(()=>{
+                a.removeClass('down')
+            },1000)
+        }
+        function downAni(){
+            let a = $('.umzicyu')
+            // console.log('위로움직여')
+            a.addClass('up')
+
+            setTimeout(()=>{
+                a.removeClass('up')
+            },1000)
+        }
+
         let last_scrollTop = 0;
         $(window).on('scroll',function(){
             // 스크롤할때 맨위에서부터의 값
@@ -13,10 +33,12 @@ function jqFn(){
             // 스크롤이 내려가는경우
             if(tmp>last_scrollTop){
                  console.log('내려가요')
+                 upAni();
             }
             // 스크롤이 올라가는경우
             else{
                 console.log('올라가요')
+                downAni();
             }
             last_scrollTop = tmp;
         })

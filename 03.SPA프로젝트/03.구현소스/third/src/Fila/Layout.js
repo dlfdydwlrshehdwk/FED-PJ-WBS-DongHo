@@ -3,13 +3,18 @@ import $ from "jquery";
 import React, { useState } from 'react';
 function jqFn(){
     $(()=>{
+        
     })
 }
 
 
 function Layout(){
+
+    
+
     return(
         <>
+        
             <Outlet />
             {jqFn()}
         </>

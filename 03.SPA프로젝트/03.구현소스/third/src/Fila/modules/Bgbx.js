@@ -32,32 +32,31 @@ function jqFn(){
         let b = $('.vidwrap_vidbx')
         let c = $('.playbtn')
         console.log(a,b,c)
-        c.on('click',()=>{
-            a.css({
-                opacity : 0
-            })
-            b.css({
-                opacity : 1
-            })
-        })
-    })
-}
-
-function onVid(){
-        console.log('온비드')
-        let a = $('.vidwrap_imgbx')
+        setTimeout(()=>{
+            cclick()
+        },10)
+        function cclick(){
+            let a = $('.vidwrap_imgbx')
         let b = $('.vidwrap_vidbx')
         let c = $('.playbtn')
-        c.click(()=>{
-            a.css({
-                opacity : 0
+            c.on('click',()=>{
+                console.log('눌렀다.')
+                a.css({
+                    opacity :0,
+                })
+                setTimeout(()=>{
+                    a.css({display: 'none'})
+                },400)
+                b.css({
+                    opacity : 1
+                })
+                c.css({
+                    zIndex : -1,
+                })
             })
-            b.css({
-                opacity : 1
-            })
-        })
+        }
+    })
 }
-
 
 function Bgbx(props){
     const [vid, setVid] = useState(0);
