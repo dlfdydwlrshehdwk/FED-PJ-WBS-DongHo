@@ -17,25 +17,46 @@ function jqFn(){
         $('body').on('mousemove',e=>{
             posX = e.pageX;
             posY = e.pageY ;
-            // console.log(posX, posY);
+            // console.log("마우스x값",posX,"마우스y값" ,posY);
 
             $('#cursor').css({
                 left : posX + 'px',
                 top : posY + 'px'
             })
 
+            
+        }) // 바디마우스오버
+
+        $('.ilg').on('mousemove',function(){
+            // console.log('여기서해야함')
+
+            let bb= $('body').height();
+            let aa = $('.ilg').offset().top;
+            let cc = $('.ilg').height();
+            let dd = bb -cc
+            // console.log(bb - cc)
+            posY = posY ;
+            // console.log("x값",posX,"수정된 마우스y값",posY)
             // 칸 변수
             let sambunilw = $('.ilg').width()/3
             let sambunew = $('.ilg').width()/3 * 2
-            let sambunilh = $('.ilg').height()/3
-            let sambuneh = $('.ilg').height()/3 * 2
+            let sambunilh = $('.ilg').height()/3 + dd;
+            let sambuneh = $('.ilg').height()/3 * 2 + dd;
+
+            // console.log(sambunilw,sambunew,sambunilh,sambuneh)
+            // 수정전
+            // 306, 612, 319.6, 639.3
+            // 수정후
+            // 306, 612, 8382.4 8702.1
+
+            // 적용되어야하는 마우스위치
+            // 8000~8300 11시 8350~8700 8700~9000
+
+            
 
             // 12시 칸 변수
             // .ilg에서 pageX가 ilg의 1/3보다 크고 2/3 과 같거나 작고
             // posY가 ilg에서 1/3일때
-            let sambumew = $('.ilg').width()/2
-            let sambumeh
-            // console.log(sambunilw,sambunilh)
 
             // 광클방지
             let a = 0;
@@ -57,7 +78,7 @@ function jqFn(){
                         opacity : 1 ,
                     })
                     b=1;
-                    console.log(b)
+                    // console.log(b)
                 }
                 else{ // b가 1이라면{
                     
@@ -67,7 +88,7 @@ function jqFn(){
             }
             // 12시
             else if(posX>=sambunilw && posX <= sambunew && posY <= sambunilh){
-                console.log('12시')
+                // console.log('12시')
                 if(a == 12) return;
                 a = 12;
 
@@ -78,7 +99,7 @@ function jqFn(){
                         opacity : 1 ,
                     })
                     b=1;
-                    console.log(b)
+                    // console.log(b)
                 }
             }
             // 1시
@@ -94,12 +115,12 @@ function jqFn(){
                         opacity : 1 ,
                     })
                     b=1;
-                    console.log(b)
+                    // console.log(b)
                 }
             }
             // 9시
             else if(posX <= sambunilw && posY >= sambunilh && posY <= sambuneh){
-                console.log('9시')
+                // console.log('9시')
                 if(a == 9) return;
                 a = 9;
 
@@ -110,11 +131,11 @@ function jqFn(){
                         opacity : 1 ,
                     })
                     b=1;
-                    console.log(b)
+                    // console.log(b)
                 }
             }
             else if(posX >= sambunew && posY >= sambunilh && posY <= sambuneh){
-                console.log('3시')
+                // console.log('3시')
                 if(a == 3) return;
                 a = 3;
 
@@ -125,7 +146,7 @@ function jqFn(){
                         opacity : 1 ,
                     })
                     b=1;
-                    console.log(b)
+                    // console.log(b)
                 }
             }
             else if(posX <= sambunilw && posY >= sambuneh){
@@ -140,11 +161,11 @@ function jqFn(){
                         opacity : 1 ,
                     })
                     b=1;
-                    console.log(b)
+                    // console.log(b)
                 }
             }
             else if(posX > sambunilw && posX < sambunew && posY >= sambuneh){
-                console.log('6시')
+                // console.log('6시')
                 if(a == 6) return;
                 a = 6;
 
@@ -155,7 +176,7 @@ function jqFn(){
                         opacity : 1 ,
                     })
                     b=1;
-                    console.log(b)
+                    // console.log(b)
                 }
             }
             else if(posX > sambunew && posY >= sambuneh){
@@ -170,7 +191,7 @@ function jqFn(){
                         opacity : 1 ,
                     })
                     b=1;
-                    console.log(b)
+                    // console.log(b)
                 }
             }
             else{
@@ -185,9 +206,12 @@ function jqFn(){
                         opacity : 0 ,
                     })
                     b=1;
-                    console.log(b)
+                    // console.log(b)
                 }
             }
+
+
+
         })
 
         // 새로고침시마다 적용이되는데
@@ -200,7 +224,22 @@ function jqFn(){
             else return;
             qwer = 0;
         }
+        // 신발 줄긋기
         shoesOn()
+        setTimeout(()=>{
+            // console.log('5초뒤')
+            $('.shoessvg').addClass('sc')
+        },5000)
+        setTimeout(()=>{
+            // console.log('5초뒤')
+            $('#cursor').css({
+                opacity :1
+            })
+        },7500)
+
+
+
+
 
         $('.blackbbx').css({
             position : 'fixed',
@@ -211,6 +250,7 @@ function jqFn(){
             backgroundColor : 'rgb(0 0 0 / 50%)',
             zIndex : 10
         })
+
         $('.bbx').css({
             position : 'absolute',
             top : '50%',
@@ -283,11 +323,11 @@ function Potal(props){
 
     return(
         <>
-        {
+        {/* {
             setTimeout(()=>{
                 setBbx(props.bbx)
             },4000)
-        }
+        } */}
         {
             bbx == 1 ? 
         <div className="blackbbx">
@@ -408,16 +448,16 @@ function Potal(props){
             {/* 세로로 4개있어야 할 글자들 */}
             <div className="ilgtxt">
                 <div>
-                    <Link to='/mountain' >MOUNTAIN</Link>
+                    <Link to='/mountain'>MOUNTAIN</Link>
                 </div>
                 <div>
-                <Link to='/woods'>WOODS</Link>
+                    <Link to='/woods'>WOODS</Link>
                 </div>
                 <div>
-                <Link to='/canyon'>CANYON</Link>
+                    <Link to='/canyon'>CANYON</Link>
                 </div>
                 <div>
-                <Link to='/elements'>ELEMENTS</Link>
+                    <Link to='/elements'>ELEMENTS</Link>
                 </div>
             </div>
             {/* 가로선 2개 */}
@@ -425,9 +465,7 @@ function Potal(props){
             <span className="gs"></span>
             {/* 세로선 4개 */}
             <span className="ss"></span>
-            <span className="ss"></span>
-            <span className="ss"></span>
-            <span className="ss"></span>
+            <span className="ss"></span>\
             {/* 마우스커서svg */}
             <div></div>
             {/* 일그러지는 사진이 들어갈 공간 */}
