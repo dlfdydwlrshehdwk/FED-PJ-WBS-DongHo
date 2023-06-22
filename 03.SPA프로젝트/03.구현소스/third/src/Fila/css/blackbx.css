@@ -47,9 +47,6 @@
     animation: marquee1 5s linear infinite;
 }
 .blackbx_wt{
-    /* -webkit-text-stroke-width: .5px; */
-    /* -webkit-text-stroke-color: white; */
-    /* color: transparent; */
     font-size: 2rem;
 }
 .blackbx_bt{
