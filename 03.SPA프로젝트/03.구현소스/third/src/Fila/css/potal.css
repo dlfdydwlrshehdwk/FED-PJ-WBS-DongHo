@@ -8,7 +8,7 @@ body{
     width: 100%;
     height: 100vh;
     position: relative;
-    z-index: 3;
+    z-index: 1;
 }
 .ilgtxt div{
     position: absolute;
@@ -24,6 +24,9 @@ body{
     background-color:#d8d8d8;
     z-index: 1;
 }
+#text{
+  display: none;
+}
 .gs{
     position: absolute;
     width: 100%;
@@ -32,6 +35,13 @@ body{
     z-index: 1;
   
 }
+
+  .bgi {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
 .bgi1{
   opacity: 0;
     position: absolute;
@@ -39,7 +49,6 @@ body{
     left: 0;
     width: 100%;
     height: 100%;
-    /* background-image: url(../../../public/images/bg/mountain.jpg); */
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -53,7 +62,6 @@ body{
     left: 0;
     width: 100%;
     height: 100%;
-    /* background-image: url(../../../public/images/bg/mountain.jpg); */
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -168,7 +176,7 @@ body{
     transform: translate(-50%,-50%) scale(1);
     transition: scale 1s;
     width: 50%;
-    z-index: 3
+    /* z-index: 1 */
     ;
   }
 

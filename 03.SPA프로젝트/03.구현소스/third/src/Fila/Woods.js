@@ -22,7 +22,7 @@ function Woods(){
             <FlowSpan />
             <Mart color="#b23794"/>
             <Blackbx color1="#b23794" color2="#b23794"/>
-            <Potal bbx="0"/>
+            <Potal bbx="0" cursor="1" white="0"/>
         </>
     )
 }

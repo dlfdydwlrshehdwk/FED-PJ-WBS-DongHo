@@ -248,7 +248,7 @@ function jqFn(){
             right:0,
             bottom:0,
             backgroundColor : 'rgb(0 0 0 / 50%)',
-            zIndex : 10
+            zIndex : 3,
         })
 
         $('.bbx').css({
@@ -290,12 +290,12 @@ $('.gs').eq(1).css({
 
 // 각 글자 위치정정
 $('.ilgtxt div').eq(0).css({
-    top : '12vw',
-    left : '-11vw',
+    top : '10vw',
+    left : '-10vw',
     transform: 'rotate(-90deg)'
 })
 $('.ilgtxt div').eq(1).css({
-    top : '8vw',
+    top : '7vw',
     right : '-7vw',
     transform: 'rotate(90deg)'
 })
@@ -323,11 +323,11 @@ function Potal(props){
 
     return(
         <>
-        {/* {
+        {
             setTimeout(()=>{
                 setBbx(props.bbx)
             },4000)
-        } */}
+        }
         {
             bbx == 1 ? 
         <div className="blackbbx">
@@ -337,6 +337,28 @@ function Potal(props){
         </div> 
         : null
         }
+        { 
+            props.white == 1?
+            <div className="whitebbx" style={{
+                position : "fixed",
+                top: 0,
+                left : 0,
+                bottom : 0,
+                right : 0,
+                zIndex : 2,
+            }}>
+            </div>
+            : null
+        }
+        {
+            props.white == 1?
+            setTimeout(()=>{
+                document.querySelector('.whitebbx').style.display="none";
+            },4000) :
+            null
+        }
+
+
         {/* 화면이 일그러져야 할 공간 */}
         <section className="ilg">
             {/* 신발인트로  */}
@@ -474,7 +496,11 @@ function Potal(props){
                 <div className="bgi2"></div>
             </div>
         </section>
-        <div id="cursor"></div>
+        {
+            props.cursor == 1 ? 
+            <div id="cursor" style={{opacity: 1}}></div>
+            : <div id="cursor"></div>
+        }
         {jqFn()}
         </>
     )
