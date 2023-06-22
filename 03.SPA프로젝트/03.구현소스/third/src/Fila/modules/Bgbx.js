@@ -7,7 +7,7 @@ import $ from 'jquery'
 
 
 const vidisrc = {
-    mountaine : {
+    mountain : {
         isrc : "./images/mountain/vid.jpg",
         vsrc : "https://www.youtube.com/embed/ez54zUhDJm8",
     },

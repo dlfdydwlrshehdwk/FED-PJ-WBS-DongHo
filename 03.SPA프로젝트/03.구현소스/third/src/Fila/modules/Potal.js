@@ -11,6 +11,7 @@ import { useState } from "react";
 function jqFn(){
     $(()=>{
         const newCursor = document.querySelector('#cursor');
+
         let posX = 0;
         let posY = 0;
         $('body').on('mousemove',e=>{
@@ -26,10 +27,8 @@ function jqFn(){
             // 칸 변수
             let sambunilw = $('.ilg').width()/3
             let sambunew = $('.ilg').width()/3 * 2
-            let sambunsamw = $('.ilg').width() * 3
             let sambunilh = $('.ilg').height()/3
             let sambuneh = $('.ilg').height()/3 * 2
-            let sambunsamh = $('.ilg').height()/3 * 3
 
             // 12시 칸 변수
             // .ilg에서 pageX가 ilg의 1/3보다 크고 2/3 과 같거나 작고
