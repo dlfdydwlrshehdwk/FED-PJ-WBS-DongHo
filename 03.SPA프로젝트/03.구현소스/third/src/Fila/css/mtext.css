@@ -1,12 +1,63 @@
 .mtwrap {
+    position: relative;
     text-align: center;
+    width: 85vw;
+    margin: 0 auto;
+    padding-top: 30%;
 }
 .mtwrap h1{
-    font-size: 4rem;
+    font-size: 10vw;
     margin: 0;
     padding-bottom: 1.5rem;
 }
-.mtwrap p{
+.mtwrap p {
     margin: 0;
-    font-size: 1.2rem;
+    font-size: 1.5vw;
+}
+
+
+
+
+
+.gamanhi{
+    position: relative;
+    z-index: 1;
+}
+.umzicyu{
+    position: absolute;
+    top: 0%;
+    left: 50%;
+    transform: translateX(-50%);
+    color: goldenrod;
+    z-index: -1;
+    opacity: .5;
+}
+
+.umzicyu.up{
+    animation: up 1s;
+}
+.umzicyu.down{
+    animation: down 1s;
+}
+@keyframes up {
+    0%{
+        top:  0;
+    }
+    50%{
+        top: 10%;
+    }
+    100%{
+        top: 0;
+    }
+}
+@keyframes down {
+    0%{
+        top:  0;
+    }
+    50%{
+        top: -10%;
+    }
+    100%{
+        top: 0;
+    }
 }

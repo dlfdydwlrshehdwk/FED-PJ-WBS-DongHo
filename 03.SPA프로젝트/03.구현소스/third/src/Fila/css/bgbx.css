@@ -3,7 +3,8 @@
     position: relative;
     width: 100%;
     height: 160vh;
-    z-index: 99;
+    z-index: 1;
+    /* pointer-events: none; */
 }
 .bgbx{
     width: 100%;
@@ -29,16 +30,31 @@
     position: relative;
 }
 .vidwrap{
-    /* 삭제예정 */
-    /* border: 1px solid;  */
     width: 90%;
     aspect-ratio: 16/9;
     position: absolute;
     top: 85%;
     left: 50%;
-    /* transform: translate(-50%, -50%); */
     transform: translateX(-50%);
+    /* pointer-events: none; */
+    pointer-events: visible;
 }
+.vidwrap iframe{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    /* opacity: 0; */
+}
+.vidwrap_imgbx{
+    opacity: 1;
+    transition: .4s;
+    z-index: 1;
+}
+
 .vidwrap img{
     width: 100%;
     height: 100%;
@@ -51,10 +67,24 @@
     transform: translate(-50%, -50%);
     /* -webkit-text-fill-color: transparent; */
     /* background: linear-gradient(to left,gray,white,silver); */
+    filter: invert(1);
+    mix-blend-mode: difference;
+    -webkit-text-stroke: 1px transparent;
+    background-color: transparent;
 }
 
-@media screen and (min-width: 768px) {
-}
-
-@media screen and (min-width: 1024px) {
+@media screen and (max-width: 400px) {
+    .vidwrap{
+        /* 삭제예정 */
+        /* border: 1px solid;  */
+        width: 90%;
+        aspect-ratio: 16/9;
+        position: absolute;
+        top: 85%;
+        left: 50%;
+        /* transform: translate(-50%, -50%); */
+        transform: translateX(-50%);
+    
+        height:50vh;
+    }
 }

@@ -38,36 +38,30 @@
 }
 
 
-
-
-
-
-
-
-
-
 .blackbx_track {
+    display: flex;
     position: absolute;
     white-space: nowrap;
     will-change: transform;
-    animation: marquee 10s linear infinite;
+    width: 200%;
+    animation: marquee1 5s linear infinite;
 }
 .blackbx_wt{
-    -webkit-text-stroke-width: .5px;
-    -webkit-text-stroke-color: white;
-    color: transparent;
     font-size: 2rem;
 }
 .blackbx_bt{
-    /* -webkit-text-stroke-width: 1px; */
-    /* -webkit-text-stroke-color: red; */
-    color: red;
     font-size: 2rem;
 }
-.blackbx_content span{
-    padding: 0 2.5%;
+.blackbx_content{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
 }
-@keyframes marquee {
+.blackbx_content div{
+    text-align: center;
+    margin: 0 2.5%;
+}
+@keyframes marquee1 {
     from {
         transform: translateX(-50%);
     }

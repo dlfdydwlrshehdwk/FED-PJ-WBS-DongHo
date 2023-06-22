@@ -1,5 +1,49 @@
 import React from 'react';
 import '../css/mtext.css';
+import $ from 'jquery';
+
+function jqFn(){
+    $(()=>{
+        console.log('스크롤함수가 실행이되나요?')
+
+        function upAni(){
+            
+            let a = $('.umzicyu')
+            // console.log('밑으로움직여',a)
+            a.addClass('down')
+
+            setTimeout(()=>{
+                a.removeClass('down')
+            },1000)
+        }
+        function downAni(){
+            let a = $('.umzicyu')
+            // console.log('위로움직여')
+            a.addClass('up')
+
+            setTimeout(()=>{
+                a.removeClass('up')
+            },1000)
+        }
+
+        let last_scrollTop = 0;
+        $(window).on('scroll',function(){
+            // 스크롤할때 맨위에서부터의 값
+            let tmp = $(this).scrollTop();
+            // 스크롤이 내려가는경우
+            if(tmp>last_scrollTop){
+                 console.log('내려가요')
+                 upAni();
+            }
+            // 스크롤이 올라가는경우
+            else{
+                console.log('올라가요')
+                downAni();
+            }
+            last_scrollTop = tmp;
+        })
+    })
+}
 
 function Mtext(props){
     const mtdata = {
@@ -21,19 +65,24 @@ function Mtext(props){
         },
     }
     let a = mtdata[props.tit]
-    console.log(a.p.split('^')[0])
     return(
         <>
             <section className='mtwrap'>
-                <h1>{a.tit}</h1>
-                <p>{a.p.split('^')[0]}</p>
-                <p>{a.p.split('^')[1]}</p>
+                <h1 className='gamanhi'>{a.tit}
+                
+                <h1 className='umzicyu'>{a.tit}</h1>
+                </h1>
+                <p className='gamanhi'>{a.p.split('^')[0]}</p>
+                <p className='gamanhi'>{a.p.split('^')[1]}</p>
                 {/* 3줄인 애도 있어서 3줄인애가 있다면 출력하게끔.. */}
                 {
                     a.p.split('^')[2] != "" &&
-                    <p>{a.p.split('^')[2]}</p>
+                    <>
+                    <p className='gamanhi'>{a.p.split('^')[2]}</p>
+                    </>
                 }
             </section>
+            {jqFn()}
         </>
     )
 }

@@ -1,0 +1,80 @@
+.blackbx{
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+    position: relative;
+    z-index: 1;
+}
+
+
+.blackbx .blackbx_flowbx1 {
+    /* font-size: 60px; */
+    font-family: "Raleway", Sans-serif;
+    font-weight: 300;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    z-index: 2;
+    position: absolute;
+    height: 60px;
+    padding-top: 5%;
+}
+.blackbx .blackbx_flowbx2{
+    font-size: 60px;
+    font-family: "Raleway", Sans-serif;
+    font-weight: 300;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    z-index: 2;
+    position: absolute;
+    bottom: 0;
+    height: 60px;
+    padding-bottom: 5%;
+}
+
+
+.blackbx_track {
+    display: flex;
+    position: absolute;
+    white-space: nowrap;
+    will-change: transform;
+    width: 200%;
+    animation: marquee1 5s linear infinite;
+}
+.blackbx_wt{
+    /* -webkit-text-stroke-width: .5px; */
+    /* -webkit-text-stroke-color: white; */
+    /* color: transparent; */
+    font-size: 2rem;
+}
+.blackbx_bt{
+    font-size: 2rem;
+}
+.blackbx_content{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+.blackbx_content div{
+    text-align: center;
+    margin: 0 2.5%;
+}
+@keyframes marquee1 {
+    from {
+        transform: translateX(-50%);
+    }
+    to {
+        transform: translateX(0%);
+    }
+}
+@media (hover: hover) and (min-width: 700px) {
+    .animated-title .content {
+        -webkit-transform: translateY(calc(100% - 8rem));
+        transform: translateY(calc(100% - 8rem));
+    }
+}

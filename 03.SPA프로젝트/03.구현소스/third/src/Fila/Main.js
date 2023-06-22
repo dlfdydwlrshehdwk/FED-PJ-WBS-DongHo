@@ -4,7 +4,7 @@ import Potal from "./modules/Potal";
 function Main(){
     return(
         <>
-            <Potal />
+            <Potal bbx='1'/>
         </>
     )
 }
