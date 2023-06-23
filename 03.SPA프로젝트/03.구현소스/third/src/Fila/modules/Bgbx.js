@@ -3,6 +3,7 @@ import '../css/bgbx.css';
 import bgsrc from '../Bg';
 import { useState } from 'react';
 import $ from 'jquery'
+import { Parallax } from 'react-scroll-parallax';
 
 
 
@@ -69,11 +70,12 @@ function Bgbx(props){
                     <div className="tit">
                         {props.title}
                     </div>
+                    
                     <div className="bag20bx">
                         <img className="bgbx" src={bgsrc[props.sub]} />
+                        <Parallax speed={30} translateY={['0px','-500px']}>
                         <div className='vidwrap vidwrap_imgbx'>
-                            <img src={vidisrc[props.sub].isrc
-                            }/>
+                            <img src={vidisrc[props.sub].isrc}/>
                             <h1 onClick={console.log('누름')}
                             className='playbtn'>PLAY ▶</h1>
                         </div>
@@ -82,6 +84,7 @@ function Bgbx(props){
                             src={vidisrc[props.sub].vsrc} title='동영상'   
                             ></iframe>
                         </div>
+                            </Parallax>
                     </div>
                 </div>
             </div>

@@ -1,5 +1,5 @@
 import "../css/flowspan.css";
-import React from "react";
+import React, { useEffect } from "react";
 import $ from "jquery"
 
 function jqFn(pm) {
@@ -45,7 +45,11 @@ function jqFn(pm) {
 
 function FlowSpan(props) {
 
-
+useEffect(()=>{
+    setTimeout(()=>{
+        jqFn(props.color)
+    },10)
+},[])
 
     return (
         <>
@@ -61,11 +65,11 @@ function FlowSpan(props) {
                     </div>
                 </div>
             </section>
-            {
+            {/* {
                 setTimeout(()=>{
                     jqFn(props.color)
                 },10)
-            }
+            } */}
         </>
     );
 }

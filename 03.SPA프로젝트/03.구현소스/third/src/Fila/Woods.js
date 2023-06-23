@@ -16,14 +16,21 @@ function Woods(){
     return(
         <>
             <Nav />
+            <ParallaxProvider>
             <Bgbx sub="woods" title="WOODS"/>
+            </ParallaxProvider>
             <Mtext tit="woods"/>
             <FlowSpan color="#b23794" />
+            <ParallaxProvider>
             <ColorBx tit="woods" num="one" bgc="#f4dfcd"/>
+            </ParallaxProvider>
             <ParallaxProvider>
             <Tmarkbx tit="woods"/>
             </ParallaxProvider>
+            <ParallaxProvider>
             <Markbx tit="woods" />
+            </ParallaxProvider>
+
             <FlowSpan />
             <Mart color="#b23794"/>
             <Blackbx color1="#b23794" color2="#b23794"/>

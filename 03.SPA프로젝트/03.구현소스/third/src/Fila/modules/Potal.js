@@ -3,7 +3,7 @@
 import "../css/potal.css"
 import $ from 'jquery';
 import { Link } from "react-router-dom";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 
 
@@ -318,16 +318,27 @@ function Potal(props){
     const [bbx,setBbx] = useState(0);
     const [cursor,setCursor] = useState(0);
 
+    useEffect(()=>{
+        setTimeout(()=>{
+            setBbx(props.bbx)
+        },4000)
+    },[])
+
+    // useEffect(()=>{
+    //     setTimeout(()=>{
+    //         document.querySelector('.whitebbx').style.display="none";
+    //     },4000) 
+    // },[])
 
 
 
     return(
         <>
-        {
+        {/* {
             setTimeout(()=>{
                 setBbx(props.bbx)
             },4000)
-        }
+        } */}
         {
             bbx == 1 ? 
         <div className="blackbbx">
@@ -337,7 +348,7 @@ function Potal(props){
         </div> 
         : null
         }
-        { 
+        {/* { 
             props.white == 1?
             <div className="whitebbx" style={{
                 position : "fixed",
@@ -349,14 +360,14 @@ function Potal(props){
             }}>
             </div>
             : null
-        }
-        {
+        } */}
+        {/* {
             props.white == 1?
             setTimeout(()=>{
                 document.querySelector('.whitebbx').style.display="none";
             },4000) :
             null
-        }
+        } */}
 
 
         {/* 화면이 일그러져야 할 공간 */}
