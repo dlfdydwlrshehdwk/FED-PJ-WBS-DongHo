@@ -13,7 +13,8 @@ import ScrollTop from './Fila/common/ScrollTop';
 
 export default function App(){
   return(
-    <BrowserRouter>
+    <BrowserRouter basename={process.env.PUBLIC_URL}>
+    {/* <BrowserRouter> */}
     <ScrollTop /> 
     <Routes>
       <Route path='/' element={<Layout />}>
