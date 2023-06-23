@@ -52,8 +52,6 @@ function jqFn(){
             // 적용되어야하는 마우스위치
             // 8000~8300 11시 8350~8700 8700~9000
 
-            
-
             // 12시 칸 변수
             // .ilg에서 pageX가 ilg의 1/3보다 크고 2/3 과 같거나 작고
             // posY가 ilg에서 1/3일때
@@ -77,6 +75,7 @@ function jqFn(){
                         backgroundImage : 'url(../images/bg/mountain.jpg)',
                         opacity : 1 ,
                     })
+                    $('.center').text('MOUNTAIN')
                     b=1;
                     // console.log(b)
                 }
@@ -97,7 +96,9 @@ function jqFn(){
                         transition : '.4s',
                         backgroundImage : 'url(../images/bg/twelve.jpg)',
                         opacity : 1 ,
+                        
                     })
+                    $('.center').text('')
                     b=1;
                     // console.log(b)
                 }
@@ -114,6 +115,7 @@ function jqFn(){
                         backgroundImage : 'url(../images/bg/woods.jpg)',
                         opacity : 1 ,
                     })
+                    $('.center').text('WOODS')
                     b=1;
                     // console.log(b)
                 }
@@ -129,10 +131,11 @@ function jqFn(){
                         transition : '.4s',
                         backgroundImage : 'url(../images/bg/nine.jpg)',
                         opacity : 1 ,
-                    })
+                    }) 
                     b=1;
                     // console.log(b)
-                }
+                    $('.center').text('')
+                } 
             }
             else if(posX >= sambunew && posY >= sambunilh && posY <= sambuneh){
                 // console.log('3시')
@@ -147,8 +150,9 @@ function jqFn(){
                     })
                     b=1;
                     // console.log(b)
-                }
-            }
+                    $('.center').text('')
+                } 
+            } 
             else if(posX <= sambunilw && posY >= sambuneh){
                 console.log('엘레멘츠')
                 if(a == 7) return;
@@ -161,6 +165,7 @@ function jqFn(){
                         opacity : 1 ,
                     })
                     b=1;
+                    $('.center').text('ELEMENTS')
                     // console.log(b)
                 }
             }
@@ -177,6 +182,7 @@ function jqFn(){
                     })
                     b=1;
                     // console.log(b)
+                    $('.center').text('')
                 }
             }
             else if(posX > sambunew && posY >= sambuneh){
@@ -192,6 +198,7 @@ function jqFn(){
                     })
                     b=1;
                     // console.log(b)
+                    $('.center').text('CANYON')
                 }
             }
             else{
@@ -205,6 +212,8 @@ function jqFn(){
                         backgroundImage : '',
                         opacity : 0 ,
                     })
+                    $('.center').html(`
+                    안녕하세요<br/>=(^ㅅ^)=`)
                     b=1;
                     // console.log(b)
                 }
@@ -260,15 +269,17 @@ function jqFn(){
             border : '1px solid',
             borderRadius : '20px',
             width: '30%',
-            height: '9%',
-            textAlign: 'center',
+            height: '30%',
+            display :'flex',
+            justifyContent : 'center',
+            alignItems : 'center',
         })
 
-        $('.blackbbx, .bbx').on('click',function(){
-            $('.blackbbx').css({
-                display:'none'
-            })
-        })
+        // $('.blackbbx, .bbx').on('click',function(){
+        //     $('.blackbbx').css({
+        //         display:'none'
+        //     })
+        // })
 
 
 
@@ -315,20 +326,35 @@ $('.ilgtxt div').eq(3).css({
 
 function Potal(props){
 
+    // 검은박스 안내문구 - 처음에 시작안되게
     const [bbx,setBbx] = useState(0);
-    const [cursor,setCursor] = useState(0);
-
+    // const [cursor,setCursor] = useState(0);
+    // 가림막 - 4초뒤에 사라짐
+    const [white,setWhite] = useState(props.white);
+    // 고양이 글씨 - 가림막이 사라지고나서 등장
+    const [cat,setCat] = useState(0);
+    console.log('블랙',bbx)
+    console.log('화이트',white)
     useEffect(()=>{
         setTimeout(()=>{
             setBbx(props.bbx)
         },4000)
+
+        
     },[])
 
-    // useEffect(()=>{
-    //     setTimeout(()=>{
-    //         document.querySelector('.whitebbx').style.display="none";
-    //     },4000) 
-    // },[])
+    useEffect(()=>{
+        setTimeout(()=>{
+            setWhite(0);
+        },4000) 
+    },[])
+
+    useEffect(()=>{
+        if(white == 0){
+            setCat(1)
+        }
+        console.log('고양이',cat)
+    },[bbx])
 
 
 
@@ -340,16 +366,15 @@ function Potal(props){
             },4000)
         } */}
         {
-            bbx == 1 ? 
-        <div className="blackbbx">
+            bbx == 1 && 
+            <div className="blackbbx" onClick={()=>{setBbx(0)}}>
             <div className="bbx">
                 <h3>마우스를 각 구역으로 이동해보세요~. </h3>
             </div>
-        </div> 
-        : null
+            </div> 
         }
-        {/* { 
-            props.white == 1?
+        { 
+            white == 1 ?
             <div className="whitebbx" style={{
                 position : "fixed",
                 top: 0,
@@ -360,14 +385,7 @@ function Potal(props){
             }}>
             </div>
             : null
-        } */}
-        {/* {
-            props.white == 1?
-            setTimeout(()=>{
-                document.querySelector('.whitebbx').style.display="none";
-            },4000) :
-            null
-        } */}
+        }
 
 
         {/* 화면이 일그러져야 할 공간 */}
@@ -498,14 +516,19 @@ function Potal(props){
             <span className="gs"></span>
             {/* 세로선 4개 */}
             <span className="ss"></span>
-            <span className="ss"></span>\
-            {/* 마우스커서svg */}
-            <div></div>
+            <span className="ss"></span>
             {/* 일그러지는 사진이 들어갈 공간 */}
             <div className="bgi">
                 <div className="bgi1"></div>
                 <div className="bgi2"></div>
             </div>
+            {/* 가운데에 들어가는 글자 */}
+            {
+                cat == 1 &&
+            <div className="center">
+                안녕하세요<br/>=(^ㅅ^)=
+            </div>
+            }
         </section>
         {
             props.cursor == 1 ? 

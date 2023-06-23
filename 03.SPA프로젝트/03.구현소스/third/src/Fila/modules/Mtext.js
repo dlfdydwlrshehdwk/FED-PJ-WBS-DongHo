@@ -68,10 +68,10 @@ function Mtext(props){
     return(
         <>
             <section className='mtwrap'>
-                <h1 className='gamanhi'>{a.tit}
+                <div className='gamanhi mtfont'>{a.tit}
                 
-                <h1 className='umzicyu'>{a.tit}</h1>
-                </h1>
+                <div className='umzicyu mtfont'>{a.tit}</div>
+                </div>
                 <p className='gamanhi'>{a.p.split('^')[0]}</p>
                 <p className='gamanhi'>{a.p.split('^')[1]}</p>
                 {/* 3줄인 애도 있어서 3줄인애가 있다면 출력하게끔.. */}
