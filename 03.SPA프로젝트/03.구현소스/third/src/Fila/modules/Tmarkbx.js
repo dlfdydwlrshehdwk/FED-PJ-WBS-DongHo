@@ -1,5 +1,7 @@
 import React from "react";
 import "../css/tmarkbx.css"
+import { Parallax } from 'react-scroll-parallax';
+import { ParallaxProvider } from 'react-scroll-parallax';
 
 const img = {
     canyon : {
@@ -31,8 +33,11 @@ function Tmarkbx(props){
             <div className="tmarkbx">
                 <div className="tmark_bgimg">
                     <img src={img[props.tit]['bg']} alt=""/>
+
                 <div className="tmarkl">
+                <Parallax speed={30} translateY={[100,0]}>
                     <img src={img[props.tit]['front']} alt=""/>
+                </Parallax>
                 </div>
 
                 </div>

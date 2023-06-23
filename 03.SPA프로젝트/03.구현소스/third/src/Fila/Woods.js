@@ -8,6 +8,9 @@ import Mtext from "./modules/Mtext";
 import Nav from "./modules/Nav";
 import Potal from "./modules/Potal";
 import Tmarkbx from "./modules/Tmarkbx";
+import { ParallaxProvider } from 'react-scroll-parallax';
+
+
 
 function Woods(){
     return(
@@ -17,7 +20,9 @@ function Woods(){
             <Mtext tit="woods"/>
             <FlowSpan color="#b23794" />
             <ColorBx tit="woods" num="one" bgc="#f4dfcd"/>
+            <ParallaxProvider>
             <Tmarkbx tit="woods"/>
+            </ParallaxProvider>
             <Markbx tit="woods" />
             <FlowSpan />
             <Mart color="#b23794"/>
