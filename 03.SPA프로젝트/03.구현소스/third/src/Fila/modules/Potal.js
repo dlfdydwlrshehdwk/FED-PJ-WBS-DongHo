@@ -65,7 +65,7 @@ function jqFn(){
             // 맨 윗층 3개
             // 11시
             if(posX <= sambunilw && posY <= sambunilh){
-                console.log('마운틴')
+                // console.log('마운틴')
                 if(a == 11) return;
                 a = 11;
 
@@ -105,7 +105,7 @@ function jqFn(){
             }
             // 1시
             else if(posX >= sambunew && posY <sambunilh){
-                console.log('우즈')
+                // console.log('우즈')
                 if(a == 3) return;
                 a = 3;
 
@@ -154,7 +154,7 @@ function jqFn(){
                 } 
             } 
             else if(posX <= sambunilw && posY >= sambuneh){
-                console.log('엘레멘츠')
+                // console.log('엘레멘츠')
                 if(a == 7) return;
                 a = 7;
 
@@ -186,7 +186,7 @@ function jqFn(){
                 }
             }
             else if(posX > sambunew && posY >= sambuneh){
-                console.log('캐니언')
+                // console.log('캐니언')
                 if(a == 5) return;
                 a = 5;
 
@@ -202,7 +202,7 @@ function jqFn(){
                 }
             }
             else{
-                console.log('중앙')
+                // console.log('중앙')
                 if(a == 13) return;
                 a = 13;
 
