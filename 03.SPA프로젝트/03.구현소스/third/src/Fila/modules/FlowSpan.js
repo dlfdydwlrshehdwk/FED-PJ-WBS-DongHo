@@ -57,19 +57,20 @@ useEffect(()=>{
                 <div className="animated-title">
                     <div className="track">
                         <div className="content">
-                            <span className="wt">SHOP THE COLLECTION↗</span>
-                            <span className="bt">SHOP THE COLLECTION↗</span>
-                            <span className="wt">SHOP THE COLLECTION↗</span>
-                            <span className="bt">SHOP THE COLLECTION↗</span>
+                            <div className="wt">SHOP THE COLLECTION↗</div>
+                            <div className="bt">SHOP THE COLLECTION↗</div>
+                            <div className="wt">SHOP THE COLLECTION↗</div>
+                            <div className="bt">SHOP THE COLLECTION↗</div>
+                        </div>
+                        <div className="content">
+                            <div className="wt">SHOP THE COLLECTION↗</div>
+                            <div className="bt">SHOP THE COLLECTION↗</div>
+                            <div className="wt">SHOP THE COLLECTION↗</div>
+                            <div className="bt">SHOP THE COLLECTION↗</div>
                         </div>
                     </div>
                 </div>
             </section>
-            {/* {
-                setTimeout(()=>{
-                    jqFn(props.color)
-                },10)
-            } */}
         </>
     );
 }

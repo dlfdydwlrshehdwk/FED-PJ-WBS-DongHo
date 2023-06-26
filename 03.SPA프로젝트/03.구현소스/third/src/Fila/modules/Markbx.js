@@ -37,17 +37,20 @@ function Markbx(props){
         <section className='markbx_wrap'>
             <div className='markbx'>
                 <div className='mark_leftimg'>
-                    <Parallax speed={30} translateX={['-100px', '200px']}>
+                    <Parallax speed={10} translateX={[-10,0 ]}
+                    translateY={[10,-0]}>
                     <img src={img[props.tit]["left"]} title='휠사사진'/>
                     </Parallax>
                 </div>
                 <div className='mark_rightimg'>
-                <Parallax speed={30} translateX={['-100px', '200px']}>
+                <Parallax speed={30} translateX={[10, 0]}
+                translateY={[-10,0]}>
                     <img src={img[props.tit]["right"]} title='휠라사진'/>
                 </Parallax>
                 </div>
                 <div className='markimg'>
-                <Parallax speed={-30} translateX={['-100px', '200px']}>
+                <Parallax speed={10} translateX={[10, -10]}
+                translateY={[-30,0]}>
                     <img src={img[props.tit]["mark"]} title='휠라마크'/>
                 </Parallax>
                 </div>

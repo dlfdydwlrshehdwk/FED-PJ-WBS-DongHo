@@ -120,9 +120,43 @@ body{
   
 }
 
+.bbxflex1{
+  display: flex;
+  justify-content: end;
+  width: 100%;
+  justify-content: space-between;
+  padding: 0 5%;
+  box-sizing: border-box;
+}
+.bbxflex2{
+  width: 100%;
+  display: flex;
+  justify-content: end;
+  justify-content: space-between;
+  padding: 0 5%;
+  box-sizing: border-box;
+}
 
+.bbx h3{
+  width: 100%;
+  text-align: center;
+  box-sizing: border-box;
+}
+.bbx h3>span:first{
+  padding-right: 2.5%;
+}
+.bbx h3 span:last-child{
+  padding-left: 2.5%;
+}
+.bbxflex3{
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  text-align: center;
+  font-size: 1.5vw;
+  align-items: center;
 
-
+}
 
 
 

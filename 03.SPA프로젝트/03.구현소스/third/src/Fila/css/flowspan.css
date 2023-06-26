@@ -18,12 +18,14 @@
     position: absolute;
     white-space: nowrap;
     will-change: transform;
-    animation: marquee 10s linear infinite;
+    /* animation: marquee 10s linear infinite; */
 }
 .wt{
     -webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: black;
     color: white;
+}
+.bt{
 }
 @keyframes marquee {
     from {
@@ -38,4 +40,10 @@
         -webkit-transform: translateY(calc(100% - 8rem));
         transform: translateY(calc(100% - 8rem));
     }
+}
+.track{
+    display: flex;
+}
+.content{
+    display: flex;
 }

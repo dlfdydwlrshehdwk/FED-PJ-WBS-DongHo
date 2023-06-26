@@ -6,7 +6,7 @@ function Main(){
     return(
         <>
             <Potal bbx='1' white="1"/>
-            <Practice />
+            {/* <Practice /> */}
         </>
     )
 }

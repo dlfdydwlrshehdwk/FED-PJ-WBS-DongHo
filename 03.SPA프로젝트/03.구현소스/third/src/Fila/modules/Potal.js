@@ -273,6 +273,8 @@ function jqFn(){
             display :'flex',
             justifyContent : 'center',
             alignItems : 'center',
+            flexDirection: 'column',
+            justifyContent: 'space-around' 
         })
 
         // $('.blackbbx, .bbx').on('click',function(){
@@ -368,8 +370,17 @@ function Potal(props){
         {
             bbx == 1 && 
             <div className="blackbbx" onClick={()=>{setBbx(0)}}>
-            <div className="bbx">
-                <h3>마우스를 각 구역으로 이동해보세요~. </h3>
+            <div className="bbx" >
+                <div className="bbxflex1">
+                <p>↖</p><p>↑</p><p>↗</p>
+                    </div> 
+                <div className="bbxflex3">
+                <p>←</p><p>마우스를 각 구역으로 이동해보세요</p><p>→</p>
+                </div>
+                <div className="bbxflex2">
+                <p>↙</p><p>↓</p><p>↘</p>
+                    </div> 
+                
             </div>
             </div> 
         }
