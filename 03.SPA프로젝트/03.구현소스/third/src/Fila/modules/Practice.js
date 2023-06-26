@@ -80,7 +80,7 @@ function Practice(props){
                 )
             }
             {
-                props.to =='' ?
+                props.to !=='' ?
                 <div>휴 된다.</div>
                 : <div>아 이런...</div> 
             }
