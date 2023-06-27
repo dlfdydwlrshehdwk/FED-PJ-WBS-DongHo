@@ -1,10 +1,11 @@
+/* 컴포넌트 랩핑박스 */
 .pracetice_wrap{
     width: 100vw;
     height: 100vh;
     background-color: gray;
     position: relative;
 }
-
+/* 오버플로우 줄 겉박스 */
 .pr_slidewrap{
     width: 60%;
     height: 40%;
@@ -16,18 +17,20 @@
     transform: translate(-50%,-50%);
 
     overflow: hidden;
-
 }
+/* li들안에들은 이미지 li의 w h 값 따라가게 */
 .pr_slidewrap img{
     width: 100%;
     height: 100%;
     display: block;
 }
+/* 기능제거 */
 ul, li {
     margin: 0;
     padding: 0;
     list-style: none;
 }
+
 .pr_slidewrap li{
     width: 100%;
     height: 100%;

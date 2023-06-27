@@ -14,7 +14,7 @@ function Practice(props){
         }
     ]
 
-    const qwe = () => {
+    const qwer = () => {
         $(()=>{
 
             function qwe(){
@@ -85,7 +85,7 @@ function Practice(props){
                     </ul>
                 </div>
            </section>
-           {qwe()}
+           {qwer()}
         </>
     )
 }
