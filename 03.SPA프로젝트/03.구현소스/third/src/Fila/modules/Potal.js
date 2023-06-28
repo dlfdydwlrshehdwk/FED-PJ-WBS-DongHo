@@ -222,6 +222,7 @@ function jqFn(){
                 if(b==0){
                     bg1.css({
                         transition : '.4s',
+                        // .한개빼고 렌더링해야 뜸
                         backgroundImage : 'url(../images/bg/canyon.jpg)',
                         opacity : 1 ,
                     })
