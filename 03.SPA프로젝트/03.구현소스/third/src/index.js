@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import {BrowserRouter, Routes, Route} from "react-router-dom";
+import {BrowserRouter, Routes, Route, HashRouter} from "react-router-dom";
 import './index.css';
 import Canyon from './Fila/Canyon';
 import Woods from './Fila/Woods';
@@ -14,7 +14,8 @@ import ScrollTop from './Fila/common/ScrollTop';
 export default function App(){
   return(
     // <BrowserRouter basename={process.env.PUBLIC_URL}>
-    <BrowserRouter>
+    // <BrowserRouter>
+    <HashRouter>
     <ScrollTop /> 
     <Routes>
       <Route path='/' element={<Layout />}>
@@ -25,7 +26,8 @@ export default function App(){
         <Route path='elements' element={<Elements />} />
       </Route>
     </Routes>
-    </BrowserRouter>
+    {/* </BrowserRouter> */}
+    </HashRouter>
   )
 }
 

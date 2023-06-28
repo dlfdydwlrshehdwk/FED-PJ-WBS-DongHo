@@ -3,8 +3,9 @@
     position: relative;
     width: 85vw;
     margin: 0 auto;
-    margin-top: 20%;
+    margin-top: 30%;
     height: 200px;
+    padding-bottom: 15vh;
 }
 .colorbg{
     width: 100%;

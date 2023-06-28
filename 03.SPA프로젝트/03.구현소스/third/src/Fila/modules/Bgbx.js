@@ -73,7 +73,7 @@ function Bgbx(props){
                     
                     <div className="bag20bx">
                         <img className="bgbx" src={bgsrc[props.sub]} />
-                        <Parallax speed={30} translateY={['0px','-500px']}>
+                        <Parallax speed={10} translateY={['0px','-300px']}>
                         <div className='vidwrap vidwrap_imgbx'>
                             <img src={vidisrc[props.sub].isrc}/>
                             <h1 onClick={console.log('누름')}

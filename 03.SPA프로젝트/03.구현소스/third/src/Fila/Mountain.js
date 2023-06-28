@@ -9,18 +9,33 @@ import Markbx from "./modules/Markbx";
 import ColorBx from "./modules/ColorBx";
 import Tmarkbx from "./modules/Tmarkbx";
 import Item from "./modules/Item";
+import { ParallaxProvider } from "react-scroll-parallax";
 
 function Mountain(){
     return(
         <>  
             <Nav />
+            
+            <ParallaxProvider>
             <Bgbx sub="mountain" title="MOUNTAIN"/>
+            </ParallaxProvider>
+
             <Mtext tit="mountain" />
             <FlowSpan  color="#f79a26"/>
             <Item />
+
+            <ParallaxProvider>
             <ColorBx tit="mountain" num="one" bgc="#eceaef"/>
+            </ParallaxProvider>
+
+            <ParallaxProvider>
             <Markbx tit="mountain"/>
+            </ParallaxProvider>
+
+            <ParallaxProvider>
             <Tmarkbx tit="mountain" />
+            </ParallaxProvider>
+            
             <FlowSpan  color="#f79a26"/>
             <Mart color="#f79a26"/>
             <Blackbx color1="#f79a26" color2="#e0d8f7"/>

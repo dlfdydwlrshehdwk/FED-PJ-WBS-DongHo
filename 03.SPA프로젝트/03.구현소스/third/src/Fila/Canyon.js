@@ -1,4 +1,5 @@
 import React from 'react';
+import { ParallaxProvider } from 'react-scroll-parallax';
 import Bgbx from "./modules/Bgbx";
 import Blackbx from './modules/Blackbx';
 import FlowSpan from './modules/FlowSpan';
@@ -13,11 +14,17 @@ function Canyon(){
     return(
         <>
             <Nav />
+            <ParallaxProvider>
             <Bgbx sub="canyon" title="CANYON"/>
+            </ParallaxProvider>
             <Mtext tit="canyon"/>
             <FlowSpan color="red" />
+            <ParallaxProvider>
             <Tmarkbx tit="canyon" />
+            </ParallaxProvider>
+            <ParallaxProvider>
             <Markbx tit="canyon"/>
+            </ParallaxProvider>
             <FlowSpan color="red" />
             <Mart color="red"/>
             <Blackbx color1="red" color2="#efdece"/>

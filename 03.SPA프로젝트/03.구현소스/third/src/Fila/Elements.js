@@ -9,19 +9,37 @@ import Markbx from "./modules/Markbx";
 import Tmarkbx from "./modules/Tmarkbx";
 import Item from "./modules/Item";
 import ColorBx from "./modules/ColorBx";
+import { ParallaxProvider } from "react-scroll-parallax";
 function Elements(){
     
     return(
         <>
             <Nav />
+
+            <ParallaxProvider>
             <Bgbx sub="elements" title="ELEMENTS"/>
+            </ParallaxProvider>
+
             <Mtext tit="elements"/>
             <FlowSpan  color="#a6e057"/>
+
+            <ParallaxProvider>
             <Tmarkbx tit="elements"/>
+            </ParallaxProvider>
+
             <Item />
+
+            <ParallaxProvider>
             <ColorBx tit="elements" num="one" bgc="#c6d4e0"/>
+            </ParallaxProvider>
+            <ParallaxProvider>
             <Markbx tit="elements" />
+            </ParallaxProvider>
+
+            <ParallaxProvider>
             <ColorBx tit="elements" num="two" bgc="#c6d4e0"/>
+            </ParallaxProvider>
+            
             <FlowSpan  color="#a6e057"/>
             <Mart color="#a6e057"/>
             <Blackbx color1="#a6e057" color2="#b6d4dc"/>

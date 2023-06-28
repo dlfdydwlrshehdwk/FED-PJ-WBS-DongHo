@@ -10,11 +10,40 @@ import { useEffect, useState } from "react";
 // 제이쿼리 로드구역 함수
 function jqFn(){
     $(()=>{
+
+        let a = $('.flowwrap content').height();
+            let b = $('.animated-title').height();
+            console.log(a,b)
+        
+
+        // 모바일인거 감지해주는거 -> 모바일일때거검은점있고없음을
+        // true false 구분해줌
+        const isMobile = () => {
+            try{
+                document.createEvent('TouchEvent');
+                return true;
+            }
+            catch (e) {
+                return false
+            }
+        }
+
+        
+        
         const newCursor = document.querySelector('#cursor');
 
+
+            
         let posX = 0;
         let posY = 0;
         $('body').on('mousemove',e=>{
+
+            // 신발자국 안남게하기
+            // if (isMobile() == true){
+            //     return
+            // }
+
+
             posX = e.pageX;
             posY = e.pageY ;
             // console.log("마우스x값",posX,"마우스y값" ,posY);
@@ -27,7 +56,7 @@ function jqFn(){
             
         }) // 바디마우스오버
 
-        $('.ilg').on('mousemove',function(){
+        $('.ilg').on('mousemove touchend touchstart',function(){
             // console.log('여기서해야함')
 
             let bb= $('body').height();
@@ -213,7 +242,7 @@ function jqFn(){
                         opacity : 0 ,
                     })
                     $('.center').html(`
-                    안녕하세요<br/>=(^ㅅ^)=`)
+                    안녕하세요<br/>=(^ㅅ^)=<br/>Press each box`)
                     b=1;
                     // console.log(b)
                 }
@@ -322,10 +351,16 @@ $('.ilgtxt div').eq(3).css({
     left : '-9vw',
     transform: 'rotate(-90deg)'
 })
+
+
+
     }); // JQB // 
 } // jqFn 함수 //
 
-
+const hh = () => {
+    console.log($('.track').height())
+    $('.animated-title').height($('.track').height())
+}
 function Potal(props){
 
     // 검은박스 안내문구 - 처음에 시작안되게
@@ -341,14 +376,14 @@ function Potal(props){
         setTimeout(()=>{
             setBbx(props.bbx)
         },4000)
-
         
     },[])
 
     useEffect(()=>{
         setTimeout(()=>{
             setWhite(0);
-        },4000) 
+        },8000) 
+        hh()
     },[])
 
     useEffect(()=>{
@@ -356,7 +391,7 @@ function Potal(props){
             setCat(1)
         }
         console.log('고양이',cat)
-    },[bbx])
+    },[white])
 
 
 
@@ -373,10 +408,11 @@ function Potal(props){
             <div className="bbx" >
                 <div className="bbxflex1">
                 <p>↖</p><p>↑</p><p>↗</p>
-                    </div> 
+                    </div> <br/>
                 <div className="bbxflex3">
                 <p>←</p><p>마우스를 각 구역으로 이동해보세요</p><p>→</p>
                 </div>
+                <div>시작하기</div>
                 <div className="bbxflex2">
                 <p>↙</p><p>↓</p><p>↘</p>
                     </div> 
@@ -537,7 +573,7 @@ function Potal(props){
             {
                 cat == 1 &&
             <div className="center">
-                안녕하세요<br/>=(^ㅅ^)=
+                안녕하세요<br/>=(^ㅅ^)=<br/>Press each box
             </div>
             }
         </section>

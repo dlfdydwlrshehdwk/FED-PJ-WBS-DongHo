@@ -1,5 +1,9 @@
 .flowwrap{
     margin-top: 20%;
+    margin-bottom: 20%;
+    padding-top: 10vh;
+    padding-bottom: 10vh;
+    overflow: hidden;
 }
 
 .animated-title {
@@ -10,15 +14,15 @@
     width: 100%;
     max-width: 100%;
     height: auto;
-    padding: 100px 0;
-    overflow-x: hidden;
-    overflow-y: hidden;
+    /* padding: 100px 0; */
+    /* overflow-x: hidden; */
+    /* overflow-y: hidden; */
 }
 .animated-title .track {
     position: absolute;
     white-space: nowrap;
     will-change: transform;
-    /* animation: marquee 10s linear infinite; */
+    animation: marquee 10s linear infinite;
 }
 .wt{
     -webkit-text-stroke-width: 1px;
@@ -35,15 +39,22 @@
         transform: translateX(0%);
     }
 }
-@media (hover: hover) and (min-width: 700px) {
+/* @media (hover: hover) and (min-width: 700px) {
     .animated-title .content {
         -webkit-transform: translateY(calc(100% - 8rem));
         transform: translateY(calc(100% - 8rem));
     }
-}
+} */
 .track{
     display: flex;
 }
 .content{
     display: flex;
+    font-size: 4vw;
+}
+
+@media screen and (min-width: 480px) {
+    .content {
+        font-size: 10vw;
+    }
 }

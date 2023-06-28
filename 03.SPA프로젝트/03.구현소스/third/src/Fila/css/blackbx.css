@@ -4,6 +4,7 @@
     background-color: black;
     position: relative;
     z-index: 1;
+    overflow: hidden;
 }
 
 
@@ -14,8 +15,8 @@
     width: 100%;
     max-width: 100%;
     height: auto;
-    overflow-x: hidden;
-    overflow-y: hidden;
+    /* overflow-x: hidden; */
+    /* overflow-y: hidden; */
     z-index: 2;
     position: absolute;
     height: 60px;
@@ -47,10 +48,10 @@
     animation: marquee1 5s linear infinite;
 }
 .blackbx_wt{
-    font-size: 2rem;
+    font-size: 3vw;
 }
 .blackbx_bt{
-    font-size: 2rem;
+    font-size: 3vw;
 }
 .blackbx_content{
     width: 100%;
@@ -73,5 +74,14 @@
     .animated-title .content {
         -webkit-transform: translateY(calc(100% - 8rem));
         transform: translateY(calc(100% - 8rem));
+    }
+}
+
+@media screen and (min-width: 480px) {
+    .blackbx_wt{
+        font-size: 3vw;
+    }
+    .blackbx_bt{
+        font-size: 3vw;
     }
 }

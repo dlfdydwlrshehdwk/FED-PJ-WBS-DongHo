@@ -1,6 +1,6 @@
 @charset "utf-8";
 body{
-    /* cursor: none; */
+    cursor: none;
 }
 /* 메인겉박 */
 .ilg{
@@ -90,6 +90,8 @@ body{
 
 
 .center{
+  pointer-events: none;
+  text-align: center;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -401,4 +403,15 @@ body{
     100%{
         stroke: black;
     }
+  }
+
+
+  /* 모바일일땐 안뜨게 */
+  @media screen and (max-width: 480px) {
+      .blackbbx{
+        display: none;
+      }
+      #cursor {
+        display: none;
+      }
   }
