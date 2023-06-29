@@ -5,7 +5,7 @@ import Practice from './modules/Practice';
 function Main(){
     return(
         <>
-            <Potal bbx='1' white="1"/>
+            <Potal bbx='1' white="1" sinbal="1"/>
             {/* <Practice /> */}
         </>
     )

@@ -15,7 +15,7 @@ import { ParallaxProvider } from 'react-scroll-parallax';
 function Woods(){
     return(
         <>
-            <Nav />
+            <Nav by={[0,1,0,0]}/>
 
             <ParallaxProvider>
             <Bgbx sub="woods" title="WOODS"/>

@@ -13,7 +13,7 @@ import Tmarkbx from './modules/Tmarkbx';
 function Canyon(){
     return(
         <>
-            <Nav />
+            <Nav by={[0,0,1,0]}/>
             <ParallaxProvider>
             <Bgbx sub="canyon" title="CANYON"/>
             </ParallaxProvider>

@@ -14,7 +14,7 @@ import { ParallaxProvider } from "react-scroll-parallax";
 function Mountain(){
     return(
         <>  
-            <Nav />
+            <Nav by={[1,0,0,0]}/>
             
             <ParallaxProvider>
             <Bgbx sub="mountain" title="MOUNTAIN"/>

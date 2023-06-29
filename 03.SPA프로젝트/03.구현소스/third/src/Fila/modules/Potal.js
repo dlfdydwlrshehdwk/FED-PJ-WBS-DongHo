@@ -29,6 +29,164 @@ function jqFn(){
         }
 
         
+        let mob = 0
+        let wd = $(window).innerWidth()
+        if(wd < 480) mob = 1;
+        console.log('가로값',wd)
+        $(window).on('resize', function(){
+            wd = $(this).innerWidth()
+            console.log('가로값',wd)
+            if(wd < 480){
+                mob = 1
+            }
+            else {
+                mob = 0
+            }
+        })
+
+        if(mob){
+            console.log('모바일')
+            $('.ilg').on('touchend',function(e){
+                console.log('탭!')
+                let bg1 = $('.bgi1')
+                // 내 가로값
+                let qqq = $('.ilg').width()
+                let qqq1 = $('.ilg').width() / 3
+                // 내 세로값
+                let www = $('.ilg').height()
+                let www1 = $('.ilg').height() / 3
+                // 눌렀을때 x값
+                let eee = e.originalEvent.changedTouches[0].pageX
+                // 눌렀을때 y값
+                let rrr = e.originalEvent.changedTouches[0].pageY
+                // console.log('가로값',qqq,'\n세로값',www)
+                // console.log('눌른가로값',eee,'\n눌른세로값',rrr)
+
+
+                // 윗층
+
+                // 11시
+                if(eee <= qqq1 && rrr <= www1){
+                    console.log('11시')
+                        // backgroundImage : 'url(../images/bg/mountain.jpg)'
+                        bg1.css({
+                            transition : '.4s',
+                            backgroundImage : 'url(../images/bg/mountain.jpg)',
+                            opacity : 1 ,
+                        })
+                        $('.center').text('MOUNTAIN')
+                }
+
+                // 12시
+                if(eee >= qqq1 && eee <= qqq1 * 2 && rrr <= www1){
+                    console.log('12시')
+                    bg1.css({
+                        transition : '.4s',
+                        opacity : 1 ,
+                        backgroundImage : 'url(../images/bg/twelve.jpg)',
+                        
+                    })
+                    $('.center').text('')
+                }
+
+                // 1시ㅣ
+                if(eee >= qqq1 * 2 && rrr <= www1){
+                    console.log('1시')
+                    bg1.css({
+                        transition : '.4s',
+                        opacity : 1 ,
+                        backgroundImage : 'url(../images/bg/woods.jpg)',
+                    })
+                    $('.center').text('WOODS')
+                }
+
+                // 중간층
+                
+                // 9시 
+                if(eee <= qqq1 && rrr>=www1 && rrr <= www1 * 2){
+                    console.log('9시')
+                    bg1.css({
+                        transition : '.4s',
+                        backgroundImage : 'url(../images/bg/nine.jpg)',
+                        opacity : 1 ,
+                    })
+                    $('.center').text('')
+                }
+
+                // 중앙 <- 이게안됨  윗층이안먹음
+                // if(eee >qqq1 && eee<qqq1 * 2 && rrr > www1 && rrr < www1 * 2)
+                // {console.log('중앙')}
+                // bg1.css({
+                //     transition : '.4s',
+                //     backgroundImage : 'url(../images/logo.jpg)',
+                //     opacity : 0 ,
+                // })
+                // $('.center').html(`
+                // 안녕하세요<br/>=(^ㅅ^)=<br/>Press each box`)
+
+                // 3시
+                if(eee>qqq1 * 2 && rrr>=www1 && rrr<=www1*2){
+                    console.log('3시')
+                    bg1.css({
+                        transition : '.4s',
+                        backgroundImage : 'url(../images/bg/three.jpg)',
+                        opacity : 1 ,
+                    })
+                    $('.center').text('')
+                }
+
+                // 아래층
+
+                // 7시
+                if(eee <= qqq1 && rrr >= www1 * 2){
+                    console.log('7시')
+                    bg1.css({
+                        transition : '.4s',
+                        backgroundImage : 'url(../images/bg/elements.jpg)',
+                        opacity : 1 ,
+                    })
+                    $('.center').text('ELEMENTS')
+                }
+
+                // 6시
+                if(eee >= qqq1 && eee<=qqq1 * 2 && rrr >= www1 * 2){
+                    console.log('6시')
+                    bg1.css({
+                        transition : '.4s',
+                        backgroundImage : 'url(../images/bg/six.jpg)',
+                        opacity : 1 ,
+                    })
+                    $('.center').text('')
+                }
+                
+                // 5시
+                if(eee >= qqq1 * 2 && rrr >= www1 * 2){
+                    console.log('5시')
+                    bg1.css({
+                        transition : '.4s',
+                        backgroundImage : 'url(../images/bg/canyon.jpg)',
+                        opacity : 1 ,
+                    })
+                    $('.center').text('CANYON')
+                }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            })
+        }
         
         const newCursor = document.querySelector('#cursor');
 
@@ -56,9 +214,14 @@ function jqFn(){
             
         }) // 바디마우스오버
 
-        $('.ilg').on('mousemove touchend touchstart',function(){
+        $('.ilg').on('mousemove',function(){
             // console.log('여기서해야함')
 
+
+            // 신발자국 안남게하기
+            if (isMobile() == true){
+                return
+            }
             let bb= $('body').height();
             let aa = $('.ilg').offset().top;
             let cc = $('.ilg').height();
@@ -371,12 +534,12 @@ function Potal(props){
     const [white,setWhite] = useState(props.white);
     // 고양이 글씨 - 가림막이 사라지고나서 등장
     const [cat,setCat] = useState(0);
-    console.log('블랙',bbx)
-    console.log('화이트',white)
+    // console.log('블랙',bbx)
+    // console.log('화이트',white)
     useEffect(()=>{
         setTimeout(()=>{
             setBbx(props.bbx)
-        },4000)
+        },8000)
         
     },[])
 
@@ -391,18 +554,15 @@ function Potal(props){
         if(white == 0){
             setCat(1)
         }
-        console.log('고양이',cat)
+        // console.log('고양이',cat)
     },[white])
 
 
 
     return(
         <>
-        {/* {
-            setTimeout(()=>{
-                setBbx(props.bbx)
-            },4000)
-        } */}
+
+        {/* 검은화면 스테이츠가 1이라면 */}
         {
             bbx == 1 && 
             <div className="blackbbx" onClick={()=>{setBbx(0)}}>
@@ -421,6 +581,10 @@ function Potal(props){
             </div>
             </div> 
         }
+
+
+
+        {/* 화이트가 1이면 */}
         { 
             white == 1 ?
             <div className="whitebbx" style={{
@@ -438,6 +602,12 @@ function Potal(props){
 
         {/* 화면이 일그러져야 할 공간 */}
         <section className="ilg">
+            
+
+            {/* 메인에서만 동작하게 프롭스로 신발값받아옴 1일때애애 */}
+        {
+            props.sinbal == 1 &&
+            <>
             {/* 신발인트로  */}
             <div className="shoessvg">
 <svg id="_레이어_1" data-name="레이어 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 338.57 374.85">
@@ -509,54 +679,27 @@ function Potal(props){
   <path className="cls-5" d="m212.62,123.32c-25.61,2.47-47.41,25.66-54.45,33.95-1.55,1.83-2.4,2.94-2.4,2.94l-3.65,5.79-15.41,24.44-2.78,4.41s-1.57,2.86-3.95,7.13c-3.59,6.42-9.02,16.03-13.73,23.82-3.84,6.35-7.19,11.49-8.68,12.73-.38.32-.81.77-1.29,1.32-2.62,3-6.85,9.15-13.4,14.98-6.65,5.92-15.68,11.5-27.85,13.07-26.35,3.39-30.12-.38-30.87-5.27-.54-3.53.88-9.99,1.71-13.31.07-.29-.33-.44-.47-.17l-8.77,16.44c3.01,16.13,12.8,15.87,42.78,12.1,29.98-3.76,61.5-48.56,72.05-73.04,10.54-24.47,46.31-60.61,55.34-63.62,4.35-1.45,25.72-7.61,46.73-13.61,2.41-3.17,4.68-6.42,6.76-9.74,0,0,.01-.02.02-.03.44-.7.87-1.39,1.29-2.09,0,0,0,0,0,0,.35-.59.69-1.18,1.02-1.77.12-.2.24-.41.35-.61.03-.05.06-.1.09-.16.46-.83.91-1.65,1.34-2.49.21-.4.39-.8.59-1.2-9.72,5.55-24.72,12.3-42.38,14Z"/>
   <path className="cls-5" d="m86.06,158.59s1.92-19.58,7.45-21.03c3.13-.82,6.23.26,8.34,1.36,1.57.82,2.3,2.67,1.73,4.35-1.42,4.17-4.05,12.21-4.7,16.38-.24,1.57-1.52,2.75-3.1,2.87-3.4.25-8.54-.06-9.73-3.93Z"/>
 </svg>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
             </div>
+            </>
+
+}
+
+
+
+
             {/* 세로로 4개있어야 할 글자들 */}
             <div className="ilgtxt">
                 <div>
-                    <Link to='/mountain'>MOUNTAIN</Link>
+                        <Link to='/mountain' >MOUNTAIN</Link>
                 </div>
                 <div>
-                    <Link to='/woods'>WOODS</Link>
+                        <Link to='/woods'>WOODS</Link>
                 </div>
                 <div>
-                    <Link to='/canyon'>CANYON</Link>
+                        <Link to='/canyon'>CANYON</Link>
                 </div>
                 <div>
-                    <Link to='/elements'>ELEMENTS</Link>
+                        <Link to='/elements'>ELEMENTS</Link>
                 </div>
             </div>
             {/* 가로선 2개 */}
@@ -574,10 +717,17 @@ function Potal(props){
             {
                 cat == 1 &&
             <div className="center">
-                안녕하세요<br/>=(^ㅅ^)=<br/>Press each box
+                <div>
+                <span style={{color : "blue"}}>F</span>
+                <span style={{color : "red"}}>i</span>
+                <span>la</span>
+                </div>
+                <div>각 화면을<br/> 눌러보세요 </div>
             </div>
             }
         </section>
+
+
         {
             props.cursor == 1 ? 
             <div id="cursor" style={{opacity: 1}}></div>
