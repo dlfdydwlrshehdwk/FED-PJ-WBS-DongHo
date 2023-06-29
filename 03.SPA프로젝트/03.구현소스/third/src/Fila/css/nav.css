@@ -1,11 +1,24 @@
 .nav {
-    position: fixed;
+    /* 원래이거 */
+    /* position: fixed;
     width: 100%;
     height: 0;
     top: 0;
     left: 0;
+    z-index: 1; */
+    /* 여기까지 */
+
+
+
     /* right: 0; */
     /* bottom: 0; */
+}
+.nav {
+    position: fixed;
+    width: 100%;
+    /* height: 100%; */
+    top: 0;
+    left: 0;
     z-index: 1;
 }
 .nav a{
@@ -51,3 +64,8 @@
     transform: rotate(270deg);
     transform-origin: left top 1px;
 } 
+
+
+@media screen and (max-width: 600px) {
+    
+}

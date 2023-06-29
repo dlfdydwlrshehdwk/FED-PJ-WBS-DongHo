@@ -31,7 +31,7 @@ function jqFn(){
         
         let mob = 0
         let wd = $(window).innerWidth()
-        if(wd < 480) mob = 1;
+        if(wd < 5100) mob = 1;
         console.log('가로값',wd)
         $(window).on('resize', function(){
             wd = $(this).innerWidth()
@@ -59,8 +59,6 @@ function jqFn(){
                 let eee = e.originalEvent.changedTouches[0].pageX
                 // 눌렀을때 y값
                 let rrr = e.originalEvent.changedTouches[0].pageY
-                // console.log('가로값',qqq,'\n세로값',www)
-                // console.log('눌른가로값',eee,'\n눌른세로값',rrr)
 
 
                 // 윗층
@@ -121,7 +119,12 @@ function jqFn(){
                     opacity : 0 ,
                 })
                 $('.center').html(`
-                안녕하세요<br/>=(^ㅅ^)=<br/>Press each box`)
+                <div>
+                    <img src='./images/heritage.png'/>
+                </div>
+                <div class='each'>Touch or Click<br/> to each box</div>
+                
+                `)
                 }
 
 
@@ -171,25 +174,9 @@ function jqFn(){
                     $('.center').text('CANYON')
                 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
             })
         }
         
-        const newCursor = document.querySelector('#cursor');
 
 
             
@@ -236,19 +223,6 @@ function jqFn(){
             let sambunilh = $('.ilg').height()/3 + dd;
             let sambuneh = $('.ilg').height()/3 * 2 + dd;
 
-            // console.log(sambunilw,sambunew,sambunilh,sambuneh)
-            // 수정전
-            // 306, 612, 319.6, 639.3
-            // 수정후
-            // 306, 612, 8382.4 8702.1
-
-            // 적용되어야하는 마우스위치
-            // 8000~8300 11시 8350~8700 8700~9000
-
-            // 12시 칸 변수
-            // .ilg에서 pageX가 ilg의 1/3보다 크고 2/3 과 같거나 작고
-            // posY가 ilg에서 1/3일때
-
             // 광클방지
             let a = 0;
             // 한번만실행 키
@@ -271,9 +245,6 @@ function jqFn(){
                     $('.center').text('MOUNTAIN')
                     b=1;
                     // console.log(b)
-                }
-                else{ // b가 1이라면{
-                    
                 }
 
 
@@ -407,7 +378,14 @@ function jqFn(){
                         opacity : 0 ,
                     })
                     $('.center').html(`
-                    안녕하세요<br/>=(^ㅅ^)=<br/>Press each box`)
+
+                    <div>
+                    <img src='./images/heritage.png'/>
+                </div>
+                <div class='each'>Move the cursor<br/>to each box</div>
+                    
+                    
+                    `)
                     b=1;
                     // console.log(b)
                 }
@@ -417,8 +395,6 @@ function jqFn(){
 
         })
 
-        // 새로고침시마다 적용이되는데
-        // 안되게 하려면 쿠키를 줘야할까..?
         let qwer = 1
         function shoesOn(){
             if(qwer){
@@ -434,7 +410,9 @@ function jqFn(){
             $('.shoessvg').addClass('sc')
         },5000)
         setTimeout(()=>{
-            // console.log('5초뒤')
+            // if(mob) return
+            console.log(mob)
+            console.log('5초뒤')
             $('#cursor').css({
                 opacity :1
             })
@@ -448,34 +426,29 @@ function jqFn(){
             position : 'fixed',
             top:0,
             left:0,
-            right:0,
-            bottom:0,
+            width : '100vw',
+            height : '100vh',
             backgroundColor : 'rgb(0 0 0 / 50%)',
             zIndex : 3,
         })
 
-        $('.bbx').css({
-            position : 'absolute',
-            top : '50%',
-            left : '50%',
-            transform : 'translate(-50%, -50%)',
-            backgroundColor : 'white',
-            border : '1px solid',
-            borderRadius : '20px',
-            width: '30%',
-            height: '30%',
-            display :'flex',
-            justifyContent : 'center',
-            alignItems : 'center',
-            flexDirection: 'column',
-            justifyContent: 'space-around' 
-        })
-
-        // $('.blackbbx, .bbx').on('click',function(){
-        //     $('.blackbbx').css({
-        //         display:'none'
-        //     })
+        // $('.bbx').css({
+        //     position : 'absolute',
+        //     top : '50%',
+        //     left : '50%',
+        //     transform : 'translate(-50%, -50%)',
+        //     backgroundColor : 'white',
+        //     border : '1px solid',
+        //     borderRadius : '20px',
+        //     width: '30%',
+        //     height: '30%',
+        //     display :'flex',
+        //     justifyContent : 'center',
+        //     alignItems : 'center',
+        //     flexDirection: 'column',
+        //     justifyContent: 'space-around',
         // })
+
 
 
 
@@ -495,27 +468,27 @@ $('.gs').eq(1).css({
 })
 
 
-// 각 글자 위치정정
-$('.ilgtxt div').eq(0).css({
-    top : '10vw',
-    left : '-10vw',
-    transform: 'rotate(-90deg)'
-})
-$('.ilgtxt div').eq(1).css({
-    top : '7vw',
-    right : '-7vw',
-    transform: 'rotate(90deg)'
-})
-$('.ilgtxt div').eq(2).css({
-    bottom : '8vw',
-    right : '-8vw',
-    transform: 'rotate(90deg)'
-})
-$('.ilgtxt div').eq(3).css({
-    bottom : '9vw',
-    left : '-9vw',
-    transform: 'rotate(-90deg)'
-})
+// 각 글자 위치정정 - css로 수정
+// $('.ilgtxt div').eq(0).css({
+//     top : '9.5vw',
+//     left : '-8.4vw',
+//     transform: 'rotate(-90deg)'
+// })
+// $('.ilgtxt div').eq(1).css({
+//     top : '7vw',
+//     right : '-7vw',
+//     transform: 'rotate(90deg)'
+// })
+// $('.ilgtxt div').eq(2).css({
+//     bottom : '8vw',
+//     right : '-8vw',
+//     transform: 'rotate(90deg)'
+// })
+// $('.ilgtxt div').eq(3).css({
+//     bottom : '9vw',
+//     left : '-7vw',
+//     transform: 'rotate(-90deg)'
+// })
 
 
 
@@ -530,13 +503,11 @@ function Potal(props){
 
     // 검은박스 안내문구 - 처음에 시작안되게
     const [bbx,setBbx] = useState(0);
-    // const [cursor,setCursor] = useState(0);
     // 가림막 - 4초뒤에 사라짐
     const [white,setWhite] = useState(props.white);
     // 고양이 글씨 - 가림막이 사라지고나서 등장
     const [cat,setCat] = useState(0);
-    // console.log('블랙',bbx)
-    // console.log('화이트',white)
+
     useEffect(()=>{
         setTimeout(()=>{
             setBbx(props.bbx)
@@ -572,9 +543,9 @@ function Potal(props){
                 <p>↖</p><p>↑</p><p>↗</p>
                     </div> <br/>
                 <div className="bbxflex3">
-                <p>←</p><p>마우스를 각 구역으로 이동해보세요</p><p>→</p>
+                <p>←</p><p>Touch or Click<br/> to each box</p><p>→</p>
                 </div>
-                <div>시작하기</div>
+                <div className='view'>View Project</div>
                 <div className="bbxflex2">
                 <p>↙</p><p>↓</p><p>↘</p>
                     </div> 
@@ -589,11 +560,11 @@ function Potal(props){
         { 
             white == 1 ?
             <div className="whitebbx" style={{
-                position : "fixed",
-                top: 0,
-                left : 0,
-                bottom : 0,
-                right : 0,
+                position : "absolute",
+                top: '0%',
+                left : '0%',
+                width : '100vw',
+                height : '100vh',
                 zIndex : 2,
             }}>
             </div>
@@ -719,13 +690,22 @@ function Potal(props){
                 cat == 1 &&
             <div className="center">
                 <div>
+                    <img src='./images/heritage.png'/>
+                </div>
+                <div className='each'>Touch or Click<br/> to each box</div>
+            </div>
+            }
+            {/* {
+                cat == 1 &&
+            <div className="center2">
+                <div>
                 <span style={{color : "blue"}}>F</span>
                 <span style={{color : "red"}}>i</span>
                 <span>la</span>
                 </div>
                 <div>각 화면을<br/> 눌러보세요 </div>
             </div>
-            }
+            } */}
         </section>
 
 

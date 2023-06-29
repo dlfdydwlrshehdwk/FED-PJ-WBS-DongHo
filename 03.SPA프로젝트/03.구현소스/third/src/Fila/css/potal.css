@@ -1,4 +1,9 @@
 @charset "utf-8";
+/* 얇은거 */
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Myeongjo&display=swap');
+/* 굵은거 */
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700&display=swap');
+/* font-family: 'Nanum Myeongjo', serif; */
 body{
     cursor: none;
 }
@@ -12,7 +17,7 @@ body{
 }
 .ilgtxt div{
     position: absolute;
-    font-size: 5vw;
+    font-size: 4.5vw;
 }
 .ilgtxt a{
     text-decoration: none;
@@ -35,6 +40,29 @@ body{
     z-index: 1;
   
 }
+.ilgtxt div{
+  font-size: 4.5vw;
+}
+.ilgtxt div:nth-child(1){
+  top: 8.8vw;
+  left: -10vw;
+transform: rotate(-90deg);
+}
+.ilgtxt div:nth-child(2){
+  top: 5.6vw;
+    right: -5.8vw;
+    transform: rotate(-90deg);
+}
+.ilgtxt div:nth-child(3){
+  bottom: 6.1vw;
+    right: -6.9vw;
+    transform: rotate(-90deg);
+}
+.ilgtxt div:nth-child(4){
+  bottom: 7.6vw;
+    left: -8.6vw;
+    transform: rotate(-90deg);
+} 
 
   .bgi {
     position: relative;
@@ -88,8 +116,42 @@ body{
     -webkit-text-fill-color: transparent; */
 }
 
-
+.center img{
+  width: 100%;
+}
+.each{
+  font-size: 4.5vw;
+}
 .center{
+  pointer-events: none;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  width: 35vw;
+  height: 33vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11vw;
+  font-weight: bold;
+  white-space: nowrap;
+  flex-direction: column;
+
+  color: white;
+  -webkit-text-stroke: 2px black;
+  
+    /* filter: invert(1);
+    mix-blend-mode: difference;
+    -webkit-text-stroke: 1px transparent;
+    background-color: transparent; */
+    /* -webkit-text-stroke : red */
+    /* text-shadow: 2px 2px 4px red; */
+  
+}
+.center2{
+  display: none;
   pointer-events: none;
   text-align: center;
   position: absolute;
@@ -113,16 +175,32 @@ body{
     mix-blend-mode: difference;
     -webkit-text-stroke: 1px transparent;
     background-color: transparent; */
-
-
-
-
-
     /* -webkit-text-stroke : red */
     /* text-shadow: 2px 2px 4px red; */
   
 }
-
+.whitebbx{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+.bbx{
+  position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    border: 1px solid;
+    border-radius: 20px;
+    width: 30%;
+    height: 30%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+}
 .bbxflex1{
   display: flex;
   justify-content: end;
@@ -154,11 +232,24 @@ body{
 .bbxflex3{
   display: flex;
   width: 100%;
-  justify-content: space-around;
+  justify-content: space-between;
   text-align: center;
   font-size: 1.5vw;
   align-items: center;
-
+  padding: 0 4%;
+  box-sizing: border-box;
+}
+.bbxflex3 p:nth-child(2){
+  position: absolute;
+    font-size: 2.3vw;
+    top: 40%;
+    width: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: "272727d6";
+}
+.view{
+  font-size: 1.2vw;
 }
 
 
@@ -248,7 +339,7 @@ body{
     left: 50%;
     transform: translate(-50%,-50%) scale(1);
     transition: scale 1s;
-    width: 50%;
+    width: 30%;
     /* z-index: 1 */
     ;
   }
@@ -397,6 +488,11 @@ body{
     stroke-miterlimit: 10;
   }
 
+
+  .bbx{
+    font-family: 'Nanum Myeongjo', serif;
+    font-weight: 700;
+  }
   @keyframes fill6 {
     0%{
         stroke: transparent;
@@ -414,8 +510,49 @@ body{
       }
       #cursor {
         display: none;
+        opacity: 0;
       }
       .center{
         flex-direction: column;
       }
+      .each {
+        font-size: 6vw;
+    }
+  }
+  @media screen and (max-width: 600px) {
+      .bbx{
+        width: 60%;
+        height: 40%;
+      }
+      .bbxflex3 p:nth-child(2) {
+        font-size: 5.5vw;
+      }
+      .view {
+        font-size: 3.5vw;
+      }
+      .each {
+        font-size: 6.5vw;
+        margin-top: 2.5vw;
+      }
+  }
+  @media screen and (max-width: 1280px) {
+    .ilgtxt div{
+      font-size: 5.5vw;
+    }
+    .ilgtxt div:nth-child(1){
+      top: 10.6vw;
+      left: -11.8vw;
+    }
+    .ilgtxt div:nth-child(2){
+      top: 6.7vw;
+      right: -7.4vw;
+    }
+    .ilgtxt div:nth-child(3){
+      bottom: 7.4vw;
+      right: -8.4vw;
+    }
+    .ilgtxt div:nth-child(4){
+      bottom: 9.1vw;
+      left: -10.2vw;
+    } 
   }
