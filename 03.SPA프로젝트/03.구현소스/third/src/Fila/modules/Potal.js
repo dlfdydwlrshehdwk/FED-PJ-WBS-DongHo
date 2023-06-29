@@ -68,7 +68,6 @@ function jqFn(){
                 // 11시
                 if(eee <= qqq1 && rrr <= www1){
                     console.log('11시')
-                        // backgroundImage : 'url(../images/bg/mountain.jpg)'
                         bg1.css({
                             transition : '.4s',
                             backgroundImage : 'url(../images/bg/mountain.jpg)',
@@ -114,15 +113,17 @@ function jqFn(){
                 }
 
                 // 중앙 <- 이게안됨  윗층이안먹음
-                // if(eee >qqq1 && eee<qqq1 * 2 && rrr > www1 && rrr < www1 * 2)
-                // {console.log('중앙')}
-                // bg1.css({
-                //     transition : '.4s',
-                //     backgroundImage : 'url(../images/logo.jpg)',
-                //     opacity : 0 ,
-                // })
-                // $('.center').html(`
-                // 안녕하세요<br/>=(^ㅅ^)=<br/>Press each box`)
+                if(eee >qqq1 && eee<qqq1 * 2 && rrr > www1 && rrr < www1 * 2)
+                {console.log('중앙')
+                bg1.css({
+                    transition : '.4s',
+                    backgroundImage : 'url(../images/logo.jpg)',
+                    opacity : 0 ,
+                })
+                $('.center').html(`
+                안녕하세요<br/>=(^ㅅ^)=<br/>Press each box`)
+                }
+
 
                 // 3시
                 if(eee>qqq1 * 2 && rrr>=www1 && rrr<=www1*2){
