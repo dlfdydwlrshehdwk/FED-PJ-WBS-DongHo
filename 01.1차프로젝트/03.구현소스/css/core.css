@@ -58,7 +58,7 @@ body *{
     z-index: -1;
     top: 0;
     left: 0;
-    height: 0;
+    height: 290px;
     width: 100%;
     background-color: #fff ; 
     transition: all .3s ease-in;
